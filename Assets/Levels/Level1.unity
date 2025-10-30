@@ -891,9 +891,9 @@ MonoBehaviour:
   TargetOffset: {x: 0, y: 0, z: 0}
   Damping: {x: 1, y: 1, z: 1}
   Lookahead:
-    Enabled: 1
+    Enabled: 0
     Time: 0.3
-    Smoothing: 0
+    Smoothing: 10
     IgnoreY: 1
 --- !u!114 &1868750678
 MonoBehaviour:
@@ -1213,7 +1213,7 @@ GameObject:
   - component: {fileID: 2142757693}
   m_Layer: 8
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2425,7 +2425,7 @@ CompositeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
   m_GenerationType: 0
-  m_EdgeRadius: 0.02
+  m_EdgeRadius: 0.05
   m_ColliderPaths:
   - m_Collider: {fileID: 2142757690}
     m_ColliderPaths:
