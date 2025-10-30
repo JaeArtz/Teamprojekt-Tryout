@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _isGrounded;
     private bool _isOnWall;
     private bool _isWallJumping;
-
+    private bool _isDetached;
 
     private void Awake()
     {
@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
             WallJump();
             _isWallJumping = t_isWallJumping = true;
             _isOnWall = false;
+            jumpCounter = extraJumps; //Reset extra jumps after walljump
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocityY > 0)
@@ -71,17 +72,23 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         _isGrounded = t_isGrounded = isGrounded();
-        if (!_isWallJumping) _isOnWall = t_isOnWall = onWall();
-        else _isOnWall = t_isOnWall = false;
+        _isOnWall = t_isOnWall = onWall();
 
         t_movementY = body.linearVelocityY;
 
         float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxis("Horizontal");
 
-        if (_isOnWall)
+        if (_isWallJumping && !_isOnWall && !_isDetached)
+        {
+            // Spieler hat Wand verlassen nach Walljump
+            _isDetached = true;
+        }
+
+        if (_isOnWall && _isDetached)
         {
             // Abbruch Walljump, wenn Wand berührt wird
             _isWallJumping = t_isWallJumping = false;
+            _isDetached = false;
             body.linearVelocityX = t_movementX = 0;
         }
         else if (_isWallJumping)
@@ -89,6 +96,11 @@ public class PlayerMovement : MonoBehaviour
             //logik für Bewegung a/d während walljump (gedämpft)
             float difference = horizontalInput * speed - body.linearVelocityX;
             body.linearVelocityX = t_movementX = body.linearVelocityX + difference * Time.deltaTime * 1.5f;
+        }
+        else if (_isOnWall)
+        {
+            // Kein seitlicher Input an der Wand
+            body.linearVelocityX = t_movementX = 0;
         }
         else
         {
@@ -100,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Stelle alle Sprungvariablen zurück während auf dem Boden
             _isWallJumping = t_isWallJumping = false;
+            _isDetached = false;
             coyoteCounter = t_coyoteCounter = coyoteTime;
             jumpCounter = extraJumps;
         }
@@ -134,6 +147,8 @@ public class PlayerMovement : MonoBehaviour
                 {
                     body.linearVelocityY = jumpForce;
                     jumpCounter--;
+                    _isWallJumping = false;
+                    _isDetached = false;
                 }
             }
         }
