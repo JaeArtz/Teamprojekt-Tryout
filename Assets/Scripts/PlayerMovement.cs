@@ -3,9 +3,21 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Tracker")]
+    [SerializeField] private float t_movementX;
+    [SerializeField] private float t_movementY;
+    [SerializeField] private float t_movementDirection;
+    [SerializeField] private float t_coyoteCounter;
+    [SerializeField] private bool t_isGrounded;
+    [SerializeField] private bool t_isOnWall;
+    [SerializeField] private bool t_isWallJumping;
+    [SerializeField] private bool t_isHoldingMoveBtn;
+
     [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private float jumpDampingForce;
+    [SerializeField] private float wallJumpForce;
 
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTime; //Time player can still jump after leaving ground
@@ -22,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private BoxCollider2D boxCollider;
 
+    private float _horizontalInput;
+
+    private bool _isGrounded;
+    private bool _isOnWall;
+    private bool _isWallJumping;
+
 
     private void Awake()
     {
@@ -31,24 +49,66 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
-
-        if (Input.GetKeyDown(KeyCode.Space) && (coyoteCounter > 0 || jumpCounter > 0))
+        t_isHoldingMoveBtn = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
+        if (Input.GetKeyDown(KeyCode.Space) && (coyoteCounter > 0 || jumpCounter > 0) && (!_isOnWall || _isGrounded))
         {
             Jump();
         }
-
-        if (isGrounded())
+        else if (Input.GetKeyDown(KeyCode.Space) && _isOnWall && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         {
-            coyoteCounter = coyoteTime;
+            WallJump();
+            _isWallJumping = t_isWallJumping = true;
+            _isOnWall = false;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocityY > 0)
+        {
+            body.linearVelocityY *= jumpDampingForce;
+        }
+
+    }
+
+    private void FixedUpdate()
+    {
+        _isGrounded = t_isGrounded = isGrounded();
+        if (!_isWallJumping) _isOnWall = t_isOnWall = onWall();
+        else _isOnWall = t_isOnWall = false;
+
+        t_movementY = body.linearVelocityY;
+
+        float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxis("Horizontal");
+
+        if (_isOnWall)
+        {
+            // Abbruch Walljump, wenn Wand berührt wird
+            _isWallJumping = t_isWallJumping = false;
+            body.linearVelocityX = t_movementX = 0;
+        }
+        else if (_isWallJumping)
+        {
+            //logik für Bewegung a/d während walljump (gedämpft)
+            float difference = horizontalInput * speed - body.linearVelocityX;
+            body.linearVelocityX = t_movementX = body.linearVelocityX + difference * Time.deltaTime * 1.5f;
+        }
+        else
+        {
+            // Normale Bewegung
+            body.linearVelocityX = t_movementX = horizontalInput * speed;
+        }
+
+        if (_isGrounded)
+        {
+            // Stelle alle Sprungvariablen zurück während auf dem Boden
+            _isWallJumping = t_isWallJumping = false;
+            coyoteCounter = t_coyoteCounter = coyoteTime;
             jumpCounter = extraJumps;
         }
         else
         {
+            // Wenn nicht auf dem Boden, verringere den Coyote Timer
             coyoteCounter -= Time.deltaTime; //Start decrease counter
+            t_coyoteCounter = coyoteCounter;
         }
-
     }
 
     private void Jump()
@@ -58,35 +118,41 @@ public class PlayerMovement : MonoBehaviour
             return; //No jump if coyote time is over
         }
 
-        if (isGrounded())
+        if (_isGrounded)
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, jumpForce);
+            body.linearVelocityY = jumpForce;
         }
         else
         {
             if (coyoteCounter > 0)
             {
-                body.linearVelocity = new Vector2(body.linearVelocity.x, jumpForce);
+                body.linearVelocityY = jumpForce;
             }
             else
             {
-                if(jumpCounter > 0)
+                if (jumpCounter > 0)
                 {
-                    body.linearVelocity = new Vector2(body.linearVelocity.x, jumpForce);
+                    body.linearVelocityY = jumpForce;
                     jumpCounter--;
                 }
             }
         }
 
-        coyoteCounter = 0; //Reset coyote counter after jump
-        
+        coyoteCounter = t_coyoteCounter = 0; //Reset coyote counter after jump
+
+    }
+
+    private void WallJump()
+    {
+        Vector2 wallJumpDirection = new Vector2(-_horizontalInput * speed * 2, wallJumpForce); //Jump in opposite direction of wall
+        body.linearVelocity = wallJumpDirection;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
-            
+
         }
     }
 
@@ -95,10 +161,10 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
-    
+
     private bool onWall()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center,boxCollider.bounds.size, 0, new Vector2(transform.localScale.x , 0), 0.1f, wallLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, wallLayer);
         return raycastHit.collider != null;
     }
 }
