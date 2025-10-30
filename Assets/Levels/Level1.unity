@@ -1141,9 +1141,9 @@ MonoBehaviour:
   t_isHoldingMoveBtn: 0
   speed: 10
   jumpForce: 10
-  jumpDampingForce: 0
-  wallJumpForce: 0
-  coyoteTime: 0.25
+  jumpDampingForce: 0.5
+  wallJumpForce: 7.5
+  coyoteTime: 0.1
   extraJumps: 1
   groundLayer:
     serializedVersion: 2
