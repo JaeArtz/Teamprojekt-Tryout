@@ -86,3 +86,13 @@ crashlytics-build.properties
 *_bak*.hipnc
 
 *.DS_Store
+
+# Ergänzt von Annabelle: --------------------------------------------------
+# Keep project essentials
+!Assets/
+!ProjectSettings/
+!Packages/
+
+# Ignore large image caches or generated spritesheets (optional)
+**/[Aa]ssets/**/GeneratedSprites/
+#---------------------------------------------------------------------------
