@@ -49,6 +49,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Flip Player Sprite when moving left/right
+        float horizontalInput = Input.GetAxis("Horizontal");
+        if (horizontalInput > 0.01)
+        {
+            transform.localScale = Vector3.one * 0.7f;
+        }
+        else if (horizontalInput < -0.01)
+        {
+            transform.localScale = new Vector3(-1, 1, 1) * 0.7f;
+        }
+
+
+
         t_isHoldingMoveBtn = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
         if (Input.GetKeyDown(KeyCode.Space) && (coyoteCounter > 0 || jumpCounter > 0) && (!_isOnWall || _isGrounded))
         {
@@ -86,14 +99,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isOnWall && _isDetached)
         {
-            // Abbruch Walljump, wenn Wand berührt wird
+            // Abbruch Walljump, wenn Wand berï¿½hrt wird
             _isWallJumping = t_isWallJumping = false;
             _isDetached = false;
             body.linearVelocityX = t_movementX = 0;
         }
         else if (_isWallJumping)
         {
-            //logik für Bewegung a/d während walljump (gedämpft)
+            //logik fï¿½r Bewegung a/d wï¿½hrend walljump (gedï¿½mpft)
             float difference = horizontalInput * speed - body.linearVelocityX;
             body.linearVelocityX = t_movementX = body.linearVelocityX + difference * Time.deltaTime * 1.5f;
         }
@@ -110,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isGrounded)
         {
-            // Stelle alle Sprungvariablen zurück während auf dem Boden
+            // Stelle alle Sprungvariablen zurï¿½ck wï¿½hrend auf dem Boden
             _isWallJumping = t_isWallJumping = false;
             _isDetached = false;
             coyoteCounter = t_coyoteCounter = coyoteTime;
@@ -181,5 +194,10 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, wallLayer);
         return raycastHit.collider != null;
+    }
+
+    public bool canAttack()
+    {
+        return isGrounded(); //could add more, like !onWall()
     }
 }
