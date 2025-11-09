@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Dennis Testfiles/Scenes/Main_Menu.unity
+    path: Assets/Dennis Utilities/Scene00 Main Menu/Scenes/Main_Menu.unity
     guid: f0b99b8348297684e921923362dc5937
   - enabled: 1
     path: Assets/Levels/Level1.unity
