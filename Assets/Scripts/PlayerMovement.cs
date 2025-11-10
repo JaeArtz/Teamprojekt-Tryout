@@ -14,10 +14,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool t_isHoldingMoveBtn;
 
     [Header("Movement")]
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
-    [SerializeField] private float jumpDampingForce;
-    [SerializeField] private float wallJumpForce;
+    [SerializeField] private float playerMaxVelocityX;
+    [SerializeField] private float playerMaxVelocityY;
+    [SerializeField] private float playerAccelerationX;
+    [SerializeField] private float playerDecelerationX;
+    [SerializeField] private float playerEarlyJumpAbortForceY;
+    [SerializeField] private float playerMaxWallJumpVelocityX;
+    [SerializeField] private float playerMaxWallJumpVelocityY;
 
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTime; //Time player can still jump after leaving ground
@@ -49,6 +52,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Flip Player Sprite when moving left/right
+        float horizontalInput = Input.GetAxis("Horizontal");
+        if (horizontalInput > 0.01)
+        {
+            transform.localScale = Vector3.one * 0.7f;
+        }
+        else if (horizontalInput < -0.01)
+        {
+            transform.localScale = new Vector3(-1, 1, 1) * 0.7f;
+        }
+
+
+
         t_isHoldingMoveBtn = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
         if (Input.GetKeyDown(KeyCode.Space) && (coyoteCounter > 0 || jumpCounter > 0) && (!_isOnWall || _isGrounded))
         {
@@ -64,9 +80,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocityY > 0)
         {
-            body.linearVelocityY *= jumpDampingForce;
+            body.linearVelocityY *= playerEarlyJumpAbortForceY;
         }
 
+        DrawBoxCast(transform.position, new Vector2(1f, 2f), 0f, Vector2.down, 0.1f, Color.red);
     }
 
     private void FixedUpdate()
@@ -76,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
         t_movementY = body.linearVelocityY;
 
-        float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxis("Horizontal");
+        float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxisRaw("Horizontal");
 
         if (_isWallJumping && !_isOnWall && !_isDetached)
         {
@@ -86,15 +103,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isOnWall && _isDetached)
         {
-            // Abbruch Walljump, wenn Wand berührt wird
+            // Abbruch Walljump, wenn Wand berï¿½hrt wird
             _isWallJumping = t_isWallJumping = false;
             _isDetached = false;
             body.linearVelocityX = t_movementX = 0;
         }
         else if (_isWallJumping)
         {
-            //logik für Bewegung a/d während walljump (gedämpft)
-            float difference = horizontalInput * speed - body.linearVelocityX;
+            //logik fï¿½r Bewegung a/d wï¿½hrend walljump (gedï¿½mpft)
+            float difference = horizontalInput * playerMaxVelocityX - body.linearVelocityX;
             body.linearVelocityX = t_movementX = body.linearVelocityX + difference * Time.deltaTime * 1.5f;
         }
         else if (_isOnWall)
@@ -105,12 +122,17 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             // Normale Bewegung
-            body.linearVelocityX = t_movementX = horizontalInput * speed;
+            float targetSpeed = horizontalInput * playerMaxVelocityX;
+            float speedDiff = targetSpeed - body.linearVelocityX;
+            float accelRate = Mathf.Sign(targetSpeed) == horizontalInput ? playerAccelerationX : playerDecelerationX;
+            float movement = speedDiff * accelRate;
+            body.linearVelocityX = t_movementX = Mathf.MoveTowards(body.linearVelocityX, targetSpeed, accelRate);
+            //body.linearVelocityX = t_movementX = horizontalInput * playerMaxVelocityX;
         }
 
         if (_isGrounded)
         {
-            // Stelle alle Sprungvariablen zurück während auf dem Boden
+            // Stelle alle Sprungvariablen zurï¿½ck wï¿½hrend auf dem Boden
             _isWallJumping = t_isWallJumping = false;
             _isDetached = false;
             coyoteCounter = t_coyoteCounter = coyoteTime;
@@ -126,40 +148,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (coyoteCounter <= 0 && jumpCounter <= 0)
-        {
-            return; //No jump if coyote time is over
-        }
-
         if (_isGrounded)
         {
-            body.linearVelocityY = jumpForce;
+            body.linearVelocityY = playerMaxVelocityY;
         }
-        else
+        else if (coyoteCounter > 0)
         {
-            if (coyoteCounter > 0)
-            {
-                body.linearVelocityY = jumpForce;
-            }
-            else
-            {
-                if (jumpCounter > 0)
-                {
-                    body.linearVelocityY = jumpForce;
-                    jumpCounter--;
-                    _isWallJumping = false;
-                    _isDetached = false;
-                }
-            }
+            body.linearVelocityY = playerMaxVelocityY;
+            coyoteCounter = t_coyoteCounter = 0;
         }
-
-        coyoteCounter = t_coyoteCounter = 0; //Reset coyote counter after jump
-
+        else if (jumpCounter > 0)
+        {
+            body.linearVelocityY = playerMaxVelocityY;
+            jumpCounter--;
+            _isWallJumping = false;
+            _isDetached = false;
+        }
     }
 
     private void WallJump()
     {
-        Vector2 wallJumpDirection = new Vector2(-_horizontalInput * speed * 2, wallJumpForce); //Jump in opposite direction of wall
+        Vector2 wallJumpDirection = new Vector2(-_horizontalInput * playerMaxWallJumpVelocityX, playerMaxWallJumpVelocityY); //Jump in opposite direction of wall
         body.linearVelocity = wallJumpDirection;
     }
 
@@ -174,12 +183,59 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-        return raycastHit.collider != null;
+        return raycastHit.collider;
     }
 
     private bool onWall()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, wallLayer);
-        return raycastHit.collider != null;
+        RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, groundLayer);
+        Debug.DrawRay(body.position, raycastHit.point);
+        return raycastHit.collider || raycastHit2.collider;
     }
+
+    public bool canAttack()
+    {
+        return isGrounded(); //could add more, like !onWall()
+    }
+
+    void DrawBoxCast(Vector2 origin, Vector2 size, float angle, Vector2 direction, float distance, Color color)
+    {
+        // Berechne die vier Ecken der Box am Startpunkt
+        Vector2 halfSize = size * 0.5f;
+        Quaternion rot = Quaternion.Euler(0, 0, angle);
+        Vector2 right = rot * Vector2.right * halfSize.x;
+        Vector2 up = rot * Vector2.up * halfSize.y;
+
+        Vector2 topLeft = origin - right + up;
+        Vector2 topRight = origin + right + up;
+        Vector2 bottomLeft = origin - right - up;
+        Vector2 bottomRight = origin + right - up;
+
+        // Berechne die Endposition
+        Vector2 move = direction.normalized * distance;
+        Vector2 topLeftEnd = topLeft + move;
+        Vector2 topRightEnd = topRight + move;
+        Vector2 bottomLeftEnd = bottomLeft + move;
+        Vector2 bottomRightEnd = bottomRight + move;
+
+        // Zeichne Startbox
+        Debug.DrawLine(topLeft, topRight, color);
+        Debug.DrawLine(topRight, bottomRight, color);
+        Debug.DrawLine(bottomRight, bottomLeft, color);
+        Debug.DrawLine(bottomLeft, topLeft, color);
+
+        // Zeichne Endbox
+        Debug.DrawLine(topLeftEnd, topRightEnd, color);
+        Debug.DrawLine(topRightEnd, bottomRightEnd, color);
+        Debug.DrawLine(bottomRightEnd, bottomLeftEnd, color);
+        Debug.DrawLine(bottomLeftEnd, topLeftEnd, color);
+
+        // Verbinde Start- und Endpunkte
+        Debug.DrawLine(topLeft, topLeftEnd, color);
+        Debug.DrawLine(topRight, topRightEnd, color);
+        Debug.DrawLine(bottomLeft, bottomLeftEnd, color);
+        Debug.DrawLine(bottomRight, bottomRightEnd, color);
+    }
+
 }
