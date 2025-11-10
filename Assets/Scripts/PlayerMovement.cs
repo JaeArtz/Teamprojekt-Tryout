@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             body.linearVelocityY *= playerEarlyJumpAbortForceY;
         }
 
+        DrawBoxCast(transform.position, new Vector2(1f, 2f), 0f, Vector2.down, 0.1f, Color.red);
     }
 
     private void FixedUpdate()
@@ -123,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
             // Normale Bewegung
             float targetSpeed = horizontalInput * playerMaxVelocityX;
             float speedDiff = targetSpeed - body.linearVelocityX;
-            float accelRate = Mathf.Abs(targetSpeed - body.linearVelocityX) < Mathf.Abs(targetSpeed) ? playerAccelerationX : playerDecelerationX;
+            float accelRate = Mathf.Sign(targetSpeed) == horizontalInput ? playerAccelerationX : playerDecelerationX;
             float movement = speedDiff * accelRate;
             body.linearVelocityX = t_movementX = Mathf.MoveTowards(body.linearVelocityX, targetSpeed, accelRate);
             //body.linearVelocityX = t_movementX = horizontalInput * playerMaxVelocityX;
@@ -147,34 +148,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        //if (coyoteCounter <= 0 && jumpCounter <= 0)
-        //{
-        //    return; //No jump if coyote time is over
-        //}
-
-        //if (_isGrounded)
-        //{
-        //    body.linearVelocityY = playerMaxVelocityY;
-        //}
-        //else
-        //{
-        //    if (coyoteCounter > 0)
-        //    {
-        //        body.linearVelocityY = playerMaxVelocityY;
-        //    }
-        //    else
-        //    {
-        //        if (jumpCounter > 0)
-        //        {
-        //            body.linearVelocityY = playerMaxVelocityY;
-        //            jumpCounter--;
-        //            _isWallJumping = false;
-        //            _isDetached = false;
-        //        }
-        //    }
-        //}
-
-        //coyoteCounter = t_coyoteCounter = 0; //Reset coyote counter after jump
         if (_isGrounded)
         {
             body.linearVelocityY = playerMaxVelocityY;
@@ -210,13 +183,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-        return raycastHit.collider != null;
+        return raycastHit.collider;
     }
 
     private bool onWall()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, wallLayer);
         RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, groundLayer);
+        Debug.DrawRay(body.position, raycastHit.point);
         return raycastHit.collider || raycastHit2.collider;
     }
 
@@ -224,4 +198,44 @@ public class PlayerMovement : MonoBehaviour
     {
         return isGrounded(); //could add more, like !onWall()
     }
+
+    void DrawBoxCast(Vector2 origin, Vector2 size, float angle, Vector2 direction, float distance, Color color)
+    {
+        // Berechne die vier Ecken der Box am Startpunkt
+        Vector2 halfSize = size * 0.5f;
+        Quaternion rot = Quaternion.Euler(0, 0, angle);
+        Vector2 right = rot * Vector2.right * halfSize.x;
+        Vector2 up = rot * Vector2.up * halfSize.y;
+
+        Vector2 topLeft = origin - right + up;
+        Vector2 topRight = origin + right + up;
+        Vector2 bottomLeft = origin - right - up;
+        Vector2 bottomRight = origin + right - up;
+
+        // Berechne die Endposition
+        Vector2 move = direction.normalized * distance;
+        Vector2 topLeftEnd = topLeft + move;
+        Vector2 topRightEnd = topRight + move;
+        Vector2 bottomLeftEnd = bottomLeft + move;
+        Vector2 bottomRightEnd = bottomRight + move;
+
+        // Zeichne Startbox
+        Debug.DrawLine(topLeft, topRight, color);
+        Debug.DrawLine(topRight, bottomRight, color);
+        Debug.DrawLine(bottomRight, bottomLeft, color);
+        Debug.DrawLine(bottomLeft, topLeft, color);
+
+        // Zeichne Endbox
+        Debug.DrawLine(topLeftEnd, topRightEnd, color);
+        Debug.DrawLine(topRightEnd, bottomRightEnd, color);
+        Debug.DrawLine(bottomRightEnd, bottomLeftEnd, color);
+        Debug.DrawLine(bottomLeftEnd, topLeftEnd, color);
+
+        // Verbinde Start- und Endpunkte
+        Debug.DrawLine(topLeft, topLeftEnd, color);
+        Debug.DrawLine(topRight, topRightEnd, color);
+        Debug.DrawLine(bottomLeft, bottomLeftEnd, color);
+        Debug.DrawLine(bottomRight, bottomRightEnd, color);
+    }
+
 }

@@ -6216,8 +6216,8 @@ MonoBehaviour:
   t_isHoldingMoveBtn: 0
   playerMaxVelocityX: 10
   playerMaxVelocityY: 10
-  playerAccelerationX: 2
-  playerDecelerationX: 3
+  playerAccelerationX: 3
+  playerDecelerationX: 5
   playerEarlyJumpAbortForceY: 0.5
   playerMaxWallJumpVelocityX: 15
   playerMaxWallJumpVelocityY: 7.5
