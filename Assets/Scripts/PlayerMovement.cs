@@ -14,10 +14,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool t_isHoldingMoveBtn;
 
     [Header("Movement")]
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpForce;
-    [SerializeField] private float jumpDampingForce;
-    [SerializeField] private float wallJumpForce;
+    [SerializeField] private float playerMaxVelocityX;
+    [SerializeField] private float playerMaxVelocityY;
+    [SerializeField] private float playerAccelerationX;
+    [SerializeField] private float playerDecelerationX;
+    [SerializeField] private float playerEarlyJumpAbortForceY;
+    [SerializeField] private float playerMaxWallJumpVelocityX;
+    [SerializeField] private float playerMaxWallJumpVelocityY;
 
     [Header("Coyote Time")]
     [SerializeField] private float coyoteTime; //Time player can still jump after leaving ground
@@ -77,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocityY > 0)
         {
-            body.linearVelocityY *= jumpDampingForce;
+            body.linearVelocityY *= playerEarlyJumpAbortForceY;
         }
 
     }
@@ -89,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
         t_movementY = body.linearVelocityY;
 
-        float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxis("Horizontal");
+        float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxisRaw("Horizontal");
 
         if (_isWallJumping && !_isOnWall && !_isDetached)
         {
@@ -107,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         else if (_isWallJumping)
         {
             //logik f�r Bewegung a/d w�hrend walljump (ged�mpft)
-            float difference = horizontalInput * speed - body.linearVelocityX;
+            float difference = horizontalInput * playerMaxVelocityX - body.linearVelocityX;
             body.linearVelocityX = t_movementX = body.linearVelocityX + difference * Time.deltaTime * 1.5f;
         }
         else if (_isOnWall)
@@ -118,7 +121,12 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             // Normale Bewegung
-            body.linearVelocityX = t_movementX = horizontalInput * speed;
+            float targetSpeed = horizontalInput * playerMaxVelocityX;
+            float speedDiff = targetSpeed - body.linearVelocityX;
+            float accelRate = Mathf.Abs(targetSpeed - body.linearVelocityX) < Mathf.Abs(targetSpeed) ? playerAccelerationX : playerDecelerationX;
+            float movement = speedDiff * accelRate;
+            body.linearVelocityX = t_movementX = Mathf.MoveTowards(body.linearVelocityX, targetSpeed, accelRate);
+            //body.linearVelocityX = t_movementX = horizontalInput * playerMaxVelocityX;
         }
 
         if (_isGrounded)
@@ -146,19 +154,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isGrounded)
         {
-            body.linearVelocityY = jumpForce;
+            body.linearVelocityY = playerMaxVelocityY;
         }
         else
         {
             if (coyoteCounter > 0)
             {
-                body.linearVelocityY = jumpForce;
+                body.linearVelocityY = playerMaxVelocityY;
             }
             else
             {
                 if (jumpCounter > 0)
                 {
-                    body.linearVelocityY = jumpForce;
+                    body.linearVelocityY = playerMaxVelocityY;
                     jumpCounter--;
                     _isWallJumping = false;
                     _isDetached = false;
@@ -172,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallJump()
     {
-        Vector2 wallJumpDirection = new Vector2(-_horizontalInput * speed * 2, wallJumpForce); //Jump in opposite direction of wall
+        Vector2 wallJumpDirection = new Vector2(-_horizontalInput * playerMaxWallJumpVelocityX, playerMaxWallJumpVelocityY); //Jump in opposite direction of wall
         body.linearVelocity = wallJumpDirection;
     }
 
@@ -193,7 +201,8 @@ public class PlayerMovement : MonoBehaviour
     private bool onWall()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, wallLayer);
-        return raycastHit.collider != null;
+        RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, groundLayer);
+        return raycastHit.collider || raycastHit2.collider;
     }
 
     public bool canAttack()
