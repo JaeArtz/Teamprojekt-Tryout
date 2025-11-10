@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: 74eab7301ada1a5479d722afddfdeb8e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4331963452460632529
+    second: Background_Forest_DarkLayer_1_0
+  - first:
+      213: -4775774657406341518
+    second: Background_Forest_DarkLayer_1_1
+  - first:
+      213: 7132281558938852881
+    second: Background_Forest_DarkLayer_1_2
+  - first:
+      213: 7246598465358039656
+    second: Background_Forest_DarkLayer_1_3
+  - first:
+      213: -4137143373017990896
+    second: Background_Forest_DarkLayer_1_4
+  - first:
+      213: 6482344848737656568
+    second: Background_Forest_DarkLayer_1_5
+  - first:
+      213: -4839711919944483851
+    second: Background_Forest_DarkLayer_1_6
+  - first:
+      213: -225341452373938526
+    second: Background_Forest_DarkLayer_1_7
+  - first:
+      213: 3770056944200359530
+    second: Background_Forest_DarkLayer_1_8
+  - first:
+      213: -4042751906741590352
+    second: Background_Forest_DarkLayer_1_9
+  - first:
+      213: 261986909706515020
+    second: Background_Forest_DarkLayer_1_10
+  - first:
+      213: -6741787776889642695
+    second: Background_Forest_DarkLayer_1_11
+  - first:
+      213: -8886603000163968485
+    second: Background_Forest_DarkLayer_1_12
+  - first:
+      213: -3743934440438072862
+    second: Background_Forest_DarkLayer_1_13
+  - first:
+      213: 5575034350641092113
+    second: Background_Forest_DarkLayer_1_14
+  - first:
+      213: -7782410309398184682
+    second: Background_Forest_DarkLayer_1_15
+  - first:
+      213: 8431371612316919646
+    second: Background_Forest_DarkLayer_1_16
+  - first:
+      213: 8554708865989264847
+    second: Background_Forest_DarkLayer_1_17
+  - first:
+      213: -2138928277510445691
+    second: Background_Forest_DarkLayer_1_18
+  - first:
+      213: 5740805714869898868
+    second: Background_Forest_DarkLayer_1_19
+  - first:
+      213: -1820148001620935358
+    second: Background_Forest_DarkLayer_1_20
+  - first:
+      213: 8992843286817651292
+    second: Background_Forest_DarkLayer_1_21
+  - first:
+      213: -611970446724045008
+    second: Background_Forest_DarkLayer_1_22
+  - first:
+      213: 9040666358956379714
+    second: Background_Forest_DarkLayer_1_23
+  - first:
+      213: -3451955740432832031
+    second: Background_Forest_DarkLayer_1_24
+  - first:
+      213: 4694229519212211582
+    second: Background_Forest_DarkLayer_1_25
+  - first:
+      213: -4935454864262334721
+    second: Background_Forest_DarkLayer_1_26
+  - first:
+      213: -2246403661786319596
+    second: Background_Forest_DarkLayer_1_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 9216
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d904ebeec93e1c30800000000000000
+      internalID: 4331963452460632529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_1
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 979
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e6bf1904a09bdb0800000000000000
+      internalID: -4775774657406341518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1009
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e9e961a44faf260800000000000000
+      internalID: 7132281558938852881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_3
+      rect:
+        serializedVersion: 2
+        x: 6731
+        y: 1017
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a8e8df8e6119460800000000000000
+      internalID: 7246598465358039656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_4
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1001
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019b662950ae596c0800000000000000
+      internalID: -4137143373017990896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_5
+      rect:
+        serializedVersion: 2
+        x: 4604
+        y: 1008
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe57948b4ae5f950800000000000000
+      internalID: 6482344848737656568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_6
+      rect:
+        serializedVersion: 2
+        x: 4604
+        y: 1000
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb3c7496a3e5dcb0800000000000000
+      internalID: -4839711919944483851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_7
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 979
+        width: 53
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aea41a942d6fdcf0800000000000000
+      internalID: -225341452373938526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_8
+      rect:
+        serializedVersion: 2
+        x: 7968
+        y: 948
+        width: 7
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e9e0ee0dee15430800000000000000
+      internalID: 3770056944200359530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_9
+      rect:
+        serializedVersion: 2
+        x: 7981
+        y: 1000
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b662ab6f8245e7c0800000000000000
+      internalID: -4042751906741590352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_10
+      rect:
+        serializedVersion: 2
+        x: 8015
+        y: 1000
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42fbd0d4b3c2a300800000000000000
+      internalID: 261986909706515020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_11
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 958
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9312c678cbb5072a0800000000000000
+      internalID: -6741787776889642695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_12
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 978
+        width: 44
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a5e4397a17ca480800000000000000
+      internalID: -8886603000163968485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_13
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 979
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9765f667fda0cc0800000000000000
+      internalID: -3743934440438072862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_14
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 981
+        width: 22
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116109044308e5d40800000000000000
+      internalID: 5575034350641092113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_15
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 981
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61dbbfb7e035ff390800000000000000
+      internalID: -7782410309398184682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_16
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 981
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5766716fcf320570800000000000000
+      internalID: 8431371612316919646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_17
+      rect:
+        serializedVersion: 2
+        x: 4531
+        y: 980
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5cc2a836e68b670800000000000000
+      internalID: 8554708865989264847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_18
+      rect:
+        serializedVersion: 2
+        x: 4669
+        y: 980
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585a3fa60100152e0800000000000000
+      internalID: -2138928277510445691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_19
+      rect:
+        serializedVersion: 2
+        x: 7857
+        y: 976
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e4a5fa1607baf40800000000000000
+      internalID: 5740805714869898868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_20
+      rect:
+        serializedVersion: 2
+        x: 7958
+        y: 976
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d3fbc39098db6e0800000000000000
+      internalID: -1820148001620935358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_21
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 970
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ab58fb25ffccc70800000000000000
+      internalID: 8992843286817651292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_22
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 961
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037e9fdfe18d187f0800000000000000
+      internalID: -611970446724045008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_23
+      rect:
+        serializedVersion: 2
+        x: 4515
+        y: 958
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e4b6a6726e67d70800000000000000
+      internalID: 9040666358956379714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_24
+      rect:
+        serializedVersion: 2
+        x: 7857
+        y: 966
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e961271b803810d0800000000000000
+      internalID: -3451955740432832031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_25
+      rect:
+        serializedVersion: 2
+        x: 7857
+        y: 958
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7debca60e0452140800000000000000
+      internalID: 4694229519212211582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_26
+      rect:
+        serializedVersion: 2
+        x: 7922
+        y: 962
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff67baa33fdb18bb0800000000000000
+      internalID: -4935454864262334721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_1_27
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 952
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415f61585cb23d0e0800000000000000
+      internalID: -2246403661786319596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Background_Forest_DarkLayer_1_0: 4331963452460632529
+      Background_Forest_DarkLayer_1_1: -4775774657406341518
+      Background_Forest_DarkLayer_1_10: 261986909706515020
+      Background_Forest_DarkLayer_1_11: -6741787776889642695
+      Background_Forest_DarkLayer_1_12: -8886603000163968485
+      Background_Forest_DarkLayer_1_13: -3743934440438072862
+      Background_Forest_DarkLayer_1_14: 5575034350641092113
+      Background_Forest_DarkLayer_1_15: -7782410309398184682
+      Background_Forest_DarkLayer_1_16: 8431371612316919646
+      Background_Forest_DarkLayer_1_17: 8554708865989264847
+      Background_Forest_DarkLayer_1_18: -2138928277510445691
+      Background_Forest_DarkLayer_1_19: 5740805714869898868
+      Background_Forest_DarkLayer_1_2: 7132281558938852881
+      Background_Forest_DarkLayer_1_20: -1820148001620935358
+      Background_Forest_DarkLayer_1_21: 8992843286817651292
+      Background_Forest_DarkLayer_1_22: -611970446724045008
+      Background_Forest_DarkLayer_1_23: 9040666358956379714
+      Background_Forest_DarkLayer_1_24: -3451955740432832031
+      Background_Forest_DarkLayer_1_25: 4694229519212211582
+      Background_Forest_DarkLayer_1_26: -4935454864262334721
+      Background_Forest_DarkLayer_1_27: -2246403661786319596
+      Background_Forest_DarkLayer_1_3: 7246598465358039656
+      Background_Forest_DarkLayer_1_4: -4137143373017990896
+      Background_Forest_DarkLayer_1_5: 6482344848737656568
+      Background_Forest_DarkLayer_1_6: -4839711919944483851
+      Background_Forest_DarkLayer_1_7: -225341452373938526
+      Background_Forest_DarkLayer_1_8: 3770056944200359530
+      Background_Forest_DarkLayer_1_9: -4042751906741590352
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
