@@ -147,35 +147,50 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (coyoteCounter <= 0 && jumpCounter <= 0)
-        {
-            return; //No jump if coyote time is over
-        }
+        //if (coyoteCounter <= 0 && jumpCounter <= 0)
+        //{
+        //    return; //No jump if coyote time is over
+        //}
 
+        //if (_isGrounded)
+        //{
+        //    body.linearVelocityY = playerMaxVelocityY;
+        //}
+        //else
+        //{
+        //    if (coyoteCounter > 0)
+        //    {
+        //        body.linearVelocityY = playerMaxVelocityY;
+        //    }
+        //    else
+        //    {
+        //        if (jumpCounter > 0)
+        //        {
+        //            body.linearVelocityY = playerMaxVelocityY;
+        //            jumpCounter--;
+        //            _isWallJumping = false;
+        //            _isDetached = false;
+        //        }
+        //    }
+        //}
+
+        //coyoteCounter = t_coyoteCounter = 0; //Reset coyote counter after jump
         if (_isGrounded)
         {
             body.linearVelocityY = playerMaxVelocityY;
         }
-        else
+        else if (coyoteCounter > 0)
         {
-            if (coyoteCounter > 0)
-            {
-                body.linearVelocityY = playerMaxVelocityY;
-            }
-            else
-            {
-                if (jumpCounter > 0)
-                {
-                    body.linearVelocityY = playerMaxVelocityY;
-                    jumpCounter--;
-                    _isWallJumping = false;
-                    _isDetached = false;
-                }
-            }
+            body.linearVelocityY = playerMaxVelocityY;
+            coyoteCounter = t_coyoteCounter = 0;
         }
-
-        coyoteCounter = t_coyoteCounter = 0; //Reset coyote counter after jump
-
+        else if (jumpCounter > 0)
+        {
+            body.linearVelocityY = playerMaxVelocityY;
+            jumpCounter--;
+            _isWallJumping = false;
+            _isDetached = false;
+        }
     }
 
     private void WallJump()
