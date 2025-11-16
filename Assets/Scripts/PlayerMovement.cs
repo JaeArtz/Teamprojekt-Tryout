@@ -31,8 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCounter;
 
     [Header("Layers")]
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private LayerMask surfaceLayer;
 
     private Rigidbody2D body;
     private BoxCollider2D boxCollider;
@@ -53,15 +52,15 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Flip Player Sprite when moving left/right
-        float horizontalInput = Input.GetAxis("Horizontal");
-        if (horizontalInput > 0.01)
-        {
-            transform.localScale = Vector3.one * 0.7f;
-        }
-        else if (horizontalInput < -0.01)
-        {
-            transform.localScale = new Vector3(-1, 1, 1) * 0.7f;
-        }
+        //float horizontalInput = Input.GetAxis("Horizontal");
+        //if (horizontalInput > 0.01)
+        //{
+        //    transform.localScale = Vector3.one * 0.7f;
+        //}
+        //else if (horizontalInput < -0.01)
+        //{
+        //    transform.localScale = new Vector3(-1, 1, 1) * 0.7f;
+        //}
 
 
 
@@ -117,14 +116,14 @@ public class PlayerMovement : MonoBehaviour
         else if (_isOnWall)
         {
             // Kein seitlicher Input an der Wand
-            body.linearVelocityX = t_movementX = 0;
+            // body.linearVelocityX = t_movementX = 0;
         }
         else
         {
             // Normale Bewegung
             float targetSpeed = horizontalInput * playerMaxVelocityX;
             float speedDiff = targetSpeed - body.linearVelocityX;
-            float accelRate = Mathf.Sign(targetSpeed) == horizontalInput ? playerAccelerationX : playerDecelerationX;
+            float accelRate = Mathf.Sign(body.linearVelocityX) == horizontalInput ? playerAccelerationX : playerDecelerationX;
             float movement = speedDiff * accelRate;
             body.linearVelocityX = t_movementX = Mathf.MoveTowards(body.linearVelocityX, targetSpeed, accelRate);
             //body.linearVelocityX = t_movementX = horizontalInput * playerMaxVelocityX;
@@ -143,6 +142,22 @@ public class PlayerMovement : MonoBehaviour
             // Wenn nicht auf dem Boden, verringere den Coyote Timer
             coyoteCounter -= Time.deltaTime; //Start decrease counter
             t_coyoteCounter = coyoteCounter;
+        }
+
+        if (horizontalInput == 0)
+        {
+            transform.localScale = new Vector3(-Mathf.Sign(horizontalInput), 1, 1) * 0.7f;
+        }
+        else if(Mathf.Sign(body.linearVelocityX) != horizontalInput)
+        {
+            // Check in which state the player is in (wall jumping, walking, etc.)
+            // if walking, Break Animation in opposite direction of Mathf.Sign(horizontalInput)
+            // placeholder:
+            transform.localScale = new Vector3(-Mathf.Sign(horizontalInput), 1, 1) * 0.7f;
+        }
+        else
+        {
+            transform.localScale = new Vector3(horizontalInput, 1, 1) * 0.7f;
         }
     }
 
@@ -182,16 +197,14 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, surfaceLayer);
         return raycastHit.collider;
     }
 
     private bool onWall()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, wallLayer);
-        RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, groundLayer);
-        Debug.DrawRay(body.position, raycastHit.point);
-        return raycastHit.collider || raycastHit2.collider;
+        RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, surfaceLayer);
+        return raycastHit2.collider;
     }
 
     public bool canAttack()
