@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 3d6053e79f5a8464f9c3672cf652b042
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4039201979667025321
+    second: Blatt_Gesammelt_2 256x256_0
+  - first:
+      213: -562971859472595955
+    second: Blatt_Gesammelt_2 256x256_1
+  - first:
+      213: -8265200296865140364
+    second: Blatt_Gesammelt_2 256x256_2
+  - first:
+      213: -5515136642373473341
+    second: Blatt_Gesammelt_2 256x256_3
+  - first:
+      213: 5512026969399697612
+    second: Blatt_Gesammelt_2 256x256_4
+  - first:
+      213: -1425691451215760204
+    second: Blatt_Gesammelt_2 256x256_5
+  - first:
+      213: 3511147928547630683
+    second: Blatt_Gesammelt_2 256x256_6
+  - first:
+      213: -4787998174685922087
+    second: Blatt_Gesammelt_2 256x256_7
+  - first:
+      213: 1946111238553098672
+    second: Blatt_Gesammelt_2 256x256_8
+  - first:
+      213: -7110405657221599174
+    second: Blatt_Gesammelt_2 256x256_9
+  - first:
+      213: -2456282716773769212
+    second: Blatt_Gesammelt_2 256x256_10
+  - first:
+      213: 4376933860589935925
+    second: Blatt_Gesammelt_2 256x256_11
+  - first:
+      213: -6347261164498532254
+    second: Blatt_Gesammelt_2 256x256_12
+  - first:
+      213: -7085505141371399253
+    second: Blatt_Gesammelt_2 256x256_13
+  - first:
+      213: -7852363279000642512
+    second: Blatt_Gesammelt_2 256x256_14
+  - first:
+      213: 1309475462299278789
+    second: Blatt_Gesammelt_2 256x256_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_0
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 243
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75274e9333fd1f7c0800000000000000
+      internalID: -4039201979667025321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 247
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d044899931cef28f0800000000000000
+      internalID: -562971859472595955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 251
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47176e3fe1c1c4d80800000000000000
+      internalID: -8265200296865140364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 251
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cba697b17c4673b0800000000000000
+      internalID: -5515136642373473341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 11
+        width: 182
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0217f1357ae7c40800000000000000
+      internalID: 5512026969399697612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 239
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b439f2cd2de63ce0800000000000000
+      internalID: -1425691451215760204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_6
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 215
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e1eea207a1ab030800000000000000
+      internalID: 3511147928547630683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_7
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 207
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc70ac270d9d8db0800000000000000
+      internalID: -4787998174685922087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_8
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 179
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b95a5b4cd9f10b10800000000000000
+      internalID: 1946111238553098672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 171
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30f0603ab3c25d90800000000000000
+      internalID: -7110405657221599174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_10
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 147
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400a4ce02e789edd0800000000000000
+      internalID: -2456282716773769212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_11
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 127
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d97ddf72efdbc30800000000000000
+      internalID: 4376933860589935925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_12
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 123
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268ce61a99ff9e7a0800000000000000
+      internalID: -6347261164498532254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 115
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba39a525d9a3bad90800000000000000
+      internalID: -7085505141371399253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_14
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c58db833dc60390800000000000000
+      internalID: -7852363279000642512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blatt_Gesammelt_2 256x256_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 75
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd507cbef03c2210800000000000000
+      internalID: 1309475462299278789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blatt_Gesammelt_2 256x256_0: -4039201979667025321
+      Blatt_Gesammelt_2 256x256_1: -562971859472595955
+      Blatt_Gesammelt_2 256x256_10: -2456282716773769212
+      Blatt_Gesammelt_2 256x256_11: 4376933860589935925
+      Blatt_Gesammelt_2 256x256_12: -6347261164498532254
+      Blatt_Gesammelt_2 256x256_13: -7085505141371399253
+      Blatt_Gesammelt_2 256x256_14: -7852363279000642512
+      Blatt_Gesammelt_2 256x256_15: 1309475462299278789
+      Blatt_Gesammelt_2 256x256_2: -8265200296865140364
+      Blatt_Gesammelt_2 256x256_3: -5515136642373473341
+      Blatt_Gesammelt_2 256x256_4: 5512026969399697612
+      Blatt_Gesammelt_2 256x256_5: -1425691451215760204
+      Blatt_Gesammelt_2 256x256_6: 3511147928547630683
+      Blatt_Gesammelt_2 256x256_7: -4787998174685922087
+      Blatt_Gesammelt_2 256x256_8: 1946111238553098672
+      Blatt_Gesammelt_2 256x256_9: -7110405657221599174
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
