@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalInput == 0)
         {
-            transform.localScale = new Vector3(-Mathf.Sign(horizontalInput), 1, 1) * 0.7f;
+            //transform.localScale = new Vector3(-Mathf.Sign(horizontalInput), 1, 1) * 0.7f;
         }
         else if(Mathf.Sign(body.linearVelocityX) != horizontalInput)
         {
