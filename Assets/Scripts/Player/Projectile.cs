@@ -4,14 +4,14 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
     private bool hit;
-    private BoxCollider2D boxCollider;
+    private CircleCollider2D cCollider;
     private float direction;
 
     private float lifeTime;
 
     private void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
+        cCollider = GetComponent<CircleCollider2D>();
     }
 
     private void FixedUpdate()
@@ -27,10 +27,21 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        Ghost ghost = other.GetComponent<Ghost>();
+        if(ghost != null)
+        {
+            ghost.HitByLight();
+
+            hit = true;
+            cCollider.enabled = false;
+            Deactivate();
+            return;
+        }
+
         hit = true;
-        boxCollider.enabled = false;
+        cCollider.enabled = false;
         Deactivate();
     }
 
@@ -40,7 +51,7 @@ public class Projectile : MonoBehaviour
         direction = _direction;
         gameObject.SetActive(true);
         hit = false;
-        boxCollider.enabled = true;
+        cCollider.enabled = true;
 
         float localScaleX = transform.localScale.x;
         if (Mathf.Sign(localScaleX) != _direction)
