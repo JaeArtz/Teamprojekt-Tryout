@@ -119,6 +119,9 @@ public class PlayerMovement : MonoBehaviour
         DrawBoxCast(transform.position, new Vector2(1f, 2f), 0f, Vector2.down, 0.1f, Color.red);
     }
 
+    /// <summary>
+    /// ACP: Achtung! -> Vector3 wird auch verwendet als Referenz für RespawnPoints
+    /// </summary>
     private void FixedUpdate()
     {
         _isGrounded = t_isGrounded = isGrounded();
