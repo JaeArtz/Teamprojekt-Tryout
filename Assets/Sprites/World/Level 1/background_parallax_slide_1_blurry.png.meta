@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 30203e0792e7a204cab52ed1aabfe93b
+guid: 67d5889a4c986bd43834371618c752fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5457573140973059233
-    second: Background_Forest_9216x1024_vage_foggy_2_0
+      213: 6061038575265325972
+    second: background_parallax_slide_1_blurry_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,29 +96,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background_Forest_9216x1024_vage_foggy_2_0
+      name: background_parallax_slide_1_blurry_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 9216
+        width: 1536
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f53869cc42ec244b0800000000000000
-      internalID: -5457573140973059233
+      spriteID: 49321a0b8722d1450800000000000000
+      internalID: 6061038575265325972
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Background_Forest_9216x1024_vage_foggy_2_0: -5457573140973059233
+      background_parallax_slide_1_blurry_0: 6061038575265325972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

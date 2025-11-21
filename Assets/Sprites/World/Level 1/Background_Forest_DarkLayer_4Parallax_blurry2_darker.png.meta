@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: ef3d37017f5d5754683470eb472f6c89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5935796646130870263
+    second: Background_Forest_DarkLayer_4Parallax_blurry2_darker_0
+  - first:
+      213: 985766708703612652
+    second: Background_Forest_DarkLayer_4Parallax_blurry2_darker_1
+  - first:
+      213: 5159828297486968893
+    second: Background_Forest_DarkLayer_4Parallax_blurry2_darker_2
+  - first:
+      213: -6153055917574801846
+    second: Background_Forest_DarkLayer_4Parallax_blurry2_darker_3
+  - first:
+      213: 6150999319306799634
+    second: Background_Forest_DarkLayer_4Parallax_blurry2_darker_4
+  - first:
+      213: 426734624687014935
+    second: Background_Forest_DarkLayer_4Parallax_blurry2_darker_5
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_4Parallax_blurry2_darker_0
+      rect:
+        serializedVersion: 2
+        x: 6674
+        y: 1014
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7e597b99f206250800000000000000
+      internalID: 5935796646130870263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_4Parallax_blurry2_darker_1
+      rect:
+        serializedVersion: 2
+        x: 6731
+        y: 1016
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee4fa749952ead00800000000000000
+      internalID: 985766708703612652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_4Parallax_blurry2_darker_2
+      rect:
+        serializedVersion: 2
+        x: 4602
+        y: 1002
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3828b5af746b9740800000000000000
+      internalID: 5159828297486968893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_4Parallax_blurry2_darker_3
+      rect:
+        serializedVersion: 2
+        x: 9202
+        y: 991
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46b6d54e34fb9aa0800000000000000
+      internalID: -6153055917574801846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_4Parallax_blurry2_darker_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 9216
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a83f0aa4dbc5550800000000000000
+      internalID: 6150999319306799634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Forest_DarkLayer_4Parallax_blurry2_darker_5
+      rect:
+        serializedVersion: 2
+        x: 4506
+        y: 952
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71444d551e01ce500800000000000000
+      internalID: 426734624687014935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Background_Forest_DarkLayer_4Parallax_blurry2_darker_0: 5935796646130870263
+      Background_Forest_DarkLayer_4Parallax_blurry2_darker_1: 985766708703612652
+      Background_Forest_DarkLayer_4Parallax_blurry2_darker_2: 5159828297486968893
+      Background_Forest_DarkLayer_4Parallax_blurry2_darker_3: -6153055917574801846
+      Background_Forest_DarkLayer_4Parallax_blurry2_darker_4: 6150999319306799634
+      Background_Forest_DarkLayer_4Parallax_blurry2_darker_5: 426734624687014935
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

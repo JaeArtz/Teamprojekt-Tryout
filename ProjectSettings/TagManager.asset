@@ -41,8 +41,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background_Far_Distance
+    uniqueID: 3077382573
+    locked: 0
+  - name: Background_Mid_Distance
+    uniqueID: 2922919179
+    locked: 0
+  - name: Background_direct_BG_Objects
+    uniqueID: 535374819
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground_direct_FG_Objects
+    uniqueID: 1857400313
+    locked: 0
+  - name: Foreground_Mid_Distance
+    uniqueID: 2504762235
+    locked: 0
+  - name: Foreground_very_close
+    uniqueID: 2780750401
     locked: 0
   m_RenderingLayers:
   - Default
