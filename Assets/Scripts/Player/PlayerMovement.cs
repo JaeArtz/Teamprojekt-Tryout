@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -7,10 +8,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float t_movementX;
     [SerializeField] private float t_movementY;
     [SerializeField] private float t_movementDirection;
-    [SerializeField] private float t_coyoteCounter;
+    [SerializeField] private float t_groundCoyoteCounter;
+    [SerializeField] private float t_wallCoyoteCounter;
     [SerializeField] private bool t_isGrounded;
     [SerializeField] private bool t_isOnWall;
+    [SerializeField] private int t_playerWallDirection;
     [SerializeField] private bool t_isWallJumping;
+    [SerializeField] private bool t_isDetached;
     [SerializeField] private bool t_isHoldingMoveBtn;
 
     [Header("Movement")]
@@ -23,8 +27,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerMaxWallJumpVelocityY;
 
     [Header("Coyote Time")]
-    [SerializeField] private float coyoteTime; //Time player can still jump after leaving ground
-    private float coyoteCounter; //how much time since leaving ground or object
+    [SerializeField] private float groundCoyoteTime; //Time player can still jump after leaving ground
+    [SerializeField] private float wallCoyoteTime; //Time player can still jump after leaving wall
+    private float groundCoyoteCounter; //how much time since leaving ground or object
+    private float wallCoyoteCounter; //how much time since leaving ground or object
 
     [Header("Multi Jump")]
     [SerializeField] private int extraJumps;
@@ -42,8 +48,8 @@ public class PlayerMovement : MonoBehaviour
     private bool _isOnWall;
     private bool _isWallJumping;
     private bool _isDetached;
-
-    private bool canDoubleJump = false; //Für Hasenseele
+    private int _playerWallDirection;
+    private bool canDoubleJump = false; // For Bunny-Soul
 
 
     private void Start()
@@ -62,38 +68,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // Flip Player Sprite when moving left/right
-        //float horizontalInput = Input.GetAxis("Horizontal");
-        //if (horizontalInput > 0.01)
-        //{
-        //    transform.localScale = Vector3.one * 0.7f;
-        //}
-        //else if (horizontalInput < -0.01)
-        //{
-        //    transform.localScale = new Vector3(-1, 1, 1) * 0.7f;
-        //}
-
-
-        // Wegen Hasenseele, sollte alre funktionalität aber nicht verändern!
+        // Because Bunny-Soul, shouldn't affect other functionalities!
         t_isHoldingMoveBtn = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(_isGrounded || coyoteCounter > 0)
+            if(_isGrounded || groundCoyoteCounter > 0)
             {
                 Jump();
                 jumpCounter = canDoubleJump ? extraJumps : 0; //Reset extra jumps after normal jump
             }
-            else if(canDoubleJump && jumpCounter > 0)
-            {
-                Jump();
-                jumpCounter = 0; // Use one jump for double jump
-            }
-            else if (_isOnWall && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+            else if (canWallJump())
             {
                 WallJump();
                 _isWallJumping = t_isWallJumping = true;
                 _isOnWall = false;
                 jumpCounter = canDoubleJump ? extraJumps : 0; //Reset extra jumps after walljump
+            }
+            else if(canDoubleJump && jumpCounter > 0)
+            {
+                Jump();
+                jumpCounter = 0; // Use one jump for double jump
             }
 
         }
@@ -116,11 +110,16 @@ public class PlayerMovement : MonoBehaviour
             body.linearVelocityY *= playerEarlyJumpAbortForceY;
         }
 
-        DrawBoxCast(transform.position, new Vector2(1f, 2f), 0f, Vector2.down, 0.1f, Color.red);
+        
+    }
+
+    private bool canWallJump()
+    {
+        return (_isOnWall || wallCoyoteCounter > 0) && (Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D));
     }
 
     /// <summary>
-    /// ACP: Achtung! -> Vector3 wird auch verwendet als Referenz für RespawnPoints
+    /// ACP: Attention! -> Vector3 is also being used as a reference for RespawnPoints
     /// </summary>
     private void FixedUpdate()
     {
@@ -133,52 +132,66 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isWallJumping && !_isOnWall && !_isDetached)
         {
-            // Spieler hat Wand verlassen nach Walljump
-            _isDetached = true;
+            // Player has left wall after walljump
+            t_isDetached = _isDetached = true;
         }
 
         if (_isOnWall && _isDetached)
         {
-            // Abbruch Walljump, wenn Wand ber�hrt wird
+            // Disrumption of walljump when touching wall again
             _isWallJumping = t_isWallJumping = false;
-            _isDetached = false;
+            t_isDetached = _isDetached = false;
             body.linearVelocityX = t_movementX = 0;
+            wallCoyoteCounter = wallCoyoteTime;
+            t_wallCoyoteCounter = wallCoyoteCounter;
         }
         else if (_isWallJumping)
         {
-            //logik f�r Bewegung a/d w�hrend walljump (ged�mpft)
+            //logic for movement a/d while walljumping (dampened)
             float difference = horizontalInput * playerMaxVelocityX - body.linearVelocityX;
             body.linearVelocityX = t_movementX = body.linearVelocityX + difference * Time.deltaTime * 1.5f;
+            if (wallCoyoteCounter > 0)
+            {
+                wallCoyoteCounter -= Time.deltaTime;
+                t_wallCoyoteCounter = wallCoyoteCounter;
+            }
         }
         else if (_isOnWall)
         {
-            // Kein seitlicher Input an der Wand
-            // body.linearVelocityX = t_movementX = 0;
+            // no velocityX while touching wall
+            // body.linearVelocityX = t_movementX = 0; // Not needed for now, add later when body movements on wall create unwanted effects
+            wallCoyoteCounter = wallCoyoteTime;
+            t_wallCoyoteCounter = wallCoyoteCounter;
         }
         else
         {
-            // Normale Bewegung
+            // Normal movement
             float targetSpeed = horizontalInput * playerMaxVelocityX;
             float speedDiff = targetSpeed - body.linearVelocityX;
             float accelRate = Mathf.Sign(body.linearVelocityX) == horizontalInput ? playerAccelerationX : playerDecelerationX;
             float movement = speedDiff * accelRate;
             body.linearVelocityX = t_movementX = Mathf.MoveTowards(body.linearVelocityX, targetSpeed, accelRate);
             //body.linearVelocityX = t_movementX = horizontalInput * playerMaxVelocityX;
+            if (wallCoyoteCounter > 0)
+            {
+                wallCoyoteCounter -= Time.deltaTime;
+                t_wallCoyoteCounter = wallCoyoteCounter;
+            }
         }
 
         if (_isGrounded)
         {
-            // Stelle alle Sprungvariablen zur�ck w�hrend auf dem Boden
+            // All jump variables back to default while grounded
             _isWallJumping = t_isWallJumping = false;
-            _isDetached = false;
-            coyoteCounter = t_coyoteCounter = coyoteTime;
+            t_isDetached = _isDetached = false;
+            groundCoyoteCounter = t_groundCoyoteCounter = groundCoyoteTime;
             jumpCounter = canDoubleJump ? extraJumps : 0;
         }
-        else
+        else if (groundCoyoteCounter > 0)
         {
-            // Wenn nicht auf dem Boden, verringere den Coyote Timer
-            coyoteCounter -= Time.deltaTime; //Start decrease counter
-            t_coyoteCounter = coyoteCounter;
+            // If not on ground, diminish Coyote Timer
+            groundCoyoteCounter -= Time.deltaTime; //Start decrease counter
+            t_groundCoyoteCounter = groundCoyoteCounter;
         }
 
         if (horizontalInput == 0)
@@ -196,6 +209,8 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(horizontalInput, 1, 1) * 0.7f;
         }
+
+        DrawBoxCast(transform.position, new Vector2(1f, 2f), 0f, Vector2.down, 0.1f, Color.red);
     }
 
     private void Jump()
@@ -204,23 +219,23 @@ public class PlayerMovement : MonoBehaviour
         {
             body.linearVelocityY = playerMaxVelocityY;
         }
-        else if (coyoteCounter > 0)
+        else if (groundCoyoteCounter > 0)
         {
             body.linearVelocityY = playerMaxVelocityY;
-            coyoteCounter = t_coyoteCounter = 0;
+            groundCoyoteCounter = t_groundCoyoteCounter = 0;
         }
         else if (jumpCounter > 0)
         {
             body.linearVelocityY = playerMaxVelocityY;
             jumpCounter--;
             _isWallJumping = false;
-            _isDetached = false;
+            t_isDetached = _isDetached = false;
         }
     }
 
     private void WallJump()
     {
-        Vector2 wallJumpDirection = new Vector2(-_horizontalInput * playerMaxWallJumpVelocityX, playerMaxWallJumpVelocityY); //Jump in opposite direction of wall
+        Vector2 wallJumpDirection = new Vector2(-_playerWallDirection * playerMaxWallJumpVelocityX, playerMaxWallJumpVelocityY); //Jump in opposite direction of wall
         body.linearVelocity = wallJumpDirection;
     }
 
@@ -233,7 +248,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool onWall()
     {
-        RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.1f, surfaceLayer);
+        RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.2f, surfaceLayer);
+        if (raycastHit2.collider)
+            t_playerWallDirection = _playerWallDirection = Math.Sign(_horizontalInput);
         return raycastHit2.collider;
     }
 
@@ -250,7 +267,7 @@ public class PlayerMovement : MonoBehaviour
             canDoubleJump = true;
         }
 
-        //weiter einfach hinzufügen
+        //just add more here if present
     }
 
     void DrawBoxCast(Vector2 origin, Vector2 size, float angle, Vector2 direction, float distance, Color color)
