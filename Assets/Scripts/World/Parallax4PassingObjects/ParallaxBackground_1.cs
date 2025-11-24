@@ -19,14 +19,14 @@ public class ParallaxBackground_1 : MonoBehaviour
     /*   BEWEGUNG IN BEIDE RICHTUNGEN, bewegt sich aber dann mit player
     void LateUpdate()
     {
-        Vector3 delta = cam.position - lastCamPos;
+        Vector3 delta = cam.position - lastCamPosition;
 
         // Nur in X (und optional Y) bewegen:
         transform.position += new Vector3(delta.x * parallaxMultiplier,
                                           delta.y * parallaxMultiplier,
                                           0f);
 
-        lastCamPos = cam.position;
+        lastCamPosition = cam.position;
     }
     */
 
