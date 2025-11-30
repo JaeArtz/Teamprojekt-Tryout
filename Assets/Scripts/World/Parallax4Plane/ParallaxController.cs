@@ -44,7 +44,7 @@ public class ParallaxController : MonoBehaviour
             }
         }
 
-        // sets speed of background in relation to distance (from cam)
+        // sets PulseFrequency of background in relation to distance (from cam)
         for (int i = 0; i < bgCount; i++)
         {
             backgroundSpeed[i] = 1 - (backgrounds[i].transform.position.z - cam.position.z) / farthestBack;
