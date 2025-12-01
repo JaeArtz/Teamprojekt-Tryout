@@ -43,6 +43,8 @@ public class Projectile : MonoBehaviour
         hit = true;
         cCollider.enabled = false;
         Deactivate();
+
+        Debug.Log("Projectile hit: " + other.name);
     }
 
     public void SetDirection(float _direction)
@@ -59,11 +61,21 @@ public class Projectile : MonoBehaviour
             localScaleX = -localScaleX;
         }
 
+
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
     private void Deactivate()
     {
-        gameObject.SetActive(false);
+        ProjectilePool.Instance.ReturnToPool(this);
     }
+
+    public void ResetProjectile()
+    {
+        hit = false;
+        lifeTime = 0f;
+        cCollider.enabled = true;
+    }
+
+
 }

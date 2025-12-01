@@ -7,14 +7,14 @@ public class SoulManager : MonoBehaviour
     public static SoulManager Instance { get; private set; }
 
     private const string PREF_KEY = "CollectedSouls";
-    public bool clearAllBool = false; // optional: clear all on start (for testing)
+    public bool resetSouls = false; // optional: clear all on start (for testing)
 
     // Collected IDs
     private HashSet<string> collected = new HashSet<string>();
 
     private void Awake()
     {   
-        if(clearAllBool == true){
+        if(resetSouls == true){
             ClearAll(); // optional: clear all on start (for testing)
         }
         

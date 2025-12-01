@@ -6,9 +6,7 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject[] lightBalls; 
     private float cooldownTimer = Mathf.Infinity;
-
     private bool lightShotUnlocked = false;
 
     private void Start()
@@ -36,23 +34,23 @@ public class PlayerAttack : MonoBehaviour
     private void Attack()
     {
         cooldownTimer = 0;
-        //Object pooling for Lightball
-        lightBalls[FindFireball()].transform.position = firePoint.position;
-        lightBalls[FindFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+
+        Projectile proj = ProjectilePool.Instance.GetProjectile();
+        proj.transform.position = firePoint.position;
+        proj.SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
-    private int FindFireball()
+
+    public void unlockShooting()
     {
-        for (int i = 0; i < lightBalls.Length; i++)
-        {
-            if (!lightBalls[i].activeInHierarchy)
-                return i;
-        }
-        return 0; //all are active
+        lightShotUnlocked = true;
     }
 
     public void OnSoulCollected(SoulData soul)
-    {   if(soul == null) return;
+    {
+        if(soul == null)
+            return;
+
         if(soul.soulID == "lightShotSoul")
         {
             lightShotUnlocked = true;

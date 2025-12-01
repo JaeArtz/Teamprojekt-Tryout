@@ -6,7 +6,7 @@ public class CollectableManager : MonoBehaviour
     public static CollectableManager Instance { get; private set; }
 
     private HashSet<int> collectedLeaves = new HashSet<int>();
-    public bool resetCollectedBoll = false; // zum testen immer resetten
+    public bool resetCollectables = false; // zum testen immer resetten
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class CollectableManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        if(resetCollectedBoll == true){
+        if(resetCollectables == true){
             ResetCollected(); // zum testen immer resetten
         }
         
