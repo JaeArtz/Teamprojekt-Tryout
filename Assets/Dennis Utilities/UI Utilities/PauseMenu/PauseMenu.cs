@@ -5,7 +5,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     [SerializeField]
     public GameObject pauseMenuUI;
-
+    public GameObject player;
     public GameObject hudUI;
     // Update is called once per frame
     void Update()
@@ -27,6 +27,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        player.SetActive(true);
         hudUI.SetActive(true);
         Time.timeScale = 1.0f;
         GameIsPaused = false;
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        player.SetActive(false);
         hudUI.SetActive(false);
         Time.timeScale = 0.0f;
         GameIsPaused = true;

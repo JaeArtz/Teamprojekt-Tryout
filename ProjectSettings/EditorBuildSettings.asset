@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Levels/Forest_Level1.unity
     guid: 48aaa190628ed224bacba1f4674448de
   - enabled: 1
+    path: Assets/Dennis Utilities/ThankYou/ThankYou.unity
+    guid: 71c7871daccdd524083ae32b811cff29
+  - enabled: 1
     path: Assets/Dennis Utilities/GameOver/Scenes/GameOverScreen.unity
     guid: ade1ee3cd0e3eee4eb15eceb444d5568
   - enabled: 1
