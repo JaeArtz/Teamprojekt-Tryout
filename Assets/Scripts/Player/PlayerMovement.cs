@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _isOnWall;
     private bool _isWallJumping;
     private bool _isDetached;
+    private bool _isWallSliding;
     private int _playerWallDirection;
     private bool canDoubleJump = false; // For Bunny-Soul
 
@@ -115,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canWallJump()
     {
-        return (_isOnWall || wallCoyoteCounter > 0) && (Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D));
+        return !_isWallJumping && (_isOnWall || wallCoyoteCounter > 0) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D));
     }
 
     /// <summary>
@@ -134,11 +135,12 @@ public class PlayerMovement : MonoBehaviour
         {
             // Player has left wall after walljump
             t_isDetached = _isDetached = true;
+            _isWallSliding = false;
         }
 
         if (_isOnWall && _isDetached)
         {
-            // Disrumption of walljump when touching wall again
+            // Disruption of walljump when touching wall again
             _isWallJumping = t_isWallJumping = false;
             t_isDetached = _isDetached = false;
             body.linearVelocityX = t_movementX = 0;
@@ -162,6 +164,19 @@ public class PlayerMovement : MonoBehaviour
             // body.linearVelocityX = t_movementX = 0; // Not needed for now, add later when body movements on wall create unwanted effects
             wallCoyoteCounter = wallCoyoteTime;
             t_wallCoyoteCounter = wallCoyoteCounter;
+            if (body.linearVelocityY < 0)
+                _isWallSliding = true;
+        }
+        else if (_isWallSliding)
+        {
+            float targetSpeed = horizontalInput * playerMaxVelocityX * 0.2f;
+            float speedDiff = targetSpeed - body.linearVelocityX;
+            float accelRate = Mathf.Sign(body.linearVelocityX) == horizontalInput ? playerAccelerationX : playerDecelerationX;
+            float movement = speedDiff * accelRate;
+            body.linearVelocityX = t_movementX = Mathf.MoveTowards(body.linearVelocityX, targetSpeed, accelRate);
+
+            if (!diminishWallCoyoteCounter())
+                _isWallSliding = false;
         }
         else
         {
@@ -172,11 +187,7 @@ public class PlayerMovement : MonoBehaviour
             float movement = speedDiff * accelRate;
             body.linearVelocityX = t_movementX = Mathf.MoveTowards(body.linearVelocityX, targetSpeed, accelRate);
             //body.linearVelocityX = t_movementX = horizontalInput * playerMaxVelocityX;
-            if (wallCoyoteCounter > 0)
-            {
-                wallCoyoteCounter -= Time.deltaTime;
-                t_wallCoyoteCounter = wallCoyoteCounter;
-            }
+            diminishWallCoyoteCounter();
         }
 
         if (_isGrounded)
@@ -184,6 +195,7 @@ public class PlayerMovement : MonoBehaviour
             // All jump variables back to default while grounded
             _isWallJumping = t_isWallJumping = false;
             t_isDetached = _isDetached = false;
+            _isWallSliding = false;
             groundCoyoteCounter = t_groundCoyoteCounter = groundCoyoteTime;
             jumpCounter = canDoubleJump ? extraJumps : 0;
         }
@@ -210,7 +222,20 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(horizontalInput, 1, 1) * 0.7f;
         }
 
-        DrawBoxCast(transform.position, new Vector2(1f, 2f), 0f, Vector2.down, 0.1f, Color.red);
+        // DrawBoxCast(transform.position, new Vector2(1f, 2f), 0f, Vector2.down, 0.1f, Color.red);
+    }
+
+    private bool diminishWallCoyoteCounter()
+    {
+        if (wallCoyoteCounter <= 0)
+        {
+            return false;
+        }
+
+        wallCoyoteCounter -= Time.deltaTime;
+        t_wallCoyoteCounter = wallCoyoteCounter;
+
+        return true;
     }
 
     private void Jump()
@@ -250,7 +275,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D raycastHit2 = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(Mathf.Sign(_horizontalInput), 0), 0.2f, surfaceLayer);
         if (raycastHit2.collider)
-            t_playerWallDirection = _playerWallDirection = Math.Sign(_horizontalInput);
+            t_playerWallDirection = _playerWallDirection = -Math.Sign(raycastHit2.normal.x);
         return raycastHit2.collider;
     }
 
