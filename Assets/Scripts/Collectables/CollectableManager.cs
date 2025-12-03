@@ -16,7 +16,8 @@ public class CollectableManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        
+        DontDestroyOnLoad(transform.root.gameObject);
 
         if(resetCollectables == true){
             ResetCollected(); // zum testen immer resetten

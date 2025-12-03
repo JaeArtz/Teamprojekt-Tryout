@@ -24,7 +24,8 @@ public class SoulManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+
+        DontDestroyOnLoad(transform.root.gameObject);
 
         Load();
     }
