@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject myLevelLoader;
     public static bool GameIsPaused = false;
     [SerializeField]
     public GameObject pauseMenuUI;
@@ -45,13 +46,13 @@ public class PauseMenu : MonoBehaviour
     public void ResetLevel()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void LoadMenu()
     {
         Time.timeScale = 1.0f;
         Debug.Log("Loading Menu...");
-        SceneManager.LoadScene("MainMenu");
+        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
 
     public void QuitGame()

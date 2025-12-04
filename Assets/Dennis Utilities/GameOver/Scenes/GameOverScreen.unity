@@ -599,6 +599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 525257162}
   flower: {fileID: 1838020499}
+  myLevelLoader: {fileID: 1469046598}
 --- !u!1001 &1018136769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -707,7 +708,6 @@ GameObject:
   - component: {fileID: 1270259542}
   - component: {fileID: 1270259541}
   - component: {fileID: 1270259540}
-  - component: {fileID: 1270259539}
   - component: {fileID: 1270259538}
   m_Layer: 5
   m_Name: Canvas
@@ -813,18 +813,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1270259539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270259537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f296d7da3b6f4c34fae91295a007ad14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1270259540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,6 +897,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1469046598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6597161064305967827, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
+  m_PrefabInstance: {fileID: 1813329480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1813329480
 PrefabInstance:
   m_ObjectHideFlags: 0

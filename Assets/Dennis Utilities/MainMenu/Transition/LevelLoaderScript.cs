@@ -15,6 +15,24 @@ public class LevelLoaderScript : MonoBehaviour
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void LoadScene(int levelIndex)
+    {
+        StartCoroutine(LoadLevel(levelIndex));
+    }
+
+    public void LoadScene(string levelName)
+    {
+        StartCoroutine(LoadLevel(levelName));
+    }
+    IEnumerator LoadLevel(string sceneName)
+    {
+        //Play animation
+        transition.SetTrigger("Start");
+        //wait
+        yield return new WaitForSeconds(transitionTime);
+        //Load Scene
+        SceneManager.LoadScene(sceneName);
+    }
     //TODO: Include this Method to others.
 
     IEnumerator LoadLevel(int levelIndex)

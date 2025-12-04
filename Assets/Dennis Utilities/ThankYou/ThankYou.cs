@@ -6,7 +6,7 @@ public class ThankYou : MonoBehaviour
 {
     private bool keyPressed = false;
     public TextFade text;
-
+    public GameObject myLevelLoader;
     void Start()
     {
         
@@ -21,7 +21,7 @@ public class ThankYou : MonoBehaviour
         //Allow Space Key Press to be done.
         if (Input.GetKey(KeyCode.Space) && !keyPressed)
         {
-            SceneManager.LoadScene("MainMenu");
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
         }
         
 

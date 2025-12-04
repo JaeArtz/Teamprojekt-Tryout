@@ -10,6 +10,8 @@ public class FadeAway : MonoBehaviour
     public TextFade text;
     public Image flower;
     private YieldInstruction fadeInstruction = new YieldInstruction();
+
+    public GameObject myLevelLoader;
     IEnumerator Start()
     {
         //Fade Away of the Player Character!
@@ -52,7 +54,7 @@ public class FadeAway : MonoBehaviour
         {
             if (Input.anyKey && !keyPressed)
             {
-                SceneManager.LoadScene("MainMenu");  
+                myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
             }
         }
         

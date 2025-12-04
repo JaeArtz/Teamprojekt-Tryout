@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject myLevelLoader;
     public void StartGame()
     {
         //load the game scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Game Scene
+        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Game Scene
     }
 
     public void LoadGame()

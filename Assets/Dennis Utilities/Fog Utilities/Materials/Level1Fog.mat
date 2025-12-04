@@ -45,7 +45,7 @@ Material:
     - _WorldSpace: 0
     m_Colors:
     - Vector2_87af546381de4621861b3b61053b0d85: {r: 0.3, g: 0, b: 0, a: 0}
-    - _FogColor: {r: 0.40392157, g: 0.3019608, b: 1, a: 0.1176471}
+    - _FogColor: {r: 0.40392157, g: 0.3019608, b: 1, a: 0.15686275}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3244418561245648821

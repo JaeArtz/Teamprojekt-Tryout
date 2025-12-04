@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    public float stunDuration = 2f;
+    #region Hit Cooldown
+    public const float cooldown = 1.0f;
+    public float lastCooldownTime = 0.0f;
+    bool cooldownActive = false;
+    #endregion
+
+    public float stunDuration = 4f;
     public Sprite normalSprite;
     public Sprite stunnedSprite;
 
@@ -26,6 +32,13 @@ public class Ghost : MonoBehaviour
 
             if (stunTimer <= 0f)
                 SetActive();
+        }
+
+        if (Time.time >= lastCooldownTime)
+        {
+            //add the current time to the damage delay
+            lastCooldownTime = Time.time + cooldown;
+            cooldownActive = false;       
         }
     }
 
@@ -51,17 +64,30 @@ public class Ghost : MonoBehaviour
         SetStunned();
     }
 
+    /// <summary>
+    /// Damages the Player when cooldown is Inactive by Collision and when the Ghost is not stunned.
+    /// </summary>
+    /// <param name="other">Collider which is colliding with the Ghost.</param>
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Geist ist harmlos?
         if (state == GhostState.Stunned) return;
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !cooldownActive)
         {
+            
             Debug.Log("Player nimmt Schaden!");
-            // oder: other.GetComponent<Player>().TakeDamage();
+            other.GetComponent<PlayerHealth>().TakeDamage(1);
+            cooldownActive = true;
         }
     }
+
+
+    
+
 }
+
+
+
 
 public enum GhostState { Active, Stunned }

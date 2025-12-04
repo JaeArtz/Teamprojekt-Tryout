@@ -5,8 +5,11 @@ using System;
 using UnityEngine.Assertions;
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject Player;
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
+
+    public GameObject myLevelLoader;
 
     public int maxHealth;
     public int currentHealth;
@@ -29,20 +32,21 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        /*if (Input.GetKeyDown(KeyCode.O))
         {
             TakeDamage(1);
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
             GainHealth(1);
-        }
+        }*/
 
         EvaluatePlayerIconAppearance();
 
         if(currentHealth == 0)
         {
-            SceneManager.LoadScene("GameOverScreen");
+            Player.SetActive(false);
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("GameOverScreen");
         }
     }
 
@@ -68,7 +72,7 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if((currentHealth - damage >= 0))
         {
