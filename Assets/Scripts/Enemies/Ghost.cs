@@ -3,11 +3,15 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     #region Hit Cooldown
-    public const float cooldown = 1.0f;
-    public float lastCooldownTime = 0.0f;
+    private const float cooldown = 1.0f;
+    private float lastCooldownTime = 0.0f;
     bool cooldownActive = false;
     bool isInEnemy = false;
     Collider2D collides;
+    #endregion
+
+    #region animation
+    private Vector3 startingPosition =new Vector3(232.0f,4.0f,0.0f);
     #endregion
 
     public float stunDuration = 4f;
@@ -21,6 +25,7 @@ public class Ghost : MonoBehaviour
     [SerializeField] private CircleCollider2D hitCollider;
     [SerializeField] private BoxCollider2D bodyCollider;
 
+    
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -28,6 +33,7 @@ public class Ghost : MonoBehaviour
 
     void Update()
     {
+        transform.position = startingPosition + Vector3.up * Mathf.Sin(Time.realtimeSinceStartup) * 0.5f;
         if (state == GhostState.Stunned)
         {
             stunTimer -= Time.deltaTime;
@@ -35,23 +41,29 @@ public class Ghost : MonoBehaviour
             if (stunTimer <= 0f)
                 SetActive();
         }
+        
+    }
 
-        if (Time.time >= lastCooldownTime)
+    void FixedUpdate()
+    {
+
+        if (Time.time - lastCooldownTime >=  cooldown)
         {
             //add the current time to the damage delay
-            lastCooldownTime = Time.time + cooldown;
-            cooldownActive = false;       
+            //lastCooldownTime = Time.time;
+            cooldownActive = false;
         }
-
-        if(isInEnemy)
+        if (isInEnemy)
         {
             if (!cooldownActive)
             {
+                cooldownActive = true;
+                lastCooldownTime = Time.time;
                 Debug.Log("Player nimmt Schaden!");
                 collides.GetComponent<PlayerHealth>().TakeDamage(1);
-                cooldownActive = true;
             }
         }
+        
     }
 
     private void SetStunned()
@@ -85,12 +97,13 @@ public class Ghost : MonoBehaviour
         // Geist ist harmlos?
         if (state == GhostState.Stunned)
         {
-            //isInEnemy = false;
+            isInEnemy = false;
             return;
         }
-        isInEnemy = true;
-        if (other.CompareTag("Player") && !cooldownActive)
+
+        if (other.CompareTag("Player") )
         {
+            isInEnemy = true;
             collides = other;
         }
     }
