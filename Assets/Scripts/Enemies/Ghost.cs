@@ -3,9 +3,11 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     #region Hit Cooldown
-    public const float cooldown = 1.0f;
+    public const float cooldown = 2.0f;
     public float lastCooldownTime = 0.0f;
     bool cooldownActive = false;
+    bool isInEnemy = false;
+    Collider2D collides;
     #endregion
 
     public float stunDuration = 4f;
@@ -40,6 +42,16 @@ public class Ghost : MonoBehaviour
             lastCooldownTime = Time.time + cooldown;
             cooldownActive = false;       
         }
+
+        if(isInEnemy)
+        {
+            if (!cooldownActive)
+            {
+                Debug.Log("Player nimmt Schaden!");
+                collides.GetComponent<PlayerHealth>().TakeDamage(1);
+                cooldownActive = true;
+            }
+        }
     }
 
     private void SetStunned()
@@ -71,19 +83,32 @@ public class Ghost : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Geist ist harmlos?
-        if (state == GhostState.Stunned) return;
-
+        if (state == GhostState.Stunned)
+        {
+            //isInEnemy = false;
+            return;
+        }
+        isInEnemy = true;
         if (other.CompareTag("Player") && !cooldownActive)
         {
-            
-            Debug.Log("Player nimmt Schaden!");
-            other.GetComponent<PlayerHealth>().TakeDamage(1);
-            cooldownActive = true;
+            collides = other;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        
+        isInEnemy = false;
+        // Geist ist harmlos?
+        if (state == GhostState.Stunned) 
+        {
+            //isInEnemy = false; 
+            return; 
         }
     }
 
 
-    
+
 
 }
 
