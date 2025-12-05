@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c050673b31006146a7524c09d9c9bb2
+guid: 80223161afdf2fc49b826f3425f4df84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4052636613967839656
-    second: background_blackplant_1_0
+      213: 1838984391314282050
+    second: background_parallax_slide_1_blurry2_final_repair_XXL_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_blackplant_1_0
+      name: background_parallax_slide_1_blurry2_final_repair_XXL_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
-        width: 301
-        height: 223
+        y: 0
+        width: 1528
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85e74bca87422c7c0800000000000000
-      internalID: -4052636613967839656
+      spriteID: 24696cf7f82658910800000000000000
+      internalID: 1838984391314282050
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background_blackplant_1_0: -4052636613967839656
+      background_parallax_slide_1_blurry2_final_repair_XXL_0: 1838984391314282050
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
