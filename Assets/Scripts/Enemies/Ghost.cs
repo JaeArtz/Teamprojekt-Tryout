@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ghost : MonoBehaviour
 {
     #region Hit Cooldown
-    public const float cooldown = 2.0f;
+    public const float cooldown = 1.0f;
     public float lastCooldownTime = 0.0f;
     bool cooldownActive = false;
     bool isInEnemy = false;
