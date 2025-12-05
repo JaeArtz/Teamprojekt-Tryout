@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public class BlattSammeln : MonoBehaviour
 {
     [SerializeField] private int leafID; // Jede Instanz bekommt eine eigene ID (0–19)
-    [SerializeField] private Sprite collectedSprite; 
+    [SerializeField] private Sprite collectedSprite;
+    [SerializeField]
+    private AudioClip audioClip;
 
 
     private SpriteRenderer spriteRenderer;
@@ -25,12 +28,23 @@ public class BlattSammeln : MonoBehaviour
         if (!isCollected && other.CompareTag("Player"))
         {
             CollectLeaf();
+            isCollected = true;
+            PlaySound();
+        }
+    }
+
+    private void PlaySound()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        Debug.Assert(audioSource);
+        if(audioSource && audioClip)
+        {
+            audioSource.PlayOneShot(audioClip);
         }
     }
 
     private void CollectLeaf()
     {
-        isCollected = true;
         CollectableManager.Instance.CollectLeaf(leafID);
 
         // Sprite ändern
