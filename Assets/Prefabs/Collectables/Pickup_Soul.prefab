@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7175237054347518928}
   - component: {fileID: 8917038320030930409}
   m_Layer: 0
-  m_Name: Pickup_Rabbit
+  m_Name: Pickup_Soul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

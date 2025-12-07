@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -52,6 +53,10 @@ public class PlayerMovement : MonoBehaviour
     private int _playerWallDirection;
     private bool canDoubleJump = false; // For Bunny-Soul
 
+    //Showcase vom Doublejump
+    private bool showcaseDoubleJump = false;
+    private bool inputLocked = false;
+
 
     private void Start()
     {
@@ -69,6 +74,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //lock input during showcase
+        if(inputLocked)
+        {
+            SetInmputLocked(inputLocked);
+            return;
+        }
+
+
         // Because Bunny-Soul, shouldn't affect other functionalities!
         t_isHoldingMoveBtn = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
         if (Input.GetKeyDown(KeyCode.Space))
@@ -111,7 +124,12 @@ public class PlayerMovement : MonoBehaviour
             body.linearVelocityY *= playerEarlyJumpAbortForceY;
         }
 
-        
+        //ShowcaseDoubleJump
+        if(showcaseDoubleJump && _isGrounded)
+        {
+            showcaseDoubleJump = false;
+            StartCoroutine(PlayDoubleJumpShowcase());
+        }
     }
 
     private bool canWallJump()
@@ -124,6 +142,13 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
+        //lock input during showcase
+        if(inputLocked)
+        {
+            SetInmputLocked(inputLocked);
+            return;
+        }
+
         _isGrounded = t_isGrounded = isGrounded();
         _isOnWall = t_isOnWall = onWall();
 
@@ -265,7 +290,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private bool isGrounded()
+    public bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, surfaceLayer);
         return raycastHit.collider;
@@ -290,6 +315,7 @@ public class PlayerMovement : MonoBehaviour
         if (soul.soulID == "rabbitSoul")
         {
             canDoubleJump = true;
+            showcaseDoubleJump = true;
         }
 
         //just add more here if present
@@ -332,6 +358,51 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawLine(topRight, topRightEnd, color);
         Debug.DrawLine(bottomLeft, bottomLeftEnd, color);
         Debug.DrawLine(bottomRight, bottomRightEnd, color);
+    }
+
+    private IEnumerator PlayDoubleJumpShowcase()
+    {
+        inputLocked = true;
+
+        while(!_isGrounded)
+        {
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.3f);
+        Jump();
+        yield return new WaitForSeconds(0.15f);
+        jumpCounter = 1;
+        Jump();
+
+        yield return new WaitForSeconds(2f);
+        inputLocked = false;
+    }
+
+    public void setVelXAndHInputToZero()
+    {
+        _horizontalInput = 0;
+        body.linearVelocityX = 0;
+    }
+
+    public void SetInmputLocked(bool locked)
+    {
+        inputLocked = locked;
+        if(locked)
+        {
+            _horizontalInput = 0;
+            body.linearVelocityX = 0;
+        }
+    }
+
+    public bool IsInputLocked()
+    {
+        return inputLocked;
+    }
+
+    public void ResetHorizontalInputAndVelocity()
+    {
+        _horizontalInput = 0;
+        body.linearVelocityX = 0;
     }
 
 }
