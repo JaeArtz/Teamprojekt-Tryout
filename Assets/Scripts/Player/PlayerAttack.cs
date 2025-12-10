@@ -4,9 +4,18 @@ using System.Collections;
 public class PlayerAttack : MonoBehaviour
 {
     private PlayerMovement playerMovement;
+    private Rigidbody2D rb;
 
+    [Header("Attack Settings")]
     [SerializeField] private float attackCooldown = 0.7f;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private bool allowAttackWhileWallSliding = false; // Standard: nur am Boden
+    
+    [Header("Recoil Settings")]
+    [SerializeField] private bool enableRecoil = false;
+    [SerializeField] private float recoilForceX = 2f;
+    [SerializeField] private float recoilForceY = 1f;
+    
     private float lastAttackTime = -Mathf.Infinity;
     private bool lightShotUnlocked = false;
 
@@ -24,6 +33,7 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -36,10 +46,10 @@ public class PlayerAttack : MonoBehaviour
         }
 
         // Showcase triggern
-        if (showcaseLightShot && playerMovement.isGrounded())
+        if (showcaseLightShot && playerMovement.IsGrounded())
         {
             showcaseLightShot = false;
-            StartCoroutine(lightShotShowcase());
+            StartCoroutine(LightShotShowcase());
         }
 
         if (lightShotUnlocked && Input.GetMouseButtonDown(0) && CanAttack())
@@ -48,10 +58,23 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-
     private bool CanAttack()
     {
-        return (Time.time - lastAttackTime) >= attackCooldown && playerMovement.canAttack();
+        // Prüfe Cooldown
+        if ((Time.time - lastAttackTime) < attackCooldown)
+            return false;
+        
+        // Prüfe ob Spieler angreifen kann
+        if (!allowAttackWhileWallSliding)
+        {
+            // Original-Verhalten: Nur am Boden
+            return playerMovement.CanAttack();
+        }
+        else
+        {
+            // Erweitertes Verhalten: Am Boden ODER am Wall Slide
+            return playerMovement.CanAttack(true); // Übergibt allowWhileWallSliding = true
+        }
     }
 
     private void Attack()
@@ -61,16 +84,33 @@ public class PlayerAttack : MonoBehaviour
         Projectile proj = ProjectilePool.Instance.GetProjectile();
         if (proj == null)
         {
-            // Pool leer oder Fehler — präzise Logmeldung hilft beim Debuggen
             Debug.LogWarning("ProjectilePool returned null — Poolgröße/Reset prüfen!");
             return;
         }
 
         proj.transform.position = firePoint.position;
-        proj.SetDirection(Mathf.Sign(transform.localScale.x));
+        
+        // Richtung basierend auf Spieler-Rotation
+        float direction = Mathf.Sign(transform.localScale.x);
+        proj.SetDirection(direction);
+        
+        // Optional: Rückstoß beim Schießen
+        if (enableRecoil)
+        {
+            ApplyRecoil(direction);
+        }
     }
 
-    public void unlockShooting()
+    private void ApplyRecoil(float direction)
+    {
+        if (rb != null)
+        {
+            Vector2 recoilForce = new Vector2(-direction * recoilForceX, recoilForceY);
+            rb.AddForce(recoilForce, ForceMode2D.Impulse);
+        }
+    }
+
+    public void UnlockShooting()
     {
         lightShotUnlocked = true;
     }
@@ -87,14 +127,26 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    private IEnumerator lightShotShowcase()
+    private IEnumerator LightShotShowcase()
     {
-        playerMovement.SetInmputLocked(true);
+        playerMovement.SetInputLocked(true);
 
         yield return new WaitForSeconds(0.3f);
         Attack();
         yield return new WaitForSeconds(2f);
 
-        playerMovement.SetInmputLocked(false);
+        playerMovement.SetInputLocked(false);
+    }
+
+    // Neue Methode für erweiterte Angriffsbedingungen
+    public bool CanAttackInCurrentState()
+    {
+        if (!lightShotUnlocked)
+            return false;
+            
+        if (playerMovement.IsInputLocked())
+            return false;
+            
+        return CanAttack();
     }
 }
