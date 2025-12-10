@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallJumpCooldown = 0.2f;
     private float wallJumpCooldownTimer;
     
-    // NEU: Erlaubt Luftsteuerung während Wall-Jump
+    // Erlaubt Luftsteuerung während Wall-Jump
     [SerializeField] private float wallJumpAirControlDelay = 0.1f;  // Nach dieser Zeit hat man wieder volle Kontrolle
     private float wallJumpAirControlTimer;
 
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _isDetached;
     private bool _isWallSliding;
     private int _playerWallDirection;
-    private int _lastWallDirection;  // NEU: Merkt sich die letzte Wand-Richtung
+    private int _lastWallDirection;  // Merkt sich die letzte Wand-Richtung
     private bool canDoubleJump = false;
 
     // ===== SYSTEMVARIABLEN =====
@@ -152,9 +152,6 @@ public class PlayerMovement : MonoBehaviour
     // Prüft, ob ein Wall-Jump möglich ist
     private bool CanWallJump()
     {
-        // WICHTIG: Wir brauchen KEINE horizontale Eingabe mehr!
-        // Der Sprung geht automatisch von der Wand weg
-        
         return !_isWallJumping && (_isOnWall || wallCoyoteCounter > 0) && wallJumpCooldownTimer <= 0;
     }
 
@@ -205,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
         {
             wallJumpTimer -= Time.fixedDeltaTime;
             
-            // NEU: Nach kurzer Zeit erlauben wir Luftsteuerung für smooth Kontrolle
+            // Nach kurzer Zeit erlauben wir Luftsteuerung für smooth Kontrolle
             if (wallJumpAirControlTimer <= 0)
             {
                 // Spieler hat wieder teilweise Kontrolle (50% der normalen Beschleunigung)
@@ -252,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
                 _isWallSliding = false;
                 t_isOnWall = false;
                 
-                // WICHTIG: Wand-Coyote-Time starten wenn wir loslassen
+                // Wand-Coyote-Time starten wenn wir loslassen
                 if (wallCoyoteCounter <= 0)
                 {
                     wallCoyoteCounter = wallCoyoteTime;
@@ -339,7 +336,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallJump()
     {
-        // WICHTIG: Sprungrichtung bestimmen
+        // Sprungrichtung bestimmen
         // Wenn wir an einer Wand sind, nutzen wir deren Richtung
         // Wenn wir in Coyote-Time sind, nutzen wir die letzte Wand-Richtung
         int wallDir = _isOnWall ? _playerWallDirection : _lastWallDirection;
@@ -347,7 +344,7 @@ public class PlayerMovement : MonoBehaviour
         // Sprung geht IMMER von der Wand weg
         float jumpDirX = -wallDir;
 
-        // WICHTIG: Horizontaler Impuls etwas stärker für besseres Gefühl
+        // Horizontaler Impuls etwas stärker für besseres Gefühl
         Vector2 jumpForce = new Vector2(
             jumpDirX * playerMaxWallJumpVelocityX, 
             playerMaxWallJumpVelocityY
@@ -409,7 +406,7 @@ public class PlayerMovement : MonoBehaviour
 
         float direction = Mathf.Sign(_horizontalInput);
 
-        // WICHTIG: Ohne Input KEINE Wand-Erkennung - sofort raus!
+        // Ohne Input KEINE Wand-Erkennung - sofort raus!
         if (Mathf.Abs(direction) < 0.1f)
             return false;
 
