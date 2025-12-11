@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        Debug.Assert(boxCollider != null, "BoxCollider2D component missing from this gameobject");
     }
 
     private void Update()
