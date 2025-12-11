@@ -41,10 +41,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1430167107289389487}
   - component: {fileID: 7432266993596707199}
-  - component: {fileID: 4176673074730419064}
   - component: {fileID: 1180920997515958489}
   - component: {fileID: 8788218873401257925}
   - component: {fileID: 6220875613963771050}
+  - component: {fileID: 627553249777499610}
+  - component: {fileID: 8406900078179165746}
+  - component: {fileID: 8223968709026634628}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -60,9 +62,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562932011958070637}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.99, y: -1.65, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.4, y: 11.05, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1593036191255314844}
@@ -115,19 +117,143 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 5c67c211b7e7f694a8bcc68f086ce0d5, type: 3}
+  m_Sprite: {fileID: -7758019984909234519, guid: 52434ea8833a4fc42b95604ca77be8c5, type: 3}
   m_Color: {r: 0, g: 0.67739433, b: 0.6981132, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.75, y: 1}
+  m_Size: {x: 0.44, y: 0.63}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4176673074730419064
-BoxCollider2D:
+--- !u!50 &1180920997515958489
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1.0177995
+  m_LinearDamping: 0.1
+  m_AngularDamping: 0.05
+  m_GravityScale: 3
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &8788218873401257925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eeb6b77121e5440b38ff917a11015a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  t_movementX: 10
+  t_movementY: 10
+  t_movementDirection: 0
+  t_groundCoyoteCounter: 0
+  t_wallCoyoteCounter: 0
+  t_isGrounded: 0
+  t_isOnWall: 0
+  t_playerWallDirection: 0
+  t_isWallJumping: 0
+  t_isDetached: 0
+  t_isHoldingMoveBtn: 0
+  playerMaxVelocityX: 10
+  playerMaxVelocityY: 12
+  playerAccelerationX: 50
+  playerDecelerationX: 60
+  playerEarlyJumpAbortForceY: 0.5
+  playerMaxWallJumpVelocityX: 10
+  playerMaxWallJumpVelocityY: 8
+  wallSlideSpeed: -3
+  wallJumpDuration: 0.15
+  wallJumpCooldown: 0.2
+  wallJumpAirControlDelay: 0.2
+  groundCoyoteTime: 0.1
+  wallCoyoteTime: 0.15
+  extraJumps: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  wallCheckDistance: 0.1
+  groundCheckDistance: 0.1
+  wallCheckSize: {x: 0.2, y: 1}
+--- !u!114 &6220875613963771050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b35d14bb20d80a49823307796d5bb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  attackCooldown: 0.7
+  firePoint: {fileID: 1593036191255314844}
+  allowAttackWhileWallSliding: 0
+  enableRecoil: 0
+  recoilForceX: 2
+  recoilForceY: 1
+--- !u!114 &627553249777499610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d78001b9dca4fadb4b4d8fd2e177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+--- !u!114 &8406900078179165746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da4b920f6380754d8aa818332c853cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  Player: {fileID: 562932011958070637}
+  myLevelLoader: {fileID: 0}
+  maxHealth: 6
+  currentHealth: 6
+  playerIcon: {fileID: 0}
+  FullLifeIcon: {fileID: 21300000, guid: 7ac2d9863acd8b24daf5470e36fe144c, type: 3}
+  HalfLifeIcon: {fileID: 21300000, guid: 8365d9f07804b054dadb7fca768a2a37, type: 3}
+  LowLifeIcon: {fileID: 21300000, guid: e34f2ed0c38d08d44836e3630b2bd8b4, type: 3}
+  AlmostDeadIcon: {fileID: 21300000, guid: 0f6d3599c84e6794daf52528af47608d, type: 3}
+--- !u!60 &8223968709026634628
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,99 +286,20 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.016496688, y: -0.040450454}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 2}
-    newSize: {x: 0.75, y: 1}
+    oldSize: {x: 1.4375, y: 2}
+    newSize: {x: 0.44, y: 0.63}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1586988, y: 1.7926505}
-  m_EdgeRadius: 0.02
---- !u!50 &1180920997515958489
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562932011958070637}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1.0177995
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 3
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!114 &8788218873401257925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562932011958070637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30eeb6b77121e5440b38ff917a11015a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  t_movementX: 0
-  t_movementY: 0
-  t_movementDirection: 0
-  t_coyoteCounter: 0
-  t_isGrounded: 0
-  t_isOnWall: 0
-  t_isWallJumping: 0
-  t_isHoldingMoveBtn: 0
-  playerMaxVelocityX: 10
-  playerMaxVelocityY: 10
-  playerAccelerationX: 3
-  playerDecelerationX: 5
-  playerEarlyJumpAbortForceY: 0.5
-  playerMaxWallJumpVelocityX: 15
-  playerMaxWallJumpVelocityY: 7.5
-  coyoteTime: 0.1
-  extraJumps: 1
-  surfaceLayer:
-    serializedVersion: 2
-    m_Bits: 256
---- !u!114 &6220875613963771050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562932011958070637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b35d14bb20d80a49823307796d5bb5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  attackCooldown: 1
-  firePoint: {fileID: 1593036191255314844}
-  lightBalls:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.7, y: 0}
+      - {x: 0, y: -1}
+      - {x: -0.7, y: 0}
+  m_UseDelaunayMesh: 0
