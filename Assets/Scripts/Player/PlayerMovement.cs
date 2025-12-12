@@ -5,7 +5,6 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // ===== TRACKER FÜR DEBUG/INSPECTOR ANZEIGE =====
     [Header("Tracker")]
     [SerializeField] private float t_movementX;
     [SerializeField] private float t_movementY;
@@ -19,92 +18,97 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool t_isDetached;
     [SerializeField] private bool t_isHoldingMoveBtn;
 
-    // ===== BEWEGUNGSPARAMETER =====
     [Header("Movement")]
     [SerializeField] private float playerMaxVelocityX = 10f;
     [SerializeField] private float playerMaxVelocityY = 20f;
     [SerializeField] private float playerAccelerationX = 50f;
     [SerializeField] private float playerDecelerationX = 60f;
     [SerializeField] private float playerEarlyJumpAbortForceY = 0.5f;
-    [SerializeField] private float playerMaxWallJumpVelocityX = 12f;
-    [SerializeField] private float playerMaxWallJumpVelocityY = 18f;
+    [SerializeField] private float playerMaxWallJumpVelocityX = 18f;
+    [SerializeField] private float playerMaxWallJumpVelocityY = 12f;
     [SerializeField] private float wallSlideSpeed = -3f;
 
-    // ===== WALL-JUMP TIMER =====
     [Header("Wall Jump Timer")]
-    [SerializeField] private float wallJumpDuration = 0.15f;    // Verringert für mehr Kontrolle
+    [SerializeField] private float wallJumpDuration = 0.15f;
     private float wallJumpTimer;
     
-    // Cooldown nach Wall-Jump
     [SerializeField] private float wallJumpCooldown = 0.2f;
     private float wallJumpCooldownTimer;
     
-    // Erlaubt Luftsteuerung während Wall-Jump
-    [SerializeField] private float wallJumpAirControlDelay = 0.1f;  // Nach dieser Zeit hat man wieder volle Kontrolle
+    [SerializeField] private float wallJumpAirControlDelay = 0.1f;
     private float wallJumpAirControlTimer;
 
-    // ===== COYOTE TIME =====
     [Header("Coyote Time")]
     [SerializeField] private float groundCoyoteTime = 0.1f;
-    [SerializeField] private float wallCoyoteTime = 0.15f;    // Etwas erhöht für besseres Gefühl
+    [SerializeField] private float wallCoyoteTime = 0.15f;
     private float groundCoyoteCounter;
     private float wallCoyoteCounter;
 
-    // ===== MEHRFACHSPRUNG =====
     [Header("Multi Jump")]
     [SerializeField] private int extraJumps = 1;
     private int jumpCounter;
 
-    // ===== PHYSICS LAYER =====
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
 
-    // ===== COLLIDER EINSTELLUNGEN =====
     [Header("Collider Settings")]
-    [SerializeField] private float wallCheckDistance = 0.1f;
-    [SerializeField] private float groundCheckDistance = 0.1f;
-    [SerializeField] private Vector2 wallCheckSize = new Vector2(0.2f, 1f);
+    [SerializeField] private float wallCheckDistance = 0.2f;   
+    [SerializeField] private float groundCheckDistance = 0.2f;
+    [SerializeField] private Vector2 wallCheckSize = new Vector2(0.2f, 0.8f);
+    [SerializeField] private BoxCollider2D boxCollider;
 
-    // ===== REFERENZEN =====
     private Rigidbody2D body;
-    private PolygonCollider2D polyCollider;
-    private Vector2[] colliderPoints;
 
-    // ===== EINGABE =====
     private float _horizontalInput;
 
-    // ===== SPIELERZUSTÄNDE =====
     private bool _isGrounded;
     private bool _isOnWall;
     private bool _isWallJumping;
     private bool _isDetached;
     private bool _isWallSliding;
     private int _playerWallDirection;
-    private int _lastWallDirection;  // Merkt sich die letzte Wand-Richtung
+    private int _lastWallDirection;
     private bool canDoubleJump = false;
 
-    // ===== SYSTEMVARIABLEN =====
+    // SYSTEMVARIABLEN
     private bool showcaseDoubleJump = false;
     private bool inputLocked = false;
 
-    // ===== INITIALISIERUNG =====
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        polyCollider = GetComponent<PolygonCollider2D>();
+        
+        // Versuche Collider zu finden
+        if (boxCollider == null)
+        {
+            // 1. Erst am eigenen GameObject suchen
+            boxCollider = GetComponent<BoxCollider2D>();
+            
+            // 2. Falls nicht gefunden, in Children suchen
+            if (boxCollider == null)
+            {
+                boxCollider = GetComponentInChildren<BoxCollider2D>();
+                
+                if (boxCollider != null)
+                {
+                    Debug.Log($"BoxCollider2D gefunden in Child: {boxCollider.gameObject.name}");
+                }
+            }
+        }
+        
+        if (boxCollider == null)
+        {
+            Debug.LogError("BoxCollider2D nicht gefunden!");
+        }
     }
 
     private void Start()
     {
-        if (polyCollider != null)
-            colliderPoints = polyCollider.points;
-
         if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("rabbitSoul"))
             canDoubleJump = true;
     }
 
-    // ===== UPDATE (EINGABE-HANDLING) =====
     private void Update()
     {
         if (inputLocked)
@@ -118,13 +122,13 @@ public class PlayerMovement : MonoBehaviour
         // SPRUNG-LOGIK
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // 1. Boden-Sprung (inkl. Coyote-Time)
+            // 1. Boden-Sprung
             if (_isGrounded || groundCoyoteCounter > 0)
             {
                 Jump();
                 jumpCounter = canDoubleJump ? extraJumps : 0;
             }
-            // 2. Wall-Jump (NUR wenn Cooldown abgelaufen und an Wand/Coyote-Time)
+            // 2. Wall-Jump
             else if (CanWallJump())
             {
                 WallJump();
@@ -149,13 +153,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Prüft, ob ein Wall-Jump möglich ist
     private bool CanWallJump()
     {
         return !_isWallJumping && (_isOnWall || wallCoyoteCounter > 0) && wallJumpCooldownTimer <= 0;
     }
 
-    // ===== FIXEDUPDATE (PHYSIK-HANDLING) =====
     private void FixedUpdate()
     {
         if (inputLocked)
@@ -174,14 +176,12 @@ public class PlayerMovement : MonoBehaviour
         // ZUSTANDS-ÜBERPRÜFUNG
         _isGrounded = t_isGrounded = CheckIsGrounded();
         
-        // Wand-Check (IMMER durchführen, nicht nur im Cooldown!)
         bool wasOnWall = _isOnWall;
         
         if (wallJumpCooldownTimer <= 0)
         {
             _isOnWall = t_isOnWall = CheckOnWall();
             
-            // Letzte Wand-Richtung merken, wenn wir an einer Wand sind
             if (_isOnWall)
                 _lastWallDirection = _playerWallDirection;
         }
@@ -192,22 +192,17 @@ public class PlayerMovement : MonoBehaviour
         
         t_movementY = body.linearVelocity.y;
 
-        // EINGABE LESEN
         float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxisRaw("Horizontal");
-
-        // === BEWEGUNGS-ZUSTANDSMASCHINE ===
         
         // WALL-JUMP LOGIK (Priorität 1)
         if (_isWallJumping)
         {
             wallJumpTimer -= Time.fixedDeltaTime;
             
-            // Nach kurzer Zeit erlauben wir Luftsteuerung für smooth Kontrolle
             if (wallJumpAirControlTimer <= 0)
             {
-                // Spieler hat wieder teilweise Kontrolle (50% der normalen Beschleunigung)
                 float targetSpeed = horizontalInput * playerMaxVelocityX;
-                float accelRate = playerAccelerationX * 0.5f; // Reduzierte Kontrolle während Wall-Jump
+                float accelRate = playerAccelerationX * 0.5f;
                 float speedDiff = targetSpeed - body.linearVelocity.x;
                 float movement = speedDiff * accelRate * Time.fixedDeltaTime;
                 
@@ -227,29 +222,23 @@ public class PlayerMovement : MonoBehaviour
         // WANDGLEITEN (Priorität 2)
         else if (_isOnWall && !_isGrounded && Mathf.Abs(horizontalInput) > 0.1f)
         {
-            // NUR an Wand gleiten, wenn AKTIV in Richtung der Wand gedrückt wird
             if (Mathf.Sign(horizontalInput) == _playerWallDirection) 
             {
                 _isWallSliding = true;
 
-                // Vertikale Geschwindigkeit begrenzen
                 if (body.linearVelocity.y < wallSlideSpeed)
                     body.linearVelocity = new Vector2(body.linearVelocity.x, wallSlideSpeed);
 
-                // Wand-Coyote-Time zurücksetzen
                 wallCoyoteCounter = wallCoyoteTime;
                 t_wallCoyoteCounter = wallCoyoteCounter;
                 
-                // Horizontale Geschwindigkeit auf 0 (an Wand kleben)
                 body.linearVelocity = new Vector2(0, body.linearVelocity.y);
             }
             else
             {
-                // Spieler drückt weg von der Wand -> normale Bewegung
                 _isWallSliding = false;
                 t_isOnWall = false;
                 
-                // Wand-Coyote-Time starten wenn wir loslassen
                 if (wallCoyoteCounter <= 0)
                 {
                     wallCoyoteCounter = wallCoyoteTime;
@@ -263,7 +252,6 @@ public class PlayerMovement : MonoBehaviour
         // NORMALE BEWEGUNG (Priorität 3)
         else
         {
-            // Wand-Coyote-Time verringern
             if (!_isOnWall && wallCoyoteCounter > 0)
             {
                 wallCoyoteCounter -= Time.fixedDeltaTime;
@@ -286,7 +274,6 @@ public class PlayerMovement : MonoBehaviour
             jumpCounter = canDoubleJump ? extraJumps : 0;
             wallCoyoteCounter = t_wallCoyoteCounter = 0;
             
-            // Cooldown zurücksetzen
             wallJumpCooldownTimer = 0;
             wallJumpAirControlTimer = 0;
         }
@@ -304,7 +291,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Hilfsmethode für normale Bewegung
     private void ApplyNormalMovement(float horizontalInput)
     {
         float targetSpeed = horizontalInput * playerMaxVelocityX;
@@ -318,7 +304,7 @@ public class PlayerMovement : MonoBehaviour
         );
     }
 
-    // ===== SPRUNGFUNKTIONEN =====
+    // SPRUNGFUNKTIONEN
 
     private void Jump()
     {
@@ -336,29 +322,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void WallJump()
     {
-        // Sprungrichtung bestimmen
-        // Wenn wir an einer Wand sind, nutzen wir deren Richtung
-        // Wenn wir in Coyote-Time sind, nutzen wir die letzte Wand-Richtung
         int wallDir = _isOnWall ? _playerWallDirection : _lastWallDirection;
-        
-        // Sprung geht IMMER von der Wand weg
         float jumpDirX = -wallDir;
 
-        // Horizontaler Impuls etwas stärker für besseres Gefühl
         Vector2 jumpForce = new Vector2(
             jumpDirX * playerMaxWallJumpVelocityX, 
             playerMaxWallJumpVelocityY
         );
         body.linearVelocity = jumpForce;
 
-        // Zustände setzen
         _isWallJumping = t_isWallJumping = true;
         wallJumpTimer = wallJumpDuration;
-        
-        // Timer für Luftsteuerung starten
         wallJumpAirControlTimer = wallJumpAirControlDelay;
-        
-        // Cooldown starten (verhindert Wall-Climbing)
         wallJumpCooldownTimer = wallJumpCooldown;
         
         _isOnWall = false;
@@ -368,70 +343,73 @@ public class PlayerMovement : MonoBehaviour
         jumpCounter = canDoubleJump ? extraJumps : 0;
     }
 
-    // ===== KOLLISIONSERKENNUNG =====
+    // KOLLISIONSERKENNUNG 
 
     private bool CheckIsGrounded()
     {
-        if (polyCollider == null || colliderPoints == null) return false;
+        if (boxCollider == null) return false;
 
-        float minY = float.MaxValue;
-        foreach (Vector2 point in colliderPoints)
-        {
-            Vector2 worldPoint = transform.TransformPoint(point);
-            if (worldPoint.y < minY) minY = worldPoint.y;
-        }
-
-        Vector2 castOrigin = new Vector2(transform.position.x, minY + 0.01f);
-        float castWidth = polyCollider.bounds.size.x * 0.8f;
-
-        RaycastHit2D hit = Physics2D.BoxCast(
-            castOrigin, 
-            new Vector2(castWidth, 0.05f),
-            0f, 
-            Vector2.down, 
-            groundCheckDistance, 
-            groundLayer
+        // Bei 45° rotiertem Collider: Die unterste Spitze des Diamanten finden
+        Vector2 bottomPoint = new Vector2(
+            boxCollider.bounds.center.x,
+            boxCollider.bounds.min.y  // Unterster Punkt des Bounds
         );
 
-        Debug.DrawRay(castOrigin, Vector2.down * groundCheckDistance, hit.collider ? Color.green : Color.red);
+        // Mehrere Raycasts für bessere Erkennung
+        float raySpacing = 0.15f;  // Abstand zwischen den Rays
+        bool isGrounded = false;
 
-        return hit.collider != null;
+        // 3 Raycasts: Mitte, Links, Rechts
+        for (int i = -1; i <= 1; i++)
+        {
+            Vector2 rayOrigin = bottomPoint + Vector2.right * (i * raySpacing);
+            
+            RaycastHit2D hit = Physics2D.Raycast(
+                rayOrigin,
+                Vector2.down,
+                groundCheckDistance,
+                groundLayer
+            );
+
+            if (hit.collider != null)
+            {
+                isGrounded = true;
+            }
+        }
+
+        return isGrounded;
     }
 
     private bool CheckOnWall()
     {
-        // Keine Wand-Erkennung wenn am Boden oder im Cooldown
-        if (polyCollider == null || _isGrounded || wallJumpCooldownTimer > 0) 
+        if (boxCollider == null || _isGrounded || wallJumpCooldownTimer > 0) 
             return false;
 
         float direction = Mathf.Sign(_horizontalInput);
 
-        // Ohne Input KEINE Wand-Erkennung - sofort raus!
         if (Mathf.Abs(direction) < 0.1f)
             return false;
 
-        Vector2 checkPos = polyCollider.bounds.center;
-        checkPos.x += (polyCollider.bounds.extents.x + wallCheckDistance) * direction;
+        // Prüfposition an der Seite des rotierten Colliders
+        Vector2 checkPos = boxCollider.bounds.center;
+        float checkDistance = boxCollider.bounds.extents.x + wallCheckDistance;
+        checkPos.x += checkDistance * direction;
 
         // BoxCast für Wand-Erkennung
+        Vector2 castSize = new Vector2(wallCheckSize.x, boxCollider.bounds.size.y * 0.8f);
+        
         RaycastHit2D hit = Physics2D.BoxCast(
-            checkPos, 
-            new Vector2(wallCheckSize.x, polyCollider.bounds.size.y * 0.9f),
-            0f, 
-            Vector2.zero, 
-            0f, 
-            wallLayer
-        );
+            checkPos, castSize, 0f, Vector2.zero, 0f, wallLayer);
 
-        // Fallback: Raycasts
+        // Fallback: Multiple Raycasts für bessere Erkennung
         if (!hit.collider)
         {
-            Vector2 top = checkPos + Vector2.up * (polyCollider.bounds.extents.y * 0.7f);
-            Vector2 bottom = checkPos + Vector2.down * (polyCollider.bounds.extents.y * 0.7f);
+            Vector2 top = checkPos + Vector2.up * (boxCollider.bounds.extents.y * 0.6f);
+            Vector2 bottom = checkPos + Vector2.down * (boxCollider.bounds.extents.y * 0.6f);
 
-            RaycastHit2D hitTop = Physics2D.Raycast(top, Vector2.right * direction, 0.05f, wallLayer);
-            RaycastHit2D hitMiddle = Physics2D.Raycast(checkPos, Vector2.right * direction, 0.05f, wallLayer);
-            RaycastHit2D hitBottom = Physics2D.Raycast(bottom, Vector2.right * direction, 0.05f, wallLayer);
+            RaycastHit2D hitTop = Physics2D.Raycast(top, Vector2.right * direction, wallCheckDistance, wallLayer);
+            RaycastHit2D hitMiddle = Physics2D.Raycast(checkPos, Vector2.right * direction, wallCheckDistance, wallLayer);
+            RaycastHit2D hitBottom = Physics2D.Raycast(bottom, Vector2.right * direction, wallCheckDistance, wallLayer);
 
             hit = hitTop.collider != null ? hitTop : hitMiddle.collider != null ? hitMiddle : hitBottom;
         }
@@ -445,14 +423,11 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    // ===== ÖFFENTLICHE METHODEN =====
-
     public bool IsGrounded() => _isGrounded;
     public bool IsOnWall() => _isOnWall;
     public bool IsWallSliding() => _isWallSliding;
     public bool CanAttack() => _isGrounded;
-    public bool CanAttack(bool allowWhileWallSliding) => 
-        allowWhileWallSliding ? _isGrounded || (_isOnWall && body.linearVelocity.y < 0) : _isGrounded;
+
 
     public void OnSoulCollected(SoulData soul)
     {
@@ -487,8 +462,7 @@ public class PlayerMovement : MonoBehaviour
         inputLocked = locked;
         if (locked)
         {
-            _horizontalInput = 0;
-            body.linearVelocity = new Vector2(0, body.linearVelocity.y);
+            ResetHorizontalInputAndVelocity();
         }
     }
 

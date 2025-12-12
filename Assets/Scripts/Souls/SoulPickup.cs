@@ -31,13 +31,13 @@ public class SoulPickup : MonoBehaviour
         // Add to SoulManager
         SoulManager.Instance?.AddSoul(soulData.soulID);
 
-        var pm = other.GetComponent<PlayerMovement>();
+        var pm = other.GetComponentInParent<PlayerMovement>();
         if (pm != null)
         {
             pm.OnSoulCollected(soulData);
         }
 
-        var pa = other.GetComponent<PlayerAttack>();
+        var pa = other.GetComponentInParent<PlayerAttack>();
         if (pa != null)
         {
             pa.OnSoulCollected(soulData);

@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 6220875613963771050}
   - component: {fileID: 627553249777499610}
   - component: {fileID: 8406900078179165746}
-  - component: {fileID: 8223968709026634628}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -63,11 +62,12 @@ Transform:
   m_GameObject: {fileID: 562932011958070637}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.4, y: 11.05, z: 0}
+  m_LocalPosition: {x: 77.1, y: 15.9, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1593036191255314844}
+  - {fileID: 516824648245163591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7432266993596707199
@@ -183,8 +183,8 @@ MonoBehaviour:
   playerAccelerationX: 50
   playerDecelerationX: 60
   playerEarlyJumpAbortForceY: 0.5
-  playerMaxWallJumpVelocityX: 10
-  playerMaxWallJumpVelocityY: 8
+  playerMaxWallJumpVelocityX: 18
+  playerMaxWallJumpVelocityY: 12
   wallSlideSpeed: -3
   wallJumpDuration: 0.15
   wallJumpCooldown: 0.2
@@ -200,7 +200,8 @@ MonoBehaviour:
     m_Bits: 512
   wallCheckDistance: 0.1
   groundCheckDistance: 0.1
-  wallCheckSize: {x: 0.2, y: 1}
+  wallCheckSize: {x: 0.2, y: 0.8}
+  boxCollider: {fileID: 8391567528759529738}
 --- !u!114 &6220875613963771050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,17 +253,81 @@ MonoBehaviour:
   HalfLifeIcon: {fileID: 21300000, guid: 8365d9f07804b054dadb7fca768a2a37, type: 3}
   LowLifeIcon: {fileID: 21300000, guid: e34f2ed0c38d08d44836e3630b2bd8b4, type: 3}
   AlmostDeadIcon: {fileID: 21300000, guid: 0f6d3599c84e6794daf52528af47608d, type: 3}
---- !u!60 &8223968709026634628
-PolygonCollider2D:
+--- !u!1 &4606677167576761522
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562932011958070637}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516824648245163591}
+  m_Layer: 0
+  m_Name: Scaler
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516824648245163591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606677167576761522}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2875830406866205104}
+  m_Father: {fileID: 1430167107289389487}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5715648347967662063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2875830406866205104}
+  - component: {fileID: 8391567528759529738}
+  m_Layer: 0
+  m_Name: Rotator
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2875830406866205104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715648347967662063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 516824648245163591}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!61 &8391567528759529738
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715648347967662063}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -289,17 +354,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4375, y: 2}
-    newSize: {x: 0.44, y: 0.63}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 1}
-      - {x: 0.7, y: 0}
-      - {x: 0, y: -1}
-      - {x: -0.7, y: 0}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

@@ -85,6 +85,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
 
         }
+        //Debug.Log("TakeDamage aufgerufen, HP vorher: " + currentHealth); //zum testen
         
     }
 
