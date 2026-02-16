@@ -1,0 +1,2442 @@
+fileFormatVersion: 2
+guid: 4035073ee48d81e4ebb674b74c0eccf6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6883627776180648239
+    second: Forest_Tiles_Tutorial_BrightWarm_0
+  - first:
+      213: 4325981853216966566
+    second: Forest_Tiles_Tutorial_BrightWarm_1
+  - first:
+      213: -4918676622718939477
+    second: Forest_Tiles_Tutorial_BrightWarm_2
+  - first:
+      213: -5088938618455354395
+    second: Forest_Tiles_Tutorial_BrightWarm_3
+  - first:
+      213: 515283525084907977
+    second: Forest_Tiles_Tutorial_BrightWarm_4
+  - first:
+      213: -7168799705771939711
+    second: Forest_Tiles_Tutorial_BrightWarm_5
+  - first:
+      213: -8322289405663052916
+    second: Forest_Tiles_Tutorial_BrightWarm_6
+  - first:
+      213: -5535451098848435743
+    second: Forest_Tiles_Tutorial_BrightWarm_7
+  - first:
+      213: 8906716276158480148
+    second: Forest_Tiles_Tutorial_BrightWarm_8
+  - first:
+      213: 4627817279365846908
+    second: Forest_Tiles_Tutorial_BrightWarm_9
+  - first:
+      213: 2673595929820113581
+    second: Forest_Tiles_Tutorial_BrightWarm_10
+  - first:
+      213: -7263160352465433353
+    second: Forest_Tiles_Tutorial_BrightWarm_11
+  - first:
+      213: 3320050994682945665
+    second: Forest_Tiles_Tutorial_BrightWarm_12
+  - first:
+      213: -4392978655841941928
+    second: Forest_Tiles_Tutorial_BrightWarm_13
+  - first:
+      213: 3959110580552926755
+    second: Forest_Tiles_Tutorial_BrightWarm_14
+  - first:
+      213: 5046557607436086779
+    second: Forest_Tiles_Tutorial_BrightWarm_15
+  - first:
+      213: 3180187632756942718
+    second: Forest_Tiles_Tutorial_BrightWarm_16
+  - first:
+      213: -5883902723109817459
+    second: Forest_Tiles_Tutorial_BrightWarm_17
+  - first:
+      213: -4257112471102114584
+    second: Forest_Tiles_Tutorial_BrightWarm_18
+  - first:
+      213: 4109105450624863810
+    second: Forest_Tiles_Tutorial_BrightWarm_19
+  - first:
+      213: -103117548722362729
+    second: Forest_Tiles_Tutorial_BrightWarm_20
+  - first:
+      213: 2880045179688106765
+    second: Forest_Tiles_Tutorial_BrightWarm_21
+  - first:
+      213: -6093391892750611006
+    second: Forest_Tiles_Tutorial_BrightWarm_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 242
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29724dcdfe878f50800000000000000
+      internalID: 6883627776180648239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 242
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a788c15399f80c30800000000000000
+      internalID: 4325981853216966566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 242
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baec1d10ca95dbbb0800000000000000
+      internalID: -4918676622718939477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e39333f9457069b0800000000000000
+      internalID: -5088938618455354395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c90c4fc2a7a62700800000000000000
+      internalID: 515283525084907977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 188e98746ae438c90800000000000000
+      internalID: -7168799705771939711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_6
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bf47101e9418c80800000000000000
+      internalID: -8322289405663052916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1e79dbd802e23b0800000000000000
+      internalID: -5535451098848435743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41fbd9b63430b9b70800000000000000
+      internalID: 8906716276158480148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77140edb4f493040800000000000000
+      internalID: 4627817279365846908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daaabd535558a1520800000000000000
+      internalID: 2673595929820113581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fcc89c2422143b90800000000000000
+      internalID: -7263160352465433353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_12
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180624e0ac0331e20800000000000000
+      internalID: 3320050994682945665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_13
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8560ba000310903c0800000000000000
+      internalID: -4392978655841941928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_14
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3260954c81691f630800000000000000
+      internalID: 3959110580552926755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_15
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfde5c9f769f80640800000000000000
+      internalID: 5046557607436086779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7761997dcb422c20800000000000000
+      internalID: 3180187632756942718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 194
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83f518c5ad285ea0800000000000000
+      internalID: -5883902723109817459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_18
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 194
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4b21f33c2bbe4c0800000000000000
+      internalID: -4257112471102114584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_19
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 194
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ecd19e2a9760930800000000000000
+      internalID: 4109105450624863810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_20
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 194
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7966b42c227a19ef0800000000000000
+      internalID: -103117548722362729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0bb260f4d9f7f720800000000000000
+      internalID: 2880045179688106765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdca539b5cef6ba0800000000000000
+      internalID: -6093391892750611006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07357a8aec7e7f4296ef8a3484d57cd
+      internalID: 357154040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de51d4a029342ef4c97eb81e955375dd
+      internalID: -957724738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e42d347decc5b4eb4a69ed77e0b81c
+      internalID: -334459428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_26
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab41256230edba4480bc49017f46353
+      internalID: -728773874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_27
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61e4894cf69147439e8a81ac3ccf5ec
+      internalID: 1443463548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_28
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2d34bbb2760374eaac48dec723561a
+      internalID: -392792979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8317f315defcfe4b9186342f5ad5b6a
+      internalID: 1513300915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_30
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7533bac5b658b41a199ba4296a15dc
+      internalID: 143448317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138148d3c1011374bb5b25bea9529bc1
+      internalID: 1566643908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bdbd23cf873434c8ceab360984e317
+      internalID: 1679187586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2298895d6d6ac9c4695f0e9ebb62bbc1
+      internalID: -1950917799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_34
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842808a8c39608a4b8d5e23e3c204823
+      internalID: -1735078528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_35
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c94def2c5705c429f13cc1a742a4d8
+      internalID: -326789038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3798dac3b863442907c656a01b93f8
+      internalID: 1902582304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_37
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dc994b5796c484f9a85da2dea82d6a
+      internalID: -1104487404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_38
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fedceca34632ba4fab605142517129a
+      internalID: -766242614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_39
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff1c50642b7dea4e828a8f396d322ce
+      internalID: -1401423073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_40
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51fa0ad466b5b84b8eabc5ab69fb9f7
+      internalID: -2074768469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_41
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f273c20457696ce418c04ebe3899f9ae
+      internalID: -2127263600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_42
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960a370a21646da498f960205753cd4f
+      internalID: -396323937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_43
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 162
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98910e7a84884374697deaa134ed9776
+      internalID: 532892928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0382f90869490a448b8be9e4640ea48
+      internalID: -1431141698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f05102d33089b49a97c4e656728019
+      internalID: -437070705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba7addb4f852914b870a43aae15b040
+      internalID: -449931029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceef6dc9d9b66f540a5f6902341892cf
+      internalID: 1192500650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_48
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b1b61184d0191469aa2e3ae843af09
+      internalID: -357144319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_49
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ab4b3ede23c38409dfc82ba6417122
+      internalID: -1316069607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_50
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6306ca2c79b66cb4dbfb59d39a398536
+      internalID: -257804895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc8dd61ff959984ebe5c43e3366b6bb
+      internalID: -662821733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_52
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf30ea8ab93e0044afe4cc23fd61cf4
+      internalID: 956448988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_53
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205b2986e18929f499f80169fdf59e21
+      internalID: 345746070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_54
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b36d491721e874a862043633f9cc9e
+      internalID: 665404670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_55
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f4ab7a5d9eff94bbb3e4a3f58514bf
+      internalID: -1461435808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_56
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb04f543f567e34f8f1a4bcf7c70848
+      internalID: -997171413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb11dd3d606f67b4d9f5bf5f850b56c6
+      internalID: -1655949084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_58
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 146
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64012db7e1a46d94192a75d28c5f591a
+      internalID: -1974670459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cd6226b7b980f4394bcb76de91b49d
+      internalID: 2140772370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12116c2b6b630844f887cb0cbb33317d
+      internalID: 1659437867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_61
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5707528e657964bb03ff4935ff3f23
+      internalID: 15550359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_62
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8099ffa8c420dc4fae9c64cf005543e
+      internalID: -72345376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_63
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1818e720f53c640aadc17a0d152a24
+      internalID: -1969153397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_64
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b54799c4ee9bc64c8ab5ffd0695b2ea
+      internalID: 212401497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_65
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f73e31c3a80a9478392411e9d41f0a
+      internalID: 272381229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_66
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 114
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f5598e690ef534aab57f204143e0e6
+      internalID: -988637414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_67
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9180edb7d32a1de40839adf8371695d0
+      internalID: 1625188683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_68
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dca06a62b2057847a1d0371ef6bd1f6
+      internalID: 1731948810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d092de21a5e781f4c9a84e777b5dc8e3
+      internalID: 1179758712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_70
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa958ffe0429ae40b1ce5bb7eca0c01
+      internalID: 1695900118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_71
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64a37c8531a09747bff90fb006acd67
+      internalID: -1637403750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_72
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983f77c5493c85a4da27ec95a56d31c8
+      internalID: -1109420262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_73
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea97d25ca90d42419639f9cce2b54b3
+      internalID: -1164614183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_74
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa53db7babf09e34085de9151f84c343
+      internalID: -318825168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_75
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57498d6262c5a604cba625e8ecda9056
+      internalID: 795296293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_76
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac4a3398cf9f1b4898a7c56c59e3a23
+      internalID: 1563077816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_77
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca035cdc28b81648a66db2eb28d6641
+      internalID: -1692452508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_78
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f5daa19f9552847956a0fd91fe11c2
+      internalID: 824721267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_79
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5050b10eeb76ded4aa418f28bc25eb2d
+      internalID: -936053810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_80
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05314f103bea2e4695028a7d078863f
+      internalID: -412736838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_81
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eacbc05561330e4c8a98581c2c1bad7
+      internalID: -1570090258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_82
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 82
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2213f2e3b447e304cb083b72e63124d6
+      internalID: -1108513565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_83
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 66
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aac49e78b11b1d479a0a1d882e54fdd
+      internalID: 1623653319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd93193972ef1a4a9447bc2dd0495e8
+      internalID: -294109241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_85
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f563d4742c0fe4ba1b78fc74be6627
+      internalID: -1442360836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_86
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a40524ec2920ce4e9abf50cc0101867
+      internalID: -1795357263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_87
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda6f9353ac194543ace738a91dad749
+      internalID: -341329798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_88
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 34
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddfcfc9058f57e944acfcb6d8a95afce
+      internalID: -1174358496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe14c2878df3d64a92a078476e862c4
+      internalID: 1824011026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_90
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4569eec22d6915438f7fd6d9eb9d4b7
+      internalID: -1584546062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_91
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a016c1359a947274cb5d46019e70221b
+      internalID: 1984859294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_92
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52117ca19fe228f489705805f23e814d
+      internalID: 1501382287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_93
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e91390fd1db634892626aa4a5e8a5c
+      internalID: -343665272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_94
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b4d4ce5eed7e2439ed17201f3e71e0
+      internalID: -245016595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_95
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d694dc7be53e03841ac7a5e737f2b804
+      internalID: 1936971441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_96
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a59fd17bb2cdaa47aab837ee835eb4e
+      internalID: -129785670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tiles_Tutorial_BrightWarm_97
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a1f5cb45d65c0409d5611088e05ea6
+      internalID: 1427222614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3ab7a1b5edd329448815c423f2c9e360
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Forest_Tiles_Tutorial_BrightWarm_0: 6883627776180648239
+      Forest_Tiles_Tutorial_BrightWarm_1: 4325981853216966566
+      Forest_Tiles_Tutorial_BrightWarm_10: 2673595929820113581
+      Forest_Tiles_Tutorial_BrightWarm_11: -7263160352465433353
+      Forest_Tiles_Tutorial_BrightWarm_12: 3320050994682945665
+      Forest_Tiles_Tutorial_BrightWarm_13: -4392978655841941928
+      Forest_Tiles_Tutorial_BrightWarm_14: 3959110580552926755
+      Forest_Tiles_Tutorial_BrightWarm_15: 5046557607436086779
+      Forest_Tiles_Tutorial_BrightWarm_16: 3180187632756942718
+      Forest_Tiles_Tutorial_BrightWarm_17: -5883902723109817459
+      Forest_Tiles_Tutorial_BrightWarm_18: -4257112471102114584
+      Forest_Tiles_Tutorial_BrightWarm_19: 4109105450624863810
+      Forest_Tiles_Tutorial_BrightWarm_2: -4918676622718939477
+      Forest_Tiles_Tutorial_BrightWarm_20: -103117548722362729
+      Forest_Tiles_Tutorial_BrightWarm_21: 2880045179688106765
+      Forest_Tiles_Tutorial_BrightWarm_22: -6093391892750611006
+      Forest_Tiles_Tutorial_BrightWarm_23: 357154040
+      Forest_Tiles_Tutorial_BrightWarm_24: -957724738
+      Forest_Tiles_Tutorial_BrightWarm_25: -334459428
+      Forest_Tiles_Tutorial_BrightWarm_26: -728773874
+      Forest_Tiles_Tutorial_BrightWarm_27: 1443463548
+      Forest_Tiles_Tutorial_BrightWarm_28: -392792979
+      Forest_Tiles_Tutorial_BrightWarm_29: 1513300915
+      Forest_Tiles_Tutorial_BrightWarm_3: -5088938618455354395
+      Forest_Tiles_Tutorial_BrightWarm_30: 143448317
+      Forest_Tiles_Tutorial_BrightWarm_31: 1566643908
+      Forest_Tiles_Tutorial_BrightWarm_32: 1679187586
+      Forest_Tiles_Tutorial_BrightWarm_33: -1950917799
+      Forest_Tiles_Tutorial_BrightWarm_34: -1735078528
+      Forest_Tiles_Tutorial_BrightWarm_35: -326789038
+      Forest_Tiles_Tutorial_BrightWarm_36: 1902582304
+      Forest_Tiles_Tutorial_BrightWarm_37: -1104487404
+      Forest_Tiles_Tutorial_BrightWarm_38: -766242614
+      Forest_Tiles_Tutorial_BrightWarm_39: -1401423073
+      Forest_Tiles_Tutorial_BrightWarm_4: 515283525084907977
+      Forest_Tiles_Tutorial_BrightWarm_40: -2074768469
+      Forest_Tiles_Tutorial_BrightWarm_41: -2127263600
+      Forest_Tiles_Tutorial_BrightWarm_42: -396323937
+      Forest_Tiles_Tutorial_BrightWarm_43: 532892928
+      Forest_Tiles_Tutorial_BrightWarm_44: -1431141698
+      Forest_Tiles_Tutorial_BrightWarm_45: -437070705
+      Forest_Tiles_Tutorial_BrightWarm_46: -449931029
+      Forest_Tiles_Tutorial_BrightWarm_47: 1192500650
+      Forest_Tiles_Tutorial_BrightWarm_48: -357144319
+      Forest_Tiles_Tutorial_BrightWarm_49: -1316069607
+      Forest_Tiles_Tutorial_BrightWarm_5: -7168799705771939711
+      Forest_Tiles_Tutorial_BrightWarm_50: -257804895
+      Forest_Tiles_Tutorial_BrightWarm_51: -662821733
+      Forest_Tiles_Tutorial_BrightWarm_52: 956448988
+      Forest_Tiles_Tutorial_BrightWarm_53: 345746070
+      Forest_Tiles_Tutorial_BrightWarm_54: 665404670
+      Forest_Tiles_Tutorial_BrightWarm_55: -1461435808
+      Forest_Tiles_Tutorial_BrightWarm_56: -997171413
+      Forest_Tiles_Tutorial_BrightWarm_57: -1655949084
+      Forest_Tiles_Tutorial_BrightWarm_58: -1974670459
+      Forest_Tiles_Tutorial_BrightWarm_59: 2140772370
+      Forest_Tiles_Tutorial_BrightWarm_6: -8322289405663052916
+      Forest_Tiles_Tutorial_BrightWarm_60: 1659437867
+      Forest_Tiles_Tutorial_BrightWarm_61: 15550359
+      Forest_Tiles_Tutorial_BrightWarm_62: -72345376
+      Forest_Tiles_Tutorial_BrightWarm_63: -1969153397
+      Forest_Tiles_Tutorial_BrightWarm_64: 212401497
+      Forest_Tiles_Tutorial_BrightWarm_65: 272381229
+      Forest_Tiles_Tutorial_BrightWarm_66: -988637414
+      Forest_Tiles_Tutorial_BrightWarm_67: 1625188683
+      Forest_Tiles_Tutorial_BrightWarm_68: 1731948810
+      Forest_Tiles_Tutorial_BrightWarm_69: 1179758712
+      Forest_Tiles_Tutorial_BrightWarm_7: -5535451098848435743
+      Forest_Tiles_Tutorial_BrightWarm_70: 1695900118
+      Forest_Tiles_Tutorial_BrightWarm_71: -1637403750
+      Forest_Tiles_Tutorial_BrightWarm_72: -1109420262
+      Forest_Tiles_Tutorial_BrightWarm_73: -1164614183
+      Forest_Tiles_Tutorial_BrightWarm_74: -318825168
+      Forest_Tiles_Tutorial_BrightWarm_75: 795296293
+      Forest_Tiles_Tutorial_BrightWarm_76: 1563077816
+      Forest_Tiles_Tutorial_BrightWarm_77: -1692452508
+      Forest_Tiles_Tutorial_BrightWarm_78: 824721267
+      Forest_Tiles_Tutorial_BrightWarm_79: -936053810
+      Forest_Tiles_Tutorial_BrightWarm_8: 8906716276158480148
+      Forest_Tiles_Tutorial_BrightWarm_80: -412736838
+      Forest_Tiles_Tutorial_BrightWarm_81: -1570090258
+      Forest_Tiles_Tutorial_BrightWarm_82: -1108513565
+      Forest_Tiles_Tutorial_BrightWarm_83: 1623653319
+      Forest_Tiles_Tutorial_BrightWarm_84: -294109241
+      Forest_Tiles_Tutorial_BrightWarm_85: -1442360836
+      Forest_Tiles_Tutorial_BrightWarm_86: -1795357263
+      Forest_Tiles_Tutorial_BrightWarm_87: -341329798
+      Forest_Tiles_Tutorial_BrightWarm_88: -1174358496
+      Forest_Tiles_Tutorial_BrightWarm_89: 1824011026
+      Forest_Tiles_Tutorial_BrightWarm_9: 4627817279365846908
+      Forest_Tiles_Tutorial_BrightWarm_90: -1584546062
+      Forest_Tiles_Tutorial_BrightWarm_91: 1984859294
+      Forest_Tiles_Tutorial_BrightWarm_92: 1501382287
+      Forest_Tiles_Tutorial_BrightWarm_93: -343665272
+      Forest_Tiles_Tutorial_BrightWarm_94: -245016595
+      Forest_Tiles_Tutorial_BrightWarm_95: 1936971441
+      Forest_Tiles_Tutorial_BrightWarm_96: -129785670
+      Forest_Tiles_Tutorial_BrightWarm_97: 1427222614
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
