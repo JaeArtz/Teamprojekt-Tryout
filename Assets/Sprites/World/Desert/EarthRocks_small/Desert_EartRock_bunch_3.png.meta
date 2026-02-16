@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 5a88b270f23d1334aae38d35bc12429c
+guid: ee4963fc0ad10ea4eb8d06f23ff1a886
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5337021179309567572
-    second: Dungeon_StoneBlock_single_0
+      213: 3545964934530534034
+    second: Desert_EartRock_bunch_3_0
+  - first:
+      213: -8510502105241598955
+    second: Desert_EartRock_bunch_3_1
+  - first:
+      213: -2331418005909942159
+    second: Desert_EartRock_bunch_3_2
+  - first:
+      213: 38331899394793458
+    second: Desert_EartRock_bunch_3_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dungeon_StoneBlock_single_0
+      name: Desert_EartRock_bunch_3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 21
+        y: 56
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45eab7f5c78e01a40800000000000000
-      internalID: 5337021179309567572
+      spriteID: 29a0fa4125cc53130800000000000000
+      internalID: 3545964934530534034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_EartRock_bunch_3_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 35
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5144cd40d6f94e980800000000000000
+      internalID: -8510502105241598955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_EartRock_bunch_3_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 42
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170d9ce0da325afd0800000000000000
+      internalID: -2331418005909942159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_EartRock_bunch_3_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 31
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff1efec8ae288000800000000000000
+      internalID: 38331899394793458
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dungeon_StoneBlock_single_0: 5337021179309567572
+      Desert_EartRock_bunch_3_0: 3545964934530534034
+      Desert_EartRock_bunch_3_1: -8510502105241598955
+      Desert_EartRock_bunch_3_2: -2331418005909942159
+      Desert_EartRock_bunch_3_3: 38331899394793458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
