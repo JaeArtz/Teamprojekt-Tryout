@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class AnActionAnimation: TriggerAction
+public class ActionAnimation: TriggerAction
 {
     public Animator animator;
     public string triggerName = "Play";

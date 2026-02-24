@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class ActionPlaySFX : MonoBehaviour
+public class ActionPlaySFX : TriggerAction
 {
 
     public AudioClip clip;
     [Range(0f, 1f)] public float volume = 1f;
 
-    public IEnumerator Execute(TriggerInfoBundle ctx)
+    public override IEnumerator Execute(TriggerInfoBundle ctx)
     {
         if (clip == null) yield break;
 

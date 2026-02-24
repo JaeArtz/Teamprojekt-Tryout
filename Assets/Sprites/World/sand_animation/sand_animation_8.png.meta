@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: f07a8fbf691c48a478e0b53f5623a7f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 803984823959916509
+    second: sand_animation_8_0
+  - first:
+      213: -4337845777522267046
+    second: sand_animation_8_1
+  - first:
+      213: 7196834408600272609
+    second: sand_animation_8_2
+  - first:
+      213: 7577307741668038716
+    second: sand_animation_8_3
+  - first:
+      213: -2836516916039855143
+    second: sand_animation_8_4
+  - first:
+      213: 8786144131048029251
+    second: sand_animation_8_5
+  - first:
+      213: 8933550795438213886
+    second: sand_animation_8_6
+  - first:
+      213: -24864846276114853
+    second: sand_animation_8_7
+  - first:
+      213: -6519598815045120150
+    second: sand_animation_8_8
+  - first:
+      213: -878806333190442669
+    second: sand_animation_8_9
+  - first:
+      213: -483975252364091416
+    second: sand_animation_8_10
+  - first:
+      213: -2533596758408530740
+    second: sand_animation_8_11
+  - first:
+      213: 3278160168577591370
+    second: sand_animation_8_12
+  - first:
+      213: 3389518399261190344
+    second: sand_animation_8_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sand_animation_8_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c30844987aee970800000000000000
+      internalID: 8786144131048029251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d89d40e089bd6d74e8adedead7b17ea3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sand_animation_8_0: 803984823959916509
+      sand_animation_8_1: -4337845777522267046
+      sand_animation_8_10: -483975252364091416
+      sand_animation_8_11: -2533596758408530740
+      sand_animation_8_12: 3278160168577591370
+      sand_animation_8_13: 3389518399261190344
+      sand_animation_8_2: 7196834408600272609
+      sand_animation_8_3: 7577307741668038716
+      sand_animation_8_4: -2836516916039855143
+      sand_animation_8_5: 8786144131048029251
+      sand_animation_8_6: 8933550795438213886
+      sand_animation_8_7: -24864846276114853
+      sand_animation_8_8: -6519598815045120150
+      sand_animation_8_9: -878806333190442669
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
