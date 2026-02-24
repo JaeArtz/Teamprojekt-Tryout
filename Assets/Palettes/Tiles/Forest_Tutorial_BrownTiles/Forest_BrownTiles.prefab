@@ -792,6 +792,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -11, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 93
+      m_TileSpriteIndex: 93
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -10, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 94
+      m_TileSpriteIndex: 94
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -9, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -1250,6 +1270,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 2edca47b3866cf24790b0d714a571f3e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 03df7e5d29b608645b9d1957411572ec, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 8eb30af82b703c44ca9df8ff7082319f, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 75b3d1ab39cb7b944a97670fa7d5d327, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 4325981853216966566, guid: 4035073ee48d81e4ebb674b74c0eccf6, type: 3}
@@ -1437,8 +1461,12 @@ Tilemap:
     m_Data: {fileID: -129785670, guid: 4035073ee48d81e4ebb674b74c0eccf6, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1427222614, guid: 4035073ee48d81e4ebb674b74c0eccf6, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1622133044, guid: 8ffb375899448c94c91646bd3db24465, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1265209120, guid: 8ffb375899448c94c91646bd3db24465, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 102
+  - m_RefCount: 104
     m_Data:
       e00: 1
       e01: 0
@@ -1457,7 +1485,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 102
+  - m_RefCount: 104
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1583,7 +1611,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &462393242925776318
+--- !u!114 &4090207589528080528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
