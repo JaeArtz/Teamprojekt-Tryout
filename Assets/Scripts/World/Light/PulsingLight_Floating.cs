@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Light))]
 public class PulsingLight_Floating : MonoBehaviour
 {
     public Light lightSource;

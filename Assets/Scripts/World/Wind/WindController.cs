@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WindController : MonoBehaviour
 {
-    [Header("Target Roots (exactly these two subtrees are scanned)")]
+    [Header("Target Roots")] //  (currently exactly these two subtrees are scanned)
     public Transform windGrassObjects;
     public Transform windGrassObjectsSlowSway;
       

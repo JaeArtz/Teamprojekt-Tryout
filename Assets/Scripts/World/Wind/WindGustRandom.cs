@@ -3,8 +3,8 @@ using System.IO;
 using UnityEngine;
 
 // idea: randomness in everything:
-// + pause inbetween gusts
-// + speed/duration of "fade in", "hold" and
+// ->in pause inbetween gusts
+// ->in speed/duration of "fade in", "hold" and
 //   "fade out" of played audio clip (=> range of float values)
 
 public class WindGustRandom : MonoBehaviour

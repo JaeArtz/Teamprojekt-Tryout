@@ -19,6 +19,7 @@ public class CheckpointTrigger : MonoBehaviour
 
     [Tooltip("Name of the players movement component ('PlayerMovement'). Leave empty to disable auto-fetch.")]
     public string playerMovementComponentName = "PlayerMovement";
+    // I only put this in in case there will be more PlayerMovement scripts for some reason
 
     private bool _hasTriggered;
 
