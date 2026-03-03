@@ -75,9 +75,13 @@ public class PlayerMovement : MonoBehaviour
     private bool showcaseDoubleJump = false;
     private bool inputLocked = false;
 
+    // Animator
+    private Animator animator;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        
         
         // Versuche Collider zu finden
         if (boxCollider == null)
@@ -96,11 +100,27 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+
+            if (animator == null)
+            {
+                animator = GetComponentInChildren<Animator>();
+
+                if(animator != null)
+                    Debug.Log($"Animator gefunden in Child: {animator.gameObject.name}");
+            }
+        }
         
         if (boxCollider == null)
         {
             Debug.LogError("BoxCollider2D nicht gefunden!");
         }
+
+        if (animator == null)
+            Debug.LogError("Animator nicht gefunden!");
     }
 
     private void Start()
@@ -151,6 +171,12 @@ public class PlayerMovement : MonoBehaviour
             showcaseDoubleJump = false;
             StartCoroutine(PlayDoubleJumpShowcase());
         }
+
+        // ANIMATOR EDITS
+        if ((Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D)) && IsGrounded())
+            animator.SetBool("IsWalking", true);
+        else
+            animator.SetBool("IsWalking", false);
     }
 
     private bool CanWallJump()
