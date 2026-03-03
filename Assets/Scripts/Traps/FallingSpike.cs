@@ -45,4 +45,6 @@ public class FallingSpike : MonoBehaviour
             Destroy(gameObject, 2f);
         }
     }
+
+    //Einfach nur um ein Test push auf meinem Branch zu machen
 }
