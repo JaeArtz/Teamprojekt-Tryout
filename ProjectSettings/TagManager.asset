@@ -8,6 +8,8 @@ TagManager:
   - Checkpoint
   - FallDetector
   - Wall
+  - Enemy
+  - Ceiling
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - 
   - Ground
   - Wall
-  - 
-  - 
+  - Enemy
+  - Ceiling
   - 
   - 
   - 
