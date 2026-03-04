@@ -18,12 +18,12 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - BGWall
   - Ground
   - Wall
   - Enemy
   - Ceiling
-  - 
+  - 'Climbable '
   - 
   - 
   - 
