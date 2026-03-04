@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1430167107289389487}
+  - component: {fileID: 2632771484423762045}
   - component: {fileID: 7432266993596707199}
   - component: {fileID: 1180920997515958489}
   - component: {fileID: 8788218873401257925}
@@ -70,6 +71,28 @@ Transform:
   - {fileID: 516824648245163591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2632771484423762045
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce6682a30c5edb645a8cc03c61eb01e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &7432266993596707199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,10 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   attackCooldown: 0.7
   firePoint: {fileID: 1593036191255314844}
-  allowAttackWhileWallSliding: 0
-  enableRecoil: 0
-  recoilForceX: 2
-  recoilForceY: 1
 --- !u!114 &627553249777499610
 MonoBehaviour:
   m_ObjectHideFlags: 0
