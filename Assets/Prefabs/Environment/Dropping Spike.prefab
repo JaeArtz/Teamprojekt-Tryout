@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1650840937640418436}
   - component: {fileID: 6049057240320857967}
-  - component: {fileID: 1321059184859015270}
   - component: {fileID: 1724911077684076482}
   - component: {fileID: 5679530205153387973}
   - component: {fileID: 5100336938645741240}
-  - component: {fileID: 373733309260461019}
+  - component: {fileID: 2303276988943468961}
+  - component: {fileID: 4159195907261847111}
   m_Layer: 0
   m_Name: Dropping Spike
   m_TagString: Untagged
@@ -95,52 +95,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1321059184859015270
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3300373615159124729}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.0040855724}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.14}
-    newSize: {x: 0.18, y: 0.14}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.18, y: 0.13182884}
-  m_EdgeRadius: 0
 --- !u!50 &1724911077684076482
 Rigidbody2D:
   serializedVersion: 5
@@ -180,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f4d8a542a85554ebb71c5e2e00b743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingSpike
-  physicsCollider: {fileID: 373733309260461019}
-  triggerCollider: {fileID: 1321059184859015270}
+  physicsCollider: {fileID: 4159195907261847111}
+  triggerCollider: {fileID: 2303276988943468961}
   speed: 5
   distance: 5
 --- !u!114 &5100336938645741240
@@ -197,8 +151,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
   damage: 2
---- !u!61 &373733309260461019
-BoxCollider2D:
+--- !u!60 &2303276988943468961
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300373615159124729}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.18, y: 0.14}
+    newSize: {x: 0.18, y: 0.14}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.08931517, y: 0.07}
+      - {x: -0.09169067, y: 0.070017755}
+      - {x: 0.0009857193, y: -0.06572739}
+  m_UseDelaunayMesh: 0
+--- !u!60 &4159195907261847111
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -231,7 +235,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.004032461}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -241,5 +245,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.18, y: 0.13193509}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.089999996, y: 0.07}
+      - {x: 0.0889459, y: 0.06959279}
+      - {x: 0.0015960708, y: -0.06609563}
+  m_UseDelaunayMesh: 0

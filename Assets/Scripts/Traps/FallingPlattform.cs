@@ -5,6 +5,7 @@ public class FallingPlatform : MonoBehaviour
 {
     [SerializeField] private float fallDelay = 1f;
     [SerializeField] private float destroyDelay = 2f;
+    [SerializeField] private float gravityScale = 1f;
 
     private bool falling = false;
 
@@ -32,6 +33,7 @@ public class FallingPlatform : MonoBehaviour
 
         // Enable rigidbody and destroy after a few seconds
         rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = gravityScale; // Set gravity scale to make it fall
         Destroy(gameObject, destroyDelay);
     }
 }

@@ -3,8 +3,8 @@ using UnityEngine;
 public class FallingSpike : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] private BoxCollider2D physicsCollider; // Für den Boden
-    [SerializeField] private BoxCollider2D triggerCollider; // Für den Schaden am Spieler
+    [SerializeField] private PolygonCollider2D physicsCollider; // Für den Boden
+    [SerializeField] private PolygonCollider2D triggerCollider; // Für den Schaden am Spieler
     public float speed;
     public float distance;
     bool isFalling = false;
@@ -42,7 +42,7 @@ public class FallingSpike : MonoBehaviour
             rb.gravityScale = 0;
             rb.bodyType = RigidbodyType2D.Kinematic;
 
-            Destroy(gameObject, 2f);
+            Destroy(gameObject, 1f);
         }
     }
 
