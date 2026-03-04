@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 670d0f16a9168ae499662303cc4af286
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4272956570709837903
+    second: leaf_bunch_dark_0
+  - first:
+      213: 3773403983873188962
+    second: leaf_bunch_dark_1
+  - first:
+      213: 2357984500720019983
+    second: leaf_bunch_dark_2
+  - first:
+      213: -1179221497142300736
+    second: leaf_bunch_dark_3
+  - first:
+      213: 4266322462724821245
+    second: leaf_bunch_dark_4
+  - first:
+      213: 4428278284500069774
+    second: leaf_bunch_dark_5
+  - first:
+      213: -6067747274510015164
+    second: leaf_bunch_dark_6
+  - first:
+      213: -185016409708552725
+    second: leaf_bunch_dark_7
+  - first:
+      213: -2666213108616405474
+    second: leaf_bunch_dark_8
+  - first:
+      213: -8717656182508090432
+    second: leaf_bunch_dark_9
+  - first:
+      213: -965901577853977089
+    second: leaf_bunch_dark_10
+  - first:
+      213: 3985824274567466710
+    second: leaf_bunch_dark_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: leaf_bunch_dark_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 171
+        width: 75
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b73b2653a863b4c0800000000000000
+      internalID: -4272956570709837903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 163
+        width: 47
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2642ec45ee2dd5430800000000000000
+      internalID: 3773403983873188962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_2
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 163
+        width: 58
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a2b47096e39b020800000000000000
+      internalID: 2357984500720019983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 163
+        width: 61
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf245fcb4092afe0800000000000000
+      internalID: -1179221497142300736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 87
+        width: 58
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df09bf70da5053b30800000000000000
+      internalID: 4266322462724821245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 91
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8de33243a7647d30800000000000000
+      internalID: 4428278284500069774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_6
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 87
+        width: 50
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4456cfb80080bcba0800000000000000
+      internalID: -6067747274510015164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_7
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 87
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed14bd3e80be6df0800000000000000
+      internalID: -185016409708552725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 15
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1edd6dcd45bffad0800000000000000
+      internalID: -2666213108616405474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_9
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 19
+        width: 65
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cb0e9fd3e9a40780800000000000000
+      internalID: -8717656182508090432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_10
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 17
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd360ce1ad6892f0800000000000000
+      internalID: -965901577853977089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_bunch_dark_11
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 19
+        width: 62
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de09b65f0e705730800000000000000
+      internalID: 3985824274567466710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      leaf_bunch_dark_0: -4272956570709837903
+      leaf_bunch_dark_1: 3773403983873188962
+      leaf_bunch_dark_10: -965901577853977089
+      leaf_bunch_dark_11: 3985824274567466710
+      leaf_bunch_dark_2: 2357984500720019983
+      leaf_bunch_dark_3: -1179221497142300736
+      leaf_bunch_dark_4: 4266322462724821245
+      leaf_bunch_dark_5: 4428278284500069774
+      leaf_bunch_dark_6: -6067747274510015164
+      leaf_bunch_dark_7: -185016409708552725
+      leaf_bunch_dark_8: -2666213108616405474
+      leaf_bunch_dark_9: -8717656182508090432
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
