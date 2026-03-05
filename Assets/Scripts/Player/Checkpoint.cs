@@ -9,11 +9,19 @@ public class Checkpoint : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-        { 
+        {
             PlayerRespawn playerRespawn = collision.GetComponent<PlayerRespawn>();
             if (playerRespawn != null)
             {
+                // sets checkpoint fur current, running session
                 playerRespawn.SetCheckpoint(transform.position);
+
+                // saves coordinates of position permanently for loading of level
+                PlayerPrefs.SetFloat("CheckpointX", transform.position.x);
+                PlayerPrefs.SetFloat("CheckpointY", transform.position.y);
+                PlayerPrefs.Save();
+
+                Debug.Log("Last Checkpoint permanently saved at: " + transform.position);
             }
         }
     }
