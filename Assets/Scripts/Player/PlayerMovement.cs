@@ -19,46 +19,47 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool t_isHoldingMoveBtn;
 
     [Header("Movement")]
-    [SerializeField] private float playerMaxVelocityX = 10f;
-    [SerializeField] private float playerMaxVelocityY = 20f;
-    [SerializeField] private float playerAccelerationX = 50f;
-    [SerializeField] private float playerDecelerationX = 60f;
-    [SerializeField] private float playerEarlyJumpAbortForceY = 0.5f;
-    [SerializeField] private float playerMaxWallJumpVelocityX = 18f;
-    [SerializeField] private float playerMaxWallJumpVelocityY = 12f;
-    [SerializeField] private float wallSlideSpeed = -3f;
+    [SerializeField, Tooltip("Maximum horizontal velocity of player")] private float playerMaxVelocityX = 10f;
+    [SerializeField, Tooltip("Maximum vertical velocity of player")] private float playerMaxVelocityY = 20f;
+    [SerializeField, Tooltip("Accelerates player to max movement speed. Acceleration speed is applied when player movement direction equals keyboard input direction")] private float playerAccelerationX = 5f;
+    [SerializeField, Tooltip("Decelerates player to movement speed 0. Deceleration speed is applied when player movement direction is different to keyboard input direction")] private float playerDecelerationX = 15f;
+    [SerializeField, Tooltip("Jump abort force is being applied when the jump button is being released before the player's max jump height was reached")] private float playerEarlyJumpAbortForceY = 0.5f;
+    [SerializeField, Tooltip("The (absolute value) horizontal velocity being applied when the player enters wall-jump")] private float playerMaxWallJumpVelocityX = 18f;
+    [SerializeField, Tooltip("The (absolute value) vertical velocity being applied when the player enters wall-jump")] private float playerMaxWallJumpVelocityY = 12f;
+    [SerializeField, Tooltip("The maximum fall speed, the player can reach while wall-sliding")] private float wallSlideSpeed = -3f;
 
     [Header("Wall Jump Timer")]
-    [SerializeField] private float wallJumpDuration = 0.15f;
+    [SerializeField, Tooltip("PROBABLY DEPRECATED")] private float wallJumpDuration = 0.15f;
     private float wallJumpTimer;
     
-    [SerializeField] private float wallJumpCooldown = 0.2f;
+    [SerializeField, Tooltip("Cooldown being triggered when entering wall-jump. Disables the check of player touching wall.")] private float wallJumpCooldown = 0.2f;
     private float wallJumpCooldownTimer;
     
-    [SerializeField] private float wallJumpAirControlDelay = 0.1f;
+    [SerializeField, Tooltip("Duration in seconds until the player control is back to normal. Player control gets interpolated")]
+    private float wallJumpAirControlDuration = 1.0f;
     private float wallJumpAirControlTimer;
 
     [Header("Coyote Time")]
-    [SerializeField] private float groundCoyoteTime = 0.1f;
-    [SerializeField] private float wallCoyoteTime = 0.15f;
+    [SerializeField, Tooltip("How long the player can still perform wall-jump when exiting wall")] private float groundCoyoteTime = 0.1f;
+    [SerializeField, Tooltip("How long the player can still perform normal jump when exiting ground")] private float wallCoyoteTime = 0.15f;
     private float groundCoyoteCounter;
     private float wallCoyoteCounter;
 
     [Header("Multi Jump")]
-    [SerializeField] private int extraJumps = 1;
+    [SerializeField, Tooltip("How many times the player can jump in mid-air")] private int extraJumps = 1;
     private int jumpCounter;
 
     [Header("Layers")]
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask wallLayer;
+    [SerializeField, Tooltip("The ground layer")] private LayerMask groundLayer;
+    [SerializeField, Tooltip("The wall layer")] private LayerMask wallLayer;
 
     [Header("Collider Settings")]
-    [SerializeField] private float wallCheckDistance = 0.2f;   
-    [SerializeField] private float groundCheckDistance = 0.2f;
-    [SerializeField] private Vector2 wallCheckSize = new Vector2(0.2f, 0.8f);
-    [SerializeField] private BoxCollider2D boxCollider;
-    [SerializeField] private BoxCollider2D surfaceTrigger;
-    [SerializeField] private CircleCollider2D wallTrigger;
+    [SerializeField, Tooltip("How far the cast start is away from the player collider to check for a nearby wall")] private float wallCheckDistance = 0.2f;   
+    [SerializeField, Tooltip("How far the cast start is away from the player collider to check for a nearby ground")] private float groundCheckDistance = 0.2f;
+    [SerializeField, Tooltip("How far the box cast is being elongated to check for a nearby wall")] private Vector2 wallCheckSize = new Vector2(0.2f, 0.8f);
+    [SerializeField, Tooltip("CURRENTLY NOT USED")] private BoxCollider2D boxCollider;
+    [SerializeField, Tooltip("Box collider for collision with objects")] private BoxCollider2D surfaceCollider;
+    [SerializeField, Tooltip("Circle collider without collision for wall check")] private CircleCollider2D wallTrigger;
 
     private Rigidbody2D body;
 
@@ -103,19 +104,19 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (surfaceTrigger == null)
+        if (surfaceCollider == null)
         {
             // 1. Erst am eigenen GameObject suchen
-            surfaceTrigger = GetComponent<BoxCollider2D>();
+            surfaceCollider = GetComponent<BoxCollider2D>();
 
             // 2. Falls nicht gefunden, in Children suchen
-            if (surfaceTrigger == null)
+            if (surfaceCollider == null)
             {
-                surfaceTrigger = GetComponentInChildren<BoxCollider2D>();
+                surfaceCollider = GetComponentInChildren<BoxCollider2D>();
 
-                if (surfaceTrigger != null)
+                if (surfaceCollider != null)
                 {
-                    Debug.Log($"BoxCollider2D gefunden in Child: {surfaceTrigger.gameObject.name}");
+                    Debug.Log($"BoxCollider2D gefunden in Child: {surfaceCollider.gameObject.name}");
                 }
             }
         }
@@ -235,36 +236,31 @@ public class PlayerMovement : MonoBehaviour
         if (wallJumpAirControlTimer > 0)
             wallJumpAirControlTimer -= Time.fixedDeltaTime;
 
-        // ZUSTANDS-ÜBERPRÜFUNG
+        // ZUSTANDS-ÜBERPRÜFUNG GROUND
         _isGrounded = t_isGrounded = CheckIsGrounded();
         
         bool wasOnWall = _isOnWall;
         
+        // ZUSTANDS-ÜBERPRÜFUNG WALL
         if (wallJumpCooldownTimer <= 0)
         {
-            _isOnWall = t_isOnWall = CheckOnWall();
-            
-            if (_isOnWall)
+            if (_isOnWall = t_isOnWall = CheckOnWall())
                 _lastWallDirection = _playerWallDirection;
-        }
-        else
-        {
-            //_isOnWall = t_isOnWall = false;
         }
         
         t_movementY = body.linearVelocity.y;
 
         float horizontalInput = _horizontalInput = t_movementDirection = Input.GetAxisRaw("Horizontal");
-        
-        // WALL-JUMP LOGIK (Priorität 1)
+        // WALL-JUMP LOGIK
         if (_isWallJumping)
         {
             wallJumpTimer -= Time.fixedDeltaTime;
             
-            if (wallJumpAirControlTimer <= 0)
+            if (wallJumpAirControlTimer > 0) // Für bestimmte Zeit während Walljump soll sich der Player nur bedingt bewegen können
             {
                 float targetSpeed = horizontalInput * playerMaxVelocityX;
-                float accelRate = playerAccelerationX * 0.5f;
+                float accelRate = playerAccelerationX * Mathf.Lerp(1f, 0f, wallJumpAirControlTimer / wallJumpAirControlDuration);
+                Debug.Log($"Accel: {accelRate}");
                 float speedDiff = targetSpeed - body.linearVelocity.x;
                 float movement = speedDiff * accelRate * Time.fixedDeltaTime;
                 
@@ -273,16 +269,31 @@ public class PlayerMovement : MonoBehaviour
                     body.linearVelocity.y
                 );
             }
-            
-            if (wallJumpTimer <= 0 || _isGrounded)
-            {
+            else
                 _isWallJumping = t_isWallJumping = false;
+
+            if (wallJumpTimer <= 0)
+            {
                 _isDetached = t_isDetached = false;
             }
         }
 
+        // NORMALE BEWEGUNG (Priorität 3)
+        else
+        {
+            if (!_isOnWall && wallCoyoteCounter > 0)
+            {
+                wallCoyoteCounter -= Time.fixedDeltaTime;
+                t_wallCoyoteCounter = wallCoyoteCounter;
+            }
+            
+            _isWallSliding = false;
+            t_isOnWall = false;
+            ApplyNormalMovement(horizontalInput);
+        }
+
         // WANDGLEITEN (Priorität 2)
-        else if (_isOnWall && !_isGrounded && Mathf.Abs(horizontalInput) > 0.1f)
+        if (_isOnWall && !_isGrounded && Mathf.Abs(horizontalInput) > 0.1f)
         {
             if (Mathf.Sign(horizontalInput) == _playerWallDirection) 
             {
@@ -311,20 +322,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
-        // NORMALE BEWEGUNG (Priorität 3)
-        else
-        {
-            if (!_isOnWall && wallCoyoteCounter > 0)
-            {
-                wallCoyoteCounter -= Time.fixedDeltaTime;
-                t_wallCoyoteCounter = wallCoyoteCounter;
-            }
-            
-            _isWallSliding = false;
-            t_isOnWall = false;
-            ApplyNormalMovement(horizontalInput);
-        }
-
         // BODEN-HANDLING
         if (_isGrounded)
         {
@@ -395,7 +392,7 @@ public class PlayerMovement : MonoBehaviour
 
         _isWallJumping = t_isWallJumping = true;
         wallJumpTimer = wallJumpDuration;
-        wallJumpAirControlTimer = wallJumpAirControlDelay;
+        wallJumpAirControlTimer = wallJumpAirControlDuration;
         wallJumpCooldownTimer = wallJumpCooldown;
         
         _isOnWall = false;
@@ -410,12 +407,12 @@ public class PlayerMovement : MonoBehaviour
     private bool CheckIsGrounded()
     {
         if (!boxCollider) return false;
-        if (!surfaceTrigger) return false;
+        if (!surfaceCollider) return false;
 
         // Bei 45° rotiertem Collider: Die unterste Spitze des Diamanten finden
         Vector2 bottomPoint = new Vector2(
-            surfaceTrigger.bounds.center.x,
-            surfaceTrigger.bounds.min.y  // Unterster Punkt des Bounds
+            surfaceCollider.bounds.center.x,
+            surfaceCollider.bounds.min.y  // Unterster Punkt des Bounds
         );
 
         // Mehrere Raycasts für bessere Erkennung
@@ -445,7 +442,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CheckOnWall()
     {
-        if (surfaceTrigger == null || _isGrounded || wallJumpCooldownTimer > 0) 
+        if (surfaceCollider == null || _isGrounded || wallJumpCooldownTimer > 0) 
             return false;
 
         float direction = Mathf.Sign(_horizontalInput);
@@ -454,8 +451,8 @@ public class PlayerMovement : MonoBehaviour
             return false;
 
         // Prüfposition an der Seite des rotierten Colliders
-        Vector2 checkPos = surfaceTrigger.bounds.center;
-        float checkDistance = surfaceTrigger.bounds.extents.x + wallCheckDistance;
+        Vector2 checkPos = surfaceCollider.bounds.center;
+        float checkDistance = surfaceCollider.bounds.extents.x + wallCheckDistance;
         // checkPos.x += checkDistance * direction;
         
         Vector2 checkLeft = checkPos, checkRight = checkPos;
@@ -463,7 +460,7 @@ public class PlayerMovement : MonoBehaviour
         checkRight.x += checkDistance;
 
         // BoxCast für Wand-Erkennung
-        Vector2 castSize = new Vector2(wallCheckSize.x, surfaceTrigger.bounds.size.y * 0.8f);
+        Vector2 castSize = new Vector2(wallCheckSize.x, surfaceCollider.bounds.size.y * 0.8f);
 
 
         //RaycastHit2D hit = Physics2D.BoxCast(
@@ -495,6 +492,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerWallDirection = t_playerWallDirection = -1;
             //_isOnWall = true;
+            _isWallJumping = false;
             Debug.Log(_playerWallDirection);
             return true;
         }
@@ -502,6 +500,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerWallDirection = t_playerWallDirection = 1;
             //_isOnWall = true;
+            _isWallJumping = false;
             Debug.Log(_playerWallDirection);
             return true;
         }

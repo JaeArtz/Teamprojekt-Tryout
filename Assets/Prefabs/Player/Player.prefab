@@ -203,15 +203,15 @@ MonoBehaviour:
   t_isHoldingMoveBtn: 0
   playerMaxVelocityX: 10
   playerMaxVelocityY: 12
-  playerAccelerationX: 50
-  playerDecelerationX: 60
+  playerAccelerationX: 7
+  playerDecelerationX: 20
   playerEarlyJumpAbortForceY: 0.5
   playerMaxWallJumpVelocityX: 18
   playerMaxWallJumpVelocityY: 12
   wallSlideSpeed: -3
   wallJumpDuration: 0.15
   wallJumpCooldown: 0.2
-  wallJumpAirControlDelay: 0.2
+  wallJumpAirControlDelay: 1
   groundCoyoteTime: 0.1
   wallCoyoteTime: 0.15
   extraJumps: 1
@@ -225,6 +225,8 @@ MonoBehaviour:
   groundCheckDistance: 0.1
   wallCheckSize: {x: 0.2, y: 0.8}
   boxCollider: {fileID: 8391567528759529738}
+  surfaceTrigger: {fileID: 0}
+  wallTrigger: {fileID: 0}
 --- !u!114 &6220875613963771050
 MonoBehaviour:
   m_ObjectHideFlags: 0
