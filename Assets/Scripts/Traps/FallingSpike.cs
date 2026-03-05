@@ -8,13 +8,11 @@ public class FallingSpike : MonoBehaviour
     public float speed;
     public float distance;
     bool isFalling = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Physics2D.queriesStartInColliders = false;
@@ -46,5 +44,15 @@ public class FallingSpike : MonoBehaviour
         }
     }
 
-    //Einfach nur um ein Test push auf meinem Branch zu machen
+    // Zeigt die Reichweite 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+
+        Vector3 startPos = transform.position;
+        Vector3 endPos = startPos + Vector3.down * distance;
+
+        Gizmos.DrawLine(startPos, endPos);
+        Gizmos.DrawWireCube(endPos, new Vector3(0.5f, 0.1f, 0));
+    }
 }
