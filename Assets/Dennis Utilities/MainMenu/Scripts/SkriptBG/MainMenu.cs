@@ -1,3 +1,4 @@
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,12 +14,32 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        Debug.Log("Loading Game is not Implemented yet...");
+        try
+        {
+            PlayerData data = SaveSystem.LoadData();
+            SaveSystem.AlterDataCheck(true);
+            Debug.Log(data.currentScene);
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(data.currentScene);
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log(e.ToString());
+        }
     }
 
-    public void OptionMenu()
+    public void DeleteData()
     {
-        Debug.Log("Optionmenu is not Implemented yet...");
+        try
+        {
+
+        SaveSystem.DeleteData();
+        }
+        catch(System.Exception e)
+        {
+            Debug.Log(e.ToString());
+        }
+        //Debug.Log("Optionmenu is not Implemented yet...");
+        Debug.Log("Data deleted");
     }
     public void QuitGame()
     {

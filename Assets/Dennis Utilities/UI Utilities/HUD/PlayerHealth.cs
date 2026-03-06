@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth;
     public int currentHealth;
-
+    public string currentScene;
     public Image playerIcon;
 
     public Sprite FullLifeIcon;
@@ -22,11 +22,23 @@ public class PlayerHealth : MonoBehaviour
     public Sprite AlmostDeadIcon;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         Assert.AreEqual(currentHealth, maxHealth);
         currentHealth = maxHealth;
+        PlayerData data = SaveSystem.LoadData();
+        if(data != null && data.wasLoaded == true)
+        {
+            currentHealth = data.currentLives;
+            Vector3 position;
+            position.x = data.currentPosition[0];
+            position.y = data.currentPosition[1];
+            position.z = data.currentPosition[2];
+
+            transform.localPosition = position;
+            SaveSystem.AlterDataCheck(false);
+        }
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame

@@ -52,11 +52,13 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         Debug.Log("Loading Menu...");
+        SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
 
     public void QuitGame()
     {
+        SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
         Debug.Log("Quitting Game...");
         Application.Quit();
     }

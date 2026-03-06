@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 941570851}
   - component: {fileID: 941570850}
   m_Layer: 5
-  m_Name: Options_Text
+  m_Name: Delete_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +718,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: Delete Save Data
 --- !u!222 &941570851
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 1152179283}
   - component: {fileID: 1152179282}
   m_Layer: 5
-  m_Name: Option_Game_Button
+  m_Name: Delete_Save_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 649192575}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OptionMenu
+        m_MethodName: DeleteData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
