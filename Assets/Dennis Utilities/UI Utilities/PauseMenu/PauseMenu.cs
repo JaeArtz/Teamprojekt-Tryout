@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject player;
     public GameObject hudUI;
+    public GameObject quitUI;
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +29,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        quitUI.SetActive(false);
         player.GetComponent<PlayerAttack>().enabled = (true);
         hudUI.SetActive(true);
         Time.timeScale = 1.0f;
@@ -57,6 +59,22 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void QuitGame()
+    {
+        quitUI.SetActive(true);
+        pauseMenuUI.SetActive(false);
+    }
+
+    public void Yes()
+    {
+        Quit();
+    }
+
+    public void No()
+    {
+        quitUI.SetActive(false);
+        pauseMenuUI.SetActive(true);
+    }
+    public void Quit()
     {
         SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
         Debug.Log("Quitting Game...");
