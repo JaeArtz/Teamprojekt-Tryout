@@ -17,13 +17,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - BlackHoleInBGWall
+  - BGWall
   - Ground
   - Wall
   - Enemy
   - Ceiling
-  - 
+  - 'Climbable '
   - 
   - 
   - 
