@@ -1,58 +1,48 @@
 using UnityEngine;
-
 public class ArrowTrap : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject[] arrows;
-    [SerializeField] private float range;
+    [SerializeField] private float arrowRange = 10f;
+    [SerializeField] private float arrowSpeed = 10f;
+    [SerializeField] private bool activateOnStart = false;
+    
     private float cooldownTimer;
-    private bool isTriggered = false;
-    private void Attak()
+    private bool isActive = false;
+
+    private void Start()
+    {
+        isActive = activateOnStart;
+    }
+
+    public void Activate()
+    {
+        isActive = true;
+    }
+
+    private void Attack()
     {
         cooldownTimer = 0;
 
-        arrows[FindArrow()].transform.position = firePoint.position;
-        arrows[FindArrow()].transform.rotation = firePoint.rotation;
-        arrows[FindArrow()].GetComponent<EnemyProjectile>().ActivateProjectileWithRange(range);
+        EnemyProjectile arrow = ProjectilePool.Instance.GetArrow();
+        arrow.transform.position = firePoint.position;
+        arrow.setRange(arrowRange);
+        arrow.setSpeed(arrowSpeed);
+        arrow.ActivateProjectile();
     }
 
-    private int FindArrow()
-    {
-        for (int i = 0; i < arrows.Length; i++)
-        {
-            if (!arrows[i].activeInHierarchy)
-            {
-                return i;
-            }
-        }
-        return 0;
-    }
     private void Update()
     {
-        if (!isTriggered)
-        {
-            RaycastHit2D hit = Physics2D.BoxCast(firePoint.position, new Vector2(0.1f, 1.0f), 0f, firePoint.right, range);
-            if (hit.collider != null && hit.collider.CompareTag("Player"))
-            {
-                isTriggered = true;
-            }
-        }
-
-        if(isTriggered)
-        {
-            cooldownTimer += Time.deltaTime;
-            if (cooldownTimer >= attackCooldown)
-            {
-                Attak();
-            }
-        }
+        if(!isActive) return;
+        cooldownTimer += Time.deltaTime;
+        if (cooldownTimer >= attackCooldown)
+            Attack();
     }
 
     private void OnDrawGizmos()
     {
         if (firePoint == null) return;
-        Gizmos.color = isTriggered ? Color.red : Color.cyan;
-        Gizmos.DrawLine(firePoint.position, firePoint.position + firePoint.right * range);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(firePoint.position, firePoint.position + Vector3.left * arrowRange);
     }
 }

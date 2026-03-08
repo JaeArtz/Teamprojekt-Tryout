@@ -15,13 +15,16 @@ public class PlayerAttack : MonoBehaviour
 
     // Showcase vom LightShot
     private bool showcaseLightShot = false;
+    private bool showcaseCatSoul = false;
 
     private void Start()
     {
         if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("lightShotSoul"))
         {
             lightShotUnlocked = true;
+            showcaseLightShot = true;
         }
+        
     }
 
     private void Awake()
@@ -44,6 +47,12 @@ public class PlayerAttack : MonoBehaviour
         {
             showcaseLightShot = false;
             StartCoroutine(LightShotShowcase());
+        }
+
+        if (showcaseCatSoul && playerMovement.IsGrounded())
+        {
+            showcaseCatSoul = false;
+            StartCoroutine(CatSoulShowcase());
         }
 
         if (lightShotUnlocked && Input.GetMouseButtonDown(0) && CanAttack())
@@ -96,14 +105,37 @@ public class PlayerAttack : MonoBehaviour
             lightShotUnlocked = true;
             showcaseLightShot = true;
         }
+        if (soul.soulID == "catSoul")
+        {
+            showcaseCatSoul = true;
+        }
     }
 
-    private IEnumerator LightShotShowcase()
+    public IEnumerator LightShotShowcase()
     {
         playerMovement.SetInputLocked(true);
 
         yield return new WaitForSeconds(0.3f);
         Attack();
+        yield return new WaitForSeconds(2f);
+
+        playerMovement.SetInputLocked(false);
+    }
+
+    public IEnumerator CatSoulShowcase()
+    {
+        playerMovement.SetInputLocked(true);
+
+        // Licht aktivieren
+        PlayerLight playerLight = GetComponent<PlayerLight>();
+        if (playerLight != null)
+            playerLight.ActivateLight();
+
+        yield return new WaitForSeconds(0.5f);
+
+        // Lichtschuss ausführen
+        Attack();
+
         yield return new WaitForSeconds(2f);
 
         playerMovement.SetInputLocked(false);

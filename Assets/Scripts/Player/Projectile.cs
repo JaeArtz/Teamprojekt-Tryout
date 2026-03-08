@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private Light2D ballLight;
     private bool hit;
     private CircleCollider2D cCollider;
     private float direction;
@@ -75,6 +77,10 @@ public class Projectile : MonoBehaviour
         hit = false;
         lifeTime = 0f;
         cCollider.enabled = true;
+        if(ballLight != null)
+        {
+            ballLight.enabled = true;
+        }
     }
 
 

@@ -2,37 +2,47 @@ using UnityEngine;
 
 public class EnemyProjectile : EnemyDamage
 {
-    [SerializeField] private float speed;
-    private float resetTime;
-    private float maxLifetime;
-
-    private float lifetime;
-
-    public void ActivateProjectileWithRange(float range)
+    private float speed;
+    private float range;
+    private Vector3 startPosition;
+    
+    public void setRange(float range)
     {
-        lifetime = 0;
-        maxLifetime = range / speed;
+        this.range = range;
+    }
+
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+    public void ActivateProjectile()
+    {
+        startPosition = transform.position;
         gameObject.SetActive(true);
     }
 
-    public void Update()
+    private void ReturnToPool()
+    {
+        ProjectilePool.Instance.ReturnArrowToPool(this);
+    }
+
+    private void Update()
     {
         float movementSpeed = speed * Time.deltaTime;
-        transform.Translate(movementSpeed, 0, 0);
-
-        lifetime += Time.deltaTime;
-        if (lifetime > Mathf.Abs(maxLifetime))
+        transform.Translate(-movementSpeed, 0, 0, Space.World);
+        
+        if (Vector3.Distance(startPosition, transform.position) >= range)
         {
-            gameObject.SetActive(false);
+            ReturnToPool();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Wall") || collision.CompareTag("Player") || collision.CompareTag("Ground"))
+        base.OnTriggerStay2D(other);
+        if (other.CompareTag("Wall") || other.CompareTag("Ground") || other.CompareTag("Player") || other.CompareTag("PlayerProjectile"))
         {
-            base.OnTriggerStay2D(collision);
-            gameObject.SetActive(false);
+            ReturnToPool();
         }
     }
 }

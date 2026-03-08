@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Enemy
   - Ceiling
+  - PlayerProjectile
   layers:
   - Default
   - TransparentFX
