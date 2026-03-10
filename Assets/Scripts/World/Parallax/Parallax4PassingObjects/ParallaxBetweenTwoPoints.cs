@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class ParallaxBetweenTwoPoints : MonoBehaviour
 {
-    [Header("Parallax")]
+    [Tooltip("Parallax reference cam for positioning and movement.")]
+    [Header("Parallax reference cam")]
     public Transform cam;
     [Range(0f, 1f)]
+    [Tooltip("Parallax \"strength\"/ movement speed.")]
     public float parallaxMultiplier = 0.1f;
 
-    [Header("Set Limits (position in Scene)")]
+    [Tooltip("Set Limits (position in Scene, borders of \"parallax movement area\")")]
+    [Header("Parallax Limits")]
     public Transform leftPoint;   // maximum of pivot point left
     public Transform rightPoint;  // maximum of pivot point right
 

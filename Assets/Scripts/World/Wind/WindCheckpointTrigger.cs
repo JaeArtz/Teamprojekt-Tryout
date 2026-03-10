@@ -4,12 +4,12 @@ public class WindCheckpointTrigger : MonoBehaviour
 {
     public WindController windController;
 
-    [Header("Gust Settings")]
+    [Header("WindGust Settings")]
     public float gustDuration = 7f;
     public float gustInfluence = 1.5f;
     public float gustSpeed = 3f;
 
-    [Header("Trigger")]
+    [Header("Trigger Settings")]
     public bool triggerOnlyOnce = true;
     bool hasTriggered = false;
 

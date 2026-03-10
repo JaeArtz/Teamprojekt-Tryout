@@ -7,10 +7,13 @@ public class WindBaseSpeedSlider : MonoBehaviour
     [Tooltip("Scales world wind values from WindController for this object only.")]
     public float windScale = 0.5f;
 
+    [Tooltip("Influences Shader Property _ExternalInfluence.")]
     public string influenceProperty = "_Externalinfluence";
+
+    [Tooltip("Influences Shader Property _WindSpeed.")]
     public string speedProperty = "_WindSpeed";
 
-    [Tooltip("Optional: assign explicitly. If null, then WindController.Instance is used at runtime.")]
+    [Tooltip("Optional: assign explicitly (if other than default). If null, then WindController.Instance is used at runtime.")]
     public WindController windController;
 
     SpriteRenderer sr;
