@@ -503,24 +503,6 @@ public class PlayerMovement : MonoBehaviour
         hitRight = Physics2D.BoxCast(
             checkRight, castSize, 0f, Vector2.zero, 0f, wallLayer);
 
-        // Fallback: Multiple Raycasts für bessere Erkennung
-        //if (!hit.collider)
-        //{
-        //    Vector2 top = checkPos + Vector2.up * (surfaceTrigger.bounds.extents.y * 0.6f);
-        //    Vector2 bottom = checkPos + Vector2.down * (surfaceTrigger.bounds.extents.y * 0.6f);
-
-        //    RaycastHit2D hitTop = Physics2D.Raycast(top, Vector2.right * direction, wallCheckDistance, wallLayer);
-        //    RaycastHit2D hitMiddle = Physics2D.Raycast(checkPos, Vector2.right * direction, wallCheckDistance, wallLayer);
-        //    RaycastHit2D hitBottom = Physics2D.Raycast(bottom, Vector2.right * direction, wallCheckDistance, wallLayer);
-
-        //    hit = hitTop.collider != null ? hitTop : hitMiddle.collider != null ? hitMiddle : hitBottom;
-        //}
-
-        //if (hit.collider)
-        //{
-        //    _playerWallDirection = t_playerWallDirection = (hit.normal.x > 0) ? -1 : 1;
-        //    return true;
-        //}
         if (hitLeft.collider)
         {
             _playerWallDirection = t_playerWallDirection = -1;
@@ -541,69 +523,6 @@ public class PlayerMovement : MonoBehaviour
 
         return false;
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision == null) return;
-
-    //    if (_isGrounded || wallJumpCooldownTimer > 0)
-    //    {
-    //        //_isOnWall = false;
-    //        Debug.Log(_isOnWall);
-    //    }
-    //    if (((1 << collision.gameObject.layer) & wallLayer) != 0)
-    //    {
-    //        //_isOnWall = true;
-
-    //        float direction = Mathf.Sign(_horizontalInput);
-    //        Vector2 checkPos = wallTrigger.bounds.center;
-    //        Vector2 castSize = new Vector2(wallCheckSize.x, wallTrigger.bounds.size.y * 0.8f);
-    //        float checkDistance = wallTrigger.bounds.extents.x + wallCheckDistance;
-    //        Vector2 checkLeft = checkPos, checkRight = checkPos;
-    //        checkLeft.x += checkDistance * -1;
-    //        checkRight.x += checkDistance;
-    //        //RaycastHit2D hit = Physics2D.BoxCast(
-    //        //    checkPos, castSize, 0f, Vector2.zero, 0f, wallLayer);
-    //        RaycastHit2D hitLeft = Physics2D.BoxCast(
-    //            checkLeft, castSize, 0f, Vector2.zero, 0f, wallLayer),
-    //            hitRight = Physics2D.BoxCast(
-    //            checkRight, castSize, 0f, Vector2.zero, 0f, wallLayer);
-    //        // Fallback: Multiple Raycasts für bessere Erkennung
-    //        //if (!hit.collider)
-    //        //{
-    //        //    Debug.Log($"hit collider is null");
-    //        //    Vector2 top = checkPos + Vector2.up * (wallTrigger.bounds.extents.y * 0.6f);
-    //        //    Vector2 bottom = checkPos + Vector2.down * (wallTrigger.bounds.extents.y * 0.6f);
-
-    //        //    RaycastHit2D hitTop = Physics2D.Raycast(top, Vector2.right * direction, wallCheckDistance, wallLayer);
-    //        //    RaycastHit2D hitMiddle = Physics2D.Raycast(checkPos, Vector2.right * direction, wallCheckDistance, wallLayer);
-    //        //    RaycastHit2D hitBottom = Physics2D.Raycast(bottom, Vector2.right * direction, wallCheckDistance, wallLayer);
-
-    //        //    hit = hitTop.collider != null ? hitTop : hitMiddle.collider != null ? hitMiddle : hitBottom;
-    //        //}
-
-    //        //if (hit.collider)
-    //        //{
-    //        //    _playerWallDirection = t_playerWallDirection = (hit.normal.x > 0) ? -1 : 1;
-    //        //    Debug.Log($"Direction: { _playerWallDirection}");
-    //        //}
-    //        //else
-    //        //    Debug.Log("nope");
-    //        if (hitLeft.collider)
-    //        {
-    //            _playerWallDirection = t_playerWallDirection = -1;
-    //            //_isOnWall = true;
-    //            Debug.Log(_playerWallDirection);
-    //        }
-    //        else if (hitRight.collider)
-    //        {
-    //            _playerWallDirection = t_playerWallDirection = 1;
-    //            //_isOnWall = true;
-    //            Debug.Log(_playerWallDirection);
-    //        }
-    //        else Debug.Log("uhhhh");
-    //    }
-    //}
 
     private void OnTriggerExit2D(Collider2D collision)
     {
