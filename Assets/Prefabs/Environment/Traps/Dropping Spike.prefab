@@ -134,10 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f4d8a542a85554ebb71c5e2e00b743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingSpike
-  physicsCollider: {fileID: 4159195907261847111}
-  triggerCollider: {fileID: 2303276988943468961}
-  speed: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8192
   distance: 5
+  speed: 5
 --- !u!114 &5100336938645741240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
   damage: 2
+  damageInterval: 2
 --- !u!60 &2303276988943468961
 PolygonCollider2D:
   m_ObjectHideFlags: 0

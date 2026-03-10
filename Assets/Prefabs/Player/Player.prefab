@@ -225,8 +225,8 @@ MonoBehaviour:
   groundCheckDistance: 0.1
   wallCheckSize: {x: 0.2, y: 0.8}
   boxCollider: {fileID: 8391567528759529738}
-  surfaceCollider: {fileID: 0}
-  wallTrigger: {fileID: 0}
+  surfaceCollider: {fileID: 4377586443525021223}
+  wallTrigger: {fileID: 345758358063241290}
 --- !u!114 &6220875613963771050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5715648347967662063}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
