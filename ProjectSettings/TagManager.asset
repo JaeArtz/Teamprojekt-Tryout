@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - Ceiling
   - PlayerProjectile
+  - Lightball
+  - Background
   layers:
   - Default
   - TransparentFX

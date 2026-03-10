@@ -5,7 +5,7 @@ public class ArrowTrap : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private float arrowRange = 10f;
     [SerializeField] private float arrowSpeed = 10f;
-    [SerializeField] private bool activateOnStart = false;
+    [SerializeField] private bool activateOnStart = false; // Startet die Falle sofort oder erst durch eine Aktivierung?
     
     private float cooldownTimer;
     private bool isActive = false;
@@ -24,10 +24,17 @@ public class ArrowTrap : MonoBehaviour
     {
         cooldownTimer = 0;
 
+        // 1. Pfeil aus dem ProjectilePool holen (Object Pooling)
         EnemyProjectile arrow = ProjectilePool.Instance.GetArrow();
+        
+        // 2. Position auf den FirePoint setzen
         arrow.transform.position = firePoint.position;
+        
+        // 3. Individuelle Werte an das Projektil übergeben
         arrow.setRange(arrowRange);
         arrow.setSpeed(arrowSpeed);
+        
+        // 4. Pfeil scharf schalten und Bewegung starten
         arrow.ActivateProjectile();
     }
 
@@ -35,10 +42,11 @@ public class ArrowTrap : MonoBehaviour
     {
         if(!isActive) return;
         cooldownTimer += Time.deltaTime;
-        if (cooldownTimer >= attackCooldown)
+        if (cooldownTimer >= attackCooldown) // Wenn die Abklingzeit erreicht ist, angreifen
             Attack();
     }
 
+    // Visualisierung der Schussbahn im Editor
     private void OnDrawGizmos()
     {
         if (firePoint == null) return;

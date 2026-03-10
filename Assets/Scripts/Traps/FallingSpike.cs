@@ -15,15 +15,15 @@ public class FallingSpike : MonoBehaviour
 
     void Update()
     {
-        Physics2D.queriesStartInColliders = false;
+        Physics2D.queriesStartInColliders = false; //Damit der Raycast nicht mit dem eigenen Collider kollidiert
         if(isFalling == false)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distance);
-            Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
+            //Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
 
             if(hit.transform != null)
             {
-                if(hit.transform.CompareTag("Player"))
+                if(hit.transform.CompareTag("Player")) //Wenn Raycsast den Spieler trifft, fällt der Spike
                 {
                     rb.gravityScale = speed;
                     isFalling = true;
@@ -34,7 +34,7 @@ public class FallingSpike : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Ground")) // Wenn der Spike den Boden berührt, wird er zerstört
         {
             rb.linearVelocity = Vector2.zero; 
             rb.gravityScale = 0;
@@ -44,7 +44,7 @@ public class FallingSpike : MonoBehaviour
         }
     }
 
-    // Zeigt die Reichweite 
+    // Zeigt die Reichweite im Editor an
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;

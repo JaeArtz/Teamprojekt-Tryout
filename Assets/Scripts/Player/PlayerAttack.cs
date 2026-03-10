@@ -7,22 +7,31 @@ public class PlayerAttack : MonoBehaviour
     private Rigidbody2D rb;
 
     [Header("Attack Settings")]
-    [SerializeField] private float attackCooldown = 0.7f;
+    [SerializeField] private float attackCooldown = 0.7f; // Zeit zwischen Angriffen
     [SerializeField] private Transform firePoint;
     
     private float lastAttackTime = -Mathf.Infinity;
     private bool lightShotUnlocked = false;
 
-    // Showcase vom LightShot
+    // Showcases
     private bool showcaseLightShot = false;
     private bool showcaseCatSoul = false;
 
     private void Start()
     {
+        // Initialer Check beim Szenenstart: Wurden Fähigkeiten bereits gesammelt?
         if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("lightShotSoul"))
         {
             lightShotUnlocked = true;
-            showcaseLightShot = true;
+            showcaseLightShot = false;
+        }
+
+        // Spezielle Logik für die Katzen-Seele (Nachtsicht/Licht)
+        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("catSoul"))
+        {
+            PlayerLight playerLight = GetComponent<PlayerLight>();
+            if (playerLight != null)
+                playerLight.ActivateLight();
         }
         
     }
@@ -55,6 +64,7 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(CatSoulShowcase());
         }
 
+        // standardangriff falls freigeschaltet
         if (lightShotUnlocked && Input.GetMouseButtonDown(0) && CanAttack())
         {
             Attack();
@@ -67,6 +77,7 @@ public class PlayerAttack : MonoBehaviour
         if ((Time.time - lastAttackTime) < attackCooldown)
             return false;
         
+        // prüfe beweugungszustand des Spielers ob angriff erlaubt ist
         return playerMovement.CanAttack();
     }
 
@@ -74,6 +85,7 @@ public class PlayerAttack : MonoBehaviour
     {
         lastAttackTime = Time.time;
 
+        // Projektil aus dem Pool geholt und positioniert
         Projectile proj = ProjectilePool.Instance.GetProjectile();
         if (proj == null)
         {
@@ -140,8 +152,6 @@ public class PlayerAttack : MonoBehaviour
 
         playerMovement.SetInputLocked(false);
     }
-
-    // Neue Methode für erweiterte Angriffsbedingungen
     public bool CanAttackInCurrentState()
     {
         if (!lightShotUnlocked)
