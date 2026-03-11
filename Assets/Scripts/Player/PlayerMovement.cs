@@ -379,7 +379,7 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput != 0)
         {
             float dir = horizontalInput > 0 ? 1 : -1;
-            transform.localScale = new Vector3(dir * 0.7f, 0.7f, 1);
+            transform.localScale = new Vector3(dir * 0.7f, 0.7f, transform.localScale.z);
         }
     }
 

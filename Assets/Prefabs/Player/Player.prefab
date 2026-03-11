@@ -211,7 +211,7 @@ MonoBehaviour:
   wallSlideSpeed: -3
   wallJumpDuration: 0.15
   wallJumpCooldown: 0.2
-  wallJumpAirControlDelay: 1
+  wallJumpAirControlDuration: 1
   groundCoyoteTime: 0.1
   wallCoyoteTime: 0.15
   extraJumps: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   groundCheckDistance: 0.1
   wallCheckSize: {x: 0.2, y: 0.8}
   boxCollider: {fileID: 8391567528759529738}
-  surfaceTrigger: {fileID: 0}
+  surfaceCollider: {fileID: 0}
   wallTrigger: {fileID: 0}
 --- !u!114 &6220875613963771050
 MonoBehaviour:
