@@ -7,7 +7,7 @@ public static class SaveSystem
     public static void SaveData(PlayerHealth player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/souls.bin";
+        string path = Application.persistentDataPath + "/player.bin";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
@@ -25,9 +25,19 @@ public static class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
+    public static void SaveLeafData(HashSet<int> collectedLeaves)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/collectedLeaves.bin";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        LeafData data = new LeafData(collectedLeaves);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
     public static PlayerData LoadData()
     {
-        string path = Application.persistentDataPath + "/souls.bin";
+        string path = Application.persistentDataPath + "/player.bin";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -48,7 +58,7 @@ public static class SaveSystem
         }
 
     }
-    public static SoulsData LoadSouls()
+    public static HashSet<string> LoadSoulData()
     {
         string path = Application.persistentDataPath + "/collectedSouls.bin";
         if (File.Exists(path))
@@ -62,7 +72,30 @@ public static class SaveSystem
             }
             SoulsData soulsData = formatter.Deserialize(stream) as SoulsData;
             stream.Close();
-            return soulsData;
+            return soulsData.souls;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+
+    }
+    public static HashSet<int> LoadLeafData()
+    {
+        string path = Application.persistentDataPath + "/collectedLeaves.bin";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            if (stream.Length == 0)
+            {
+                stream.Close();
+                return null;
+            }
+            LeafData leavesData = formatter.Deserialize(stream) as LeafData;
+            stream.Close();
+            return leavesData.leaves;
         }
         else
         {
@@ -73,8 +106,9 @@ public static class SaveSystem
     }
     public static void DeleteData()
     {
-        string path = Application.persistentDataPath + "/souls.bin";
+        string path = Application.persistentDataPath + "/player.bin";
         string soulsPath = Application.persistentDataPath + "/collectedSouls.bin";
+        string leafPath = Application.persistentDataPath + "/collectedLeaves.bin";
         if (File.Exists(path))
         {
             File.Delete(path);
@@ -90,8 +124,17 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogError("Souls file is already deleted " + path);
+            Debug.LogError("Souls file is already deleted " + soulsPath);
            
+        }
+        if (File.Exists(leafPath))
+        {
+            File.Delete(leafPath);
+        }
+        else
+        {
+            Debug.LogError("Leaf file is already deleted " + leafPath);
+
         }
 
     }
@@ -101,7 +144,7 @@ public static class SaveSystem
     /// <param name="loadState"></param>
     public static void AlterDataCheck(bool loadState)
     {
-        string path = Application.persistentDataPath + "/souls.bin";
+        string path = Application.persistentDataPath + "/player.bin";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

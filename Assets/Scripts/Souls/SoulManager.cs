@@ -14,9 +14,9 @@ public class SoulManager : MonoBehaviour
 
     private void Awake()
     {   
-        if(resetSouls == true){
-            ClearAll(); // optional: clear all on start (for testing)
-        }
+        //if(resetSouls == true){
+            //ClearAll(); // optional: clear all on start (for testing)
+        //}
         
         if (Instance != null && Instance != this)
         {
@@ -54,25 +54,30 @@ public class SoulManager : MonoBehaviour
 
     private void Save()
     {
-        var serial = new Serialization<string>(collected);
-        string json = JsonUtility.ToJson(serial);
-        PlayerPrefs.SetString(PREF_KEY, json);
-        PlayerPrefs.Save();
+        SaveSystem.SaveSoulData(collected);
+        //var serial = new Serialization<string>(collected);
+        //string json = JsonUtility.ToJson(serial);
+        //PlayerPrefs.SetString(PREF_KEY, json);
+        //PlayerPrefs.Save();
     }
 
     private void Load()
     {
-        if (!PlayerPrefs.HasKey(PREF_KEY)) return;
-        string json = PlayerPrefs.GetString(PREF_KEY);
-        var serial = JsonUtility.FromJson<Serialization<string>>(json);
-        collected = new HashSet<string>(serial.ToList());
+        if(SaveSystem.LoadSoulData() == null)
+        {
+            SaveSystem.SaveSoulData(collected);
+        }
+        else
+        {
+            collected = SaveSystem.LoadSoulData();
+        }
     }
 
     // optional: clear all (for testing)
     public void ClearAll()
     {
         collected.Clear();
-        PlayerPrefs.DeleteKey(PREF_KEY);
+        //PlayerPrefs.DeleteKey(PREF_KEY);
     }
 }
 

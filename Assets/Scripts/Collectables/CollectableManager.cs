@@ -39,22 +39,18 @@ public class CollectableManager : MonoBehaviour
 
     private void SaveCollectedLeaves()
     {
-        // Als String speichern (z. B. "0,1,2,5")
-        PlayerPrefs.SetString("CollectedLeaves", string.Join(",", collectedLeaves));
-        PlayerPrefs.Save();
+        SaveSystem.SaveLeafData(collectedLeaves);
     }
 
     private void LoadCollectedLeaves()
     {
-        collectedLeaves.Clear();
-        string saved = PlayerPrefs.GetString("CollectedLeaves", "");
-        if (string.IsNullOrEmpty(saved)) return;
-
-        string[] ids = saved.Split(',');
-        foreach (string id in ids)
+        if (SaveSystem.LoadLeafData() == null)
         {
-            if (int.TryParse(id, out int leafId))
-                collectedLeaves.Add(leafId);
+            SaveSystem.SaveLeafData(collectedLeaves);
+        }
+        else
+        {
+            collectedLeaves = SaveSystem.LoadLeafData();
         }
     }
 
