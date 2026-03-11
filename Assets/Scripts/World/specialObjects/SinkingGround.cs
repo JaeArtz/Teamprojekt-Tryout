@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SinkingGround : MonoBehaviour
 {
+
     [Header("Sink Settings")]
     [Tooltip("slows player movement")]
     [SerializeField] private float slowFactor = 0.3f; // 0.3f = 30% of normal velocity
@@ -65,3 +66,4 @@ public class SinkingGround : MonoBehaviour
         }
     }
 }
+

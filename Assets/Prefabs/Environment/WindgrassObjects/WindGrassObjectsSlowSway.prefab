@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8233910403418325020}
   - component: {fileID: 6620948000601044244}
-  - component: {fileID: 4860595468141330881}
+  - component: {fileID: 3578494502084978643}
   m_Layer: 0
   m_Name: forest_decoplant_4_0 (5)
   m_TagString: Untagged
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4860595468141330881
+--- !u!114 &3578494502084978643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,13 +199,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2954058940464635494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &3058528928208864085
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2080262771240593316}
   - component: {fileID: 4978121725666200393}
-  - component: {fileID: 8814797684688471523}
+  - component: {fileID: 3177196932022541218}
   m_Layer: 0
   m_Name: forest_decoplant_5_0
   m_TagString: Untagged
@@ -297,7 +295,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8814797684688471523
+--- !u!114 &3177196932022541218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,13 +304,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3058528928208864085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &3714359429840131432
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1257353146625993035}
   - component: {fileID: 4499825029778411701}
-  - component: {fileID: 756877330426528006}
+  - component: {fileID: 4727316737485440736}
   m_Layer: 0
   m_Name: forest_decoplant_4_0 (4)
   m_TagString: Untagged
@@ -404,7 +400,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &756877330426528006
+--- !u!114 &4727316737485440736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -413,13 +409,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3714359429840131432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &4083297164876242680
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736431092219579239}
   - component: {fileID: 3655834395489797042}
-  - component: {fileID: 3768751763548767263}
+  - component: {fileID: 1856272525401325829}
   m_Layer: 0
   m_Name: forest_decoplant_4_0 (3)
   m_TagString: Untagged
@@ -511,7 +505,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3768751763548767263
+--- !u!114 &1856272525401325829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -520,13 +514,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4083297164876242680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &4517438682864754941
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6338970438855535970}
   - component: {fileID: 6268182276548466811}
-  - component: {fileID: 7933419954781642614}
+  - component: {fileID: 1651729636865908867}
   m_Layer: 0
   m_Name: forest_decoplant_4_0 (1)
   m_TagString: Untagged
@@ -618,7 +610,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7933419954781642614
+--- !u!114 &1651729636865908867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -627,13 +619,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4517438682864754941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &5509694793607431692
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445710286950612600}
   - component: {fileID: 5823127189548082}
-  - component: {fileID: 1051255428729224938}
+  - component: {fileID: 4126235060210895463}
   m_Layer: 0
   m_Name: forest_decoplant_4_0 (2)
   m_TagString: Untagged
@@ -725,7 +715,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1051255428729224938
+--- !u!114 &4126235060210895463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -734,13 +724,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5509694793607431692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &5698053772220039184
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6299215749715149491}
   - component: {fileID: 6267912935086019540}
-  - component: {fileID: 539381193820850896}
+  - component: {fileID: 583778811754387037}
   m_Layer: 0
   m_Name: forest_decoplant_4_0
   m_TagString: Untagged
@@ -832,7 +820,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &539381193820850896
+--- !u!114 &583778811754387037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -841,13 +829,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5698053772220039184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &5946597108508148414
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,8 +844,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7289625665347461854}
   - component: {fileID: 5624938018801748894}
-  - component: {fileID: 4960885509231791233}
   - component: {fileID: 414837103463219064}
+  - component: {fileID: 3799779420058595677}
   m_Layer: 0
   m_Name: forest_decoplant_1_0 (1)
   m_TagString: Untagged
@@ -940,22 +926,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4960885509231791233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5946597108508148414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
 --- !u!210 &414837103463219064
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -968,6 +938,20 @@ SortingGroup:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &3799779420058595677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5946597108508148414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &7273827102443964845
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,8 +962,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4754127724954195617}
   - component: {fileID: 6681401359493428344}
-  - component: {fileID: 1976725173441576640}
   - component: {fileID: 7024158916853248562}
+  - component: {fileID: 6690439622905397856}
   m_Layer: 0
   m_Name: forest_decoplant_1_0
   m_TagString: Untagged
@@ -1060,22 +1044,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1976725173441576640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7273827102443964845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee13573ee15fba46b22e414a972de3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WindBaseSpeedSlider
-  windScale: 0.5
-  influenceProperty: _Externalinfluence
-  speedProperty: _WindSpeed
-  windController: {fileID: 0}
 --- !u!210 &7024158916853248562
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1088,3 +1056,17 @@ SortingGroup:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &6690439622905397856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273827102443964845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
+  maxStretchLimit: 0.05
+  objectScaleCompensation: _ObjectScaleCompensation
