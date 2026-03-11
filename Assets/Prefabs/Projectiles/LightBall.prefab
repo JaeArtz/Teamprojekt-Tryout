@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688706894060551368}
   - component: {fileID: 492265331378227190}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Spot Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6223093224735404250}
   - component: {fileID: 6118884644347307981}
   - component: {fileID: -8340048085918154514}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LightBall
   m_TagString: Lightball
   m_Icon: {fileID: 0}
