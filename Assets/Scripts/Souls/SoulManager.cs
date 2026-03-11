@@ -38,11 +38,13 @@ public class SoulManager : MonoBehaviour
     public void AddSoul(string id)
     {
         if (string.IsNullOrEmpty(id)) return;
+        
         if (collected.Add(id))
         {
             Save();
             Debug.Log($"Soul collected: {id}");
         }
+        
     }
 
     public void RemoveSoul(string id)
