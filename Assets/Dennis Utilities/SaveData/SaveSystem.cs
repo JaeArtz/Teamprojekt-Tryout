@@ -109,6 +109,7 @@ public static class SaveSystem
         string path = Application.persistentDataPath + "/player.bin";
         string soulsPath = Application.persistentDataPath + "/collectedSouls.bin";
         string leafPath = Application.persistentDataPath + "/collectedLeaves.bin";
+        bool isAlreadyDeleted = false;
         if (File.Exists(path))
         {
             File.Delete(path);
@@ -116,7 +117,7 @@ public static class SaveSystem
         else
         {
             Debug.LogError("Save file already deleted " + path);
-
+            isAlreadyDeleted = true;
         }
         if (File.Exists(soulsPath))
         {
@@ -125,7 +126,7 @@ public static class SaveSystem
         else
         {
             Debug.LogError("Souls file is already deleted " + soulsPath);
-           
+            isAlreadyDeleted = true;
         }
         if (File.Exists(leafPath))
         {
@@ -134,9 +135,13 @@ public static class SaveSystem
         else
         {
             Debug.LogError("Leaf file is already deleted " + leafPath);
-
+            isAlreadyDeleted = true;
         }
-
+        if(isAlreadyDeleted)
+        {
+            throw new System.Exception();
+        }
+        
     }
     /// <summary>
     /// First loads current State of Data and then changes the current loadState depending on the transmitted state.

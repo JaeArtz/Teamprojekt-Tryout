@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject myLevelLoader;
+    [SerializeField] private Notify loadingFailed;
+    [SerializeField] private Notify deletingFailed;
+    [SerializeField] private Notify deletingSucceded;
     public void StartGame()
     {
         //load the game scene
@@ -23,7 +26,10 @@ public class MainMenu : MonoBehaviour
         }
         catch (System.Exception e)
         {
-            Debug.Log(e.ToString());
+            if(NotifyManager.ManagerInstance != null)
+            {
+                NotifyManager.ManagerInstance.ShowNotification(loadingFailed);
+            }
         }
     }
 
@@ -32,11 +38,12 @@ public class MainMenu : MonoBehaviour
         try
         {
 
-        SaveSystem.DeleteData();
+            SaveSystem.DeleteData();
+            NotifyManager.ManagerInstance.ShowNotification(deletingSucceded);
         }
         catch(System.Exception e)
         {
-            Debug.Log(e.ToString());
+            NotifyManager.ManagerInstance.ShowNotification(deletingFailed);
         }
         //Debug.Log("Optionmenu is not Implemented yet...");
         Debug.Log("Data deleted");
