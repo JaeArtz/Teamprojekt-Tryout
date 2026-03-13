@@ -219,9 +219,11 @@ MonoBehaviour:
   stunDuration: 4
   normalSprite: {fileID: -1718917180269710191, guid: dd5bf277b213bea4d995c87a7ef614b0, type: 3}
   stunnedSprite: {fileID: 119441457431117624, guid: 0d686fc5c41eaf544af914c3d65fea77, type: 3}
-  useInternalHover: 0
-  hoverAmplitude: 0.5
+  useInternalHover: 1
+  hoverAmplitude: 0.003
   hoverSpeed: 2
+  autoFlipp: 1
+  spriteFacesRightByDefault: 0
   hitCollider: {fileID: 1198937652742355571}
   bodyCollider: {fileID: 302914218035805106}
 --- !u!114 &2493316488136366846

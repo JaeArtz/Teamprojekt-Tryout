@@ -32,6 +32,7 @@ public class Ghost2 : MonoBehaviour
     public bool autoFlipp = true;
     [Tooltip("Does the original Sprite Image used in the spriteRenderer face right?")]
     public bool spriteFacesRightByDefault = false;
+    public float hoverTimeOffset;
     
 
     private GhostState state = GhostState.Active;
@@ -53,7 +54,13 @@ public class Ghost2 : MonoBehaviour
     {
         if (useInternalHover)
         {
-            transform.position = startingPosition + Vector3.up * Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude;
+            // old one : transform.position = startingPosition + Vector3.up * Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude;
+
+            // offset of starting time for hovering
+            float hoverY = Mathf.Sin((Time.time + hoverTimeOffset) * hoverSpeed) * hoverAmplitude;
+
+            // ghost moves relativ to parent
+            transform.localPosition = new Vector3(0, hoverY, 0);
         }
 
         if (state == GhostState.Stunned)
