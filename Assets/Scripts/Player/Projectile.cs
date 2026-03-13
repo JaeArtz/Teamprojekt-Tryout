@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Ghost ghost = other.GetComponent<Ghost>();
+        Ghost2 ghost = other.GetComponent<Ghost2>();
         if(ghost != null)
         {
             ghost.HitByLight();
