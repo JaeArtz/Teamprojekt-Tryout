@@ -16,53 +16,58 @@ public class SinkingGround : MonoBehaviour
     [Tooltip("time window for jumping while in SinkingGround (Coyote Time override)")]
     [SerializeField] private float sinkingGroundCoyouteTime = 0.2f;
 
-    private float _originalMaxX;
-    private float _originalMaxY;
+    private float? _originalMaxX;
+    private float? _originalMaxY;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var player = other.GetComponentInParent<PlayerMovement>();
-        if (player != null)
+        var jump = other.GetComponentInParent<PlayerJump>();
+        var run = other.GetComponentInParent<PlayerRunning>();
+        if (jump && run)
         {
             // gets original values
-            _originalMaxX = player.MaxVelocityX;
-            _originalMaxY = player.MaxVelocityY;
+            if(!_originalMaxX.HasValue)
+                _originalMaxX = run.MaxVelocityX;
+            if(!_originalMaxY.HasValue)
+                _originalMaxY = jump.MaxVelocityY;
 
             // change values (while stuck in SinkingGround)
-            player.MaxVelocityX = _originalMaxX * slowFactor;
-            player.MaxVelocityY = _originalMaxY * jumpFactor;
+            run.MaxVelocityX = (float)_originalMaxX * slowFactor;
+            jump.MaxVelocityY = (float)_originalMaxY * jumpFactor;
         }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        var player = other.GetComponentInParent<PlayerMovement>();
-        if (player != null)
+        var jump = other.GetComponentInParent<PlayerJump>();
+        var run = other.GetComponentInParent<PlayerRunning>();
+        if (jump && run)
         {
             // if player doesn't actively jump and try to get out
             // he gets dragged down
-            if (player.VerticalVelocity <= 0.1f)
+            if (jump.VerticalVelocity <= 0.1f)
             {
-                player.VerticalVelocity = sinkForce;
+                jump.VerticalVelocity = sinkForce;
             }
 
-            player.remoteAccessToGroundCoyoteCounter = sinkingGroundCoyouteTime;
+            jump.remoteAccessToGroundCoyoteCounter = sinkingGroundCoyouteTime;
 
-            player.MaxVelocityX = _originalMaxX * slowFactor;
-            player.MaxVelocityY = _originalMaxY * jumpFactor;
+            run.MaxVelocityX = (float)_originalMaxX * slowFactor;
+            jump.MaxVelocityY = (float)_originalMaxY * jumpFactor;
 
-            player.VerticalVelocity = sinkForce;
+            jump.VerticalVelocity = sinkForce;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        var player = other.GetComponentInParent<PlayerMovement>();
-        if (player != null)
+        var jump = other.GetComponentInParent<PlayerJump>();
+        var run = other.GetComponentInParent<PlayerRunning>();
+        if (jump && run)
         {
-            // sets values back to normal
-            player.MaxVelocityX = _originalMaxX;
-            player.MaxVelocityY = _originalMaxY;
+            // change values (while stuck in SinkingGround)
+            run.MaxVelocityX = (float)_originalMaxX;
+            jump.MaxVelocityY = (float)_originalMaxY;
         }
     }
 }

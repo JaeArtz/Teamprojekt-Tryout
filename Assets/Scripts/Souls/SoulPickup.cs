@@ -31,7 +31,7 @@ public class SoulPickup : MonoBehaviour
         // Add to SoulManager
         SoulManager.Instance?.AddSoul(soulData.soulID);
 
-        var pm = other.GetComponentInParent<PlayerMovement>();
+        var pm = other.GetComponentInParent<PlayerController>();
         if (pm != null)
         {
             pm.OnSoulCollected(soulData);
