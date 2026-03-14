@@ -1,0 +1,2041 @@
+fileFormatVersion: 2
+guid: 1c43caa4e02103d4697bc715eeb75876
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 264708090262370256
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_0
+  - first:
+      213: 3732283429361958681
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_1
+  - first:
+      213: 414297315866637422
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_2
+  - first:
+      213: 5982605117280482707
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_3
+  - first:
+      213: 6364195601190396527
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_4
+  - first:
+      213: 5337791597189229763
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_5
+  - first:
+      213: 4693419430112568403
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_6
+  - first:
+      213: -8652145932279488485
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_7
+  - first:
+      213: 3195314519505992605
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_8
+  - first:
+      213: 2630327784852454465
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_9
+  - first:
+      213: -4093702158318762625
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_10
+  - first:
+      213: 3166018255143923406
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_11
+  - first:
+      213: -2732716318770313342
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_12
+  - first:
+      213: 3082325530670866439
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_13
+  - first:
+      213: 523811110435823543
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_14
+  - first:
+      213: -6940969602844362304
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_15
+  - first:
+      213: -7908217062480664819
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_16
+  - first:
+      213: -2191575349355931357
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_17
+  - first:
+      213: 9157296757163315938
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_18
+  - first:
+      213: 6747364400679880686
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_19
+  - first:
+      213: 6110348244791100999
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_20
+  - first:
+      213: -8687790820932710551
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_21
+  - first:
+      213: 2325189061599188891
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_22
+  - first:
+      213: -8563759001206379957
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_23
+  - first:
+      213: -705781751784084992
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_24
+  - first:
+      213: -4649212664118949357
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_25
+  - first:
+      213: 2691213559638610537
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_26
+  - first:
+      213: 912096967715649585
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_27
+  - first:
+      213: 3343933867062585857
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_28
+  - first:
+      213: -652312596465095849
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_29
+  - first:
+      213: -3453288510664116987
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_30
+  - first:
+      213: 5844420645085630606
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_31
+  - first:
+      213: 6829874588857536723
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_32
+  - first:
+      213: 7002253484987651672
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_33
+  - first:
+      213: 6637099444746569212
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_34
+  - first:
+      213: -9021665776165555181
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_35
+  - first:
+      213: 4623502908331524723
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_36
+  - first:
+      213: -3446732096257912869
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_37
+  - first:
+      213: 6343673999351657142
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_38
+  - first:
+      213: 8995227490444360351
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_39
+  - first:
+      213: 1784574581995890980
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_40
+  - first:
+      213: 376411053906258524
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_41
+  - first:
+      213: -7878714635122210100
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_42
+  - first:
+      213: -5538936316616211336
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_43
+  - first:
+      213: -6566022286112130659
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_44
+  - first:
+      213: 9178478521090763405
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_45
+  - first:
+      213: 2413372269193094068
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_46
+  - first:
+      213: 439012969353472283
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_47
+  - first:
+      213: 4022311130480446242
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_48
+  - first:
+      213: 1056093682510455902
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_49
+  - first:
+      213: 3514543076468457101
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_50
+  - first:
+      213: -3843481556270383408
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_51
+  - first:
+      213: 6911249800235009729
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_52
+  - first:
+      213: -2084536530788853723
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_53
+  - first:
+      213: -9150043849636980363
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_54
+  - first:
+      213: 6078919259321055223
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_55
+  - first:
+      213: -6492590362314923042
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_56
+  - first:
+      213: -1552257440624048370
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_57
+  - first:
+      213: -5595588782010764713
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_58
+  - first:
+      213: -2075867706054527501
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_59
+  - first:
+      213: 6348856336378087675
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_60
+  - first:
+      213: -7153811017349327232
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_61
+  - first:
+      213: 5862669686555428543
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_62
+  - first:
+      213: 1698382457781579003
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_63
+  - first:
+      213: -2938323709456111267
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_64
+  - first:
+      213: 4945691494283583098
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_65
+  - first:
+      213: -9208261699058106566
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_66
+  - first:
+      213: -3922473029909969879
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_67
+  - first:
+      213: 4270351143104065321
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_68
+  - first:
+      213: 6202943419177600625
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_69
+  - first:
+      213: -2300397166005657632
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_70
+  - first:
+      213: 1702684641316127343
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_71
+  - first:
+      213: -7504388700730608756
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_72
+  - first:
+      213: 4912997302770366137
+    second: Swamp_OnlyBubbles_4BubbleAnimation_pic2_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 906
+        height: 758
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7b2490b9e6ca300800000000000000
+      internalID: 264708090262370256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_1
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 621
+        width: 74
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f3238210cbbc330800000000000000
+      internalID: 3732283429361958681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_2
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 685
+        width: 63
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64f0a7b631efb500800000000000000
+      internalID: 414297315866637422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 623
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395ffee28ab760350800000000000000
+      internalID: 5982605117280482707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_4
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 660
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62ae0a2e2a225850800000000000000
+      internalID: 6364195601190396527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_5
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 571
+        width: 75
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc67834d25a31a40800000000000000
+      internalID: 5337791597189229763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_6
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 630
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354a6c9da10622140800000000000000
+      internalID: 4693419430112568403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_7
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 599
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10e3a99d176de780800000000000000
+      internalID: -8652145932279488485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_8
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 617
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b7dc040a9085c20800000000000000
+      internalID: 3195314519505992605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_9
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 590
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c78fa2f2dc08420800000000000000
+      internalID: 2630327784852454465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_10
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 599
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75092d839f3037c0800000000000000
+      internalID: -4093702158318762625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_11
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 591
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece614a24d4ffeb20800000000000000
+      internalID: 3166018255143923406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_12
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 554
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28748c39cf0731ad0800000000000000
+      internalID: -2732716318770313342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_13
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 571
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70021c14dbe96ca20800000000000000
+      internalID: 3082325530670866439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_14
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 467
+        width: 28
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf1eeefd63f44700800000000000000
+      internalID: 523811110435823543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_15
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 543
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c97da9cbe8bcaf90800000000000000
+      internalID: -6940969602844362304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_16
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 560
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0728203b7e504290800000000000000
+      internalID: -7908217062480664819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_17
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 507
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329132bc4d5f591e0800000000000000
+      internalID: -2191575349355931357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 544
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e25e8912e0451f70800000000000000
+      internalID: 9157296757163315938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_19
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 530
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee704a06c2473ad50800000000000000
+      internalID: 6747364400679880686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_20
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 542
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74684b8ca515cc450800000000000000
+      internalID: 6110348244791100999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_21
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 524
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f086b3744ce6780800000000000000
+      internalID: -8687790820932710551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_22
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 542
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b975e34d12bb44020800000000000000
+      internalID: 2325189061599188891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_23
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 275
+        width: 155
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a2a07af8a672980800000000000000
+      internalID: -8563759001206379957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_24
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 409
+        width: 97
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ae4f37c3f8436f0800000000000000
+      internalID: -705781751784084992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_25
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 520
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a41fde6bdaa7fb0800000000000000
+      internalID: -4649212664118949357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_26
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 489
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96259fc497c195520800000000000000
+      internalID: 2691213559638610537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_27
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 341
+        width: 105
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138f6611c5b68ac00800000000000000
+      internalID: 912096967715649585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_28
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 471
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ae9aa922a086e20800000000000000
+      internalID: 3343933867062585857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_29
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 471
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b6f2d462582f6f0800000000000000
+      internalID: -652312596465095849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_30
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 457
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5057de655647310d0800000000000000
+      internalID: -3453288510664116987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_31
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 459
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80d9449c9d8b1150800000000000000
+      internalID: 5844420645085630606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_32
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 452
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0125990c698ce50800000000000000
+      internalID: 6829874588857536723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_33
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 435
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8561eefe1700d2160800000000000000
+      internalID: 7002253484987651672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_34
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 433
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5cf07b7c6bb1c50800000000000000
+      internalID: 6637099444746569212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_35
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 411
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3147a5186ca9cc280800000000000000
+      internalID: -9021665776165555181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_36
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 439
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3720615166bf92040800000000000000
+      internalID: 4623502908331524723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_37
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 416
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf0c968b6fba20d0800000000000000
+      internalID: -3446732096257912869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_38
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 413
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2bc3664e1490850800000000000000
+      internalID: 6343673999351657142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_39
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 422
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ab3c96eb775dc70800000000000000
+      internalID: 8995227490444360351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_40
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 412
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4296e03902514c810800000000000000
+      internalID: 1784574581995890980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_41
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 421
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5aec95fbd7493500800000000000000
+      internalID: 376411053906258524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_42
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 301
+        width: 122
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca8ed658ce29a290800000000000000
+      internalID: -7878714635122210100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_43
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 409
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874849e34ceb123b0800000000000000
+      internalID: -5538936316616211336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_44
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 400
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99fcf0e48dc0e4a0800000000000000
+      internalID: -6566022286112130659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_45
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 380
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8aea24d591806f70800000000000000
+      internalID: 9178478521090763405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_46
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 364
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b36800da450e7120800000000000000
+      internalID: 2413372269193094068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_47
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 362
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b196a1a38ffa71600800000000000000
+      internalID: 439012969353472283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_48
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 340
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b036c79ae12d730800000000000000
+      internalID: 4022311130480446242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_49
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 238
+        width: 130
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54e19bdb9ff7ae00800000000000000
+      internalID: 1056093682510455902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_50
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 327
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8ef5b4ae4a26c030800000000000000
+      internalID: 3514543076468457101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_51
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 337
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0defcb163e539aac0800000000000000
+      internalID: -3843481556270383408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_52
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 329
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c64ff07311b9ef50800000000000000
+      internalID: 6911249800235009729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_53
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 326
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5285101d11d3213e0800000000000000
+      internalID: -2084536530788853723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_54
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 299
+        width: 53
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579d3270993840180800000000000000
+      internalID: -9150043849636980363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_55
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 331
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7bc1edbd8ac5450800000000000000
+      internalID: 6078919259321055223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_56
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 268
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed32816f67fa5e5a0800000000000000
+      internalID: -6492590362314923042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_57
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 288
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0785abf416457ae0800000000000000
+      internalID: -1552257440624048370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_58
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 294
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752761346a97852b0800000000000000
+      internalID: -5595588782010764713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_59
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 278
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f53aebd1590133e0800000000000000
+      internalID: -2075867706054527501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_60
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 277
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8cdc3433bab1850800000000000000
+      internalID: 6348856336378087675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_61
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 230
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0861e9048ce88bc90800000000000000
+      internalID: -7153811017349327232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_62
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 236
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb64696a4036c5150800000000000000
+      internalID: 5862669686555428543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_63
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 212
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc63d0d8ddd19710800000000000000
+      internalID: 1698382457781579003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_64
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 150
+        width: 105
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59a2c6772af837d0800000000000000
+      internalID: -2938323709456111267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_65
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 155
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e917de530a2a440800000000000000
+      internalID: 4945691494283583098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_66
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 164
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f7ecca5cea53080800000000000000
+      internalID: -9208261699058106566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_67
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 146
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9248a2bbf839099c0800000000000000
+      internalID: -3922473029909969879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_68
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 135
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92fa6e64db5534b30800000000000000
+      internalID: 4270351143104065321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_69
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 144
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1768de5dc28451650800000000000000
+      internalID: 6202943419177600625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_70
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 147
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efdaed27f85310e0800000000000000
+      internalID: -2300397166005657632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_71
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 146
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62492af8a621a710800000000000000
+      internalID: 1702684641316127343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_72
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 123
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c833f749c3e0bd790800000000000000
+      internalID: -7504388700730608756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swamp_OnlyBubbles_4BubbleAnimation_pic2_73
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 126
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6741644097e2440800000000000000
+      internalID: 4912997302770366137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2a48a0289ad312149a54c1544240f9b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_0: 264708090262370256
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_1: 3732283429361958681
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_10: -4093702158318762625
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_11: 3166018255143923406
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_12: -2732716318770313342
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_13: 3082325530670866439
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_14: 523811110435823543
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_15: -6940969602844362304
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_16: -7908217062480664819
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_17: -2191575349355931357
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_18: 9157296757163315938
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_19: 6747364400679880686
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_2: 414297315866637422
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_20: 6110348244791100999
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_21: -8687790820932710551
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_22: 2325189061599188891
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_23: -8563759001206379957
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_24: -705781751784084992
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_25: -4649212664118949357
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_26: 2691213559638610537
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_27: 912096967715649585
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_28: 3343933867062585857
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_29: -652312596465095849
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_3: 5982605117280482707
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_30: -3453288510664116987
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_31: 5844420645085630606
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_32: 6829874588857536723
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_33: 7002253484987651672
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_34: 6637099444746569212
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_35: -9021665776165555181
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_36: 4623502908331524723
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_37: -3446732096257912869
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_38: 6343673999351657142
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_39: 8995227490444360351
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_4: 6364195601190396527
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_40: 1784574581995890980
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_41: 376411053906258524
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_42: -7878714635122210100
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_43: -5538936316616211336
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_44: -6566022286112130659
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_45: 9178478521090763405
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_46: 2413372269193094068
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_47: 439012969353472283
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_48: 4022311130480446242
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_49: 1056093682510455902
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_5: 5337791597189229763
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_50: 3514543076468457101
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_51: -3843481556270383408
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_52: 6911249800235009729
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_53: -2084536530788853723
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_54: -9150043849636980363
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_55: 6078919259321055223
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_56: -6492590362314923042
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_57: -1552257440624048370
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_58: -5595588782010764713
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_59: -2075867706054527501
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_6: 4693419430112568403
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_60: 6348856336378087675
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_61: -7153811017349327232
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_62: 5862669686555428543
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_63: 1698382457781579003
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_64: -2938323709456111267
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_65: 4945691494283583098
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_66: -9208261699058106566
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_67: -3922473029909969879
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_68: 4270351143104065321
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_69: 6202943419177600625
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_7: -8652145932279488485
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_70: -2300397166005657632
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_71: 1702684641316127343
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_72: -7504388700730608756
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_73: 4912997302770366137
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_8: 3195314519505992605
+      Swamp_OnlyBubbles_4BubbleAnimation_pic2_9: 2630327784852454465
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

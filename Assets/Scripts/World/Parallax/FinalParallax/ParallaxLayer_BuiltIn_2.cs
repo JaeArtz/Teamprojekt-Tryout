@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Renderer))]
 public class ParallaxLayer_BuiltIn_2 : MonoBehaviour
 {
-
-    [Header("References")]
+    [Header("Cam_Reference")]
+    [Tooltip("Cam_Reference saves transform data of cam (default ist main cam).")]
     [SerializeField] private Transform cam;
 
     [Header("Plane follows camera (X only)")]

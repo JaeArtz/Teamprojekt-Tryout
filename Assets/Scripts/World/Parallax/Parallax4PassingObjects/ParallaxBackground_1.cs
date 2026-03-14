@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class ParallaxBackground_1 : MonoBehaviour
 {
+    [Tooltip("Parallax reference cam for positioning and movement.")]
+    [Header("Reference_cam")]
     public Transform cam;                // Referenz zur Kamera
     [Range(0f, 1f)]
+    [Tooltip("Parallax \"strength\"/ movement speed.")]
     public float parallaxMultiplier = 0.1f; // 0 = fest, 1 = bewegt sich wie Vordergrund
 
     private Vector3 lastCamPos;

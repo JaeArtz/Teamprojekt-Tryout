@@ -3,7 +3,7 @@
 public class GhostLight_PathPoints_SmoothMovement : MonoBehaviour
 {
   
-    [Header("WayPoint")]
+    [Header("WayPoints")]
     public Transform[] points;
 
     [Header("Movement")]
@@ -17,7 +17,9 @@ public class GhostLight_PathPoints_SmoothMovement : MonoBehaviour
     public float cornerRadius = 0.3f;
 
     [Header("Loop or PingPong?")]
+    [Tooltip("activates circular movement/ roundtrip = 1-2-3-1-2-3...")]
     public bool loop = true;      // circular movement
+    [Tooltip("activates pingpong movement, light travels back and forth = 1-2-3-2-1...")]
     public bool pingPong = false; // back and forth (patroling)
 
     private Vector3[] cachedPoints;

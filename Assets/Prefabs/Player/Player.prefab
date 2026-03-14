@@ -210,7 +210,7 @@ MonoBehaviour:
   playerMaxWallJumpVelocityY: 12
   wallSlideSpeed: -3
   wallJumpDuration: 0.15
-  wallJumpCooldown: 0.1
+  wallJumpCooldown: 0.2
   wallJumpAirControlDuration: 1
   groundCoyoteTime: 0.1
   wallCoyoteTime: 0.15
@@ -225,8 +225,8 @@ MonoBehaviour:
   groundCheckDistance: 0.1
   wallCheckSize: {x: 0.2, y: 0.8}
   boxCollider: {fileID: 8391567528759529738}
-  surfaceCollider: {fileID: 4377586443525021223}
-  wallTrigger: {fileID: 345758358063241290}
+  surfaceCollider: {fileID: 0}
+  wallTrigger: {fileID: 0}
 --- !u!114 &6220875613963771050
 MonoBehaviour:
   m_ObjectHideFlags: 0

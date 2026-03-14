@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
     // Wenn projektil was trifft, wird es deaktiviert und zurück in den Pool gegeben
     void OnTriggerEnter2D(Collider2D other)
     {
-        Ghost ghost = other.GetComponent<Ghost>();
+        Ghost2 ghost = other.GetComponent<Ghost2>();
         if(ghost != null)
         {
             ghost.HitByLight();
