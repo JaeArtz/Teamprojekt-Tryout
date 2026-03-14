@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9172496353040495446
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1573.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 513.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9679196
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.25126028
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271829129435979372, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 29.104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845022769393530176, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_Name
+      value: LanternShroom (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949589146400475291, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2389397525548878098, guid: 9ca7c281aa613634d91b60a9ea36dc52, type: 3}
+    - target: {fileID: 3230884984626519368, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230884984626519368, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498385351213592016, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2389397525548878098, guid: 9ca7c281aa613634d91b60a9ea36dc52, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef82d451cab70d3488a3eddf72bd9613, type: 3}

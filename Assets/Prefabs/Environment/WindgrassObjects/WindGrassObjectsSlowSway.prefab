@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &980743880318062858
 GameObject:
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &3058528928208864085
 GameObject:
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &3714359429840131432
 GameObject:
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &4083297164876242680
 GameObject:
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &4517438682864754941
 GameObject:
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &5509694793607431692
 GameObject:
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &5698053772220039184
 GameObject:
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.27
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &5946597108508148414
 GameObject:
@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 414837103463219064}
   - component: {fileID: 3799779420058595677}
   m_Layer: 0
-  m_Name: forest_decoplant_1_0 (1)
+  m_Name: forest_decoplant_hangingGrass2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.28
   objectScaleCompensation: _ObjectScaleCompensation
 --- !u!1 &7273827102443964845
 GameObject:
@@ -1071,7 +1071,7 @@ GameObject:
   - component: {fileID: 7024158916853248562}
   - component: {fileID: 6690439622905397856}
   m_Layer: 0
-  m_Name: forest_decoplant_1_0
+  m_Name: forest_decoplant_hangingGrass1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,5 +1174,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835ff6ffd716e146a6ca54f8bf008ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindGustSmallGrass
-  maxStretchLimit: 0.25
+  maxStretchLimit: 0.28
   objectScaleCompensation: _ObjectScaleCompensation
