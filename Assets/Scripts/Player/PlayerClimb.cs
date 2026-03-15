@@ -31,7 +31,6 @@ public class PlayerClimb : MonoBehaviour
         climbDown = Input.GetKey(KeyCode.S);
 
         CanJump = canClimb && !climbUp && !climbDown && Input.GetKey(KeyCode.LeftShift);
-        //Debug.Log(isClimbKeyDown ? "Climb Key is down" : "Nada");
 
         bool isClimbKeyDown = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S);
         if (canClimb && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Space))
@@ -53,9 +52,6 @@ public class PlayerClimb : MonoBehaviour
             body.linearVelocityY = climbingSpeed;
         if (climbDown & !climbUp)
             body.linearVelocityY = climbingSpeedDown;
-
-        //else
-        //    Debug.LogError("Body kann nicht climben weil " + (canClimb ? "canClimb ist false" : "isClimbKeyDown ist false"));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,24 +59,10 @@ public class PlayerClimb : MonoBehaviour
         if (!collision || !body)
             return;
 
-        //if (collision.CompareTag("PassableGround"))
-        //{
-        //    Vector2 collPos = collision.transform.position;
-        //    Vector2 bodyPos = body.transform.position;
-
-        //    Vector2 distance = collPos - bodyPos;
-        //    if(distance.y < 0)
-        //    {
-        //        canClimb = false;
-        //    }
-        //}
-
         if (!collision.CompareTag("Climbable"))
             return;
 
         canClimb = true;
-        Debug.Log("enter");
-        //body.constraints |= RigidbodyConstraints2D.FreezePositionY;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -92,8 +74,5 @@ public class PlayerClimb : MonoBehaviour
             return;
 
         canClimb = false;
-
-        Debug.Log("exit");
-        //body.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 }
