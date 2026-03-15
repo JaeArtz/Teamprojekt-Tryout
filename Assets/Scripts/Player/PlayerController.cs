@@ -34,18 +34,6 @@ public class PlayerController : MonoBehaviour
 
     private bool _isGrounded;
     public bool Grounded => _isGrounded;
-    private bool _isOnWall;
-    private bool _isWallJumping;
-    private bool _isDetached;
-    private bool _isWallSliding;
-    private int _playerWallDirection;
-    private int _lastWallDirection;
-
-    // TIMER
-    private float wallJumpAirControlTimer;
-    private float wallJumpCooldownTimer;
-    private float groundCoyoteTimer;
-    private float wallCoyoteTimer;
 
     // SYSTEMVARIABLEN
     private bool showcaseDoubleJump = false;
@@ -56,6 +44,7 @@ public class PlayerController : MonoBehaviour
     private PlayerRunning movement;
     private PlayerJump jump;
     private PlayerWallActions wallActions;
+    private PlayerClimb climb;
     // Animator component
     private Animator animator;
 
@@ -68,6 +57,8 @@ public class PlayerController : MonoBehaviour
         movement = GetComponent<PlayerRunning>();
         jump = GetComponent<PlayerJump>();
         wallActions = GetComponent<PlayerWallActions>();
+        climb = GetComponent<PlayerClimb>();
+        climb.Body = body;
 
         if (surfaceCollider == null)
         {
@@ -234,14 +225,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision == null) return;
-
-        if (((1 << collision.gameObject.layer) & wallLayer) != 0)
-            _isOnWall = false;
-    }
-
     private bool IsGrounded()
     {
         float extraHeight = 0.05f;
@@ -255,7 +238,7 @@ public class PlayerController : MonoBehaviour
             groundLayer
         );
 
-        return hit.collider != null;
+        return hit.collider != null || climb.CanJump;
     }
 
     public void SetInputLocked(bool locked)
