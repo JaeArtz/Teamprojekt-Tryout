@@ -351193,7 +351193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79461f17a4e3c7a408572ca39d32f14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoulManager
-  resetSouls: 1
+  resetSouls: 0
 --- !u!4 &398389707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4214202714024346985, guid: e82d17b9586b4bc468e26ad52d434e4d, type: 3}
@@ -351615,6 +351615,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 409082860}
     m_Modifications:
+    - target: {fileID: 764311512007234956, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
     - target: {fileID: 2617579502948053258, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1366.62
@@ -352262,7 +352266,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.9642005, y: 81.176994, z: -2}
+  m_LocalPosition: {x: -14.074202, y: 81.43699, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -363478,8 +363482,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1329516389}
+  - component: {fileID: 1329516392}
+  - component: {fileID: 1329516391}
   - component: {fileID: 1329516390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopZone
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -363501,7 +363507,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 695594626}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1329516390
+--- !u!114 &1329516390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329516388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24be67de6afb0ef45b4cf6a0683ffa3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PassableGroundTrigger
+  passableWithKeyPress: 1
+--- !u!61 &1329516391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329516388}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -1.4787598, y: -0.032862186}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.399658, y: 0.1142149}
+  m_EdgeRadius: 0
+--- !u!61 &1329516392
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363535,7 +363600,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.5048981, y: 0}
+  m_Offset: {x: -1.4838867, y: -0.4237504}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -363545,7 +363610,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.009796, y: 0.01}
+  m_Size: {x: 4.9176025, y: 2.1105185}
   m_EdgeRadius: 0
 --- !u!4 &1337554932 stripped
 Transform:
@@ -367320,7 +367385,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1692803272}
   - component: {fileID: 1692803273}
-  m_Layer: 0
+  - component: {fileID: 1692803275}
+  - component: {fileID: 1692803274}
+  m_Layer: 8
   m_Name: TopZone
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -367376,7 +367443,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.5904541, y: 0}
+  m_Offset: {x: -0.6412964, y: -0.3347969}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -367386,8 +367453,67 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.0454102, y: 0.01}
+  m_Size: {x: 3.1052246, y: 1.5288391}
   m_EdgeRadius: 0
+--- !u!61 &1692803274
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692803271}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.52001953, y: 0.09146881}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.1810303, y: 0.09567261}
+  m_EdgeRadius: 0
+--- !u!114 &1692803275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692803271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24be67de6afb0ef45b4cf6a0683ffa3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PassableGroundTrigger
+  passableWithKeyPress: 1
 --- !u!1 &1694386818
 GameObject:
   m_ObjectHideFlags: 0
@@ -510135,7 +510261,7 @@ Transform:
   m_GameObject: {fileID: 1868750676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.9642005, y: 81.176994, z: -2}
+  m_LocalPosition: {x: -14.074202, y: 81.43699, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -541002,11 +541128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1430167107289389487, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.99
+      value: -22.1
       objectReference: {fileID: 0}
     - target: {fileID: 1430167107289389487, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 89.94
+      value: 90.2
       objectReference: {fileID: 0}
     - target: {fileID: 1430167107289389487, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_LocalPosition.z
