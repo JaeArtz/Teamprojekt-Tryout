@@ -19,6 +19,8 @@ public class PlayerClimb : MonoBehaviour
     private bool climbDown = false;
     private bool isOnTop = false;
 
+    public bool IsClimbing => canClimb && (climbUp ^ climbDown);
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,7 +37,7 @@ public class PlayerClimb : MonoBehaviour
         bool isClimbKeyDown = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S);
         if (canClimb && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Space))
             body.constraints |= RigidbodyConstraints2D.FreezePositionY;
-        if (!Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Space) || isClimbKeyDown)
+        if (!canClimb || !Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Space) || isClimbKeyDown)
             body.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 

@@ -146,19 +146,13 @@ public class PlayerController : MonoBehaviour
         if (!wallActions.HandleWallActions(ref body, ref wallLayer, _isGrounded))
         {
             // If no walljump was executed, test normal jump action
-            if (jump.HandleJump(_isGrounded))
+            if (jump.HandleJump(_isGrounded || climb.CanJump))
             {
                 // If normal jump was successfully executed, reset wall jump air control duration for a normal movement
                 wallActions.ResetWallJumpAirControlDuration();
             }
         }
         else jump.ResetDoubleJumps(); // If walljump was executed, reset the double jumps
-
-        // ANIMATOR EDITS
-        if ((Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D)) && _isGrounded)
-            animator.SetBool("IsWalking", true);
-        else
-            animator.SetBool("IsWalking", false);
     }
 
     private void FixedUpdate()
@@ -225,6 +219,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        // ANIMATOR EDITS
+        animator.SetBool("IsWalking", (Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D)) && _isGrounded);
+        animator.SetFloat("xVel", body.linearVelocityX);
+        animator.SetFloat("yVel", body.linearVelocityY);
+        animator.SetBool("IsClimbing", climb.IsClimbing);
+    }
+
     private bool IsGrounded()
     {
         float extraHeight = 0.05f;
@@ -238,7 +241,7 @@ public class PlayerController : MonoBehaviour
             groundLayer
         );
 
-        return hit.collider != null || climb.CanJump;
+        return hit.collider != null;
     }
 
     public void SetInputLocked(bool locked)
