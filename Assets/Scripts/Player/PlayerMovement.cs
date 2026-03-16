@@ -468,6 +468,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isGrounded = true;
             }
+            Debug.Log($"({rayOrigin.x}, {rayOrigin.y}), {groundCheckDistance}");
         }
 
         return isGrounded;

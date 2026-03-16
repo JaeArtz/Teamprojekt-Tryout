@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private PlayerMovement playerMovement;
+    private PlayerController playerController;
     private Rigidbody2D rb;
 
     [Header("Attack Settings")]
@@ -26,21 +26,21 @@ public class PlayerAttack : MonoBehaviour
 
     private void Awake()
     {
-        playerMovement = GetComponent<PlayerMovement>();
+        playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
         // Lock input während Showcase
-        if (playerMovement.IsInputLocked())
+        if (playerController.IsInputLocked())
         {
-            playerMovement.ResetHorizontalInputAndVelocity();
+            playerController.ResetHorizontalInputAndVelocity();
             return;
         }
 
         // Showcase triggern
-        if (showcaseLightShot && playerMovement.IsGrounded())
+        if (showcaseLightShot && playerController.Grounded)
         {
             showcaseLightShot = false;
             StartCoroutine(LightShotShowcase());
@@ -57,8 +57,8 @@ public class PlayerAttack : MonoBehaviour
         // Prüfe Cooldown
         if ((Time.time - lastAttackTime) < attackCooldown)
             return false;
-        
-        return playerMovement.CanAttack();
+
+        return true;
     }
 
     private void Attack()
@@ -100,13 +100,13 @@ public class PlayerAttack : MonoBehaviour
 
     private IEnumerator LightShotShowcase()
     {
-        playerMovement.SetInputLocked(true);
+        playerController.SetInputLocked(true);
 
         yield return new WaitForSeconds(0.3f);
         Attack();
         yield return new WaitForSeconds(2f);
 
-        playerMovement.SetInputLocked(false);
+        playerController.SetInputLocked(false);
     }
 
     // Neue Methode für erweiterte Angriffsbedingungen
@@ -115,7 +115,7 @@ public class PlayerAttack : MonoBehaviour
         if (!lightShotUnlocked)
             return false;
             
-        if (playerMovement.IsInputLocked())
+        if (playerController.IsInputLocked())
             return false;
             
         return CanAttack();
