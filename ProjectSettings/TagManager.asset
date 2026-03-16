@@ -10,9 +10,8 @@ TagManager:
   - Wall
   - Enemy
   - Ceiling
-  - PlayerProjectile
-  - Lightball
-  - Background
+  - Climbable
+  - PassableGround
   layers:
   - Default
   - TransparentFX
@@ -27,9 +26,9 @@ TagManager:
   - Enemy
   - Ceiling
   - 'Climbable '
-  - Player
-  - Projectile
-  - Checkpoint
+  - 
+  - 
+  - SinkingGround_CoverTiles
   - 
   - 
   - 

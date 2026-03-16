@@ -26159,6 +26159,10 @@ PrefabInstance:
       value: 0.95630115
       objectReference: {fileID: 0}
     - target: {fileID: 7980971162823618589, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
+    - target: {fileID: 7980971162823618589, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
       propertyPath: m_Offset.x
       value: -0.005783081
       objectReference: {fileID: 0}
@@ -31195,6 +31199,10 @@ PrefabInstance:
       value: 0.9841667
       objectReference: {fileID: 0}
     - target: {fileID: 7980971162823618589, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
+    - target: {fileID: 7980971162823618589, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
       propertyPath: m_Offset.x
       value: 0.0060806274
       objectReference: {fileID: 0}
@@ -34129,7 +34137,7 @@ SpriteRenderer:
   m_Size: {x: 0.44, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1781895816
@@ -279625,6 +279633,10 @@ PrefabInstance:
       propertyPath: myLevelLoader
       value: 
       objectReference: {fileID: 1237155976}
+    - target: {fileID: 8788218873401257925, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -279815,6 +279827,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.9737181
       objectReference: {fileID: 0}
+    - target: {fileID: 7980971162823618589, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
     - target: {fileID: 7980971162823618589, guid: 2d5701fc86032c241a3a3c8c16af5ebd, type: 3}
       propertyPath: m_Offset.x
       value: 0.0008035302
