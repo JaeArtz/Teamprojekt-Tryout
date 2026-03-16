@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Enemy
   - Ceiling
+  - Climbable
+  - PassableGround
   layers:
   - Default
   - TransparentFX

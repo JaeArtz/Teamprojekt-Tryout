@@ -29,12 +29,12 @@ public class BouncySpring : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Getting Box-Collider from Player- Child "Rotator"
-        PlayerMovement player = collision.GetComponentInParent<PlayerMovement>();
+        PlayerJump player = collision.GetComponentInParent<PlayerJump>();
 
         if (player != null)
         {
             // uses property float in PlayerMovement-Skript to set y-velocity
-            player.VerticalVelocity = bounceForce;
+            player.Jump(yVel: bounceForce);
 
             // triggers animation for bounce
             if (anim != null)
