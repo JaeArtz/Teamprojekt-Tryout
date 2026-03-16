@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private bool hit;
+    [SerializeField] private Light2D ballLight;
+    private bool hit; // Projektil was getroffen?
     private CircleCollider2D cCollider;
     private float direction;
 
@@ -17,23 +19,25 @@ public class Projectile : MonoBehaviour
     private void FixedUpdate()
     {
         if (hit) return;
+
         float movementSpeed = speed * Time.deltaTime * direction;
         transform.Translate(movementSpeed, 0, 0);
         lifeTime += Time.deltaTime;
-        if (lifeTime > 5f) //put to whatever, deactivates projectile after 5 seconds
+
+        if (lifeTime > 5f) //Projektil nach 5 Sekuden entfernen wenn nichts getroffen wird
         {
             gameObject.SetActive(false);
             lifeTime = 0;
         }
     }
 
+    // Wenn projektil was trifft, wird es deaktiviert und zurück in den Pool gegeben
     void OnTriggerEnter2D(Collider2D other)
     {
         Ghost2 ghost = other.GetComponent<Ghost2>();
         if(ghost != null)
         {
             ghost.HitByLight();
-
             hit = true;
             cCollider.enabled = false;
             Deactivate();
@@ -47,6 +51,7 @@ public class Projectile : MonoBehaviour
         Debug.Log("Projectile hit: " + other.name);
     }
 
+    // Um Schuss zu initialisieren, Richtung setzen und aktivieren
     public void SetDirection(float _direction)
     {
         lifeTime = 0;
@@ -55,6 +60,7 @@ public class Projectile : MonoBehaviour
         hit = false;
         cCollider.enabled = true;
 
+        // Sprite an Flugrichtung anpassen
         float localScaleX = transform.localScale.x;
         if (Mathf.Sign(localScaleX) != _direction)
         {
@@ -70,12 +76,15 @@ public class Projectile : MonoBehaviour
         ProjectilePool.Instance.ReturnToPool(this);
     }
 
+    // Zurücksetzen des Projektils, bevor es wiederverwendet wird
     public void ResetProjectile()
     {
         hit = false;
         lifeTime = 0f;
         cCollider.enabled = true;
+        if(ballLight != null)
+        {
+            ballLight.enabled = true;
+        }
     }
-
-
 }

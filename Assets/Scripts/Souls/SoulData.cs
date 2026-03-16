@@ -8,5 +8,4 @@ public class SoulData : ScriptableObject
     public Sprite icon;
     [TextArea] public string description;
 
-    // optional: categorie, cooldown, prefab reference etc.
 }
