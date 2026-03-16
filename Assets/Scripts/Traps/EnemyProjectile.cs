@@ -40,9 +40,13 @@ public class EnemyProjectile : EnemyDamage
     private void OnTriggerEnter2D(Collider2D other) 
     {
         base.OnTriggerStay2D(other); // Basisklassen-Logik für Schaden anwenden
-        if (other.CompareTag("Wall") || other.CompareTag("Ground") || other.CompareTag("Player") || other.CompareTag("PlayerProjectile"))
+        if (other.CompareTag("Wall") || other.CompareTag("Ground") || other.CompareTag("Player") || other.CompareTag("Lightball"))
         {
             ReturnToPool();
+        }
+        else
+        {
+            return;
         }
     }
 }

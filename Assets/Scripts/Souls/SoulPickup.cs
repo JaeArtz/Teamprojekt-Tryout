@@ -43,6 +43,13 @@ public class SoulPickup : MonoBehaviour
             pa.OnSoulCollected(soulData);
         }
 
+        // Suche das PlayerLight Script auf dem Spieler und aktiviere es
+        var pl = other.GetComponentInParent<PlayerLight>();
+        if (pl != null)
+        {
+            pl.ActivateLight();
+        }
+
         // Dialog anzeigen (optional)
         if (dialogBox != null)
         {
