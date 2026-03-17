@@ -109,7 +109,7 @@ public class PlayerAttack : MonoBehaviour
         playerController.SetInputLocked(false);
     }
 
-    // Neue Methode für erweiterte Angriffsbedingungen
+    // Methode für erweiterte Angriffsbedingungen
     public bool CanAttackInCurrentState()
     {
         if (!lightShotUnlocked)

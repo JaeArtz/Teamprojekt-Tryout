@@ -13,7 +13,7 @@ public class MovingPlatform : MonoBehaviour
     }
     void Update()
     {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
+        if (Vector3.Distance(transform.position, points[i].position) < 0.02f)
         {
             i++;
             if (i == points.Length)
@@ -22,7 +22,7 @@ public class MovingPlatform : MonoBehaviour
             }
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

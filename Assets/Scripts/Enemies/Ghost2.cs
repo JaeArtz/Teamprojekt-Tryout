@@ -77,27 +77,28 @@ public class Ghost2 : MonoBehaviour
             if (stunTimer <= 0f)
                 SetActive();
         }
-
-        if (autoFlipp && sr != null)
-        {
-            float xFactorDifference = transform.position.x - lastPosition.x;
-
-            // means Sprite is moving towards the right
-            if (xFactorDifference > 0.001f)
-            {
-                sr.flipX = spriteFacesRightByDefault ? false : true;
-            }
-            // means Sprite is moving towards the left
-            else if (xFactorDifference < -0.001f)
-            { 
-                sr.flipX = spriteFacesRightByDefault ? true : false;
-            }
-        }
         
     }
 
     private void LateUpdate()
     {
+        if (autoFlipp && sr != null)
+        {
+            float xFactorDifference = transform.position.x - lastPosition.x;
+
+            /*// Das hier hilft uns zu sehen, was die zweite Hyäne berechnet
+            if (gameObject.name == "GhostTraveling1") // Ersetze durch den exakten Namen im Inspector
+            {
+                Debug.Log($"{gameObject.name} bewegt sich um: {xFactorDifference}");
+            }*/
+
+            if (Mathf.Abs(xFactorDifference) > 0.0001f) // Sensiblerer Schwellenwert
+            {
+                bool faceRight = xFactorDifference > 0;
+                sr.flipX = spriteFacesRightByDefault ? !faceRight : faceRight;
+            }
+        }
+
         lastPosition = transform.position;
     }
 
