@@ -34,4 +34,16 @@ public class MovingPlatform : MonoBehaviour
     {
         collision.transform.SetParent(null);
     }
+
+    private void OnDrawGizmos()
+    {
+        if (points != null && points.Length > 1)
+        {
+            Gizmos.color = Color.red;
+            for (int j = 0; j < points.Length - 1; j++)
+            {
+                Gizmos.DrawLine(points[j].position, points[j + 1].position);
+            }
+        }
+    }
 }
