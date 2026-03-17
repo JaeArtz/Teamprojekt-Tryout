@@ -318559,10 +318559,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1241393008}
     m_Modifications:
-    - target: {fileID: 260213277001434198, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
-      propertyPath: prohibitRollDuration
-      value: 0.08
-      objectReference: {fileID: 0}
     - target: {fileID: 562932011958070637, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -318606,14 +318602,6 @@ PrefabInstance:
     - target: {fileID: 1430167107289389487, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558364824663307351, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
-      propertyPath: brakeForce
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558364824663307351, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
-      propertyPath: speedBoost
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4558364824663307351, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: decelerationManipulator

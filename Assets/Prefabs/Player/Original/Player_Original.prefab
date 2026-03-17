@@ -349,8 +349,9 @@ MonoBehaviour:
   playerMaxWallJumpVelocityX: 13
   playerMaxWallJumpVelocityY: 12
   wallSlideSpeed: -3
-  wallJumpCooldown: 0.1
+  wallJumpCooldownDuration: 0.2
   wallJumpAirControlDuration: 1
+  prohibitRollDuration: 0.08
   wallCoyoteTime: 0.15
   wallCheckDistance: 0.1
   wallTrigger: {fileID: 0}
@@ -382,6 +383,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rollCooldown: 1
   maxRollDuration: 0.5
+  brakeForce: 0.05
+  speedBoost: 1.5
 --- !u!1 &4606677167576761522
 GameObject:
   m_ObjectHideFlags: 0
