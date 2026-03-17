@@ -157,6 +157,7 @@ public class PlayerController : MonoBehaviour
             {
                 // If normal jump was successfully executed, reset wall jump air control duration for a normal movement
                 wallActions.ResetWallJumpAirControlDuration();
+                roll.StopRoll();
             }
         }
         else jump.ResetDoubleJumps(); // If walljump was executed, reset the double jumps
@@ -175,13 +176,19 @@ public class PlayerController : MonoBehaviour
         roll.IsGrounded = _isGrounded;
 
         // PLAYER-SPRITE DIRECTION
-        if (horizontalInput != 0)
+        if (Mathf.Abs(body.linearVelocityX) > 0.1f)
         {
-            float dir = horizontalInput > 0 ? 1 : -1;
+            float dir = body.linearVelocityX > 0 ? 1 : -1;
             transform.localScale = new Vector3(dir * 0.7f, 0.7f, transform.localScale.z);
         }
+
+        roll.CanRoll = wallActions.CanRoll;
+
+        if (!roll.IsRolling && roll.ApplyBoostedSpeed && !_isGrounded && Mathf.Sign(body.linearVelocityX) != Input.GetAxisRaw("Horizontal"))
+            roll.StopBoostSpeed();
+
         if (roll.ApplyBoostedSpeed)
-            movement.ApplyRollMovement(horizontalInput);
+            movement.ApplyRollMovement(horizontalInput, roll.SpeedBoost, roll.BrakeForce);
         else if (wallActions.T > 0)
             movement.ApplyWalljumpMovement(horizontalInput, wallActions.T);
         else movement.ApplyNormalMovement(horizontalInput);

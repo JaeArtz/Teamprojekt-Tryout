@@ -13,6 +13,14 @@ public class PlayerRoll : MonoBehaviour
     private float maxRollDuration;
     private float rollDurationTimer;
 
+    [SerializeField, Tooltip("How much the player can decelerate while rolling.")]
+    private float brakeForce;
+    public float BrakeForce { get; private set; }
+
+    [SerializeField, Tooltip("The multiplier being applied to the normal movement speed while having the speed boost, gained when enter rolling.")]
+    private float speedBoost;
+    public float SpeedBoost => speedBoost;
+
     private bool isHoldingR;
     private bool releasedR = true;
     private bool isRolling;
@@ -25,6 +33,9 @@ public class PlayerRoll : MonoBehaviour
     private bool isGrounded;
     public bool IsGrounded { set { isGrounded = value; } }
 
+    private bool canRoll;
+    public bool CanRoll {set{ canRoll = value; }}
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,7 +46,7 @@ public class PlayerRoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (releasedR && Input.GetKeyDown(KeyCode.R) && /*body.linearVelocityY <= 5 &&*/ rollCooldownTimer <= 0 && rollDurationTimer <= 0)
+        if (canRoll && releasedR && Input.GetKeyDown(KeyCode.R) && rollCooldownTimer <= 0 && rollDurationTimer <= 0)
         {
             isHoldingR = true;
             releasedR = false;
@@ -45,6 +56,18 @@ public class PlayerRoll : MonoBehaviour
             isHoldingR = false;
             releasedR = true;
         }
+    }
+
+    public void StopRoll()
+    {
+        if (!isRolling) return;
+        isRolling = false;
+        rollCooldownTimer = rollCooldown;
+    }
+
+    public void StopBoostSpeed()
+    {
+        applyBoostedSpeed = false;
     }
 
     private void FixedUpdate()
@@ -61,29 +84,40 @@ public class PlayerRoll : MonoBehaviour
         if (body.linearVelocityY > 0.1f)
             isJumping = true;
 
-        if (isJumping && body.linearVelocityY <= 0.1f && isGrounded)
-        {
-            isJumping = false;
-            applyBoostedSpeed = false;
-        }
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        if (isHoldingR && !isRolling && /*body.linearVelocityY <= 5 &&*/ Mathf.Abs(body.linearVelocityX) > 0.1f && rollCooldownTimer <= 0)
+        if (canRoll && isHoldingR && !isRolling && horizontalInput != 0 && rollCooldownTimer <= 0)
         {
             isRolling = true;
             isHoldingR = false;
             applyBoostedSpeed = true;
             rollDurationTimer = maxRollDuration;
-            Debug.Log("ROLL!");
+            BrakeForce = brakeForce;
+
+            if (Mathf.Abs(body.linearVelocityX) != horizontalInput)
+                body.linearVelocityX = horizontalInput;
         }
 
-        if (isRolling && (rollDurationTimer <= 0 || body.linearVelocityY > 0.1f))
+        if (isJumping && body.linearVelocityY <= 0.1f && isGrounded)
         {
-            isRolling = false;
-            rollCooldownTimer = rollCooldown;
-            Debug.Log("STOP ROLL!");
+            isJumping = false;
+            StopBoostSpeed();
+            StopRoll();
+        }
+
+        if (isRolling && (rollDurationTimer <= 0))
+            StopRoll();
+
+        if (isRolling && Mathf.Abs(body.linearVelocityX) < 0.1f)
+        {
+            StopBoostSpeed();
+            StopRoll();
         }
 
         if (applyBoostedSpeed && rollDurationTimer <= 0)
-            applyBoostedSpeed = false;
+        {
+            StopBoostSpeed();
+        }
+
     }
 }

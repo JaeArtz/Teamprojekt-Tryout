@@ -28,7 +28,6 @@ public class PlayerRunning : MonoBehaviour
         }
 
         walljumpVelocityX = wallActions.PlayerMaxWallJumpVelocityX;
-        Debug.Log($"Walljump Acceleration X: {walljumpVelocityX}");
     }
 
     public void ApplyNormalMovement(float horizontalInput)
@@ -43,9 +42,9 @@ public class PlayerRunning : MonoBehaviour
         Move(horizontalInput, maxVelocityX: wallJumpVelocity, accelerationRateManipulator: manipulator, decelerationRateManipulator: manipulator);
     }
 
-    public void ApplyRollMovement(float horizontalInput)
+    public void ApplyRollMovement(float horizontalInput, float targetSpeedManipulator, float decelerationRateManipulator)
     {
-        Move(horizontalInput, targetSpeedManipulator: 1.5f, accelerationRateManipulator: 10f, decelerationRateManipulator: 0.025f);
+        Move(horizontalInput, targetSpeedManipulator: targetSpeedManipulator, accelerationRateManipulator: 10f, decelerationRateManipulator: decelerationRateManipulator);
     }
 
     private void Move(float horizontalInput, float? maxVelocityX = null, float targetSpeedManipulator = 1, float accelerationRateManipulator = 1, float decelerationRateManipulator = 1)
