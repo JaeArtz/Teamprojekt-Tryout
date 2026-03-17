@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private PlayerJump jump;
     private PlayerWallActions wallActions;
     private PlayerClimb climb;
+    private PlayerRoll roll;
     // Animator component
     private Animator animator;
 
@@ -58,7 +59,13 @@ public class PlayerController : MonoBehaviour
         jump = GetComponent<PlayerJump>();
         wallActions = GetComponent<PlayerWallActions>();
         climb = GetComponent<PlayerClimb>();
+        roll = GetComponent<PlayerRoll>();
+        movement.Body = body;
+        wallActions.Body = body;
         climb.Body = body;
+        roll.Body = body;
+
+        climb.Roll = roll;
 
         if (surfaceCollider == null)
         {
@@ -143,7 +150,7 @@ public class PlayerController : MonoBehaviour
             playerState = PlayerState.FALLING;
 
         // Prioritize walljump over normal jump
-        if (!wallActions.HandleWallActions(ref body, ref wallLayer, _isGrounded))
+        if (!wallActions.HandleWallActions(ref wallLayer, _isGrounded))
         {
             // If no walljump was executed, test normal jump action
             if (jump.HandleJump(_isGrounded || climb.CanJump))
@@ -165,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
         float horizontalInput = _horizontalInput = Input.GetAxisRaw("Horizontal");
         _isGrounded = IsGrounded();
+        roll.IsGrounded = _isGrounded;
 
         // PLAYER-SPRITE DIRECTION
         if (horizontalInput != 0)
@@ -172,12 +180,13 @@ public class PlayerController : MonoBehaviour
             float dir = horizontalInput > 0 ? 1 : -1;
             transform.localScale = new Vector3(dir * 0.7f, 0.7f, transform.localScale.z);
         }
+        if (roll.ApplyBoostedSpeed)
+            movement.ApplyRollMovement(horizontalInput);
+        else if (wallActions.T > 0)
+            movement.ApplyWalljumpMovement(horizontalInput, wallActions.T);
+        else movement.ApplyNormalMovement(horizontalInput);
 
-        if (wallActions.T > 0)
-            movement.ApplyWalljumpMovement(ref body, horizontalInput, wallActions.T);
-        else movement.ApplyNormalMovement(ref body, horizontalInput);
-
-        wallActions.HandleFixedActions(ref body);
+        wallActions.HandleFixedActions();
 
         switch (playerState)
         {
@@ -226,6 +235,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("xVel", body.linearVelocityX);
         animator.SetFloat("yVel", body.linearVelocityY);
         animator.SetBool("IsClimbing", climb.IsClimbing);
+        animator.SetBool("IsRolling", roll.IsRolling);
     }
 
     private bool IsGrounded()

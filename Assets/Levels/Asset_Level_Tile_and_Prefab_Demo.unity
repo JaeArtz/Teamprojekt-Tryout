@@ -316637,10 +316637,6 @@ PrefabInstance:
       propertyPath: myLevelLoader
       value: 
       objectReference: {fileID: 1237155976}
-    - target: {fileID: 8788218873401257925, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
-      propertyPath: t_isWallJumping
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
