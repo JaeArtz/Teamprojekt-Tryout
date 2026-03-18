@@ -2,10 +2,14 @@
 
 public class GhostLight_PathPoint : MonoBehaviour
 {
-
+    [Tooltip("array of waypoints")]
     public Transform[] points;
+    [Tooltip("Speed of Light")]
     public float MovementSpeed = 2f;
+    [Tooltip("activates circular movement/ roundtrip = 1-2-3-1-2-3...")]
+    [Header("Loop or PingPong?")]
     public bool loop = true;      // circular movement
+    [Tooltip("activates pingpong movement, light travels back and forth = 1-2-3-2-1...")]
     public bool pingPong = false; // pingpong movement
 
     private Vector3[] cachedPoints;

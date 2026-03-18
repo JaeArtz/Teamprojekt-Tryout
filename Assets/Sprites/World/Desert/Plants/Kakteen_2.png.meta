@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: e9292e9ae50c5034cb53ea88d6e30cf0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7304261793804182674
+    second: Kakteen_2_0
+  - first:
+      213: 4300688069102923321
+    second: Kakteen_2_1
+  - first:
+      213: 5137523916292200001
+    second: Kakteen_2_2
+  - first:
+      213: -6884782729369062462
+    second: Kakteen_2_3
+  - first:
+      213: 3205288292377356790
+    second: Kakteen_2_4
+  - first:
+      213: -6809866841459680463
+    second: Kakteen_2_5
+  - first:
+      213: 8053417853698913163
+    second: Kakteen_2_6
+  - first:
+      213: 1947282279774423102
+    second: Kakteen_2_7
+  - first:
+      213: 7829401250025690587
+    second: Kakteen_2_8
+  - first:
+      213: 6865721754871562242
+    second: Kakteen_2_9
+  - first:
+      213: -1807003254412458177
+    second: Kakteen_2_10
+  - first:
+      213: 3607322952790836873
+    second: Kakteen_2_11
+  - first:
+      213: 1442858383592345808
+    second: Kakteen_2_12
+  - first:
+      213: -7118389776432208883
+    second: Kakteen_2_13
+  - first:
+      213: -7106386359096271897
+    second: Kakteen_2_14
+  - first:
+      213: 6386649606953048157
+    second: Kakteen_2_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kakteen_2_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 952
+        width: 97
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b18d1299c02aa90800000000000000
+      internalID: -7304261793804182674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 182
+        width: 482
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ee3a8430d1fab30800000000000000
+      internalID: 4300688069102923321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1019
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1469ba738c62c4740800000000000000
+      internalID: 5137523916292200001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1013
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c37634b5965470a0800000000000000
+      internalID: -6884782729369062462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1018
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9eed538b87b7c20800000000000000
+      internalID: 3205288292377356790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1019
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b951b103e7e71a0800000000000000
+      internalID: -6809866841459680463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_6
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 752
+        width: 167
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83338d7edc73cf60800000000000000
+      internalID: 8053417853698913163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_7
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 998
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e380e539ae2260b10800000000000000
+      internalID: 1947282279774423102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 920
+        width: 10
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd5d7c774fe97ac60800000000000000
+      internalID: 7829401250025690587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_9
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 701
+        width: 242
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2008ac55f81f74f50800000000000000
+      internalID: 6865721754871562242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_10
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 164
+        width: 146
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3745c03d1c3ce6e0800000000000000
+      internalID: -1807003254412458177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_11
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 163
+        width: 96
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9860637fc19cf0230800000000000000
+      internalID: 3607322952790836873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_12
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 73
+        width: 138
+        height: 297
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d057372e00160410800000000000000
+      internalID: 1442858383592345808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_13
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 145
+        width: 163
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d046cf29636663d90800000000000000
+      internalID: -7118389776432208883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_14
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 149
+        width: 146
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb9265f14b016d90800000000000000
+      internalID: -7106386359096271897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kakteen_2_15
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 157
+        width: 130
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d581357caffe1a850800000000000000
+      internalID: 6386649606953048157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5f22881af5b2998488eaa7b774379ad2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Kakteen_2_0: -7304261793804182674
+      Kakteen_2_1: 4300688069102923321
+      Kakteen_2_10: -1807003254412458177
+      Kakteen_2_11: 3607322952790836873
+      Kakteen_2_12: 1442858383592345808
+      Kakteen_2_13: -7118389776432208883
+      Kakteen_2_14: -7106386359096271897
+      Kakteen_2_15: 6386649606953048157
+      Kakteen_2_2: 5137523916292200001
+      Kakteen_2_3: -6884782729369062462
+      Kakteen_2_4: 3205288292377356790
+      Kakteen_2_5: -6809866841459680463
+      Kakteen_2_6: 8053417853698913163
+      Kakteen_2_7: 1947282279774423102
+      Kakteen_2_8: 7829401250025690587
+      Kakteen_2_9: 6865721754871562242
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

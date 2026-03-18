@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Enemy
   - Ceiling
+  - Climbable
+  - PassableGround
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - 'Climbable '
   - 
   - 
-  - 
+  - SinkingGround_CoverTiles
   - 
   - 
   - 

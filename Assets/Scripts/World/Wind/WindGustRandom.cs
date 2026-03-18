@@ -11,19 +11,19 @@ public class WindGustRandom : MonoBehaviour
 {
     public WindController windController;
 
-    [Header("Interval (seconds)")]
+    [Header("WindGust Interval (seconds)")]
     public float minInterval = 30f;
     public float maxInterval = 70f;
 
-    [Header("Gust Duration (seconds)")]
+    [Header("WindGust Duration (seconds)")]
     public float minDuration = 4f;
     public float maxDuration = 8f;
 
-    [Header("Gust Influence")]
+    [Header("WindGust Influence")]
     public float minInfluence = 0.6f;
     public float maxInfluence = 1.5f;
 
-    [Header("Gust Speed")]
+    [Header("WindGust Speed")]
     public float minSpeed = 6f;
     public float maxSpeed = 10f;
 

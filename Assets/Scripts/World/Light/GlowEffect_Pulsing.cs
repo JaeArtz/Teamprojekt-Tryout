@@ -3,9 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class GlowEffect_Pulsing : MonoBehaviour
 {
-   
+    [Header("GlowPulse Settings")]
+    [Tooltip("Minimum Transparency of ColorOverlay")]
     public float minAlpha = 0.3f;
+    [Tooltip("Maximum Transparency of ColorOberlay")]
     public float maxAlpha = 0.8f;
+    [Tooltip("Influence value for sinus calculation of PulseFrequency")]
     public float PulseFrequency = 2f;
 
     private SpriteRenderer sr;

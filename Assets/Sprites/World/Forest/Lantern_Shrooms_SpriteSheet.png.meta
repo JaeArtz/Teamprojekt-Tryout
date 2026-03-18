@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 9ca7c281aa613634d91b60a9ea36dc52
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1866209905185957556
+    second: Lantern_Shrooms_SpriteSheet_0
+  - first:
+      213: -4219498398558791935
+    second: Lantern_Shrooms_SpriteSheet_1
+  - first:
+      213: 4582240894768280091
+    second: Lantern_Shrooms_SpriteSheet_2
+  - first:
+      213: -6800236129168093333
+    second: Lantern_Shrooms_SpriteSheet_3
+  - first:
+      213: 7515928339801473742
+    second: Lantern_Shrooms_SpriteSheet_4
+  - first:
+      213: -6312861755994951526
+    second: Lantern_Shrooms_SpriteSheet_5
+  - first:
+      213: 2941260779081903650
+    second: Lantern_Shrooms_SpriteSheet_6
+  - first:
+      213: -3558681748953048313
+    second: Lantern_Shrooms_SpriteSheet_7
+  - first:
+      213: 765815436305955310
+    second: Lantern_Shrooms_SpriteSheet_8
+  - first:
+      213: 3340950876813470830
+    second: Lantern_Shrooms_SpriteSheet_9
+  - first:
+      213: 5320914941027545598
+    second: Lantern_Shrooms_SpriteSheet_10
+  - first:
+      213: -2389397525548878098
+    second: Lantern_Shrooms_SpriteSheet_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1784
+        width: 290
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4953159af3e916e0800000000000000
+      internalID: -1866209905185957556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1788
+        width: 291
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107d297ff845175c0800000000000000
+      internalID: -4219498398558791935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 2041
+        width: 474
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b127ee7e0d3679f30800000000000000
+      internalID: 4582240894768280091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 2219
+        width: 19
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f882c0545b0a1a0800000000000000
+      internalID: -6800236129168093333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 1553
+        width: 632
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec288230101fd4860800000000000000
+      internalID: 7515928339801473742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1151
+        width: 482
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90b5cd0ea53468a0800000000000000
+      internalID: -6312861755994951526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 207
+        width: 359
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e27f8581571d820800000000000000
+      internalID: 2941260779081903650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 293
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bdcf4ddc50d9ec0800000000000000
+      internalID: -3558681748953048313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 242
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9f684f419b0aa00800000000000000
+      internalID: 765815436305955310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 244
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c2f701f117d5e20800000000000000
+      internalID: 3340950876813470830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 244
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1f30c82ffa7d940800000000000000
+      internalID: 5320914941027545598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern_Shrooms_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 216
+        width: 565
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6367e2c9727ded0800000000000000
+      internalID: -2389397525548878098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lantern_Shrooms_SpriteSheet_0: -1866209905185957556
+      Lantern_Shrooms_SpriteSheet_1: -4219498398558791935
+      Lantern_Shrooms_SpriteSheet_10: 5320914941027545598
+      Lantern_Shrooms_SpriteSheet_11: -2389397525548878098
+      Lantern_Shrooms_SpriteSheet_2: 4582240894768280091
+      Lantern_Shrooms_SpriteSheet_3: -6800236129168093333
+      Lantern_Shrooms_SpriteSheet_4: 7515928339801473742
+      Lantern_Shrooms_SpriteSheet_5: -6312861755994951526
+      Lantern_Shrooms_SpriteSheet_6: 2941260779081903650
+      Lantern_Shrooms_SpriteSheet_7: -3558681748953048313
+      Lantern_Shrooms_SpriteSheet_8: 765815436305955310
+      Lantern_Shrooms_SpriteSheet_9: 3340950876813470830
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

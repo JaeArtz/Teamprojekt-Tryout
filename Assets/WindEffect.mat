@@ -56,6 +56,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _Externalinfluence: 1
     - _MaskFromBottom: 1
+    - _ObjectScaleCompensation: 1
     - _WindIntensity: 0.5
     - _WindScale: 0.5
     - _WindSpeed: 3
