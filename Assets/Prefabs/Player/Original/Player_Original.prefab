@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 5039070485943792809}
   - component: {fileID: 260213277001434198}
   - component: {fileID: 5322117019487849484}
+  - component: {fileID: 4558364824663307351}
   m_Layer: 0
   m_Name: Player_Original
   m_TagString: Player
@@ -345,11 +346,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cc46c4e1884dd4c8d0147e98c86ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  playerMaxWallJumpVelocityX: 18
+  playerMaxWallJumpVelocityX: 13
   playerMaxWallJumpVelocityY: 12
   wallSlideSpeed: -3
-  wallJumpCooldown: 0.1
+  wallJumpCooldownDuration: 0.2
   wallJumpAirControlDuration: 1
+  prohibitRollDuration: 0.08
   wallCoyoteTime: 0.15
   wallCheckDistance: 0.1
   wallTrigger: {fileID: 0}
@@ -367,6 +369,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   climbingSpeed: 5
   climbingSpeedDown: -5
+--- !u!114 &4558364824663307351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f5f2dfff91c05448e67ee0aeb5fd8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  rollCooldown: 1
+  maxRollDuration: 0.5
+  brakeForce: 0.05
+  speedBoost: 1.5
 --- !u!1 &4606677167576761522
 GameObject:
   m_ObjectHideFlags: 0

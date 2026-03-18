@@ -12,6 +12,9 @@ public class PlayerClimb : MonoBehaviour
     private Rigidbody2D body;
     public Rigidbody2D Body { set { body = value; } }
 
+    private PlayerRoll roll;
+    public PlayerRoll Roll { set { roll = value; } }
+
     private bool canClimb = false;
     public bool CanJump { get { return canClimb; } private set {} }
 
@@ -44,12 +47,10 @@ public class PlayerClimb : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!body)
-            return;
+        if (!body) return;
+        if (!canClimb) return;
+        if (!roll || roll.IsRolling) return;
 
-        if (!canClimb)
-            return;
-        
         if (climbUp & !climbDown)
             body.linearVelocityY = climbingSpeed;
         if (climbDown & !climbUp)
