@@ -6,9 +6,11 @@ public class CollectableManager : MonoBehaviour
 
     private HashSet<int> collectedLeaves = new HashSet<int>();
     public bool resetCollectables = false; // zum testen immer resetten
-
+    private GameObject player;
     private void Awake()
     {
+        player = GameObject.Find("Player");
+
         LoadCollectedLeaves();
     }
 
@@ -25,6 +27,7 @@ public class CollectableManager : MonoBehaviour
 
     private void SaveCollectedLeaves()
     {
+        SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
         SaveSystem.SaveLeafData(collectedLeaves);
     }
 

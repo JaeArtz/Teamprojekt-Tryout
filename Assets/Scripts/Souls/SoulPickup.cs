@@ -8,9 +8,14 @@ public class SoulPickup : MonoBehaviour
     [Tooltip("Optional: UI-Dialog-Panel, welches aktiviert wird")]
     public GameObject dialogBox;
     public float dialogDuration = 3f;
-    [SerializeField] private SoulManager soulManager;
+    private SoulManager soulManager;
     private bool collected = false;
 
+    private void Awake()
+    {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
+        
+    }
     private void Start()
     {
         if (dialogBox != null) dialogBox.SetActive(false);

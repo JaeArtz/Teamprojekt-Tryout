@@ -7,15 +7,14 @@ public class SoulManager : MonoBehaviour
 
     public bool resetSouls = false; // optional: clear all on start (for testing)
 
+    private GameObject player;
     // Collected IDs
     private HashSet<string> collected = new HashSet<string>();
 
     private void Awake()
-    {   
-        //if(resetSouls == true){
-            //ClearAll(); // optional: clear all on start (for testing)
-        //}
-        
+    {
+        player = GameObject.Find("Player");
+
         Load();
     }
 
@@ -31,6 +30,7 @@ public class SoulManager : MonoBehaviour
         if (collected.Add(id))
         {
             Save();
+            SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
             Debug.Log($"Soul collected: {id}");
         }
         

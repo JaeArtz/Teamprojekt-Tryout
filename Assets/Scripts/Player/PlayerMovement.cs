@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Tooltip("Circle collider without collision for wall check")] private CircleCollider2D wallTrigger;
 
     private Rigidbody2D body;
-    [SerializeField] private SoulManager soulManager;
+    private SoulManager soulManager;
 
     private float _horizontalInput;
 
@@ -117,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
         body = GetComponent<Rigidbody2D>();
         
         

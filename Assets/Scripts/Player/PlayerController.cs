@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D body;
 
-    [SerializeField] private SoulManager soulManager;
+    private SoulManager soulManager;
 
     private float _horizontalInput;
 
@@ -52,9 +52,12 @@ public class PlayerController : MonoBehaviour
 
     private PlayerState playerState;
 
-
+    
+        
+    
     private void Awake()
     {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
         body = GetComponent<Rigidbody2D>();
         movement = GetComponent<PlayerRunning>();
         jump = GetComponent<PlayerJump>();

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private PlayerController playerController;
-    [SerializeField] private SoulManager soulManager;
+    private SoulManager soulManager;
     private Rigidbody2D rb;
 
     [Header("Attack Settings")]
@@ -28,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Awake()
     {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
     }
