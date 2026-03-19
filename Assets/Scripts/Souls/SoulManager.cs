@@ -4,9 +4,7 @@ using System.Linq;
 
 public class SoulManager : MonoBehaviour
 {
-    public static SoulManager Instance { get; private set; }
 
-    private const string PREF_KEY = "CollectedSouls";
     public bool resetSouls = false; // optional: clear all on start (for testing)
 
     // Collected IDs
@@ -18,15 +16,6 @@ public class SoulManager : MonoBehaviour
             //ClearAll(); // optional: clear all on start (for testing)
         //}
         
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-
-        DontDestroyOnLoad(transform.root.gameObject);
-
         Load();
     }
 
@@ -35,7 +24,7 @@ public class SoulManager : MonoBehaviour
 
     public bool HasSoul(string id) => collected.Contains(id);
 
-    public void AddSoul(string id)
+    public  void AddSoul(string id)
     {
         if (string.IsNullOrEmpty(id)) return;
         
@@ -47,12 +36,12 @@ public class SoulManager : MonoBehaviour
         
     }
 
-    public void RemoveSoul(string id)
+    public  void RemoveSoul(string id)
     {
         if (collected.Remove(id)) Save();
     }
 
-    private void Save()
+    private  void Save()
     {
         SaveSystem.SaveSoulData(collected);
         //var serial = new Serialization<string>(collected);
@@ -61,7 +50,7 @@ public class SoulManager : MonoBehaviour
         //PlayerPrefs.Save();
     }
 
-    private void Load()
+    private  void Load()
     {
         if(SaveSystem.LoadSoulData() == null)
         {
@@ -74,7 +63,7 @@ public class SoulManager : MonoBehaviour
     }
 
     // optional: clear all (for testing)
-    public void ClearAll()
+    public  void ClearAll()
     {
         collected.Clear();
         //PlayerPrefs.DeleteKey(PREF_KEY);

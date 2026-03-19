@@ -5,6 +5,7 @@ public class BlattSammeln : MonoBehaviour
 {
     [SerializeField] private int leafID; // Jede Instanz bekommt eine eigene ID (0–19)
     [SerializeField] private Sprite collectedSprite;
+    [SerializeField] private CollectableManager collectableManager;
     [SerializeField]
     private AudioClip audioClip;
 
@@ -15,9 +16,8 @@ public class BlattSammeln : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
         // Prüfen, ob das Blatt schon gesammelt wurde
-        if (CollectableManager.Instance.IsLeafCollected(leafID))
+        if (collectableManager.IsLeafCollected(leafID))
         {
             SetCollectedState();
         }
@@ -45,7 +45,7 @@ public class BlattSammeln : MonoBehaviour
 
     private void CollectLeaf()
     {
-        CollectableManager.Instance.CollectLeaf(leafID);
+        collectableManager.CollectLeaf(leafID);
 
         // Sprite ändern
         SetCollectedState();

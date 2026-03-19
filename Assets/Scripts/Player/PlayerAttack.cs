@@ -1,9 +1,11 @@
-using UnityEngine;
 using System.Collections;
+using UnityEditor.EditorTools;
+using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
     private PlayerController playerController;
+    [SerializeField] private SoulManager soulManager;
     private Rigidbody2D rb;
 
     [Header("Attack Settings")]
@@ -18,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("lightShotSoul"))
+        if (soulManager.HasSoul("lightShotSoul"))
         {
             lightShotUnlocked = true;
         }

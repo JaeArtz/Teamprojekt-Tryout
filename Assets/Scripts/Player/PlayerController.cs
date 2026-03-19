@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D body;
 
+    [SerializeField] private SoulManager soulManager;
+
     private float _horizontalInput;
 
     private bool _isGrounded;
@@ -114,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("rabbitSoul"))
+        if (soulManager.HasSoul("rabbitSoul"))
             jump.CanDoubleJump = true;
 
         playerState = PlayerState.DEFAULT;
