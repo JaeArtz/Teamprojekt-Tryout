@@ -4,7 +4,7 @@ public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] protected int damage = 1;
     [SerializeField] private float damageInterval = 2.0f; // Alle 2 Sekunden Schaden
-    [SerializeField] private float initialDelay = 1.5f; // Verzögerung vor dem ersten Schaden
+    [SerializeField] private float initialDelay = 0f; // Verzögerung vor dem ersten Schaden
     private float nextDamageTime;
 
     private bool isInside = false;
