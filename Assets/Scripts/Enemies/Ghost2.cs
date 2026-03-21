@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Ghost2 : MonoBehaviour
+public class Ghost2 : MonoBehaviour, ILightReactable
 {
     #region Hit Cooldown
     private const float cooldown = 1.0f;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Ghost : MonoBehaviour
+public class Ghost : MonoBehaviour, ILightReactable
 {
     #region Hit Cooldown
     private const float cooldown = 1.0f;

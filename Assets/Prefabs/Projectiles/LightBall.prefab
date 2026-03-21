@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   speed: 10
-  ballLight: {fileID: 0}
+  ballLight: {fileID: 492265331378227190}
 --- !u!50 &6118884644347307981
 Rigidbody2D:
   serializedVersion: 5
