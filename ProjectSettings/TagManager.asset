@@ -14,6 +14,7 @@ TagManager:
   - PassableGround
   - Background
   - Lightball
+  - BreakableWall
   layers:
   - Default
   - TransparentFX
@@ -28,10 +29,10 @@ TagManager:
   - Enemy
   - Ceiling
   - 'Climbable '
-  - 
+  - Player
   - 
   - SinkingGround_CoverTiles
-  - 
+  - BreakableWall
   - 
   - 
   - 

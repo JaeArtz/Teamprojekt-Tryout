@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9490301a502ecd345b23cb8113ce280f, type: 3}
-  m_Name: CatSoul
+  m_Name: ArmadilloSoul
   m_EditorClassIdentifier: Assembly-CSharp::SoulData
-  soulID: catSoul
-  displayName: Katzenseele
-  icon: {fileID: 3296326058211347476, guid: a046126fca025ac438ca6144b87a27b2, type: 3}
-  description: "Erlaubt die Sicht im Dunkeln und besseres H\xF6ren"
+  soulID: armadilloSoul
+  displayName: "G\xFCrteltierseele"
+  icon: {fileID: 7090321929616263124, guid: 13e174d1b5b4e5541be45febf64bdd5d, type: 3}
+  description: Erlaubt das Rollen

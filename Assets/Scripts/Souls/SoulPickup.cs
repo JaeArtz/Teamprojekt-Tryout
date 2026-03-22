@@ -31,12 +31,14 @@ public class SoulPickup : MonoBehaviour
         // Add to SoulManager
         SoulManager.Instance?.AddSoul(soulData.soulID);
 
+        // Suche das PlayerController Script auf dem Spieler
         var pm = other.GetComponentInParent<PlayerController>();
         if (pm != null)
         {
             pm.OnSoulCollected(soulData);
         }
 
+        // Suche das PlayerAttack Script auf dem Spieler
         var pa = other.GetComponentInParent<PlayerAttack>();
         if (pa != null)
         {
@@ -48,6 +50,13 @@ public class SoulPickup : MonoBehaviour
         if (pl != null)
         {
             pl.ActivateLight();
+        }
+
+        // Suche das PlayerRoll Script auf dem Spieler und erlaube das Rollen, wenn es die Armadillo-Seele ist
+        var pr = other.GetComponentInParent<PlayerRoll>();
+        if (pr != null && soulData.soulID == "armadilloSoul")
+        {
+            pr.CanRoll = true;
         }
 
         // Dialog anzeigen (optional)

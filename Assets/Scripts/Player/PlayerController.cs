@@ -124,6 +124,10 @@ public class PlayerController : MonoBehaviour
         if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("rabbitSoul"))
             jump.CanDoubleJump = true;
 
+        // Rollen wiederherstellen falls Armadillo-Seele bereits eingesammelt
+        if(SoulManager.Instance != null && SoulManager.Instance.HasSoul("armadilloSoul")) // Neu hinzugefügt Jean Gürteltierseele
+            roll.CanRoll = true;
+
         playerState = PlayerState.DEFAULT;
         Debug.Log("Player Controller Start Done.");
     }
@@ -182,7 +186,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(dir * 0.7f, 0.7f, transform.localScale.z);
         }
 
-        roll.CanRoll = wallActions.CanRoll;
+        //roll.CanRoll = wallActions.CanRoll; // Test weil kann rollen ohne seele
 
         if (!roll.IsRolling && roll.ApplyBoostedSpeed && !_isGrounded && Mathf.Sign(body.linearVelocityX) != Input.GetAxisRaw("Horizontal"))
             roll.StopBoostSpeed();
@@ -287,6 +291,12 @@ public class PlayerController : MonoBehaviour
         {
             jump.CanDoubleJump = true;
             showcaseDoubleJump = true;
+        }
+
+        // Armadillo-Seele: Rollen freischalten
+        if(soul.soulID == "armadilloSoul")
+        {
+            roll.CanRoll = true;
         }
     }
 
