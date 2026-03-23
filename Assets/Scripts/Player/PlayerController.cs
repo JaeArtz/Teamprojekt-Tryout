@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D body;
 
+    private SoulManager soulManager;
+
     private float _horizontalInput;
 
     private bool _isGrounded;
@@ -50,9 +52,12 @@ public class PlayerController : MonoBehaviour
 
     private PlayerState playerState;
 
-
+    
+        
+    
     private void Awake()
     {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
         body = GetComponent<Rigidbody2D>();
         movement = GetComponent<PlayerRunning>();
         jump = GetComponent<PlayerJump>();
@@ -114,7 +119,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("rabbitSoul"))
+        if (soulManager.HasSoul("rabbitSoul"))
             jump.CanDoubleJump = true;
 
         playerState = PlayerState.DEFAULT;

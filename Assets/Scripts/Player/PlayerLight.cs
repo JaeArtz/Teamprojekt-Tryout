@@ -6,9 +6,15 @@ public class PlayerLight : MonoBehaviour
 {
     [SerializeField] private Light2D playerLight;
 
+    private SoulManager soulManager;
+
+    private void Awake()
+    {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
+    }
     private void Start()
     {
-        bool hasLight = SoulManager.Instance != null && SoulManager.Instance.HasSoul("catSoul");
+        bool hasLight = soulManager.HasSoul("catSoul");
         playerLight.gameObject.SetActive(true);
         playerLight.enabled = hasLight;
     }

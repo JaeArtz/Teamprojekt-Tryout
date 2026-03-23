@@ -8,15 +8,20 @@ public class SoulPickup : MonoBehaviour
     [Tooltip("Optional: UI-Dialog-Panel, welches aktiviert wird")]
     public GameObject dialogBox;
     public float dialogDuration = 3f;
-
+    private SoulManager soulManager;
     private bool collected = false;
 
+    private void Awake()
+    {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
+        
+    }
     private void Start()
     {
         if (dialogBox != null) dialogBox.SetActive(false);
 
         // Wenn der Spieler die Seele schon hat, verstecke das Pickup-Objekt
-        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul(soulData.soulID))
+        if (soulManager.HasSoul(soulData.soulID))
         {
             gameObject.SetActive(false);
         }
@@ -29,7 +34,7 @@ public class SoulPickup : MonoBehaviour
         collected = true;
 
         // Add to SoulManager
-        SoulManager.Instance?.AddSoul(soulData.soulID);
+        soulManager.AddSoul(soulData.soulID);
 
         var pm = other.GetComponentInParent<PlayerController>();
         if (pm != null)

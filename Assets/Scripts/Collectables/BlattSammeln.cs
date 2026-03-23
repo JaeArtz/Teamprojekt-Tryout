@@ -1,23 +1,27 @@
 using System;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class BlattSammeln : MonoBehaviour
 {
     [SerializeField] private int leafID; // Jede Instanz bekommt eine eigene ID (0–19)
     [SerializeField] private Sprite collectedSprite;
+    private CollectableManager collectableManager;
     [SerializeField]
     private AudioClip audioClip;
 
 
     private SpriteRenderer spriteRenderer;
     private bool isCollected = false;
-
+    private void Awake()
+    {
+        collectableManager = GameObject.Find("GameManager").GetComponent<CollectableManager>();
+    }
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
         // Prüfen, ob das Blatt schon gesammelt wurde
-        if (CollectableManager.Instance.IsLeafCollected(leafID))
+        if (collectableManager.IsLeafCollected(leafID))
         {
             SetCollectedState();
         }
@@ -45,7 +49,7 @@ public class BlattSammeln : MonoBehaviour
 
     private void CollectLeaf()
     {
-        CollectableManager.Instance.CollectLeaf(leafID);
+        collectableManager.CollectLeaf(leafID);
 
         // Sprite ändern
         SetCollectedState();
