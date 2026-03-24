@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerRespawn : MonoBehaviour
 {
     private Vector3 respawnPoint;
+    public bool useCheckpoints = true;
 
     
     /// <summary>
@@ -10,7 +11,20 @@ public class PlayerRespawn : MonoBehaviour
     /// </summary>
     void Start()
     {
-        respawnPoint = transform.position;
+        //respawnPoint = transform.position;
+        if (useCheckpoints && PlayerPrefs.HasKey("CheckpointX"))
+        {
+            float x = PlayerPrefs.GetFloat("CheckpointX");
+            float y = PlayerPrefs.GetFloat("CheckpointY");
+            respawnPoint = new Vector3(x, y, transform.position.z);
+            transform.position = respawnPoint; // Spieler direkt hinsetzen!
+        }
+        else
+        {
+            PlayerPrefs.DeleteKey("CheckpointX");
+            PlayerPrefs.DeleteKey("CheckpointY");
+            respawnPoint = transform.position; // Fallback: Levelstart
+        }
     }
 
     public void SetCheckpoint(Vector3 newCheckpoint)
@@ -24,10 +38,19 @@ public class PlayerRespawn : MonoBehaviour
         { 
             transform.position = respawnPoint;
 
-            var myRigidBody = GetComponent<Rigidbody2D>();
+            var myRigidBody = GetComponentInParent<Rigidbody2D>();
             if (myRigidBody != null)
                 myRigidBody.linearVelocity = Vector2.zero;
         }
+    }
+
+    public void RespawnNow()
+    {
+        transform.position = respawnPoint;
+
+        var rb = GetComponentInParent<Rigidbody2D>();
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
     }
 
     /*

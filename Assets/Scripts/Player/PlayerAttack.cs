@@ -98,6 +98,22 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public void StartManualShowcase()
+    {
+        StartCoroutine(WaitAndShowcase());
+    }
+
+    private IEnumerator WaitAndShowcase()
+    {
+        // Falls der Spieler noch springt, warten wir kurz, bis er landet
+        while (!playerController.Grounded)
+        {
+            yield return null;
+        }
+
+        StartCoroutine(LightShotShowcase());
+    }
+
     private IEnumerator LightShotShowcase()
     {
         playerController.SetInputLocked(true);

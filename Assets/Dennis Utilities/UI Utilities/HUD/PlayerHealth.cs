@@ -45,9 +45,28 @@ public class PlayerHealth : MonoBehaviour
 
         if(currentHealth == 0)
         {
-            Player.SetActive(false);
-            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("GameOverScreen");
+            //Player.SetActive(false);
+            //myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("GameOverScreen");
+            RespawnPlayer();
         }
+    }
+
+    private void RespawnPlayer()
+    {
+        // HP zurücksetzen
+        currentHealth = maxHealth;
+
+        // Zum Checkpoint teleportieren via PlayerRespawn
+        PlayerRespawn playerRespawn = Player.GetComponentInParent<PlayerRespawn>();
+        if (playerRespawn != null)
+        {
+            playerRespawn.RespawnNow();
+        }
+
+        // Spieler wieder aktivieren (falls deaktiviert)
+        Player.SetActive(true);
+
+        OnPlayerDamaged?.Invoke();
     }
 
     //Testfunction, might be optimized and changed later on!
