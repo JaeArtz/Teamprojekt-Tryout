@@ -7,8 +7,8 @@ public class RuneManager : MonoBehaviour
     private int currentActiveRunes = 0;
 
     [Header("Events")]
-    public CheckpointTrigger bossStartTrigger; // Der Trigger, der die Erwachen-Sequenz startet
-    public GameObject victoryRune; // Die Rune auf der rechten Seite
+    public CheckpointTrigger bossStartTrigger;
+    public GameObject victoryRune; // Rune on RightSide, put Golem to sleep
 
     public void ActivateRune()
     {
@@ -26,10 +26,9 @@ public class RuneManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (bossStartTrigger != null)
         {
-            // Wir nutzen dein vorhandenes System, um die Sequenz zu starten
+            
             bossStartTrigger.enabled = true;
-            // Falls der Trigger normalerweise auf Kollision wartet, 
-            // rufen wir hier manuell die Logik auf oder setzen den Player davor.
+            
         }
     }
 }

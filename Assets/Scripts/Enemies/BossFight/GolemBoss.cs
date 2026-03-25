@@ -20,24 +20,24 @@ public class GolemBoss : MonoBehaviour
 
     private IEnumerator BossLoop()
     {
-        // 1. Transformation Animation (Platzhalter)
+        // 1. Transformation Animation (PlaceHolder)
         yield return new WaitForSeconds(3f);
         currentState = GolemState.Attacking;
 
         while (currentState == GolemState.Attacking)
         {
-            // RHYTHMUS: 2x Linker Fuﬂ -> 2x Faust -> 1x Rechter Fuﬂ (L¸cke) -> 2x Faust
+            // RHYTH: 2x Left Foot Stomp -> 2x PunchFloor -> 1x Right Foot Stomp -> 2x PunchFloor
 
-            // 2x Linker Fuﬂ
+            // 2x Left Foot, LF also needs is‹assegeChance
             for (int i = 0; i < 2; i++) { yield return Stamp(leftFootPos); }
 
-            // 2x Faust
+            // 2x Punch
             for (int i = 0; i < 2; i++) { yield return FistSlam(); }
 
-            // 1x Rechter Fuﬂ (Hier kann der Spieler vorbei!)
+            // 1x Right Foot
             yield return Stamp(rightFootPos, isPassageChance: true);
 
-            // 2x Faust
+            // 2x Punch
             for (int i = 0; i < 2; i++) { yield return FistSlam(); }
         }
     }
@@ -45,24 +45,23 @@ public class GolemBoss : MonoBehaviour
     private IEnumerator Stamp(Transform pos, bool isPassageChance = false)
     {
         Debug.Log("Golem hebt Fuﬂ...");
-        yield return new WaitForSeconds(1f); // Zeit zum Drunterherrennen, wenn es der rechte Fuﬂ ist
+        yield return new WaitForSeconds(1f); 
 
-        Debug.Log("STAMPF!");
-        // Hier Instanziieren der Welle (Nutzt dein Projectile/EnemyDamage Prinzip)
+        Debug.Log("STOMP!");
+        // Instantiate Wave with Stomp
         Instantiate(groundWavePrefab, pos.position, Quaternion.identity);
         yield return new WaitForSeconds(attackDelay);
     }
 
     private IEnumerator FistSlam()
     {
-        // Schatten anzeigen
+        // Cast Shadow before Punch on Floor
         GameObject shadow = Instantiate(fistShadowPrefab, fistTargetPos.position, Quaternion.identity);
         yield return new WaitForSeconds(1.5f);
 
-        // Einschlag (Schaden)
-        Debug.Log("FAUSTSCHLAG!");
+        Debug.Log("PUNCH!");
         Destroy(shadow);
-        // Hier Damage-Area kurz aktivieren
+        
         yield return new WaitForSeconds(attackDelay);
     }
 }
