@@ -3212,6 +3212,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1345823095}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3276,6 +3280,10 @@ PrefabInstance:
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: gravityScale
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
@@ -3363,6 +3371,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1978181797}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3819,6 +3831,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1855963089}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -350130,6 +350146,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2042754534}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -350281,6 +350301,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1625179712}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -350576,6 +350600,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1740871070}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -351393,6 +351421,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2062988068}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -351905,6 +351937,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1954334892}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -352463,6 +352499,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1866611934}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -353563,6 +353603,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2019038125}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -353808,6 +353852,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1910111942}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -354579,6 +354627,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1610749254}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -354908,6 +354960,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2072269409}
@@ -355066,6 +355122,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2147404152}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -355302,6 +355362,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 834034600}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -355375,6 +355439,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1980212772}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -355521,6 +355589,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1863768596}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -355611,6 +355683,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1933742317}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -355684,6 +355760,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1915863064}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -356130,6 +356210,10 @@ PrefabInstance:
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: gravityScale
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
@@ -363691,6 +363775,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1547274953}
@@ -364716,6 +364804,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1869596168}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -364780,6 +364872,10 @@ PrefabInstance:
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: gravityScale
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
@@ -364853,6 +364949,10 @@ PrefabInstance:
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: gravityScale
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
@@ -365123,6 +365223,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1680901562}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -368233,6 +368337,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1221999175}
@@ -368382,6 +368490,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1262444553}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -510424,6 +510536,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1462645412}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -511079,6 +511195,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1079415663}
@@ -511195,6 +511315,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 984760345}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -511468,6 +511592,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1571796323}
+    - target: {fileID: 5679530205153387973, guid: 8a0e954b838937a44ab1b1732ec588a4, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -547642,6 +547770,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
+      propertyPath: respawnDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818381257199477172, guid: fa01fafc7efd68941ae46f77b9775b81, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1949259731}
@@ -547830,7 +547962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627553249777499610, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: useCheckpoints
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1430167107289389487, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_LocalPosition.x
