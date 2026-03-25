@@ -4,10 +4,12 @@ public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] protected int damage = 1;
     [SerializeField] private float damageInterval = 2.0f; // Alle 2 Sekunden Schaden
+    [SerializeField] private bool canBeDodgedByRolling = true;
     private float nextDamageTime;
 
     private bool isInside = false;
     private PlayerHealth playerHealth;
+    private PlayerRoll playerRoll;
 
     private void Update()
     {
