@@ -4,39 +4,27 @@ public class EnemyDamage2 : MonoBehaviour
 {
     [Header("Damage Settings")]
     [SerializeField] protected int damage = 1;
-    [SerializeField] private float hitCooldown = 1.0f; // cooldown until next possible damage intake
+    [SerializeField] private float hitCooldown = 1.0f;
 
-    [Header("Dodge Settings")]
-    [SerializeField] private bool canBeDodged = true;
-
-    private float lastHitTime = -99f; // = last time hit
+    private float lastHitTime = -99f;
     private bool isInPlayer = false;
-
     private PlayerHealth playerHealth;
-    private IDodgeable dodgeableEntity;
 
     private void FixedUpdate()
     {
-        // Is player in contact with a damage source, AND is the cooldown "ready"?
+       
         if (isInPlayer && (Time.time - lastHitTime >= hitCooldown))
         {
             if (playerHealth != null)
             {
-                TryApplyDamage();
+                ApplyDamage();
             }
         }
     }
 
-    private void TryApplyDamage()
-    {        
-        if (canBeDodged && dodgeableEntity != null && dodgeableEntity.IsInvulnerable)
-        {            
-            return;
-        }
-        
+    private void ApplyDamage()
+    {
         playerHealth.TakeDamage(damage);
-
-        // starts new Cooldown
         lastHitTime = Time.time;
     }
 
@@ -45,8 +33,6 @@ public class EnemyDamage2 : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerHealth = other.GetComponentInParent<PlayerHealth>();
-            dodgeableEntity = other.GetComponentInParent<IDodgeable>();
-
             if (playerHealth != null)
             {
                 isInPlayer = true;
@@ -60,7 +46,6 @@ public class EnemyDamage2 : MonoBehaviour
         {
             isInPlayer = false;
             playerHealth = null;
-            dodgeableEntity = null;
         }
     }
 }
