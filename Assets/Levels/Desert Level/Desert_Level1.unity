@@ -56933,7 +56933,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: cedc2974015cf8e43bf1f413d28e329f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.143
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -61529,7 +61529,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 788384247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d05478cd5229724599afcb95f6d4384, type: 3}
+  m_Script: {fileID: 11500000, guid: f4554652ff89c7142a1dc578e304dfb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
 --- !u!212 &788384250
@@ -77706,7 +77706,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1592449651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d05478cd5229724599afcb95f6d4384, type: 3}
+  m_Script: {fileID: 11500000, guid: f4554652ff89c7142a1dc578e304dfb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
 --- !u!212 &1592449653
@@ -86697,7 +86697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627553249777499610, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: useCheckpoints
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1430167107289389487, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_LocalPosition.x

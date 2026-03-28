@@ -5,14 +5,20 @@ using System.Linq;
 public class SoulManager : MonoBehaviour
 {
 
+
     public bool resetSouls = false; // optional: clear all on start (for testing)
 
     private GameObject player;
     // Collected IDs
     private HashSet<string> collected = new HashSet<string>();
 
+    public static SoulManager Instance { get; private set; }
+
+
     private void Awake()
     {
+        Instance = this;
+
         player = GameObject.Find("Player");
 
         Load();
