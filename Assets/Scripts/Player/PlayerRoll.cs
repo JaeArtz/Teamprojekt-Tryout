@@ -35,20 +35,20 @@ public class PlayerRoll : MonoBehaviour
 
     // Rollen ist gesperrt bis die Armadillo-Seele eingesammelt wurde
     private bool canRoll;
-    public bool CanRoll { set { canRoll = value; } }
+    public bool CanRoll {set{ canRoll = value; }}
 
-    // Layer-Indizes für Physics2D.IgnoreLayerCollision
+    // Layer-Indizes fÃ¼r Physics2D.IgnoreLayerCollision
     private int playerLayerIndex;
     private int breakableWallLayerIndex;
     private int enemyLayerIndex;
-    private int breakableWallMask; // Layer-Maske für BreakableWall-Layer
+    private int breakableWallMask; // Layer-Maske fÃ¼r BreakableWall-Layer
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        canRoll = false; // Rollen zu Beginn sperren — wird durch Armadillo-Seele freigeschaltet
-
-        // Layer vom tatsächlichen Collider-Child holen (sitzt auf "Scaler", nicht Root)
+        canRoll = false; // Rollen zu Beginn sperren â€” wird durch Armadillo-Seele freigeschaltet
+        
+        // Layer vom tatsÃ¤chlichen Collider-Child holen (sitzt auf "Scaler", nicht Root)
         var col = GetComponentInChildren<BoxCollider2D>();
         if (col != null)
             playerLayerIndex = col.gameObject.layer;
@@ -64,7 +64,7 @@ public class PlayerRoll : MonoBehaviour
         Physics2D.IgnoreLayerCollision(playerLayerIndex, breakableWallLayerIndex, false);
         Physics2D.IgnoreLayerCollision(playerLayerIndex, enemyLayerIndex, false);
 
-        breakableWallMask = 1 << breakableWallLayerIndex; // Layer-Maske für BreakableWall-Layer erstellen
+        breakableWallMask = 1 << breakableWallLayerIndex; // Layer-Maske fÃ¼r BreakableWall-Layer erstellen
 
     }
 
@@ -148,7 +148,7 @@ public class PlayerRoll : MonoBehaviour
             StopBoostSpeed();
         }
 
-        // Kollisionen mit BreakableWall und Enemies während des Rollens ignorieren
+        // Kollisionen mit BreakableWall und Enemies wÃ¤hrend des Rollens ignorieren
         Physics2D.IgnoreLayerCollision(
             playerLayerIndex,
             breakableWallLayerIndex,
@@ -158,14 +158,14 @@ public class PlayerRoll : MonoBehaviour
         Physics2D.IgnoreLayerCollision(playerLayerIndex, enemyLayerIndex, isRolling);
 
         // Ist nicht der effizienteste WEg, aber mit 2 collidern auf dem Brakable wall objekt hats irgendwie nicht funktioniert, kp warum 
-        // deshalb jetzt per OverlapBoxAll die Wände im Bereich erkennen und zerstören, solange der Spieler rollt
-        // Beim Rollen: BreakableWalls im Bereich per OverlapBox erkennen und zerstören
+        // deshalb jetzt per OverlapBoxAll die WÃ¤nde im Bereich erkennen und zerstÃ¶ren, solange der Spieler rollt
+        // Beim Rollen: BreakableWalls im Bereich per OverlapBox erkennen und zerstÃ¶ren
         if (isRolling)
         {
             var col = GetComponentInChildren<Collider2D>();
             if (col != null)
             {
-                // Alle Collider mit BreakableWallMask im Bereich des Spielers prüfen
+                // Alle Collider mit BreakableWallMask im Bereich des Spielers prÃ¼fen
                 Collider2D[] hits = Physics2D.OverlapBoxAll(
                     col.bounds.center,
                     col.bounds.size,
@@ -174,7 +174,7 @@ public class PlayerRoll : MonoBehaviour
                 );
                 foreach (var hit in hits)
                 {
-                    hit.GetComponent<BreakableWall>()?.Break();
+                    hit.GetComponent<BreakableWall>()?.Break();  
                 }
             }
         }

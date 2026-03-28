@@ -4,15 +4,21 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class PlayerWallActions : MonoBehaviour
 {
     [SerializeField, Tooltip("The (absolute value) horizontal velocity being applied when the player enters wall-jump")] private float playerMaxWallJumpVelocityX = 18f;
+    public float PlayerMaxWallJumpVelocityX => playerMaxWallJumpVelocityX;
     [SerializeField, Tooltip("The (absolute value) vertical velocity being applied when the player enters wall-jump")] private float playerMaxWallJumpVelocityY = 12f;
     [SerializeField, Tooltip("The maximum fall speed, the player can reach while wall-sliding")] private float wallSlideSpeed = -3f;
     
-    [SerializeField, Tooltip("Cooldown being triggered when entering wall-jump. Disables the check of player touching wall.")] private float wallJumpCooldown = 0.2f;
+    [SerializeField, Tooltip("Cooldown being triggered when entering wall-jump. Disables the check of player touching wall.")] private float wallJumpCooldownDuration = 0.2f;
     private float wallJumpCooldownTimer;
 
-    [SerializeField, Tooltip("Duration in seconds until the player control is back to normal. Player control gets interpolated")]
+    [SerializeField, Tooltip("Duration in seconds until the player control is back to normal. Player control gets interpolated.")]
     private float wallJumpAirControlDuration = 1.0f;
     private float wallJumpAirControlTimer;
+
+    [SerializeField, Tooltip("Duration in seconds until the player is allowed to roll again after walljumping.")]
+    private float prohibitRollDuration = 1.0f;
+    private float prohibitRollTimer;
+    public bool CanRoll => prohibitRollTimer <= 0;
 
     [SerializeField, Tooltip("How long the player can still perform normal jump when exiting ground")] private float wallCoyoteTime = 0.15f;
     private float wallCoyoteTimer;
@@ -22,6 +28,10 @@ public class PlayerWallActions : MonoBehaviour
     private float wallCheckDistance = 0.1f;
     [SerializeField, Tooltip("Circle collider without collision for wall check")]
     private CircleCollider2D wallTrigger;
+
+
+    private Rigidbody2D body;
+    public Rigidbody2D Body { set { body = value; } }
 
     public float T => wallJumpAirControlTimer / wallJumpAirControlDuration;
 
@@ -75,7 +85,7 @@ public class PlayerWallActions : MonoBehaviour
         return !_isWallJumping && (_isOnWall || wallCoyoteTimer > 0) && wallJumpCooldownTimer <= 0;
     }
 
-    public bool HandleWallActions(ref Rigidbody2D body, ref LayerMask layer, bool isGrounded)
+    public bool HandleWallActions(ref LayerMask layer, bool isGrounded)
     {
         _isGrounded = isGrounded;
         if (!_isOnWall && wallCoyoteTimer > 0)
@@ -94,7 +104,7 @@ public class PlayerWallActions : MonoBehaviour
         if (!CanWallJump())
             return false;
 
-        WallJump(ref body);
+        WallJump();
         _isWallJumping = true;
 
         return true;
@@ -127,13 +137,18 @@ public class PlayerWallActions : MonoBehaviour
         }
     }
 
-    public bool HandleFixedActions(ref Rigidbody2D body)
+    public bool HandleFixedActions()
     {
+        if (!body) return false;
+
         if (wallJumpAirControlTimer > 0)
             wallJumpAirControlTimer -= Time.fixedDeltaTime;
 
         if (wallJumpCooldownTimer > 0)
             wallJumpCooldownTimer -= Time.fixedDeltaTime;
+
+        if (prohibitRollTimer > 0)
+            prohibitRollTimer -= Time.fixedDeltaTime;
 
         // ZUSTANDS-ÜBERPRÜFUNG WALL
         if (wallJumpCooldownTimer <= 0)
@@ -162,8 +177,10 @@ public class PlayerWallActions : MonoBehaviour
         return _isWallSliding;
     }
 
-    private void WallJump(ref Rigidbody2D body)
+    private void WallJump()
     {
+        if (!body) return;
+
         int wallDir = _isOnWall ? _playerWallDirection : _lastWallDirection;
         float jumpDirX = -wallDir;
 
@@ -175,7 +192,8 @@ public class PlayerWallActions : MonoBehaviour
 
         _isWallJumping = true;
         wallJumpAirControlTimer = wallJumpAirControlDuration;
-        wallJumpCooldownTimer = wallJumpCooldown;
+        wallJumpCooldownTimer = wallJumpCooldownDuration;
+        prohibitRollTimer = prohibitRollDuration;
 
         _isOnWall = false;
         _isWallSliding = false;

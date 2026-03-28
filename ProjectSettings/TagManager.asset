@@ -12,6 +12,9 @@ TagManager:
   - Ceiling
   - Climbable
   - PassableGround
+  - Background
+  - Lightball
+  - BreakableWall
   layers:
   - Default
   - TransparentFX
@@ -26,7 +29,7 @@ TagManager:
   - Enemy
   - Ceiling
   - 'Climbable '
-  - 
+  - Player
   - 
   - SinkingGround_CoverTiles
   - BreakableWall
@@ -54,6 +57,9 @@ TagManager:
     locked: 0
   - name: Background_direct_BG_Objects
     uniqueID: 535374819
+    locked: 0
+  - name: Climbable
+    uniqueID: 3296632253
     locked: 0
   - name: Default
     uniqueID: 0

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Ghost2 : MonoBehaviour
+public class Ghost2 : MonoBehaviour, ILightReactable
 {
     #region Hit Cooldown
     private const float cooldown = 1.0f;
@@ -41,11 +41,16 @@ public class Ghost2 : MonoBehaviour
 
     [SerializeField] private CircleCollider2D hitCollider;
     [SerializeField] private BoxCollider2D bodyCollider;
+    private Animator animator;
+    private GhostLight_PathPoints_SmoothMovement pathScript;
+
 
 
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        pathScript = GetComponentInParent<GhostLight_PathPoints_SmoothMovement>();
         startingPosition = transform.position;
         lastPosition = transform.position;
     }
@@ -77,27 +82,28 @@ public class Ghost2 : MonoBehaviour
             if (stunTimer <= 0f)
                 SetActive();
         }
-
-        if (autoFlipp && sr != null)
-        {
-            float xFactorDifference = transform.position.x - lastPosition.x;
-
-            // means Sprite is moving towards the right
-            if (xFactorDifference > 0.001f)
-            {
-                sr.flipX = spriteFacesRightByDefault ? false : true;
-            }
-            // means Sprite is moving towards the left
-            else if (xFactorDifference < -0.001f)
-            { 
-                sr.flipX = spriteFacesRightByDefault ? true : false;
-            }
-        }
         
     }
 
     private void LateUpdate()
     {
+        if (autoFlipp && sr != null)
+        {
+            float xFactorDifference = transform.position.x - lastPosition.x;
+
+            /*// Das hier hilft uns zu sehen, was die zweite Hyäne berechnet
+            if (gameObject.name == "GhostTraveling1") // Ersetze durch den exakten Namen im Inspector
+            {
+                Debug.Log($"{gameObject.name} bewegt sich um: {xFactorDifference}");
+            }*/
+
+            if (Mathf.Abs(xFactorDifference) > 0.0001f) // Sensiblerer Schwellenwert
+            {
+                bool faceRight = xFactorDifference > 0;
+                sr.flipX = spriteFacesRightByDefault ? !faceRight : faceRight;
+            }
+        }
+
         lastPosition = transform.position;
     }
 
@@ -134,6 +140,16 @@ public class Ghost2 : MonoBehaviour
         sr.sprite = stunnedSprite;
 
         bodyCollider.enabled = false;
+
+        // Animator deaktivieren damit stunnedSprite sichtbar bleibt
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
+        if(pathScript != null)
+        {
+            pathScript.enabled = false; // Deaktiviert das Path-Script, damit der Geist nicht weiterbewegt wird
+        }
     }
 
     private void SetActive()
@@ -142,6 +158,16 @@ public class Ghost2 : MonoBehaviour
         sr.sprite = normalSprite;
 
         bodyCollider.enabled = true;
+
+        // Animator wieder aktivieren
+        if (animator != null)
+        {
+            animator.enabled = true;
+        }
+        if(pathScript != null)
+        {
+            pathScript.enabled = true; // Reaktiviert das Path-Script, damit der Geist sich wieder bewegt
+        }
     }
 
     public void HitByLight()

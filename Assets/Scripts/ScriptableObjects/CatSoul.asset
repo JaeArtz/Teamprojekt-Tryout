@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulData
   soulID: catSoul
   displayName: Katzenseele
-  icon: {fileID: 2575315295076841119, guid: 202d30f3fa9934c4e8ad6cedb52c5f11, type: 3}
+  icon: {fileID: 3296326058211347476, guid: a046126fca025ac438ca6144b87a27b2, type: 3}
   description: "Erlaubt die Sicht im Dunkeln und besseres H\xF6ren"

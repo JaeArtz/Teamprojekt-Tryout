@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     private PlayerJump jump;
     private PlayerWallActions wallActions;
     private PlayerClimb climb;
+    private PlayerRoll roll;
     // Animator component
     private Animator animator;
 
@@ -63,7 +64,13 @@ public class PlayerController : MonoBehaviour
         jump = GetComponent<PlayerJump>();
         wallActions = GetComponent<PlayerWallActions>();
         climb = GetComponent<PlayerClimb>();
+        roll = GetComponent<PlayerRoll>();
+        movement.Body = body;
+        wallActions.Body = body;
         climb.Body = body;
+        roll.Body = body;
+
+        climb.Roll = roll;
 
         if (surfaceCollider == null)
         {
@@ -122,6 +129,10 @@ public class PlayerController : MonoBehaviour
         if (soulManager.HasSoul("rabbitSoul"))
             jump.CanDoubleJump = true;
 
+        // Rollen wiederherstellen falls Armadillo-Seele bereits eingesammelt
+        if(SoulManager.Instance != null && SoulManager.Instance.HasSoul("armadilloSoul")) // Neu hinzugefügt Jean Gürteltierseele
+            roll.CanRoll = true;
+
         playerState = PlayerState.DEFAULT;
         Debug.Log("Player Controller Start Done.");
     }
@@ -148,22 +159,17 @@ public class PlayerController : MonoBehaviour
             playerState = PlayerState.FALLING;
 
         // Prioritize walljump over normal jump
-        if (!wallActions.HandleWallActions(ref body, ref wallLayer, _isGrounded))
+        if (!wallActions.HandleWallActions(ref wallLayer, _isGrounded))
         {
             // If no walljump was executed, test normal jump action
-            if (jump.HandleJump(_isGrounded))
+            if (jump.HandleJump(_isGrounded || climb.CanJump))
             {
                 // If normal jump was successfully executed, reset wall jump air control duration for a normal movement
                 wallActions.ResetWallJumpAirControlDuration();
+                roll.StopRoll();
             }
         }
         else jump.ResetDoubleJumps(); // If walljump was executed, reset the double jumps
-
-        // ANIMATOR EDITS
-        if ((Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D)) && _isGrounded)
-            animator.SetBool("IsWalking", true);
-        else
-            animator.SetBool("IsWalking", false);
     }
 
     private void FixedUpdate()
@@ -176,19 +182,27 @@ public class PlayerController : MonoBehaviour
 
         float horizontalInput = _horizontalInput = Input.GetAxisRaw("Horizontal");
         _isGrounded = IsGrounded();
+        roll.IsGrounded = _isGrounded;
 
         // PLAYER-SPRITE DIRECTION
-        if (horizontalInput != 0)
+        if (Mathf.Abs(body.linearVelocityX) > 0.1f)
         {
-            float dir = horizontalInput > 0 ? 1 : -1;
+            float dir = body.linearVelocityX > 0 ? 1 : -1;
             transform.localScale = new Vector3(dir * 0.7f, 0.7f, transform.localScale.z);
         }
 
-        if (wallActions.T > 0)
-            movement.ApplyWalljumpMovement(ref body, horizontalInput, wallActions.T);
-        else movement.ApplyNormalMovement(ref body, horizontalInput);
+        //roll.CanRoll = wallActions.CanRoll; // Test weil kann rollen ohne seele
 
-        wallActions.HandleFixedActions(ref body);
+        if (!roll.IsRolling && roll.ApplyBoostedSpeed && !_isGrounded && Mathf.Sign(body.linearVelocityX) != Input.GetAxisRaw("Horizontal"))
+            roll.StopBoostSpeed();
+
+        if (roll.ApplyBoostedSpeed)
+            movement.ApplyRollMovement(horizontalInput, roll.SpeedBoost, roll.BrakeForce);
+        else if (wallActions.T > 0)
+            movement.ApplyWalljumpMovement(horizontalInput, wallActions.T);
+        else movement.ApplyNormalMovement(horizontalInput);
+
+        wallActions.HandleFixedActions();
 
         switch (playerState)
         {
@@ -230,6 +244,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        // ANIMATOR EDITS
+        animator.SetBool("IsWalking", (Input.GetKey(KeyCode.A) ^ Input.GetKey(KeyCode.D)) && _isGrounded);
+        animator.SetFloat("xVel", body.linearVelocityX);
+        animator.SetFloat("yVel", body.linearVelocityY);
+        animator.SetBool("IsClimbing", climb.IsClimbing);
+        animator.SetBool("IsRolling", roll.IsRolling);
+    }
+
     private bool IsGrounded()
     {
         float extraHeight = 0.05f;
@@ -243,7 +267,7 @@ public class PlayerController : MonoBehaviour
             groundLayer
         );
 
-        return hit.collider != null || climb.CanJump;
+        return hit.collider != null;
     }
 
     public void SetInputLocked(bool locked)
@@ -272,6 +296,12 @@ public class PlayerController : MonoBehaviour
         {
             jump.CanDoubleJump = true;
             showcaseDoubleJump = true;
+        }
+
+        // Armadillo-Seele: Rollen freischalten
+        if(soul.soulID == "armadilloSoul")
+        {
+            roll.CanRoll = true;
         }
     }
 
