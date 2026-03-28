@@ -6,9 +6,14 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     [SerializeField]
     public GameObject pauseMenuUI;
-    public GameObject player;
+    private GameObject player;
     public GameObject hudUI;
     public GameObject quitUI;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+    }
     // Update is called once per frame
     void Update()
     {
