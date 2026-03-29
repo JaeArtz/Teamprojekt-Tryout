@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: eccb0bac0521da24c98c4403600549fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5969606692127929146
+    second: "RunenS\xE4ule1_Runen_0"
+  - first:
+      213: 5113699616254303719
+    second: "RunenS\xE4ule1_Runen_1"
+  - first:
+      213: -1687094828857329711
+    second: "RunenS\xE4ule1_Runen_2"
+  - first:
+      213: 5544717098029945090
+    second: "RunenS\xE4ule1_Runen_3"
+  - first:
+      213: 7407209973585899263
+    second: "RunenS\xE4ule1_Runen_4"
+  - first:
+      213: 3909210071464502449
+    second: "RunenS\xE4ule1_Runen_5"
+  - first:
+      213: 4627960229060532560
+    second: "RunenS\xE4ule1_Runen_6"
+  - first:
+      213: 229923105866091699
+    second: "RunenS\xE4ule1_Runen_7"
+  - first:
+      213: -385628322117864349
+    second: "RunenS\xE4ule1_Runen_8"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_0"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 908
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33741d78ad48d250800000000000000
+      internalID: 5969606692127929146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_1"
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 910
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed93ea15b287f640800000000000000
+      internalID: 5113699616254303719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_2"
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 909
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d77f87113c3698e0800000000000000
+      internalID: -1687094828857329711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_3"
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 742
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2011c10d2dac2fc40800000000000000
+      internalID: 5544717098029945090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_4"
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 743
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe6154d932bbc660800000000000000
+      internalID: 7407209973585899263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_5"
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 744
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4650e19dd404630800000000000000
+      internalID: 3909210071464502449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_6"
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 578
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059d9cfee41d93040800000000000000
+      internalID: 4627960229060532560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_7"
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 576
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc8dcab8d9d03300800000000000000
+      internalID: 229923105866091699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "RunenS\xE4ule1_Runen_8"
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 577
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364b5dc8519f5aaf0800000000000000
+      internalID: -385628322117864349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "RunenS\xE4ule1_Runen_0": 5969606692127929146
+      "RunenS\xE4ule1_Runen_1": 5113699616254303719
+      "RunenS\xE4ule1_Runen_2": -1687094828857329711
+      "RunenS\xE4ule1_Runen_3": 5544717098029945090
+      "RunenS\xE4ule1_Runen_4": 7407209973585899263
+      "RunenS\xE4ule1_Runen_5": 3909210071464502449
+      "RunenS\xE4ule1_Runen_6": 4627960229060532560
+      "RunenS\xE4ule1_Runen_7": 229923105866091699
+      "RunenS\xE4ule1_Runen_8": -385628322117864349
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

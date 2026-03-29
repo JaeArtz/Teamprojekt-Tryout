@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -63,5 +64,10 @@ public class GolemBoss : MonoBehaviour
         Destroy(shadow);
         
         yield return new WaitForSeconds(attackDelay);
+    }
+
+    internal void StartBossFight()
+    {
+        throw new NotImplementedException();
     }
 }
