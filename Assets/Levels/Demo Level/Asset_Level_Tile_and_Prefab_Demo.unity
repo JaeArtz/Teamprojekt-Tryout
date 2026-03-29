@@ -45744,6 +45744,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da4b920f6380754d8aa818332c853cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+--- !u!114 &1876935971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618768188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb597b150ea0d8a4bb196a9389cbc025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  startingGlidingVelocityY: -1
+  endingGlidingVelocityY: -20
+  glideSpeedTransitionDuration: 5
+  glideAbortionPenalty: 0.25
 --- !u!1 &1877713867
 GameObject:
   m_ObjectHideFlags: 0
@@ -318559,6 +318575,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1241393008}
     m_Modifications:
+    - target: {fileID: 260213277001434198, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
+      propertyPath: wallJumpCooldownDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 562932011958070637, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -318604,6 +318624,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4558364824663307351, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
+      propertyPath: speedBoost
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558364824663307351, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: decelerationManipulator
       value: 1
       objectReference: {fileID: 0}
@@ -318622,7 +318646,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 562932011958070637, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1876935971}
   m_SourcePrefab: {fileID: 100100000, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
 --- !u!1001 &4948269936761694573
 PrefabInstance:
