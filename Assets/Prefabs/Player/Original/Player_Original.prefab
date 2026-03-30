@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 260213277001434198}
   - component: {fileID: 5322117019487849484}
   - component: {fileID: 4558364824663307351}
+  - component: {fileID: 5846427342632742176}
   m_Layer: 0
   m_Name: Player_Original
   m_TagString: Player
@@ -349,7 +350,7 @@ MonoBehaviour:
   playerMaxWallJumpVelocityX: 13
   playerMaxWallJumpVelocityY: 12
   wallSlideSpeed: -3
-  wallJumpCooldownDuration: 0.2
+  wallJumpCooldownDuration: 0.1
   wallJumpAirControlDuration: 1
   prohibitRollDuration: 0.08
   wallCoyoteTime: 0.15
@@ -385,6 +386,22 @@ MonoBehaviour:
   maxRollDuration: 0.5
   brakeForce: 0.05
   speedBoost: 1.5
+--- !u!114 &5846427342632742176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb597b150ea0d8a4bb196a9389cbc025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  startingGlidingVelocityY: -1
+  endingGlidingVelocityY: -20
+  glideSpeedTransitionDuration: 5
+  glideAbortionPenalty: 0.25
 --- !u!1 &4606677167576761522
 GameObject:
   m_ObjectHideFlags: 0
