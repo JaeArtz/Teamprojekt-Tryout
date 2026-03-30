@@ -37,7 +37,7 @@ public class SoulManager : MonoBehaviour
         {
             Save();
             SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
-            Debug.Log($"Soul collected: {id}");
+            Debug.Log($"Soul collectedPhoenix: {id}");
         }
         
     }
@@ -50,7 +50,7 @@ public class SoulManager : MonoBehaviour
     private  void Save()
     {
         SaveSystem.SaveSoulData(collected);
-        //var serial = new Serialization<string>(collected);
+        //var serial = new Serialization<string>(collectedPhoenix);
         //string json = JsonUtility.ToJson(serial);
         //PlayerPrefs.SetString(PREF_KEY, json);
         //PlayerPrefs.Save();

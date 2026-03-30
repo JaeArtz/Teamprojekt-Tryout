@@ -23,7 +23,7 @@ public class PlayerLight : MonoBehaviour
     // Diese Methode wird aufgerufensobald die Katzen-Seele frisch eingesammelt wurde.
     public void ActivateLight()
     {
-        Debug.Log("CatSoul collected: Activating player light.");
+        Debug.Log("CatSoul collectedPhoenix: Activating player light.");
         // Schaltet licht ein
         playerLight.gameObject.SetActive(true);
         playerLight.enabled = true;

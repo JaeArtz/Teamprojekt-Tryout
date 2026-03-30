@@ -5696,6 +5696,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "Ph\xF6nix_224"
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 442
+        width: 125
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f584baa3e9a3994bbf58c1bcd861c12
+      internalID: 2075611531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -5850,6 +5872,7 @@ TextureImporter:
       "Ph\xF6nix_221": 3078241720267406174
       "Ph\xF6nix_222": 471493476752961107
       "Ph\xF6nix_223": -8583589453698847879
+      "Ph\xF6nix_224": 2075611531
       "Ph\xF6nix_23": 381793047882491645
       "Ph\xF6nix_24": 4702435184175545240
       "Ph\xF6nix_25": -5429927448353941026
