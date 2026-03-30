@@ -4,7 +4,7 @@ using System.Collections;
 public class BouncerFist : MonoBehaviour
 {
     [Header("--- Targeting ---")]
-    [Tooltip("Drag Player here, he is the Target/Trigger"]
+    [Tooltip("Drag Player here, he is the Target/Trigger")]
     public Transform playerTransform;
     [Tooltip("This is how far the BouncerFist can reach, it stops here")]
     public Transform arenaLeftBoundary;
