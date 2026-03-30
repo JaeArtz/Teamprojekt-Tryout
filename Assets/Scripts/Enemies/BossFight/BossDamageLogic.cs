@@ -6,14 +6,14 @@ public class BossDamageLogic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Wir reagieren nur, wenn das Objekt den Tag 'Player' hat
+        // Object needs Player Tag to trigger
         if (collision.CompareTag("Player"))
         {
             PlayerHealth health = collision.GetComponentInParent<PlayerHealth>();
             if (health != null)
             {
                 health.TakeDamage(damageAmount);
-                Debug.Log("Boss hat Player während Stampfen getroffen!");
+                Debug.Log("Boss hit Player during Stomp!");
             }
         }
     }

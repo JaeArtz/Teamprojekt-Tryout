@@ -9,65 +9,65 @@ public class RuneStoneInteraction : TriggerAction
     public GameObject interactionHint;
 
     [Header("Boss Cleanup Settings")]
-    [Tooltip("Das aktive Boss-Objekt (der animierte Golem)")]
+    [Tooltip("The active, awoken Golem in Fight Mode")]
     public GameObject activeBossGolem;
-    [Tooltip("Das Objekt mit den statischen Trümmerteilen auf dem Boden")]
+    [Tooltip("Boss-Golem Debris, after Sleeping Rune has been reactivated, a part of Debris is \"walkable\"")]
     public GameObject golemDebris;
-    [Tooltip("Der Sound vom zerfallenden Gestein")]
+    [Tooltip("Sound of Golem falling into Pieces, after SleepingRune has been reactivated")]
     public AudioSource crumbleSound;
 
     [Header("Settings")]
     public AudioSource successSound;
-    private bool isPlayerInside = false;
-    private bool canInteract = false;
+    private bool playerIsInside = false;
+    private bool youCanInteract = false;
 
     public void EnableInteraction()
     {
-        canInteract = true;
+        youCanInteract = true;
     }
 
     public override IEnumerator Execute(TriggerInfoBundle ctx)
     {
-        if (!canInteract) yield break;
+        if (!youCanInteract) yield break;
 
         while (!Input.GetKeyDown(KeyCode.E))
         {
-            if (!isPlayerInside) yield break;
+            if (!playerIsInside) yield break;
             yield return null;
         }
 
-        // --- 1. SIEG-SEQUENZ START ---
-        canInteract = false;
+        // --- 1. VICTORY_SEQUENCE START ---
+        youCanInteract = false;
         if (interactionHint != null) interactionHint.SetActive(false);
 
-        // 2. Visueller Runen-Tausch am Stein
+        // 2. Visual Swapping of Rune
         if (successSound != null) successSound.Play();
         if (sleepingRuneVisual != null) sleepingRuneVisual.SetActive(true);
         if (wakingRuneVisual != null) wakingRuneVisual.SetActive(false);
 
-        // 3. Der Boss zerfällt (Akustisch)
+        // 3. Boss crumbles
         if (crumbleSound != null) crumbleSound.Play();
 
-        // 4. Logik-Pause: Wir lassen den Sound kurz wirken
+        // 4. Let Sound do its thing for a moment
         yield return new WaitForSeconds(1.5f);
 
-        // 5. Den aktiven Golem "verschwinden" lassen
+        // 5. Let active Golem disappear
         if (activeBossGolem != null) activeBossGolem.SetActive(false);
 
-        // 6. Die statischen Steinhaufen auf dem Boden aktivieren
+        // 6. "Activate" GolemDebris
         if (golemDebris != null) golemDebris.SetActive(true);
 
-        Debug.Log("Der Wächter wurde gebändigt und ist in Einzelteile zerfallen.");
+        Debug.Log("The Guardian has been put back to Sleep.");
 
-        // Hier könnte man noch ein Victory-Theme oder ein Screen-Fade einbauen
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!canInteract) return;
+        if (!youCanInteract) return;
         if (other.CompareTag("Player"))
         {
-            isPlayerInside = true;
+            playerIsInside = true;
             if (interactionHint != null) interactionHint.SetActive(true);
         }
     }
@@ -76,7 +76,7 @@ public class RuneStoneInteraction : TriggerAction
     {
         if (other.CompareTag("Player"))
         {
-            isPlayerInside = false;
+            playerIsInside = false;
             if (interactionHint != null) interactionHint.SetActive(false);
         }
     }

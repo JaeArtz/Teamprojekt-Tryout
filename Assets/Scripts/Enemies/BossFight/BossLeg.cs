@@ -5,12 +5,12 @@ using Unity.Cinemachine;
 public class BossLeg : MonoBehaviour
 {
     [Header("Collider Setup")]
-    [Tooltip("Der Polygon Collider mit 'Is Trigger = ON'")]
+    [Tooltip("Polygon Collider with 'Is Trigger = ON'")]
     public Collider2D damageTrigger;
-    [Tooltip("Der Box Collider mit 'Is Trigger = OFF'")]
+    [Tooltip("Box Collider with 'Is Trigger = OFF'")]
     public Collider2D solidWallCollider;
 
-    [Header("Movement Settings")]
+    [Header("Movement Settings for Leg")]
     public float raiseHeight = 8f;
     public float raiseDuration = 1.5f;
     public float strikeDuration = 0.15f;
@@ -21,16 +21,16 @@ public class BossLeg : MonoBehaviour
     public float warningTime = 1.0f;
 
     private Vector3 groundPos;
-    private CinemachineImpulseSource impulseSource;
+    private CinemachineImpulseSource impulseSource; // for "shaking" of cam on Stomp
 
     void Awake()
     {
         groundPos = transform.position;
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
-        // Initial-Zustand:
-        if (damageTrigger) damageTrigger.enabled = false; // Kein Schaden im Stand
-        if (solidWallCollider) solidWallCollider.enabled = true; // Solide Wand im Stand
+        // Initial State:
+        if (damageTrigger) damageTrigger.enabled = false; // no damage dealt when Leg ist standing still
+        if (solidWallCollider) solidWallCollider.enabled = true; // "solid wall" while standing
         if (shadowSprite) shadowSprite.SetActive(false);
     }
 
@@ -38,11 +38,11 @@ public class BossLeg : MonoBehaviour
     {
         Vector3 raisedPos = new Vector3(groundPos.x, groundPos.y + raiseHeight, groundPos.z);
 
-        // 1. ANHEBEN
+        // 1. LIFT Foot
         if (damageTrigger) damageTrigger.enabled = false;
         yield return StartCoroutine(LerpPosition(groundPos, raisedPos, raiseDuration));
 
-        // 2. WARNUNG
+        // 2. "WARNING"
         if (shadowSprite)
         {
             shadowSprite.transform.position = groundPos;
@@ -50,25 +50,25 @@ public class BossLeg : MonoBehaviour
         }
         yield return new WaitForSeconds(warningTime);
 
-        // 3. STAMPFEN (Aktion beginnt)
-        // Schaden EIN, Wand AUS (damit der Player nicht unter das Bein teleportiert wird)
+        // 3. STOMP
+        // Damage ON, Wall OFF
         if (damageTrigger) damageTrigger.enabled = false;
         if (solidWallCollider) solidWallCollider.enabled = true;
 
 
         yield return StartCoroutine(LerpPosition(raisedPos, groundPos, strikeDuration));
 
-        // 4. AUFPRALL
+        // 4. IMPACT
         if (impulseSource) impulseSource.GenerateImpulse();
 
-        // --- NEU: RUFT SOUND UND WELLEN IM MANAGER AUF ---
+        // --- SOUND AND SHOCKWAVES ---
         if (BossCombatManager.Instance != null)
         {
             BossCombatManager.Instance.TriggerStompEffects(transform.position);
         }
         // ------------------------------------------------
 
-        // Wand sofort wieder an, Schaden kurz danach aus
+        // WALL ON, shortly after DAMAGE OFF
         if (solidWallCollider) solidWallCollider.enabled = true;
         yield return new WaitForSeconds(0.1f);
         if (damageTrigger) damageTrigger.enabled = false;

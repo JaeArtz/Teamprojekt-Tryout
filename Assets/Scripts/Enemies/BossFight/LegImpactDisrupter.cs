@@ -7,8 +7,8 @@ public class LegImpactDisrupter : MonoBehaviour
     [SerializeField] private float velocityThreshold = 2f;
 
     [Header("Sound Effekte")]
-    [SerializeField] private AudioSource bumpSource;   // Für normales Dagegenlaufen/Abprallen
-    [SerializeField] private AudioSource rumbleSource; // Für den harten Einschlag (Schaden)
+    [SerializeField] private AudioSource bumpSource;   // For FistBump
+    [SerializeField] private AudioSource rumbleSource; // For FootStomp
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,19 +18,19 @@ public class LegImpactDisrupter : MonoBehaviour
 
             if (impactSpeed > velocityThreshold)
             {
-                // --- SCHADENS-FALL (Rumpeln) ---
+                // --- FallingFoot Damage Impact (Rumble) ---
                 collision.gameObject.SendMessage("ApplyDamage", damageToApply, SendMessageOptions.DontRequireReceiver);
 
                 if (rumbleSource != null) rumbleSource.PlayOneShot(rumbleSource.clip);
             }
-            else
+            else // this might have to go, probably don't need it anymore
             {
-                // --- NUR KONTAKT (Bump) ---
-                // Spielt den Bump-Sound nur, wenn man nicht gerade stirbt
+                // --- On Contact (Bump) ---
+                // Plays Bump once
                 if (bumpSource != null) bumpSource.PlayOneShot(bumpSource.clip);
             }
 
-            // Stoppt das Rollen physisch
+            // stops rolling physically, can't pass through
             Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
             if (playerRb != null) playerRb.linearVelocity = Vector2.zero;
         }

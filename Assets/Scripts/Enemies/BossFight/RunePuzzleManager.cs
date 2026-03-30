@@ -6,72 +6,72 @@ using Unity.Cinemachine;
 public class RunePuzzleManager : MonoBehaviour
 {
     [Header("--- Rune Puzzle Core ---")]
-    [Tooltip("Liste der IDs, die für das Rätsel aktiviert werden müssen.")]
+    [Tooltip("List of IDs that need to be activated.")]
     public List<string> requiredRuneIDs;
-    [Tooltip("Referenz auf alle Runen-Skripte in der Arena.")]
+    [Tooltip("Reference to all BossRunes in the Area.")]
     public List<RuneAction> allBossRunes;
     private List<RuneAction> activeRunes = new List<RuneAction>();
     private bool _puzzleComplete = false;
 
     [Header("--- Camera Setup ---")]
-    [Tooltip("Die Cinemachine Virtual Camera.")]
+    [Tooltip("Cinemachine Virtual Camera.")]
     public CinemachineCamera vcam;
-    [Tooltip("Das Target-Objekt (Tracker), dem die Kamera folgt.")]
+    [Tooltip("The CamTracker-Object you use to have the Cam follow it around.")]
     public Transform cameraFollowTarget;
     private Vector3 originalTargetLocalPos;
 
     [Header("--- Sequence Waypoints ---")]
-    [Tooltip("Position der Kamera am Runen-Wandbild.")]
+    [Tooltip("Object with Reference Position of Camera on RuneStone (Sleeping and Waking Rune).")]
     public Transform runeStoneCamPoint;
-    [Tooltip("Position der Kamera am schlafenden Golem.")]
+    [Tooltip("Object with Reference Position of Cam on SleepingGolem, who then wakes up.")]
     public Transform golemCamPoint;
 
     [Header("--- Timing Settings ---")]
-    [Tooltip("Dauer der Kamerafahrt vom Spieler zum Wandbild.")]
+    [Tooltip("Duration of CamTravel from Player to RuneStone (Sleeping and Waking Rune).")]
     public float durationToRuneStone = 1.5f;
-    [Tooltip("Wartezeit am Wandbild, BEVOR der Runenwechsel optisch passiert.")]
+    [Tooltip("Waiting Time before you see the RuneSwap (Glowing switches from Sleeping to WakingRune).")]
     public float delayBeforeRuneSwap = 0.5f;
-    [Tooltip("Wartezeit am Wandbild NACHDEM die Rune umgesprungen ist.")]
+    [Tooltip("Waiting Time to look at freshly activated WakingRune, before traveling to GolemBoss.")]
     public float durationRuneChangeWait = 2.0f;
-    [Tooltip("Dauer der Kamerafahrt vom Wandbild zum Golem.")]
+    [Tooltip("Duration of CamTravel from RuneStone (Sleeping and Waking Rune) to GolemBoss who wakes up.")]
     public float durationToGolem = 2.5f;
-    [Tooltip("Dauer, die die Kamera beim erwachenden Golem verweilt.")]
+    [Tooltip("Duration you hold Cam on Waking GolemBoss.")]
     public float waitTimeAtGolem = 3.0f;
-    [Tooltip("Dauer der Rückfahrt zum Spieler.")]
+    [Tooltip("Duration of CamTravel from freshly Risen GolemBoss back to Player.")]
     public float durationBackToPlayer = 1.5f;
-    [Tooltip("Bewegungskurve für alle Kamerafahrten (Einfrieren/Beschleunigen).")]
+    [Tooltip("Movement curve, smooth traveling, for all Cam Movement using movementCurve.")]
     public AnimationCurve movementCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     [Header("--- Visual & Shake Settings ---")]
-    [Tooltip("Zoom-Größe während der Kamerafahrt (höherer Wert = weiter weg).")]
+    [Tooltip("How far does the Camera zoom out/away, while we see the RuneSwap and the GolemBoss waking up?")]
     public float zoomOutSize = 18f;
-    [Tooltip("Standard-Zoom-Größe beim Spieler.")]
+    [Tooltip("Back to Standard Setting (was initially 10 in Cinemachine Cam).")]
     public float normalZoom = 10f;
-    [Tooltip("Intensität des Kamerazitterns beim Erdbeben.")]
+    [Tooltip("Intensity of Camera Shake.")]
     public float shakeIntensity = 0.3f;
-    [Tooltip("Verzögerung relativ zur Ankunft am Golem. Negative Werte lassen den Sound SCHON WÄHREND der Anfahrt starten.")]
+    [Tooltip("Control when the EarthquakeSound starts: -1 = it starts before Cam arrives at the Golemboss for WakingUpAnimation, 1 = it starts after.")]
     public float earthquakeSoundDelay = 0.2f;
 
     [Header("--- Audio & Animation ---")]
-    [Tooltip("Sound für das Erdbeben/Erwachen.")]
+    [Tooltip("Sound for Earthquake, Waking up GolemBoss.")]
     public AudioSource earthquakeSound;
-    [Tooltip("Animator des Golems (für den Awake-Trigger).")]
+    [Tooltip("Animator of GolemBoss, waking up.")]
     public Animator golemAnimator;
-    [Tooltip("Sound, der beim Umspringen der Runen am Wandbild spielt.")]
+    [Tooltip("Sound played while Glow switches from SleepingRune to WakingRune.")]
     public AudioSource runeSwapSound;
 
     [Header("--- RuneStone Visuals ---")]
-    [Tooltip("Das Objekt für das 'Schlaf'-Symbol am Stein.")]
+    [Tooltip("Object for SleepingRune in Scene.")]
     public GameObject sleepingRuneVisual;
-    [Tooltip("Das Objekt für das 'Wach'-Symbol am Stein.")]
+    [Tooltip("Object for WakingRune in Scene..")]
     public GameObject wakingRuneVisual;
 
     [Header("--- Scene Transitions ---")]
-    [Tooltip("Der Container, der die Boss-Gliedmaßen (Kampf-Logik) aktiviert.")]
+    [Tooltip("Container-Object holding all the GolemBossLimbs and things for the FightAnimation.")]
     public GameObject bossFightContainer;
-    [Tooltip("Interaktions-Skript am Wandbild (wird nach Kampf aktiviert).")]
+    [Tooltip("Interaction-Script, RuneStone(SleepingRune), exists after Player activated Golem, lets Player deactivate Golem.")]
     public RuneStoneInteraction mainRuneStone;
-    [Tooltip("Unsichtbare Wände, die den Spieler während der Sequenz einsperren.")]
+    [Tooltip("Invisible Walls, keeps Player form walking into Boss Area during Wakeup-Sequence.")]
     public List<GameObject> invisibleWalls;
 
     public void RegisterRuneActivation(string id, RuneAction script, TriggerInfoBundle ctx)
@@ -96,16 +96,16 @@ public class RunePuzzleManager : MonoBehaviour
     {
         _puzzleComplete = true;
 
-        // PHASE 1: VORBEREITUNG
+        // PHASE 1: Preparation
         foreach (GameObject wall in invisibleWalls)
             if (wall != null) wall.SetActive(true);
 
         if (cameraFollowTarget != null) originalTargetLocalPos = cameraFollowTarget.localPosition;
 
-        // PHASE 2: FAHRT ZUM WANDBILD
+        // PHASE 2: CamTravel to RuneStone (Sleeping and Waking Rune)
         yield return StartCoroutine(LerpCamera(cameraFollowTarget.position, runeStoneCamPoint.position, durationToRuneStone));
 
-        // PHASE 3: RUNEN-WECHSEL AM STEIN
+        // PHASE 3: Rune Swap at RuneStone
         yield return new WaitForSeconds(delayBeforeRuneSwap);
 
         if (runeSwapSound != null) runeSwapSound.Play();
@@ -113,17 +113,15 @@ public class RunePuzzleManager : MonoBehaviour
         if (wakingRuneVisual != null) wakingRuneVisual.SetActive(true);
 
         yield return new WaitForSeconds(durationRuneChangeWait);
-
-        // --- NEUE SOUND-LOGIK ---
-        // Wir starten den Sound-Timer BEVOR die Fahrt zum Golem beginnt.
-        // Fahrtzeit + Delay ergibt den exakten Zeitpunkt relativ zur Ankunft.
+        
+        // enables +1 or -1 for shifting start of Earthquake Sound 
         float totalWaitUntilSound = durationToGolem + earthquakeSoundDelay;
         StartCoroutine(PlaySoundDelayed(totalWaitUntilSound));
 
-        // PHASE 4: WEITERFAHRT ZUM GOLEM
+        // PHASE 4: CamTravel to Waking GolemBoss
         yield return StartCoroutine(LerpCamera(runeStoneCamPoint.position, golemCamPoint.position, durationToGolem));
 
-        // PHASE 5: ERWACHEN (BEBEN & ANIMATION)
+        // PHASE 5: Earthquake and Waking-Animation
         if (golemAnimator != null) golemAnimator.SetTrigger("Awake");
 
         float shakeTimer = 2.0f;
@@ -138,7 +136,7 @@ public class RunePuzzleManager : MonoBehaviour
 
         yield return new WaitForSeconds(waitTimeAtGolem);
 
-        // PHASE 6: RÜCKFAHRT ZUM PLAYER
+        // PHASE 6: CamTravel back to Player
         float elapsed = 0f;
         float returnStartZoom = vcam.Lens.OrthographicSize;
         while (elapsed < durationBackToPlayer)
@@ -187,8 +185,7 @@ public class RunePuzzleManager : MonoBehaviour
 
     private IEnumerator PlaySoundDelayed(float delay)
     {
-        // Falls der Delay negativ war und die Fahrtzeit übersteigt, 
-        // wird er hier auf 0 geklemmt, damit kein Fehler auftritt.
+        // Clamp in case the SoundDelay was beyond the whole playtime of sequence         
         if (delay < 0) delay = 0;
 
         yield return new WaitForSeconds(delay);

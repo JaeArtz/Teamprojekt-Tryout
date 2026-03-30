@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossWave : MonoBehaviour
 {
     [SerializeField] private float speed = 8f;
-    [SerializeField] private int damage = 1; // Halbes Herz
+    [SerializeField] private int damage = 1; //   1/2 Heart
     private float direction;
     private float lifetime = 4f;
 

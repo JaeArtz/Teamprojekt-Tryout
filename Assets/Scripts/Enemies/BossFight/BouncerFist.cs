@@ -1,128 +1,101 @@
 using UnityEngine;
+using System.Collections;
 
-// --- DIESER TEIL ERZEUGT DEN TEST-BUTTON IM INSPECTOR ---
-#if UNITY_EDITOR
-using UnityEditor;
-[CustomEditor(typeof(BouncerFist))]
-public class BouncerFistEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        DrawDefaultInspector();
-        BouncerFist script = (BouncerFist)target;
-        if (Application.isPlaying)
-        {
-            if (GUILayout.Button("TEST SCHLAG"))
-            {
-                script.TriggerAttack();
-            }
-        }
-        else
-        {
-            EditorGUILayout.HelpBox("Starte das Spiel, um den Test-Button zu nutzen.", MessageType.Info);
-        }
-    }
-}
-#endif
-// -------------------------------------------------------
-
-[RequireComponent(typeof(Rigidbody2D))]
 public class BouncerFist : MonoBehaviour
 {
-    [Header("--- Target & Layer Setup ---")]
+    [Header("--- Targeting ---")]
+    [Tooltip("Drag Player here, he is the Target/Trigger"]
     public Transform playerTransform;
+    [Tooltip("This is how far the BouncerFist can reach, it stops here")]
     public Transform arenaLeftBoundary;
 
-    [Header("--- Movement Settings ---")]
-    public float attackSpeed = 30f;
-    public float returnSpeed = 10f;
+    [Header("--- Timing ---")]
+    public float strikeDuration = 0.12f;
+    public float stayDuration = 0.5f;
+    public float retractDuration = 1.0f;
 
-    [Header("--- Combat Settings ---")]
+    [Header("--- Combat ---")]
     public int damage = 2;
     public float knockbackForce = 25f;
-    public float upwardForce = 6f;
-
-    [Header("--- Audio ---")]
+    public float upwardForce = 7f;
     public AudioSource bumpSoundSource;
 
-    private Rigidbody2D rb;
     private bool isAttacking = false;
-    private bool isReturning = false;
     private float idleX;
+    private Rigidbody2D rb;
 
-    private void Awake()
+    void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        // Wichtig für Kollisionen mit Kinematic Objekten
-        rb.useFullKinematicContacts = true;
-
         idleX = transform.position.x;
+        rb = GetComponent<Rigidbody2D>();
+
+        // Looking for Trigger
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.isTrigger = true;
     }
 
     public void TriggerAttack()
     {
-        if (isAttacking || isReturning || playerTransform == null) return;
+        if (!isAttacking) StartCoroutine(AttackRoutine());
+    }
 
-        // Faust auf Player-Höhe setzen
-        transform.position = new Vector3(idleX, playerTransform.position.y, 0);
+    private IEnumerator AttackRoutine()
+    {
         isAttacking = true;
-        Debug.Log("<color=cyan>BouncerFist:</color> Angriff gestartet!");
+
+        float targetY = (playerTransform != null) ? playerTransform.position.y : transform.position.y;
+        transform.position = new Vector3(idleX, targetY, transform.position.z);
+
+        float targetX = (arenaLeftBoundary != null) ? arenaLeftBoundary.position.x : idleX - 40f;
+        Vector3 strikePos = new Vector3(targetX, targetY, transform.position.z);
+
+        yield return StartCoroutine(LerpPosition(transform.position, strikePos, strikeDuration));
+        yield return new WaitForSeconds(stayDuration);
+
+        Vector3 returnPos = new Vector3(idleX, transform.position.y, transform.position.z);
+        yield return StartCoroutine(LerpPosition(transform.position, returnPos, retractDuration));
+
+        isAttacking = false;
     }
 
-    private void FixedUpdate()
+    private IEnumerator LerpPosition(Vector3 start, Vector3 end, float duration)
     {
-        if (isAttacking)
+        float elapsed = 0;
+        while (elapsed < duration)
         {
-            Vector2 nextPos = rb.position + Vector2.left * attackSpeed * Time.fixedDeltaTime;
-            rb.MovePosition(nextPos);
-
-            // PRÜFUNG: Wenn wir den Grenzpunkt LINKS erreicht/passiert haben
-            if (arenaLeftBoundary != null && nextPos.x <= arenaLeftBoundary.position.x)
-            {
-                Debug.Log("<color=yellow>BouncerFist:</color> Grenze erreicht. Rückzug.");
-                StartReturn();
-            }
+            // transform.position should be enough for a Trigger?
+            transform.position = Vector3.Lerp(start, end, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
         }
-        else if (isReturning)
-        {
-            Vector2 targetPos = new Vector2(idleX, rb.position.y);
-            Vector2 nextPos = Vector2.MoveTowards(rb.position, targetPos, returnSpeed * Time.fixedDeltaTime);
-            rb.MovePosition(nextPos);
-
-            if (Vector2.Distance(rb.position, targetPos) < 0.1f)
-            {
-                isReturning = false;
-            }
-        }
+        transform.position = end;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // --- TRIGGER ---
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        // Checking for Player Tag
+        if (other.CompareTag("Player") || (other.transform.parent != null && other.transform.parent.CompareTag("Player")))
         {
             if (bumpSoundSource != null) bumpSoundSource.Play();
 
-            // Schaden
-            var health = collision.gameObject.GetComponentInParent<PlayerHealth>() ?? collision.gameObject.GetComponent<PlayerHealth>();
-            if (health != null) health.TakeDamage(damage);
-
-            // Knockback
-            Rigidbody2D playerRb = collision.gameObject.GetComponentInParent<Rigidbody2D>() ?? collision.gameObject.GetComponent<Rigidbody2D>();
-            if (playerRb != null)
+            // 1. Cause Damage
+            PlayerHealth health = other.GetComponentInParent<PlayerHealth>();
+            if (health != null)
             {
-                playerRb.linearVelocity = Vector2.zero;
-                playerRb.AddForce(new Vector2(-knockbackForce, upwardForce), ForceMode2D.Impulse);
+                health.TakeDamage(damage);
+                Debug.Log("<color=cyan>BouncerFist Trigger: Schaden!</color>");
             }
 
-            StartReturn();
+            // 2. Knockback (=> Rigidbody in Player, "Parent" because "GetComponent only" didn't work)
+            Rigidbody2D pRb = other.GetComponentInParent<Rigidbody2D>();
+            if (pRb != null)
+            {
+                pRb.linearVelocity = Vector2.zero;
+                pRb.AddForce(new Vector2(-knockbackForce, upwardForce), ForceMode2D.Impulse);
+                Debug.Log("<color=cyan>BouncerFist Trigger: Player weggeschubst!</color>");
+            }
         }
     }
-
-    private void StartReturn()
-    {
-        isAttacking = false;
-        isReturning = true;
-    }
 }
+// I currently use an invisible Wall that spawns at the appropriate spot, so the fist flies, does nothing, but at least the player collides and falls down....

@@ -1,14 +1,16 @@
 using UnityEngine;
-using System.Collections.Generic; // Ermöglicht die Liste
+using System.Collections.Generic; // Enables creating the List
 
 public class BossEndTrigger : MonoBehaviour
 {
-    [Header("Referenzen")]
+    [Header("References")]
+    [Tooltip("Object holding the DebrisSprites, is deactivated per default")]
     public GameObject golemDebris;
+    [Tooltip("Object holding the GolemLimbs and FightAnimationStuff, is deactivated per default")]
     public GameObject bossFightContainer;
 
-    [Header("Finale Platformen")]
-    // Hier kannst du im Inspector so viele Plattformen reinziehen wie du willst
+    [Header("Final Platforms")]
+    [Tooltip("Drag the Special Ground-Tilemap in here: These glowing platforms and everything with it appear after GolemBoss is defeated, deactivated per default")]
     public List<GameObject> finalPlatforms = new List<GameObject>();
 
     [Header("Audio")]
@@ -16,26 +18,24 @@ public class BossEndTrigger : MonoBehaviour
 
     public void StopTheBoss()
     {
-        // 1. Krach abspielen
+        // 1. Play Sound
         if (collapseSound != null) collapseSound.Play();
 
-        // 2. Boss aus
+        // 2. BossFight Animation OFF
         if (bossFightContainer != null) bossFightContainer.SetActive(false);
 
-        // 3. Trümmer an
+        // 3. GolemDebris ON
         if (golemDebris != null) golemDebris.SetActive(true);
 
-        // --- NEU: Alle finalen Plattformen aktivieren ---
+        // 4. Activate glowing platforms, and phoenix soul for "FInale"
         foreach (GameObject platform in finalPlatforms)
         {
             if (platform != null)
             {
-                platform.SetActive(true);
-                // Optional: Hier könnte man später noch einen kleinen 
-                // Partikeleffekt pro Plattform spawnen lassen
+                platform.SetActive(true);                
             }
         }
 
-        Debug.Log("Boss besiegt, Trümmer da und Pfad nach oben ist frei!");
+        Debug.Log("Boss defeated, Debris and GlowingPlatforms appeared!");
     }
 }

@@ -8,8 +8,11 @@ public class GolemBoss : MonoBehaviour
     public GolemState currentState = GolemState.Sleeping;
 
     [Header("Settings")]
+    [Tooltip("Delay after each Stomp and Punch")]
     public float attackDelay = 2f;
+    [Tooltip("Drag ShockWave Prefab in here")]
     public GameObject groundWavePrefab;
+    [Tooltip("Drag Shadow Sprite Prefab in here")]
     public GameObject fistShadowPrefab;
     public Transform leftFootPos, rightFootPos, fistTargetPos;
 
@@ -27,25 +30,25 @@ public class GolemBoss : MonoBehaviour
 
         while (currentState == GolemState.Attacking)
         {
-            // RHYTH: 2x Left Foot Stomp -> 2x PunchFloor -> 1x Right Foot Stomp -> 2x PunchFloor
+            // RHYTHM: 2x Left Foot Stomp -> 2x PunchFloor -> 1x Right Foot Stomp -> 2x PunchFloor
 
-            // 2x Left Foot, LF also needs is‹assegeChance
-            for (int i = 0; i < 2; i++) { yield return Stamp(leftFootPos); }
+            // 2x Left Foot
+            for (int i = 0; i < 2; i++) { yield return Stomp(leftFootPos); }
 
             // 2x Punch
             for (int i = 0; i < 2; i++) { yield return FistSlam(); }
 
             // 1x Right Foot
-            yield return Stamp(rightFootPos, isPassageChance: true);
+            yield return Stomp(rightFootPos, isPassageChance: true);
 
             // 2x Punch
             for (int i = 0; i < 2; i++) { yield return FistSlam(); }
         }
     }
 
-    private IEnumerator Stamp(Transform pos, bool isPassageChance = false)
+    private IEnumerator Stomp(Transform pos, bool isPassageChance = false)
     {
-        Debug.Log("Golem hebt Fuﬂ...");
+        Debug.Log("Golem raises Foot...");
         yield return new WaitForSeconds(1f); 
 
         Debug.Log("STOMP!");

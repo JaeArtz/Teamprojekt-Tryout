@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class BossCombatManager : MonoBehaviour
 {
@@ -13,18 +14,18 @@ public class BossCombatManager : MonoBehaviour
 
     [Header("Player & Arena Tracking")]
     public Transform playerTransform;
-    [Tooltip("Zieh hier dein 'Arena_Limit_Center' Objekt rein")]
+    [Tooltip("ArenaMiddlePoint is the centerpoint")]
     public Transform centerPoint;
-    public float groundY = 94f; // y-coordinate of Ground
+    public float groundY = 94f; // y-coordinate of Ground, for reference of BossFist-Attack
 
     [Header("Rhythm Settings")]
-    public float pauseBetweenAttacks = 0.8f;
-    public float pauseBetweenCycles = 2.0f;
+    public float pauseBetweenAttacks = 0.8f; // single attack
+    public float pauseBetweenCycles = 2.0f;  // whole cycle of attacks (fixed rythm of boss-attacks)
 
     private bool playerIsInRange = false;
     private bool bossIsRunning = false;
 
-    [Header("Zentrale Effekte")]
+    [Header("Sound and Visual Fight Effects")]
     [SerializeField] private AudioSource bumpSource;
     [SerializeField] private AudioSource rumbleSource;
     [SerializeField] private GameObject shockwavePrefab;
@@ -37,7 +38,7 @@ public class BossCombatManager : MonoBehaviour
     // --- LEG (Sound + Shockwave) ---
     public void TriggerStompEffects(Vector3 spawnPos)
     {
-        // brings everything to "Ground-Level" (y coordinate, height of Ground)
+        // brings everything to "Ground-Level" (y coordinate, "height of Ground" for wave animations)
         Vector3 groundSpawnPos = new Vector3(spawnPos.x, groundY, spawnPos.z);
 
         // 1. Sound
@@ -59,7 +60,7 @@ public class BossCombatManager : MonoBehaviour
         }
     }
 
-    // --- FÜR DIE FAUST (Nur Sound) ---
+    // --- FIST (Sound) ---
     public void TriggerFistSound()
     {
         if (rumbleSource != null && rumbleSource.clip != null)
@@ -68,7 +69,7 @@ public class BossCombatManager : MonoBehaviour
         }
     }
 
-    #region Trigger & Loop (Unverändert)
+    #region Trigger & Loop (Unchanged)
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

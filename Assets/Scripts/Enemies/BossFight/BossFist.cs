@@ -30,7 +30,7 @@ public class BossFist : MonoBehaviour
         if (damageCollider) damageCollider.enabled = false;
         if (shadowSprite) shadowSprite.SetActive(false);
 
-        // Startposition in der Luft
+        // Startposition "in Air"
         transform.position = new Vector3(transform.position.x, waitingHeightY, transform.position.z);
     }
 
@@ -38,22 +38,23 @@ public class BossFist : MonoBehaviour
     {
         float targetX = (playerTransform != null) ? playerTransform.position.x : transform.position.x;
 
-        // --- DIE BEGRENZUNG (CLAMP) ---
+        // --- CLAMP ---
         if (minXLimit != null && maxXLimit != null)
         {
-            // Wir ermitteln die absolute linke und rechte Grenze aus den beiden Punkten
+            // getting left and right boundary for "free movement", and tracking of player
+            // Left Fist os only supposed to punch down on left half, righ Fist on right side of Golem
             float leftBoundary = Mathf.Min(minXLimit.position.x, maxXLimit.position.x);
             float rightBoundary = Mathf.Max(minXLimit.position.x, maxXLimit.position.x);
 
-            // targetX wird hart zwischen diese beiden Werte gezwungen
+            // targetX = X position of Player at time of "Targeting" (Shadow)
             targetX = Mathf.Clamp(targetX, leftBoundary, rightBoundary);
         }
 
-        // Position für den Angriff fixieren
+        //fix position for attack, using the current targetX
         transform.position = new Vector3(targetX, waitingHeightY, transform.position.z);
         Vector3 targetGround = new Vector3(targetX, groundY, transform.position.z);
 
-        // Schatten anzeigen
+        // CAST SHADOW
         if (shadowSprite)
         {
             shadowSprite.transform.position = targetGround;
@@ -62,11 +63,11 @@ public class BossFist : MonoBehaviour
 
         yield return new WaitForSeconds(warningTime);
 
-        // Schlag nach unten
+        // PUNCH DOWN
         if (damageCollider) damageCollider.enabled = true;
         yield return StartCoroutine(LerpPosition(transform.position, targetGround, strikeDuration));
 
-        // Effekt & Sound
+        // EFFECT & SOUND
         if (impulseSource) impulseSource.GenerateImpulse();
         if (BossCombatManager.Instance != null)
         {
@@ -75,7 +76,7 @@ public class BossFist : MonoBehaviour
 
         yield return new WaitForSeconds(stayDuration);
 
-        // Rückzug
+        // RETREAT
         if (damageCollider) damageCollider.enabled = false;
         if (shadowSprite) shadowSprite.SetActive(false);
 

@@ -9,13 +9,14 @@ public class BossLimb : MonoBehaviour
     public Transform playerTransform;
 
     [Header("Movement Limits (Points)")]
-    [Tooltip("Empty Object für die linke Grenze")]
+    [Tooltip("Insert Empty Object for Left Border,\"Movement Cap\"")]
     public Transform minXPoint;
-    [Tooltip("Empty Object für die rechte Grenze")]
+    [Tooltip("Insert Empty Object for Right Border,\"Movement Cap\"")]
     public Transform maxXPoint;
 
     [Header("Visuals & Warning")]
     public GameObject shadowSprite;
+    [Tooltip("Time in which Shadow exists, before the Fist hits the Spot")]
     public float warningTime = 1.0f;
 
     [Header("Movement Settings")]
@@ -28,9 +29,9 @@ public class BossLimb : MonoBehaviour
     public float legRaiseDuration = 1.5f;
 
     [Header("Distance Settings")]
-    [Tooltip("Deine Bodenhöhe (94)")]
+    [Tooltip("My Chosen Height for the Object thats attacking (currently 94)")]
     public float groundYPosition = 94f;
-    [Tooltip("Die Höhe, in der die Fäuste schweben (z.B. 105)")]
+    [Tooltip("Height from which attack is started")]
     public float attackHeightY = 105f;
 
     private Collider2D damageCollider;
@@ -47,7 +48,7 @@ public class BossLimb : MonoBehaviour
 
     public IEnumerator Attack()
     {
-        // Sicherheits-Check: Falls der Player im Inspector vergessen wurde, suchen wir ihn über das Tag
+        // Security check, we really want the Player (Player Tag)
         if (isPlayerTracker && playerTransform == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -60,20 +61,20 @@ public class BossLimb : MonoBehaviour
 
     private IEnumerator FistAttack()
     {
-        // 1. POSITIONIERUNG: Aktuelle X-Position des Spielers holen
+        // 1. POSITIONING: takes x-coordinate of Player
         float targetX = (playerTransform != null) ? playerTransform.position.x : transform.position.x;
 
-        // Begrenzung durch die Empty Objects
+        // Sets "Border", limit of maximum "freedom of movement"
         if (minXPoint != null && maxXPoint != null)
         {
             targetX = Mathf.Clamp(targetX, minXPoint.position.x, maxXPoint.position.x);
         }
 
-        // Faust direkt über das Ziel teleportieren
+        // Teleports Fist directly above position of Player, for attack
         transform.position = new Vector3(targetX, attackHeightY, transform.position.z);
         Vector3 targetGroundPos = new Vector3(targetX, groundYPosition, transform.position.z);
 
-        // 2. SCHATTEN ZEIGEN
+        // 2. CAST SHADOW
         if (shadowSprite)
         {
             shadowSprite.transform.position = targetGroundPos;
@@ -81,7 +82,7 @@ public class BossLimb : MonoBehaviour
         }
         yield return new WaitForSeconds(warningTime);
 
-        // 3. EINSCHLAG (STRIKE)
+        // 3. STRIKE
         if (damageCollider) damageCollider.enabled = true;
         yield return LerpPosition(transform.position, targetGroundPos, strikeDuration);
 
@@ -91,23 +92,23 @@ public class BossLimb : MonoBehaviour
         if (damageCollider) damageCollider.enabled = false;
         if (shadowSprite) shadowSprite.SetActive(false);
 
-        // 4. RÜCKZUG
+        // 4. RETREAT
         yield return LerpPosition(transform.position, new Vector3(transform.position.x, attackHeightY, transform.position.z), retractDuration);
     }
 
     private IEnumerator LegAttack()
     {
-        // Beine starten und enden IMMER bei groundYPosition (94)
+        // Legs always start at, and retreat to same coordinate/ "Height"
         Vector3 floorPos = new Vector3(transform.position.x, groundYPosition, transform.position.z);
         Vector3 raisedPos = new Vector3(transform.position.x, groundYPosition + legRaiseHeight, transform.position.z);
 
-        // Sicherheit: Bein auf den Boden setzen, bevor es hochfährt
+        // Put Leg on Ground before raising it
         transform.position = floorPos;
 
-        // 1. ANHEBEN
+        // 1. LIFT LEG
         yield return LerpPosition(floorPos, raisedPos, legRaiseDuration);
 
-        // 2. SCHATTEN & WARNUNG
+        // 2. CAST SHADOW // was taken off from foot, looked weird
         if (shadowSprite)
         {
             shadowSprite.transform.position = floorPos;
@@ -115,7 +116,7 @@ public class BossLimb : MonoBehaviour
         }
         yield return new WaitForSeconds(warningTime);
 
-        // 3. STAMPFEN
+        // 3. STOMP
         if (damageCollider) damageCollider.enabled = true;
         yield return LerpPosition(raisedPos, floorPos, strikeDuration);
 
@@ -125,7 +126,7 @@ public class BossLimb : MonoBehaviour
         if (damageCollider) damageCollider.enabled = false;
         if (shadowSprite) shadowSprite.SetActive(false);
 
-        // Sicherheit: Bein fix auf Y = 94 halten
+        // Keeps Leg fixed to requested Y-Position (Ground-Level)
         transform.position = floorPos;
     }
 
