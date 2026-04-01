@@ -67,11 +67,11 @@ public class PlayerRunning : MonoBehaviour
 
         if (Hit && horizontalInput == 0f)
         {
-            if (body.linearVelocityX < 0.01f) body.linearVelocityX = 0f;
-            if (body.linearVelocityY < 0.01f) body.linearVelocityY = 0f;
-            body.gravityScale = 0;
+            //if (body.linearVelocityX < 0.01f) body.linearVelocityX = 0f;
+            //if (body.linearVelocityY < 0.01f) body.linearVelocityY = 0f;
+            //body.gravityScale = 0;
         }
-        else body.gravityScale = 3;
+        //else body.gravityScale = 3;
     }
 
     private void AdjustVelocityToSlope()
@@ -82,8 +82,13 @@ public class PlayerRunning : MonoBehaviour
         }
 
         var slopeRotation = Quaternion.FromToRotation(Vector3.up, Hit.normal);
+
+        if (Mathf.Abs(slopeRotation.y) < 0.1f)
+            return;
+
         var adjustedVelocity = slopeRotation * body.linearVelocity;
         if (adjustedVelocity.y < 0)
             body.linearVelocity = adjustedVelocity;
+        Debug.Log($"{slopeRotation.x}");
     }
 }
