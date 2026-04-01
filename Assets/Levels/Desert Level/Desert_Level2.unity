@@ -397800,6 +397800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 627553249777499610, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
+      propertyPath: useCheckpoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1430167107289389487, guid: df91e39c3490a014aba62efd1dcd21e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1656.34
