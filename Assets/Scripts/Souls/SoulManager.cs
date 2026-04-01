@@ -5,14 +5,20 @@ using System.Linq;
 public class SoulManager : MonoBehaviour
 {
 
+
     public bool resetSouls = false; // optional: clear all on start (for testing)
 
     private GameObject player;
     // Collected IDs
     private HashSet<string> collected = new HashSet<string>();
 
+    public static SoulManager Instance { get; private set; }
+
+
     private void Awake()
     {
+        Instance = this;
+
         player = GameObject.Find("Player");
 
         Load();
@@ -31,7 +37,7 @@ public class SoulManager : MonoBehaviour
         {
             Save();
             SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
-            Debug.Log($"Soul collected: {id}");
+            Debug.Log($"Soul collectedPhoenix: {id}");
         }
         
     }
@@ -44,7 +50,7 @@ public class SoulManager : MonoBehaviour
     private  void Save()
     {
         SaveSystem.SaveSoulData(collected);
-        //var serial = new Serialization<string>(collected);
+        //var serial = new Serialization<string>(collectedPhoenix);
         //string json = JsonUtility.ToJson(serial);
         //PlayerPrefs.SetString(PREF_KEY, json);
         //PlayerPrefs.Save();

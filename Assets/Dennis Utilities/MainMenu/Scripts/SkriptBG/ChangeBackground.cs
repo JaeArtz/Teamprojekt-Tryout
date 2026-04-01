@@ -61,7 +61,7 @@ public class ChangeBackground : MonoBehaviour
     }
     
     /// <summary>
-    /// TODO: Change the Selection Criteria from Random to collected Goodies.
+    /// TODO: Change the Selection Criteria from Random to collectedPhoenix Goodies.
     /// </summary>
     private void ChooseBackground()
     {

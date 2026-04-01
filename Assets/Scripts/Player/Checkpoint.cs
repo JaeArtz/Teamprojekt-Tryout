@@ -8,9 +8,11 @@ public class Checkpoint : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Trigger betreten von: " + collision.gameObject.name + " Tag: " + collision.tag);
+
         if (collision.CompareTag("Player"))
         {
-            PlayerRespawn playerRespawn = collision.GetComponent<PlayerRespawn>();
+            PlayerRespawn playerRespawn = collision.GetComponentInParent<PlayerRespawn>();
             if (playerRespawn != null)
             {
                 // sets checkpoint fur current, running session

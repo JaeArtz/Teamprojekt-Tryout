@@ -4,6 +4,7 @@ public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] protected int damage = 1;
     [SerializeField] private float damageInterval = 2.0f; // Alle 2 Sekunden Schaden
+    [SerializeField] private float initialDelay = 0f; // Verzögerung vor dem ersten Schaden
     private float nextDamageTime;
 
     private bool isInside = false;
@@ -22,7 +23,22 @@ public class EnemyDamage : MonoBehaviour
         }
     }
 
-    protected void OnTriggerStay2D(Collider2D collision)
+    // Wir nutzen Enter für den ersten Kontakt
+    protected void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerHealth = collision.GetComponentInParent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                isInside = true;
+                // den ersten Schadenszeitpunkt in die Zukunft
+                nextDamageTime = Time.time + initialDelay;
+            }
+        }
+    }
+
+    /*protected void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -40,10 +56,10 @@ public class EnemyDamage : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
     // Timer zurücksetzen, wenn der Spieler den Gegner verlässt -> wenn man nochmal reingeht erneuter Schaden
-    private void OnTriggerExit2D(Collider2D collision)
+    protected void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {

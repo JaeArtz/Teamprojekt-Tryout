@@ -12,12 +12,17 @@ public class PlayerClimb : MonoBehaviour
     private Rigidbody2D body;
     public Rigidbody2D Body { set { body = value; } }
 
+    private PlayerRoll roll;
+    public PlayerRoll Roll { set { roll = value; } }
+
     private bool canClimb = false;
     public bool CanJump { get { return canClimb; } private set {} }
 
     private bool climbUp = false;
     private bool climbDown = false;
     private bool isOnTop = false;
+
+    public bool IsClimbing => canClimb && (climbUp ^ climbDown);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,19 +40,17 @@ public class PlayerClimb : MonoBehaviour
         bool isClimbKeyDown = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S);
         if (canClimb && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Space))
             body.constraints |= RigidbodyConstraints2D.FreezePositionY;
-        if (!Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Space) || isClimbKeyDown)
+        if (!canClimb || !Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Space) || isClimbKeyDown)
             body.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!body)
-            return;
+        if (!body) return;
+        if (!canClimb) return;
+        if (!roll || roll.IsRolling) return;
 
-        if (!canClimb)
-            return;
-        
         if (climbUp & !climbDown)
             body.linearVelocityY = climbingSpeed;
         if (climbDown & !climbUp)

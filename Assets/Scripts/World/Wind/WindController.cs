@@ -87,7 +87,7 @@ public class WindController : MonoBehaviour
             list.AddRange(windGrassObjectsSlowSway.GetComponentsInChildren<SpriteRenderer>(true));
 
         targets = list.ToArray();
-        // Debug.Log($"WindController: collected {targets.Length} sprites from the 2 roots.");
+        // Debug.Log($"WindController: collectedPhoenix {targets.Length} sprites from the 2 roots.");
     }
    
 

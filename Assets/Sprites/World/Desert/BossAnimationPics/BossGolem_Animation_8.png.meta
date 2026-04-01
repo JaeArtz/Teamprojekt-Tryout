@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: 0ef7ff89f81f85140b13909814f1d608
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1901605818557374622
+    second: BossGolem_Animation_8_0
+  - first:
+      213: 7959597272513604051
+    second: BossGolem_Animation_8_1
+  - first:
+      213: -4527051551947850112
+    second: BossGolem_Animation_8_2
+  - first:
+      213: 7237978407349526550
+    second: BossGolem_Animation_8_3
+  - first:
+      213: 2569352669789037664
+    second: BossGolem_Animation_8_4
+  - first:
+      213: 2204808754766630249
+    second: BossGolem_Animation_8_5
+  - first:
+      213: -3273885082459984882
+    second: BossGolem_Animation_8_6
+  - first:
+      213: -8463865948410574468
+    second: BossGolem_Animation_8_7
+  - first:
+      213: -5592339271650799872
+    second: BossGolem_Animation_8_8
+  - first:
+      213: 6901222754251748833
+    second: BossGolem_Animation_8_9
+  - first:
+      213: 6199127872530329553
+    second: BossGolem_Animation_8_10
+  - first:
+      213: -9098595208856204495
+    second: BossGolem_Animation_8_11
+  - first:
+      213: 684244571562627893
+    second: BossGolem_Animation_8_12
+  - first:
+      213: -7191332611919994488
+    second: BossGolem_Animation_8_13
+  - first:
+      213: -6323659027416550476
+    second: BossGolem_Animation_8_14
+  - first:
+      213: -708963833455492100
+    second: BossGolem_Animation_8_15
+  - first:
+      213: -8521350712544444101
+    second: BossGolem_Animation_8_16
+  - first:
+      213: -6131446554656532501
+    second: BossGolem_Animation_8_17
+  - first:
+      213: 7014134806728929644
+    second: BossGolem_Animation_8_18
+  - first:
+      213: 7204972237344253961
+    second: BossGolem_Animation_8_19
+  - first:
+      213: -5831850288709096391
+    second: BossGolem_Animation_8_20
+  - first:
+      213: 2245731433330325447
+    second: BossGolem_Animation_8_21
+  - first:
+      213: -5041523947076527803
+    second: BossGolem_Animation_8_22
+  - first:
+      213: 7969481013508343503
+    second: BossGolem_Animation_8_23
+  - first:
+      213: 6504039929926347863
+    second: BossGolem_Animation_8_24
+  - first:
+      213: -2471655582196270033
+    second: BossGolem_Animation_8_25
+  - first:
+      213: -3852886965764259077
+    second: BossGolem_Animation_8_26
+  - first:
+      213: 8936920609470616718
+    second: BossGolem_Animation_8_27
+  - first:
+      213: 2461387530059349285
+    second: BossGolem_Animation_8_28
+  - first:
+      213: 930563514173094904
+    second: BossGolem_Animation_8_29
+  - first:
+      213: 8585911928254390879
+    second: BossGolem_Animation_8_30
+  - first:
+      213: 6436919465311971262
+    second: BossGolem_Animation_8_31
+  - first:
+      213: 6346187371653090494
+    second: BossGolem_Animation_8_32
+  - first:
+      213: 5230648844256925163
+    second: BossGolem_Animation_8_33
+  - first:
+      213: 5887174701582358125
+    second: BossGolem_Animation_8_34
+  - first:
+      213: 7467084132196215856
+    second: BossGolem_Animation_8_35
+  - first:
+      213: 7424395834739207272
+    second: BossGolem_Animation_8_36
+  - first:
+      213: -3737396548281800059
+    second: BossGolem_Animation_8_37
+  - first:
+      213: 7234849534381882283
+    second: BossGolem_Animation_8_38
+  - first:
+      213: 4479716142162593791
+    second: BossGolem_Animation_8_39
+  - first:
+      213: -8951530140720947998
+    second: BossGolem_Animation_8_40
+  - first:
+      213: -8983096960546963186
+    second: BossGolem_Animation_8_41
+  - first:
+      213: 7122391530430252295
+    second: BossGolem_Animation_8_42
+  - first:
+      213: -311359059191252816
+    second: BossGolem_Animation_8_43
+  - first:
+      213: -3425475813971339858
+    second: BossGolem_Animation_8_44
+  - first:
+      213: 7163736454937826411
+    second: BossGolem_Animation_8_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_0
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 206
+        width: 978
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90ade5ba6cd36a10800000000000000
+      internalID: 1901605818557374622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_1
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1255
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9675f2c8b267e60800000000000000
+      internalID: 7959597272513604051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_2
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 1117
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e744e499eac21c0800000000000000
+      internalID: -4527051551947850112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_3
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 1124
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61024065307727460800000000000000
+      internalID: 7237978407349526550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_4
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1109
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0642a71e3ac28a320800000000000000
+      internalID: 2569352669789037664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_5
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 712
+        width: 345
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d498181ed099e10800000000000000
+      internalID: 2204808754766630249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_6
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 963
+        width: 51
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ca5800dd2d092d0800000000000000
+      internalID: -3273885082459984882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_7
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 979
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79867e63ce4a8a80800000000000000
+      internalID: -8463865948410574468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_8
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 925
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f89c9df050462b0800000000000000
+      internalID: -5592339271650799872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_9
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 963
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5b40fd78116cf50800000000000000
+      internalID: 6901222754251748833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_10
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 950
+        width: 37
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dfa467a4f9b70650800000000000000
+      internalID: 6199127872530329553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_11
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 913
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b0e0d2ddb4bb180800000000000000
+      internalID: -9098595208856204495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_12
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 932
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533da7300dcee7900800000000000000
+      internalID: 684244571562627893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_13
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 944
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881a3dc3711433c90800000000000000
+      internalID: -7191332611919994488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_14
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 939
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3f4266e99dd38a0800000000000000
+      internalID: -6323659027416550476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_15
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 919
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3494456214926f0800000000000000
+      internalID: -708963833455492100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_16
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 874
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31444ccca41eb980800000000000000
+      internalID: -8521350712544444101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_17
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 902
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7976628d9b8eaa0800000000000000
+      internalID: -6131446554656532501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_18
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 864
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61f7c9b176375160800000000000000
+      internalID: 7014134806728929644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_19
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 875
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908a47783143df360800000000000000
+      internalID: 7204972237344253961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_20
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 875
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c2c369f0b111fa0800000000000000
+      internalID: -5831850288709096391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_21
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 863
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7359817d07a2f10800000000000000
+      internalID: 2245731433330325447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_22
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 830
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549d0e76ea8e80ab0800000000000000
+      internalID: -5041523947076527803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_23
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 851
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc68266f1c8499e60800000000000000
+      internalID: 7969481013508343503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_24
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 839
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c673c3bddf24a50800000000000000
+      internalID: 6504039929926347863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_25
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 661
+        width: 158
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c7418e75ae2bdd0800000000000000
+      internalID: -2471655582196270033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_26
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 813
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf283e5d7bbc78ac0800000000000000
+      internalID: -3852886965764259077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_27
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 795
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e841d59c1f1560c70800000000000000
+      internalID: 8936920609470616718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_28
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 816
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d73c7eaea982220800000000000000
+      internalID: 2461387530059349285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_29
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 819
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbf937f5960aec00800000000000000
+      internalID: 930563514173094904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_30
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 783
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52646c9869472770800000000000000
+      internalID: 8585911928254390879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_31
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 608
+        width: 53
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7a7b14628845950800000000000000
+      internalID: 6436919465311971262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_32
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 633
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebcc37d7acf221850800000000000000
+      internalID: 6346187371653090494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_33
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 622
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5ddb2296ff69840800000000000000
+      internalID: 5230648844256925163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_34
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 637
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d669b72133273b150800000000000000
+      internalID: 5887174701582358125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_35
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 536
+        width: 197
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ce287b47960a760800000000000000
+      internalID: 7467084132196215856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_36
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 594
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c2581fca0c80760800000000000000
+      internalID: 7424395834739207272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_37
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 511
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a64e214a9122cc0800000000000000
+      internalID: -3737396548281800059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_38
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 490
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab7b34d159576460800000000000000
+      internalID: 7234849534381882283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_39
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 497
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff74f24c8162b2e30800000000000000
+      internalID: 4479716142162593791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_40
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 486
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec1026a3c6c5c380800000000000000
+      internalID: -8951530140720947998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_41
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 447
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0105bba8e0a55380800000000000000
+      internalID: -8983096960546963186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_42
+      rect:
+        serializedVersion: 2
+        x: 1531
+        y: 458
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705cb826c51d7d260800000000000000
+      internalID: 7122391530430252295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_43
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 436
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b83e47d594ddabf0800000000000000
+      internalID: -311359059191252816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_44
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 397
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5db8965e34670d0800000000000000
+      internalID: -3425475813971339858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossGolem_Animation_8_45
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 393
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64d515c954ba6360800000000000000
+      internalID: 7163736454937826411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BossGolem_Animation_8_0: 1901605818557374622
+      BossGolem_Animation_8_1: 7959597272513604051
+      BossGolem_Animation_8_10: 6199127872530329553
+      BossGolem_Animation_8_11: -9098595208856204495
+      BossGolem_Animation_8_12: 684244571562627893
+      BossGolem_Animation_8_13: -7191332611919994488
+      BossGolem_Animation_8_14: -6323659027416550476
+      BossGolem_Animation_8_15: -708963833455492100
+      BossGolem_Animation_8_16: -8521350712544444101
+      BossGolem_Animation_8_17: -6131446554656532501
+      BossGolem_Animation_8_18: 7014134806728929644
+      BossGolem_Animation_8_19: 7204972237344253961
+      BossGolem_Animation_8_2: -4527051551947850112
+      BossGolem_Animation_8_20: -5831850288709096391
+      BossGolem_Animation_8_21: 2245731433330325447
+      BossGolem_Animation_8_22: -5041523947076527803
+      BossGolem_Animation_8_23: 7969481013508343503
+      BossGolem_Animation_8_24: 6504039929926347863
+      BossGolem_Animation_8_25: -2471655582196270033
+      BossGolem_Animation_8_26: -3852886965764259077
+      BossGolem_Animation_8_27: 8936920609470616718
+      BossGolem_Animation_8_28: 2461387530059349285
+      BossGolem_Animation_8_29: 930563514173094904
+      BossGolem_Animation_8_3: 7237978407349526550
+      BossGolem_Animation_8_30: 8585911928254390879
+      BossGolem_Animation_8_31: 6436919465311971262
+      BossGolem_Animation_8_32: 6346187371653090494
+      BossGolem_Animation_8_33: 5230648844256925163
+      BossGolem_Animation_8_34: 5887174701582358125
+      BossGolem_Animation_8_35: 7467084132196215856
+      BossGolem_Animation_8_36: 7424395834739207272
+      BossGolem_Animation_8_37: -3737396548281800059
+      BossGolem_Animation_8_38: 7234849534381882283
+      BossGolem_Animation_8_39: 4479716142162593791
+      BossGolem_Animation_8_4: 2569352669789037664
+      BossGolem_Animation_8_40: -8951530140720947998
+      BossGolem_Animation_8_41: -8983096960546963186
+      BossGolem_Animation_8_42: 7122391530430252295
+      BossGolem_Animation_8_43: -311359059191252816
+      BossGolem_Animation_8_44: -3425475813971339858
+      BossGolem_Animation_8_45: 7163736454937826411
+      BossGolem_Animation_8_5: 2204808754766630249
+      BossGolem_Animation_8_6: -3273885082459984882
+      BossGolem_Animation_8_7: -8463865948410574468
+      BossGolem_Animation_8_8: -5592339271650799872
+      BossGolem_Animation_8_9: 6901222754251748833
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
