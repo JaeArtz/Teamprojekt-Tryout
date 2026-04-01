@@ -5,7 +5,7 @@ using System;
 using UnityEngine.Assertions;
 public class PlayerHealth : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject Player;
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
 
@@ -24,6 +24,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Awake()
     {
+        playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();
+        myLevelLoader = GameObject.Find("LevelLoader");
+        Player = GameObject.Find("Player");
+
         Assert.AreEqual(currentHealth, maxHealth);
         currentHealth = maxHealth;
         PlayerData data = SaveSystem.LoadData();
@@ -39,9 +43,6 @@ public class PlayerHealth : MonoBehaviour
             SaveSystem.AlterDataCheck(false);
         }
         currentScene = SceneManager.GetActiveScene().name;
-
-        playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();
-        myLevelLoader = GameObject.Find("LevelLoader");
     }
 
     // Update is called once per frame
