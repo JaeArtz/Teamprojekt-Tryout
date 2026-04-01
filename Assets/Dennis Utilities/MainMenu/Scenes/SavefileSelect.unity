@@ -394,6 +394,34 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.70440245
       objectReference: {fileID: 0}
+    - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 649192577}
+    - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectSaveFile3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SavefileLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3234186711238450362, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -490,6 +518,34 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.70440245
       objectReference: {fileID: 0}
+    - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 649192577}
+    - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectSaveFile2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SavefileLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4753828174045672694, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -537,6 +593,34 @@ PrefabInstance:
     - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.70440245
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 649192577}
+    - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectSaveFile1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SavefileLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7653692046345295106, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_fontColor.b

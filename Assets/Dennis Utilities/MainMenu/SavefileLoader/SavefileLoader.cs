@@ -38,7 +38,35 @@ public class SavefileLoader : MonoBehaviour
 
     private void Start()
     {
-        //TODO: Ask if SaveData exists and if it does update their Information.
+        PlayerData player1 = SaveSystem.LoadData(1);
+        PlayerData player2 = SaveSystem.LoadData(2);
+        PlayerData player3 = SaveSystem.LoadData(3);
+        if (player1 != null)
+        {
+            buttonText1.GetComponent<TextMeshProUGUI>().text = player1.currentScene;
+        }
+        else
+        {
+            buttonText1.GetComponent<TextMeshProUGUI>().text = "Empty";
+        }
+
+        if (player2 != null)
+        {
+            buttonText2.GetComponent<TextMeshProUGUI>().text = player2.currentScene;
+        }
+        else
+        {
+            buttonText2.GetComponent<TextMeshProUGUI>().text = "Empty";
+        }
+
+        if (player3 != null)
+        {
+            buttonText3.GetComponent<TextMeshProUGUI>().text = player3.currentScene;
+        }
+        else
+        {
+            buttonText3.GetComponent<TextMeshProUGUI>().text = "Empty";
+        }
     }
 
     public void ReturnToMenu()
@@ -49,20 +77,26 @@ public class SavefileLoader : MonoBehaviour
     public void SelectSaveFile1()
     {
         //Set Current selected file to 1
+        SaveSystem.SaveSelectedFileData(1);
+        LoadAlterMainMenu();
     }
 
     public void SelectSaveFile2()
     {
         //Set Current selected file to 2
+        SaveSystem.SaveSelectedFileData(2);
+        LoadAlterMainMenu();
     }
 
     public void SelectSaveFile3()
     {
         //Set Current selected file to 3
+        SaveSystem.SaveSelectedFileData(3);
+        LoadAlterMainMenu();
     }
 
     public void LoadAlterMainMenu()
     {
-        //TODO...
+        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("LoadedMenu");
     }
 }

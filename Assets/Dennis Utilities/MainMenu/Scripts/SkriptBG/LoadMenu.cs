@@ -49,18 +49,16 @@ public class LoadMenu : MonoBehaviour
         }
     }
 
-    //Delete the currently indexed gamedata and set it to 0  and return to MainMenu
     public void DeleteData()
     {
         DeleteSaveFile();
-        //TODO...
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
 
     //return to MainMenu and set currently indexed gamedata to 0
     public void Back()
     {
-        //TODO...
+        SaveSystem.SaveSelectedFileData(0);
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
     public void DeleteSaveFile()
@@ -87,6 +85,7 @@ public class LoadMenu : MonoBehaviour
         }
         No();
         Debug.Log("Data deleted...");
+        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
 
     public void No()

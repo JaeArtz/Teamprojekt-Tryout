@@ -390,26 +390,26 @@ PrefabInstance:
     - target: {fileID: 8294107834610659512, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 649192575}
+      objectReference: {fileID: 649192577}
     - target: {fileID: 8294107834610659512, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NoGame
       objectReference: {fileID: 0}
     - target: {fileID: 8294107834610659512, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
+      value: LoadMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8465372607627123010, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 649192575}
+      objectReference: {fileID: 649192577}
     - target: {fileID: 8465372607627123010, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: YesGame
       objectReference: {fileID: 0}
     - target: {fileID: 8465372607627123010, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
+      value: LoadMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9064561340611855925, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_Name
@@ -511,8 +511,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 649192575}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 649192577}
+        m_TargetAssemblyTypeName: LoadMenu, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -2212,7 +2212,6 @@ GameObject:
   - component: {fileID: 649192573}
   - component: {fileID: 649192572}
   - component: {fileID: 649192571}
-  - component: {fileID: 649192575}
   - component: {fileID: 649192577}
   - component: {fileID: 649192576}
   m_Layer: 5
@@ -2307,25 +2306,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &649192575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649192570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f296d7da3b6f4c34fae91295a007ad14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myLevelLoader: {fileID: 435660811}
-  loadingFailed: {fileID: 11400000, guid: 8228b9b00f3169942b54ef2279b05139, type: 2}
-  deletingFailed: {fileID: 11400000, guid: e7940abdfeb86564ea3318daca3a8138, type: 2}
-  deletingSucceded: {fileID: 11400000, guid: 6f8446b4f09bc4c4ebdbc6a62eb3aefe, type: 2}
-  quitUI: {fileID: 1754457240}
-  mainUI: {fileID: 1655044665}
-  newGameUI: {fileID: 1420993994}
 --- !u!82 &649192576
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3819,9 +3799,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 649192575}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: DeleteData
+      - m_Target: {fileID: 649192577}
+        m_TargetAssemblyTypeName: LoadMenu, Assembly-CSharp
+        m_MethodName: DeleteSaveFile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4316,8 +4296,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 649192575}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 649192577}
+        m_TargetAssemblyTypeName: LoadMenu, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
@@ -5173,7 +5153,7 @@ GameObject:
   - component: {fileID: 1428590852}
   - component: {fileID: 1428590851}
   m_Layer: 5
-  m_Name: Quit_Text
+  m_Name: Back_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5231,7 +5211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Back
 --- !u!222 &1428590852
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5391,26 +5371,26 @@ PrefabInstance:
     - target: {fileID: 8294107834610659512, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 649192575}
+      objectReference: {fileID: 649192577}
     - target: {fileID: 8294107834610659512, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: No
       objectReference: {fileID: 0}
     - target: {fileID: 8294107834610659512, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
+      value: LoadMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8465372607627123010, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 649192575}
+      objectReference: {fileID: 649192577}
     - target: {fileID: 8465372607627123010, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Yes
       objectReference: {fileID: 0}
     - target: {fileID: 8465372607627123010, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
+      value: LoadMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9064561340611855925, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_Name
@@ -5442,7 +5422,7 @@ GameObject:
   - component: {fileID: 1472903694}
   - component: {fileID: 1472903693}
   m_Layer: 5
-  m_Name: Quit_Game_Button
+  m_Name: Back_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5512,9 +5492,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 649192575}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 649192577}
+        m_TargetAssemblyTypeName: LoadMenu, Assembly-CSharp
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
