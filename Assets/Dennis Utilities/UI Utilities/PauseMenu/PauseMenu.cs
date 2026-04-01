@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject myLevelLoader;
+    private GameObject myLevelLoader;
     public static bool GameIsPaused = false;
     [SerializeField]
     public GameObject pauseMenuUI;
@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("Player");
+        myLevelLoader = GameObject.Find("LevelLoader");
     }
     // Update is called once per frame
     void Update()

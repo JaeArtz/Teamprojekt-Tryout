@@ -9,12 +9,12 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
 
-    public GameObject myLevelLoader;
+    private GameObject myLevelLoader;
 
     public int maxHealth;
     public int currentHealth;
     public string currentScene;
-    public Image playerIcon;
+    private Image playerIcon;
 
     public Sprite FullLifeIcon;
     public Sprite HalfLifeIcon;
@@ -39,6 +39,9 @@ public class PlayerHealth : MonoBehaviour
             SaveSystem.AlterDataCheck(false);
         }
         currentScene = SceneManager.GetActiveScene().name;
+
+        playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();
+        myLevelLoader = GameObject.Find("LevelLoader");
     }
 
     // Update is called once per frame

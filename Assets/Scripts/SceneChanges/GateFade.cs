@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 //Quelle: https://stackoverflow.com/questions/39848911/unity-fade-image-alpha-over-time
 public class GateFade : MonoBehaviour
 {
-    private bool keyPressed = false;
-    private bool hasFadePassed = false;
     private YieldInstruction fadeInstruction = new YieldInstruction();
     IEnumerator Start()
     {
@@ -22,6 +20,5 @@ public class GateFade : MonoBehaviour
             colorPlayer.a = 1.0f - Mathf.Clamp01(elapsedTime / fadeTime);
             gate.color = colorPlayer;
         }
-        hasFadePassed = true;
     }
 }
