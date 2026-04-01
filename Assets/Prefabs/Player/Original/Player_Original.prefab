@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 7432266993596707199}
   - component: {fileID: 1180920997515958489}
   - component: {fileID: 28790931356578837}
-  - component: {fileID: 8788218873401257925}
   - component: {fileID: 6220875613963771050}
   - component: {fileID: 627553249777499610}
   - component: {fileID: 8406900078179165746}
@@ -208,55 +207,6 @@ MonoBehaviour:
   wallCheckSize: {x: 0.2, y: 0.8}
   surfaceCollider: {fileID: 12904411011785910}
   wallTrigger: {fileID: 606657185490777511}
---- !u!114 &8788218873401257925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562932011958070637}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30eeb6b77121e5440b38ff917a11015a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  t_movementX: 10
-  t_movementY: 10
-  t_movementDirection: 0
-  t_groundCoyoteCounter: 0
-  t_wallCoyoteCounter: 0
-  t_isGrounded: 0
-  t_isOnWall: 0
-  t_playerWallDirection: 0
-  t_isWallJumping: 0
-  t_isDetached: 0
-  t_isHoldingMoveBtn: 0
-  playerMaxVelocityX: 10
-  playerMaxVelocityY: 12
-  playerAccelerationX: 7
-  playerDecelerationX: 20
-  playerEarlyJumpAbortForceY: 0.5
-  playerMaxWallJumpVelocityX: 18
-  playerMaxWallJumpVelocityY: 12
-  wallSlideSpeed: -3
-  wallJumpDuration: 0.15
-  wallJumpCooldown: 0.2
-  wallJumpAirControlDuration: 1
-  groundCoyoteTime: 0.1
-  wallCoyoteTime: 0.15
-  extraJumps: 1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  wallCheckDistance: 0.1
-  groundCheckDistance: 0.1
-  wallCheckSize: {x: 0.2, y: 0.8}
-  boxCollider: {fileID: 8391567528759529738}
-  surfaceCollider: {fileID: 0}
-  wallTrigger: {fileID: 0}
 --- !u!114 &6220875613963771050
 MonoBehaviour:
   m_ObjectHideFlags: 0

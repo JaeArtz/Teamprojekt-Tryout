@@ -15,6 +15,8 @@ public class PlayerRunning : MonoBehaviour
     private Rigidbody2D body;
     public Rigidbody2D Body { set { body = value; } }
 
+    public RaycastHit2D Hit { get; set; }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -32,6 +34,7 @@ public class PlayerRunning : MonoBehaviour
 
     public void ApplyNormalMovement(float horizontalInput)
     {
+        AdjustVelocityToSlope();
         Move(horizontalInput);
     }
 
@@ -51,6 +54,7 @@ public class PlayerRunning : MonoBehaviour
     {
         if (!maxVelocityX.HasValue)
             maxVelocityX = playerMaxVelocityX;
+
         float targetSpeed = horizontalInput * (float)maxVelocityX * targetSpeedManipulator;
         float accelRate = Mathf.Sign(body.linearVelocityX) == Mathf.Sign(targetSpeed) && horizontalInput != 0 ? playerAccelerationX * accelerationRateManipulator : playerDecelerationX * decelerationRateManipulator;
         float speedDiff = targetSpeed - body.linearVelocity.x;
@@ -60,5 +64,26 @@ public class PlayerRunning : MonoBehaviour
             Mathf.Clamp(body.linearVelocity.x + movement, -(float)maxVelocityX * targetSpeedManipulator, (float)maxVelocityX * targetSpeedManipulator),
             body.linearVelocity.y
         );
+
+        if (Hit && horizontalInput == 0f)
+        {
+            if (body.linearVelocityX < 0.01f) body.linearVelocityX = 0f;
+            if (body.linearVelocityY < 0.01f) body.linearVelocityY = 0f;
+            body.gravityScale = 0;
+        }
+        else body.gravityScale = 3;
+    }
+
+    private void AdjustVelocityToSlope()
+    {
+        if (!Hit)
+        {
+            return;
+        }
+
+        var slopeRotation = Quaternion.FromToRotation(Vector3.up, Hit.normal);
+        var adjustedVelocity = slopeRotation * body.linearVelocity;
+        if (adjustedVelocity.y < 0)
+            body.linearVelocity = adjustedVelocity;
     }
 }

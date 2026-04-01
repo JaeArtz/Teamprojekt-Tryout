@@ -4,17 +4,6 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 
-public enum PlayerState
-{
-    DEFAULT = 0,
-    RUNNING = 1,
-    JUMPING = 2,
-    FALLING = 3,
-    WALLSLIDING = 4,
-    WALLJUMPING = 5,
-    CLIMBING = 6,
-}
-
 public class PlayerController : MonoBehaviour
 {
     [Header("Layers")]
@@ -49,8 +38,6 @@ public class PlayerController : MonoBehaviour
     private PlayerGlide glide;
     // Animator component
     private Animator animator;
-
-    private PlayerState playerState;
 
 
     private void Awake()
@@ -128,7 +115,6 @@ public class PlayerController : MonoBehaviour
         if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("rabbitSoul"))
             jump.CanDoubleJump = true;
 
-        playerState = PlayerState.DEFAULT;
         Debug.Log("Player Controller Start Done.");
     }
 
@@ -146,12 +132,6 @@ public class PlayerController : MonoBehaviour
             showcaseDoubleJump = false;
             StartCoroutine(PlayDoubleJumpShowcase());
         }
-
-        if (Input.GetKeyDown(KeyCode.A) ^ Input.GetKeyDown(KeyCode.D) && _isGrounded)
-            playerState = PlayerState.RUNNING;
-
-        if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocity.y > 0)
-            playerState = PlayerState.FALLING;
 
         // Prioritize walljump over normal jump
         if (!wallActions.HandleWallActions(ref wallLayer, _isGrounded))
@@ -199,45 +179,6 @@ public class PlayerController : MonoBehaviour
         else movement.ApplyNormalMovement(horizontalInput);
 
         wallActions.HandleFixedActions();
-
-        switch (playerState)
-        {
-            case PlayerState.DEFAULT:
-                animator.SetBool("IsWalking", false);
-
-                if (body.linearVelocity.y < 0)
-                    playerState = PlayerState.FALLING;
-                //Debug.Log("DEFAULT");
-                break;
-            case PlayerState.RUNNING:
-                animator.SetBool("IsWalking", true);
-
-                if (body.linearVelocity.y < 0)
-                    playerState = PlayerState.FALLING;
-                //Debug.Log("RUNNING");
-                break;
-            case PlayerState.JUMPING:
-
-                if (body.linearVelocity.y < 0)
-                    playerState = PlayerState.FALLING;
-                //Debug.Log("JUMPING");
-                break;
-            case PlayerState.FALLING:
-                //Debug.Log("FALLING");
-                break;
-            case PlayerState.WALLSLIDING:
-                //Debug.Log("WALL SLIDING");
-                break;
-            case PlayerState.WALLJUMPING:
-                //Debug.Log("WALLJUMPING");
-                break;
-            case PlayerState.CLIMBING:
-                //Debug.Log("CLIMBING");
-                break;
-            default:
-                //Debug.Log("DEFAULT");
-                break;
-        }
     }
 
     private void LateUpdate()
@@ -252,7 +193,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        float extraHeight = 0.05f;
+        float extraHeight = 0.3f;
 
         RaycastHit2D hit = Physics2D.BoxCast(
             surfaceCollider.bounds.center,
@@ -262,6 +203,8 @@ public class PlayerController : MonoBehaviour
             extraHeight,
             groundLayer
         );
+
+        movement.Hit = hit;
 
         return hit.collider != null;
     }
