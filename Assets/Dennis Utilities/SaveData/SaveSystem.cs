@@ -145,9 +145,57 @@ public static class SaveSystem
         }
 
     }
+
+    public static HashSet<string> LoadSoulData(int currentSaveFile)
+    { 
+        string path = Application.persistentDataPath + $"/collectedSouls{currentSaveFile}.bin";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            if (stream.Length == 0)
+            {
+                stream.Close();
+                return null;
+            }
+            SoulsData soulsData = formatter.Deserialize(stream) as SoulsData;
+            stream.Close();
+            return soulsData.souls;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+
+    }
     public static HashSet<int> LoadLeafData()
     {
         int currentSaveFile = LoadSelectedFileData();
+        string path = Application.persistentDataPath + $"/collectedLeaves{currentSaveFile}.bin";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            if (stream.Length == 0)
+            {
+                stream.Close();
+                return null;
+            }
+            LeafData leavesData = formatter.Deserialize(stream) as LeafData;
+            stream.Close();
+            return leavesData.leaves;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+
+    }
+
+    public static HashSet<int> LoadLeafData(int currentSaveFile)
+    {
         string path = Application.persistentDataPath + $"/collectedLeaves{currentSaveFile}.bin";
         if (File.Exists(path))
         {
