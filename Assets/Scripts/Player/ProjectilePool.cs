@@ -27,13 +27,14 @@ public class ProjectilePool : MonoBehaviour
             proj.gameObject.SetActive(false);
             pool.Enqueue(proj);
         }
-
+        /*
         for (int i = 0; i < arrowPoolSize; i++)
         {
             EnemyProjectile arrow = Instantiate(arrowPrefab, transform);
             arrow.gameObject.SetActive(false);
             arrowPool.Enqueue(arrow);
         }
+        */
     }
 
     // Spielerprojektile abrufen und zurückgeben

@@ -3,26 +3,14 @@ using UnityEngine;
 
 public class CollectableManager : MonoBehaviour
 {
-    public static CollectableManager Instance { get; private set; }
 
     private HashSet<int> collectedLeaves = new HashSet<int>();
     public bool resetCollectables = false; // zum testen immer resetten
-
+    private GameObject player;
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        
-        DontDestroyOnLoad(transform.root.gameObject);
+        player = GameObject.Find("Player");
 
-        if(resetCollectables == true){
-            ResetCollected(); // zum testen immer resetten
-        }
-        
         LoadCollectedLeaves();
     }
 
@@ -39,22 +27,19 @@ public class CollectableManager : MonoBehaviour
 
     private void SaveCollectedLeaves()
     {
-        // Als String speichern (z. B. "0,1,2,5")
-        PlayerPrefs.SetString("CollectedLeaves", string.Join(",", collectedLeaves));
-        PlayerPrefs.Save();
+        SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
+        SaveSystem.SaveLeafData(collectedLeaves);
     }
 
     private void LoadCollectedLeaves()
     {
-        collectedLeaves.Clear();
-        string saved = PlayerPrefs.GetString("CollectedLeaves", "");
-        if (string.IsNullOrEmpty(saved)) return;
-
-        string[] ids = saved.Split(',');
-        foreach (string id in ids)
+        if (SaveSystem.LoadLeafData() == null)
         {
-            if (int.TryParse(id, out int leafId))
-                collectedLeaves.Add(leafId);
+            SaveSystem.SaveLeafData(collectedLeaves);
+        }
+        else
+        {
+            collectedLeaves = SaveSystem.LoadLeafData();
         }
     }
 

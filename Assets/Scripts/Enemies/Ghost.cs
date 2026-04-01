@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Ghost : MonoBehaviour
+public class Ghost : MonoBehaviour, ILightReactable
 {
     #region Hit Cooldown
     private const float cooldown = 1.0f;
@@ -11,9 +11,8 @@ public class Ghost : MonoBehaviour
     // Statt Collider2D speichern wir direkt die PlayerHealth-Referenz
     private PlayerHealth playerHealth;
     #endregion
-
+    private Vector3 startingPos;
     #region animation
-    private Vector3 startingPosition = new Vector3(232.0f, 4.0f, 0.0f);
     #endregion
 
     public float stunDuration = 4f;
@@ -31,11 +30,13 @@ public class Ghost : MonoBehaviour
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        startingPos = transform.localPosition;
     }
 
     void Update()
     {
-        transform.position = startingPosition + Vector3.up * Mathf.Sin(Time.realtimeSinceStartup) * 0.5f;
+        Vector3 currentPosition = startingPos + Vector3.up * Mathf.Sin(Time.realtimeSinceStartup) * 0.5f;
+        transform.localPosition = currentPosition;
         if (state == GhostState.Stunned)
         {
             stunTimer -= Time.deltaTime;

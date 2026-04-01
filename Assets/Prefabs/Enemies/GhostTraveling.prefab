@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 302914218035805106}
   - component: {fileID: 1198937652742355571}
   - component: {fileID: -3016009641559298757}
-  - component: {fileID: 2493316488136366846}
   m_Layer: 0
   m_Name: GhostTraveling
   m_TagString: Untagged
@@ -224,23 +223,6 @@ MonoBehaviour:
   hoverSpeed: 2
   autoFlipp: 1
   spriteFacesRightByDefault: 0
+  hoverTimeOffset: 0
   hitCollider: {fileID: 1198937652742355571}
   bodyCollider: {fileID: 302914218035805106}
---- !u!114 &2493316488136366846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8229111381611243761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70390014de0be9d4ca15d91f7e3b4fe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GhostLight_PathPoints_SmoothMovement
-  points: []
-  MovementSpeed: 2
-  ReactionSmoothness: 0.2
-  cornerRadius: 0.3
-  loop: 1
-  pingPong: 0

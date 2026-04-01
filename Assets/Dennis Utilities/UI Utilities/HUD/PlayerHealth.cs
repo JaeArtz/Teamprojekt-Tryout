@@ -5,16 +5,16 @@ using System;
 using UnityEngine.Assertions;
 public class PlayerHealth : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject Player;
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
 
-    public GameObject myLevelLoader;
+    private GameObject myLevelLoader;
 
     public int maxHealth;
     public int currentHealth;
-
-    public Image playerIcon;
+    public string currentScene;
+    private Image playerIcon;
 
     public Sprite FullLifeIcon;
     public Sprite HalfLifeIcon;
@@ -22,11 +22,27 @@ public class PlayerHealth : MonoBehaviour
     public Sprite AlmostDeadIcon;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();
+        myLevelLoader = GameObject.Find("LevelLoader");
+        Player = GameObject.Find("Player");
+
         Assert.AreEqual(currentHealth, maxHealth);
         currentHealth = maxHealth;
+        PlayerData data = SaveSystem.LoadData();
+        if(data != null && data.wasLoaded == true)
+        {
+            currentHealth = data.currentLives;
+            Vector3 position;
+            position.x = data.currentPosition[0];
+            position.y = data.currentPosition[1];
+            position.z = data.currentPosition[2];
+
+            transform.localPosition = position;
+            SaveSystem.AlterDataCheck(false);
+        }
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -45,9 +61,28 @@ public class PlayerHealth : MonoBehaviour
 
         if(currentHealth == 0)
         {
-            Player.SetActive(false);
-            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("GameOverScreen");
+            //Player.SetActive(false);
+            //myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("GameOverScreen");
+            RespawnPlayer();
         }
+    }
+
+    private void RespawnPlayer()
+    {
+        // HP zurücksetzen
+        currentHealth = maxHealth;
+
+        // Zum Checkpoint teleportieren via PlayerRespawn
+        PlayerRespawn playerRespawn = Player.GetComponentInParent<PlayerRespawn>();
+        if (playerRespawn != null)
+        {
+            playerRespawn.RespawnNow();
+        }
+
+        // Spieler wieder aktivieren (falls deaktiviert)
+        Player.SetActive(true);
+
+        OnPlayerDamaged?.Invoke();
     }
 
     //Testfunction, might be optimized and changed later on!

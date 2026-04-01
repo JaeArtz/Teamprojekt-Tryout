@@ -1,9 +1,11 @@
-using UnityEngine;
 using System.Collections;
+using UnityEditor.EditorTools;
+using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
     private PlayerController playerController;
+    private SoulManager soulManager;
     private Rigidbody2D rb;
 
     [Header("Attack Settings")]
@@ -18,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("lightShotSoul"))
+        if (soulManager.HasSoul("lightShotSoul"))
         {
             lightShotUnlocked = true;
         }
@@ -26,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Awake()
     {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -98,6 +101,22 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public void StartManualShowcase()
+    {
+        StartCoroutine(WaitAndShowcase());
+    }
+
+    private IEnumerator WaitAndShowcase()
+    {
+        // Falls der Spieler noch springt, warten wir kurz, bis er landet
+        while (!playerController.Grounded)
+        {
+            yield return null;
+        }
+
+        StartCoroutine(LightShotShowcase());
+    }
+
     private IEnumerator LightShotShowcase()
     {
         playerController.SetInputLocked(true);
@@ -109,7 +128,7 @@ public class PlayerAttack : MonoBehaviour
         playerController.SetInputLocked(false);
     }
 
-    // Neue Methode für erweiterte Angriffsbedingungen
+    // Methode für erweiterte Angriffsbedingungen
     public bool CanAttackInCurrentState()
     {
         if (!lightShotUnlocked)

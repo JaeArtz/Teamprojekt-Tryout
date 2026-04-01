@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1048312683936071223}
   - component: {fileID: 8483448297299558396}
   - component: {fileID: 1898285999940468341}
+  - component: {fileID: 2667694190620631547}
   m_Layer: 0
   m_Name: sinking_underneath_ground
   m_TagString: Untagged
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.05900961, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -110,7 +111,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1180182, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1898285999940468341
 MonoBehaviour:
@@ -125,9 +126,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SinkingGround
   slowFactor: 0.7
-  jumpFactor: 0.9
+  jumpFactor: 1.2
   sinkForce: -0.2
   sinkingGroundCoyouteTime: 0.7
+--- !u!114 &2667694190620631547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5014887739485058104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f0f91786901445ab0d762b1dfa8e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamage
+  damage: 1
+  damageInterval: 2
+  initialDelay: 1.5
 --- !u!1 &7873148683340865740
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,8 +172,8 @@ Transform:
   m_GameObject: {fileID: 7873148683340865740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.55, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0.016, y: -3.2, z: 0}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6248623121091479413}
@@ -209,15 +225,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -6279740137576207280, guid: 2c15dfb8109163a45925e8083a33f9ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.535, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6389340030068330448
@@ -279,18 +295,18 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.535, y: 1.56}
+    newSize: {x: 3.535, y: 1.56}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
     - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
+      - {x: -1.3992412, y: 0.22898303}
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+      - {x: 1.4482021, y: 0.20230731}
   m_UseDelaunayMesh: 0

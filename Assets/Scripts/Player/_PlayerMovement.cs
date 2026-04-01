@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, Tooltip("Circle collider without collision for wall check")] private CircleCollider2D wallTrigger;
 
     private Rigidbody2D body;
+    private SoulManager soulManager;
 
     private float _horizontalInput;
 
@@ -116,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
         body = GetComponent<Rigidbody2D>();
         
         
@@ -195,7 +197,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("rabbitSoul"))
+        
+        if (soulManager.HasSoul("rabbitSoul"))
             canDoubleJump = true;
     }
 
