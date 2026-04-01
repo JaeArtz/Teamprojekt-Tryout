@@ -14,9 +14,9 @@ public class SavefileLoader : MonoBehaviour
     private GameObject buttonText2;
     private GameObject buttonText3;
 
-    private TMP_Text savefileText1;
-    private TMP_Text savefileText2;
-    private TMP_Text savefileText3;
+    private GameObject savefileText1;
+    private GameObject savefileText2;
+    private GameObject savefileText3;
     private void Awake()
     {
         myLevelLoader = GameObject.Find("LevelLoader");
@@ -29,9 +29,9 @@ public class SavefileLoader : MonoBehaviour
         buttonText2 = GameObject.Find("Button_Savefile_2_Text");
         buttonText3 = GameObject.Find("Button_Savefile_3_Text");
 
-        savefileText1 = GameObject.Find("Savestate1_Text").GetComponent<TextMeshPro>();
-        savefileText2 = GameObject.Find("Savestate2_Text").GetComponent<TextMeshPro>();
-        savefileText3 = GameObject.Find("Savestate3_Text").GetComponent<TextMeshPro>();
+        savefileText1 = GameObject.Find("Savestate1_Text");
+        savefileText2 = GameObject.Find("Savestate2_Text");
+        savefileText3 = GameObject.Find("Savestate3_Text");
     }
 
     // Update is called once per frame
@@ -41,31 +41,43 @@ public class SavefileLoader : MonoBehaviour
         PlayerData player1 = SaveSystem.LoadData(1);
         PlayerData player2 = SaveSystem.LoadData(2);
         PlayerData player3 = SaveSystem.LoadData(3);
-        if (player1 != null)
+        if (player1.currentScene != null)
         {
             buttonText1.GetComponent<TextMeshProUGUI>().text = player1.currentScene;
+            int collectedSouls = SaveSystem.LoadSoulData().Count;
+            int collectedLeaves = SaveSystem.LoadLeafData().Count; 
+            savefileText1.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/4 \nCollected Leaves {collectedLeaves }/ 22";
         }
         else
         {
             buttonText1.GetComponent<TextMeshProUGUI>().text = "Empty";
+            savefileText1.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/22";
         }
 
         if (player2 != null)
         {
             buttonText2.GetComponent<TextMeshProUGUI>().text = player2.currentScene;
+            int collectedSouls = SaveSystem.LoadSoulData().Count;
+            int collectedLeaves = SaveSystem.LoadLeafData().Count;
+            savefileText2.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/4 \nCollected Leaves {collectedLeaves}/ 22";
         }
         else
         {
             buttonText2.GetComponent<TextMeshProUGUI>().text = "Empty";
+            savefileText2.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/22";
         }
 
         if (player3 != null)
         {
             buttonText3.GetComponent<TextMeshProUGUI>().text = player3.currentScene;
+            int collectedSouls = SaveSystem.LoadSoulData().Count;
+            int collectedLeaves = SaveSystem.LoadLeafData().Count;
+            savefileText3.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/4 \nCollected Leaves {collectedLeaves}/ 22";
         }
         else
         {
             buttonText3.GetComponent<TextMeshProUGUI>().text = "Empty";
+            savefileText3.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/22";
         }
     }
 
