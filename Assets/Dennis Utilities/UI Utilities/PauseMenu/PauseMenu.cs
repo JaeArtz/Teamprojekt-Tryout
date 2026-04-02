@@ -2,13 +2,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject myLevelLoader;
+    private GameObject myLevelLoader;
     public static bool GameIsPaused = false;
     [SerializeField]
     public GameObject pauseMenuUI;
-    public GameObject player;
+    private GameObject player;
     public GameObject hudUI;
     public GameObject quitUI;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+        myLevelLoader = GameObject.Find("LevelLoader");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -55,7 +61,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1.0f;
         Debug.Log("Loading Menu...");
         SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
-        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
+        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("LoadedMenu");
     }
 
     public void QuitGame()

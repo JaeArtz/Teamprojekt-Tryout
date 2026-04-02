@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Dennis Utilities/MainMenu/Scenes/DecideLoadableMenu.unity
+    guid: 7f9e1b94fc7bbf744baa7b196e8e8da0
+  - enabled: 1
     path: Assets/Dennis Utilities/MainMenu/Scenes/MainMenu.unity
     guid: f0b99b8348297684e921923362dc5937
+  - enabled: 1
+    path: Assets/Dennis Utilities/MainMenu/Scenes/SavefileSelect.unity
+    guid: 27943bca893561d4e9780d05d6674ca9
+  - enabled: 1
+    path: Assets/Dennis Utilities/MainMenu/Scenes/LoadedMenu.unity
+    guid: 71114559de28520438b64beca4144a0a
   - enabled: 1
     path: Assets/Levels/Forest_Level1.unity
     guid: 48aaa190628ed224bacba1f4674448de

@@ -5,10 +5,14 @@ public class HealthHeartBar : MonoBehaviour
 {
     public GameObject heartPrefab;
 
-    public PlayerHealth playerHealth;
+    private PlayerHealth playerHealth;
 
     List<HealthHeart> hearts = new List<HealthHeart>();
 
+    private void Awake()
+    {
+        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+    }
     private void Start()
     {
         DrawHearts();
