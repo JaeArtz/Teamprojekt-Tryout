@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private PlayerWallActions wallActions;
     private PlayerClimb climb;
     private PlayerRoll roll;
+    private PlayerGlide glide;
     // Animator component
     private Animator animator;
 
@@ -65,12 +66,15 @@ public class PlayerController : MonoBehaviour
         wallActions = GetComponent<PlayerWallActions>();
         climb = GetComponent<PlayerClimb>();
         roll = GetComponent<PlayerRoll>();
+        glide = GetComponent<PlayerGlide>();
         movement.Body = body;
         wallActions.Body = body;
         climb.Body = body;
         roll.Body = body;
+        glide.Body = body;
 
         climb.Roll = roll;
+        glide.Roll = roll;
 
         if (surfaceCollider == null)
         {
@@ -183,6 +187,7 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = _horizontalInput = Input.GetAxisRaw("Horizontal");
         _isGrounded = IsGrounded();
         roll.IsGrounded = _isGrounded;
+        glide.IsGrounded = _isGrounded;
 
         // PLAYER-SPRITE DIRECTION
         if (Mathf.Abs(body.linearVelocityX) > 0.1f)
