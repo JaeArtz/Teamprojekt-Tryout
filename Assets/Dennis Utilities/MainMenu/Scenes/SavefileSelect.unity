@@ -382,6 +382,14 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4288190616
       objectReference: {fileID: 0}
+    - target: {fileID: 2199318030462642819, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_text
+      value: 'Collected Souls: 0/4
+
+        Collected Leaves: 0/22
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2615207986825550063, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.70440245
@@ -506,6 +514,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -480254276019886394, guid: acd21d23227f0e14eb25f1e91efb472d, type: 3}
+    - target: {fileID: 3847773555834120600, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847773555834120600, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847773555834120600, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4005510123986328951, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.70440245
@@ -574,14 +594,46 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4288190616
       objectReference: {fileID: 0}
+    - target: {fileID: 7153521053668761604, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_text
+      value: 'Collected Souls: 0/4
+
+        Collected Leaves: 0/22
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 7396372475126129095, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -480254276019886394, guid: acd21d23227f0e14eb25f1e91efb472d, type: 3}
+    - target: {fileID: 7396372475126129095, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396372475126129095, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396372475126129095, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7422289750066966819, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -480254276019886394, guid: acd21d23227f0e14eb25f1e91efb472d, type: 3}
+    - target: {fileID: 7422289750066966819, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422289750066966819, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422289750066966819, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7534836116528213711, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.70440245
@@ -637,6 +689,14 @@ PrefabInstance:
     - target: {fileID: 7653692046345295106, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4288190616
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030194569119127050, guid: 0a4bc03a59ae002418d09bdfcc018dc4, type: 3}
+      propertyPath: m_text
+      value: 'Collected Souls: 0/4
+
+        Collected Leaves: 0/22
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

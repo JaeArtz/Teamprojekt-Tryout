@@ -12,6 +12,7 @@ public class LoadMenu : MonoBehaviour
     public GameObject quitUI;
     public GameObject mainUI;
     public GameObject newGameUI;
+    public GameObject levelsUI;
     public void StartGame()
     {
         
@@ -104,4 +105,17 @@ public class LoadMenu : MonoBehaviour
         mainUI.SetActive(true);
         newGameUI.SetActive(false);
     }
+
+    public void OpenLevelSelectionPanel()
+    {
+        mainUI.SetActive(false);
+        levelsUI.SetActive(true);
+    }
+
+    public void CloseLevelSelectionPanel()
+    {
+        levelsUI.SetActive(false);
+        mainUI.SetActive(true);
+    }
+
 }
