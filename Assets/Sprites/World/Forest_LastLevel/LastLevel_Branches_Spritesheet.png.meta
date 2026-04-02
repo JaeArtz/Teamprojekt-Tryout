@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 1767f12968a4ff5419e974dad526a4fc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2808214725941521492
+    second: LastLevel_Branches_Spritesheet_0
+  - first:
+      213: -952917375743744165
+    second: LastLevel_Branches_Spritesheet_1
+  - first:
+      213: -391730193456747008
+    second: LastLevel_Branches_Spritesheet_2
+  - first:
+      213: -3459037008949671470
+    second: LastLevel_Branches_Spritesheet_3
+  - first:
+      213: -8404612609375133204
+    second: LastLevel_Branches_Spritesheet_4
+  - first:
+      213: -4060094632110210373
+    second: LastLevel_Branches_Spritesheet_5
+  - first:
+      213: 1368649870535257726
+    second: LastLevel_Branches_Spritesheet_6
+  - first:
+      213: 6032871085983887390
+    second: LastLevel_Branches_Spritesheet_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 740
+        width: 522
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ce3c82a68c8f620800000000000000
+      internalID: 2808214725941521492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 744
+        width: 577
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b572f7e02be86c2f0800000000000000
+      internalID: -952917375743744165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 484
+        width: 631
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00e273be67b409af0800000000000000
+      internalID: -391730193456747008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 683
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d900a8ca280fffc0800000000000000
+      internalID: -3459037008949671470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 473
+        width: 633
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce12d6f7c51dc5b80800000000000000
+      internalID: -8404612609375133204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 488
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2c9928175a7a7c0800000000000000
+      internalID: -4060094632110210373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 244
+        width: 537
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e632b4ecb6ef210800000000000000
+      internalID: 1368649870535257726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LastLevel_Branches_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 67
+        width: 1080
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e107bc70a4019b350800000000000000
+      internalID: 6032871085983887390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2e76c1bf74e7efb44a028429f627854f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LastLevel_Branches_Spritesheet_0: 2808214725941521492
+      LastLevel_Branches_Spritesheet_1: -952917375743744165
+      LastLevel_Branches_Spritesheet_2: -391730193456747008
+      LastLevel_Branches_Spritesheet_3: -3459037008949671470
+      LastLevel_Branches_Spritesheet_4: -8404612609375133204
+      LastLevel_Branches_Spritesheet_5: -4060094632110210373
+      LastLevel_Branches_Spritesheet_6: 1368649870535257726
+      LastLevel_Branches_Spritesheet_7: 6032871085983887390
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

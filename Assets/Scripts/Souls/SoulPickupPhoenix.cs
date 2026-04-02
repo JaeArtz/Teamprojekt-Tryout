@@ -8,6 +8,7 @@ public class SoulPickupPhoenix : MonoBehaviour
     public Transform phoenixTargetPoint;
     public GameObject camTrackerPoint;
     public LevelLoaderScript levelLoader;
+    public PlayerController playerController;
 
     [Header("Teleportation")]
     public Transform playerTeleportPoint;      // Punkt 1 (Sand)
@@ -34,6 +35,8 @@ public class SoulPickupPhoenix : MonoBehaviour
     {
         if (collectedPhoenix || !other.CompareTag("Player")) return;
         collectedPhoenix = true;
+
+        // playerController.SetInputLocked(true);
 
         // --- DER ABSOLUTE FIX ---
         // Wir suchen das Objekt mit dem Namen "Player". 

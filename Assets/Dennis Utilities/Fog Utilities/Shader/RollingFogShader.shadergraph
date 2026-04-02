@@ -1560,7 +1560,7 @@
     "m_DefaultRefNameVersion": 0,
     "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector2_87af546381de4621861b3b61053b0d85",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_FogSpeed",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",

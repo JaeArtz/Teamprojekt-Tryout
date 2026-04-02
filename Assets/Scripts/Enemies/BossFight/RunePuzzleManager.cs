@@ -19,6 +19,7 @@ public class RunePuzzleManager : MonoBehaviour
     [Tooltip("The CamTracker-Object you use to have the Cam follow it around.")]
     public Transform cameraFollowTarget;
     private Vector3 originalTargetLocalPos;
+    public PlayerController playerController;
 
     [Header("--- Sequence Waypoints ---")]
     [Tooltip("Object with Reference Position of Camera on RuneStone (Sleeping and Waking Rune).")]
@@ -96,6 +97,8 @@ public class RunePuzzleManager : MonoBehaviour
     {
         _puzzleComplete = true;
 
+        playerController.SetInputLocked(true);
+
         // PHASE 1: Preparation
         foreach (GameObject wall in invisibleWalls)
             if (wall != null) wall.SetActive(true);
@@ -160,6 +163,8 @@ public class RunePuzzleManager : MonoBehaviour
 
         foreach (GameObject wall in invisibleWalls)
             if (wall != null) wall.SetActive(false);
+
+        playerController.SetInputLocked(false);
     }
 
     private IEnumerator LerpCamera(Vector3 startPos, Vector3 endPos, float duration)
