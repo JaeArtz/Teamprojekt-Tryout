@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private AudioClip m_soundEffectClick;
 
+    [SerializeField]
+    private AudioClip m_blank;
     private void Awake()
     {
         m_audioComponent = GetComponent<AudioSource>();
@@ -23,13 +25,13 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         //TODO: waitForMillis instead of null value.
-        m_soundEffectHover = null;
+        m_soundEffectHover = m_blank;
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()
     {
         //TODO: waitForMillis instead of null value.
-        m_soundEffectHover = null;
+        m_soundEffectHover = m_blank;
         Debug.Log("Quitting Game...");
         Application.Quit();
     }
@@ -44,6 +46,6 @@ public class MainMenu : MonoBehaviour
         m_audioComponent.PlayOneShot(m_soundEffectClick);
 
         //TODO: waitForMillis instead of null value.
-        m_soundEffectClick = null;
+        m_soundEffectClick = m_blank;
     }
 }

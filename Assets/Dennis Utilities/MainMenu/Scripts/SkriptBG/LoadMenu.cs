@@ -13,22 +13,33 @@ public class LoadMenu : MonoBehaviour
     public GameObject mainUI;
     public GameObject newGameUI;
     public GameObject levelsUI;
+
+    private AudioSource m_audioComponent;
+    [SerializeField]
+    private AudioClip m_soundEffectHover;
+    [SerializeField]
+    private AudioClip m_soundEffectClick;
+    [SerializeField]
+    private AudioClip m_blank;
+    private void Awake()
+    {
+        m_audioComponent = GetComponent<AudioSource>();
+    }
+
     public void StartGame()
     {
-        
         PlayerData data = SaveSystem.LoadData();
         if(data == null)
         {
+            PlayClickSound();
+            m_soundEffectHover = m_blank;
             myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else
         {
+            ClickSoundPlayNoDeactivation();
             CreateNewGame();
         }
-
-
-        
-
     }
 
     //TODO: load the currently indexed game
@@ -40,6 +51,8 @@ public class LoadMenu : MonoBehaviour
             SaveSystem.AlterDataCheck(true);
             Debug.Log(data.currentScene);
             myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(data.currentScene);
+            m_soundEffectHover = m_blank;
+            PlayClickSound();
         }
         catch (System.Exception e)
         {
@@ -47,11 +60,13 @@ public class LoadMenu : MonoBehaviour
             {
                 NotifyManager.ManagerInstance.ShowNotification(loadingFailed);
             }
+            ClickSoundPlayNoDeactivation();
         }
     }
 
     public void DeleteData()
     {
+        PlayClickSound();
         DeleteSaveFile();
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
@@ -59,11 +74,14 @@ public class LoadMenu : MonoBehaviour
     //return to MainMenu and set currently indexed gamedata to 0
     public void Back()
     {
+        m_soundEffectHover = m_blank;
         SaveSystem.SaveSelectedFileData(0);
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
     public void DeleteSaveFile()
     {
+        ClickSoundPlayNoDeactivation();
+
         quitUI.SetActive(true);
         mainUI.SetActive(false);
     }
@@ -97,6 +115,7 @@ public class LoadMenu : MonoBehaviour
 
     public void YesGame()
     {
+        m_soundEffectHover = m_blank;
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -108,6 +127,8 @@ public class LoadMenu : MonoBehaviour
 
     public void OpenLevelSelectionPanel()
     {
+        ClickSoundPlayNoDeactivation();
+
         mainUI.SetActive(false);
         levelsUI.SetActive(true);
     }
@@ -116,6 +137,24 @@ public class LoadMenu : MonoBehaviour
     {
         levelsUI.SetActive(false);
         mainUI.SetActive(true);
+    }
+
+    public void PlayHoverSound()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectHover);
+    }
+
+    public void PlayClickSound()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectClick);
+
+        //TODO: waitForMillis instead of null value.
+        m_soundEffectClick = m_blank;
+    }
+
+    public void ClickSoundPlayNoDeactivation()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectClick);
     }
 
 }

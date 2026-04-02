@@ -6,6 +6,14 @@ public class SavefileLoader : MonoBehaviour
 {
     private GameObject myLevelLoader;
 
+    private AudioSource m_audioComponent;
+    [SerializeField]
+    private AudioClip m_soundEffectHover;
+    [SerializeField]
+    private AudioClip m_soundEffectClick;
+    [SerializeField]
+    private AudioClip m_blank;
+
     private GameObject button1;
     private GameObject button2;
     private GameObject button3;
@@ -18,8 +26,10 @@ public class SavefileLoader : MonoBehaviour
     private GameObject savefileText2;
     private GameObject savefileText3;
     private void Awake()
-    {
+    { 
         myLevelLoader = GameObject.Find("LevelLoader");
+        
+        m_audioComponent = GetComponent<AudioSource>();
 
         button1 = GameObject.Find("Button_Savefile_1");
         button2 = GameObject.Find("Button_Savefile_2");
@@ -83,11 +93,13 @@ public class SavefileLoader : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        m_soundEffectHover = m_blank;
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
     }
 
     public void SelectSaveFile1()
     {
+        m_soundEffectHover = m_blank;
         //Set Current selected file to 1
         SaveSystem.SaveSelectedFileData(1);
         LoadAlterMainMenu();
@@ -95,6 +107,7 @@ public class SavefileLoader : MonoBehaviour
 
     public void SelectSaveFile2()
     {
+        m_soundEffectHover = m_blank;
         //Set Current selected file to 2
         SaveSystem.SaveSelectedFileData(2);
         LoadAlterMainMenu();
@@ -102,6 +115,7 @@ public class SavefileLoader : MonoBehaviour
 
     public void SelectSaveFile3()
     {
+        m_soundEffectHover = m_blank;
         //Set Current selected file to 3
         SaveSystem.SaveSelectedFileData(3);
         LoadAlterMainMenu();
@@ -110,5 +124,18 @@ public class SavefileLoader : MonoBehaviour
     public void LoadAlterMainMenu()
     {
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("LoadedMenu");
+    }
+
+    public void PlayHoverSound()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectHover);
+    }
+
+    public void PlayClickSound()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectClick);
+
+        //TODO: waitForMillis instead of null value.
+        m_soundEffectClick = m_blank;
     }
 }
