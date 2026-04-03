@@ -61,7 +61,7 @@ public class SavefileLoader : MonoBehaviour
         else
         {
             buttonText1.GetComponent<TextMeshProUGUI>().text = "Empty";
-            savefileText1.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/22";
+            savefileText1.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/24";
         }
 
         if (player2 != null)
@@ -74,7 +74,7 @@ public class SavefileLoader : MonoBehaviour
         else
         {
             buttonText2.GetComponent<TextMeshProUGUI>().text = "Empty";
-            savefileText2.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/22";
+            savefileText2.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/24";
         }
 
         if (player3 != null)
@@ -87,7 +87,7 @@ public class SavefileLoader : MonoBehaviour
         else
         {
             buttonText3.GetComponent<TextMeshProUGUI>().text = "Empty";
-            savefileText3.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/22";
+            savefileText3.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/24";
         }
     }
 

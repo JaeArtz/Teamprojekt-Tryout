@@ -115,7 +115,10 @@ public class LoadMenu : MonoBehaviour
 
     public void YesGame()
     {
+        int currentSave = SaveSystem.LoadSelectedFileData();
+        SaveSystem.DeleteData();
         m_soundEffectHover = m_blank;
+        SaveSystem.SaveSelectedFileData(currentSave);
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -135,6 +138,7 @@ public class LoadMenu : MonoBehaviour
 
     public void CloseLevelSelectionPanel()
     {
+        ClickSoundPlayNoDeactivation();
         levelsUI.SetActive(false);
         mainUI.SetActive(true);
     }

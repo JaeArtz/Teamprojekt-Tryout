@@ -201,6 +201,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2511538156179606041}
     m_Modifications:
+    - target: {fileID: 131141537795318899, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 131141537795318899, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 650656284835190746, guid: acd21d23227f0e14eb25f1e91efb472d, type: 3}
+    - target: {fileID: 131141537795318899, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 131141537795318899, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Color.g
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743707021894548677, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743707021894548677, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743707021894548677, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743707021894548677, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027878026772779985, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027878026772779985, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 650656284835190746, guid: acd21d23227f0e14eb25f1e91efb472d, type: 3}
+    - target: {fileID: 2027878026772779985, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027878026772779985, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_Color.g
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169660340585655654, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169660340585655654, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169660340585655654, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169660340585655654, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488528732731097481, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6082095866150457885, guid: 12684f21cd7c10a4891efb4831840f29, type: 3}
       propertyPath: m_text
       value: "     Do you wish to close the Game?\n            (Progess will be saved!)"
