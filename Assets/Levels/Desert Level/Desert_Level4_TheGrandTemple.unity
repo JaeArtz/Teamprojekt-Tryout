@@ -13955,7 +13955,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8917038320030930409, guid: 038145d1257d6554abbabbe181eb131b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -13988,7 +13989,6 @@ MonoBehaviour:
   phoenixObject: {fileID: 1491265274}
   phoenixTargetPoint: {fileID: 659245643}
   camTrackerPoint: {fileID: 1953856675492576539}
-  levelLoader: {fileID: 0}
   playerController: {fileID: 0}
   playerTeleportPoint: {fileID: 2795334608620483108}
   playerTeleportPointGate: {fileID: 6882757886283499194}
