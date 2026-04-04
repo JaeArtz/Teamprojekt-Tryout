@@ -406417,7 +406417,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e28766f90c599c8419770544b1fc760c, type: 2}
+  - {fileID: 2100000, guid: 8efe99d44d2d8e44c9e6682643e16f5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -408386,7 +408386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816bd12d2a7a02940a4de4730b4589b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadNextLevel1
-  myLevelLoader: {fileID: 1237155976}
 --- !u!212 &1687901495
 SpriteRenderer:
   m_ObjectHideFlags: 0
