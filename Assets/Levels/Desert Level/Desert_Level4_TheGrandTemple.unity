@@ -104265,6 +104265,7 @@ GameObject:
   - component: {fileID: 955267462946666838}
   - component: {fileID: 1205877735889540283}
   - component: {fileID: 6295636737266857135}
+  - component: {fileID: 8102986387000047099}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -104272,6 +104273,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8102986387000047099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102986387000047098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddde829d86570ad44a391a4efc8b0a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!4 &8251221888944913125
 Transform:
   m_ObjectHideFlags: 0

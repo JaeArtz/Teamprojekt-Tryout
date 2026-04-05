@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnPlayerDeath;
 
     private GameObject myLevelLoader;
+    private LevelManager myLevelManager;
 
     public int maxHealth;
     public int currentHealth;
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     {
         playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();
         myLevelLoader = GameObject.Find("LevelLoader");
+        myLevelManager = GameObject.Find("GameManager").GetComponent<LevelManager>();
         Player = GameObject.Find("Player");
 
         Assert.AreEqual(currentHealth, maxHealth);
@@ -43,6 +45,11 @@ public class PlayerHealth : MonoBehaviour
             SaveSystem.AlterDataCheck(false);
         }
         currentScene = SceneManager.GetActiveScene().name;
+    }
+
+    void Start()
+    {
+        myLevelManager.SaveCurrentLevel();
     }
 
     // Update is called once per frame
