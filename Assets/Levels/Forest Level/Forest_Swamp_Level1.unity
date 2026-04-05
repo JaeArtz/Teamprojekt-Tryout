@@ -29453,11 +29453,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2523446020092437668, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2523446020092437668, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16666666
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2602959659066654969, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29511,6 +29511,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: checkpointLeafBlower_dark
       objectReference: {fileID: 0}
+    - target: {fileID: 8042952094196370065, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042952094196370065, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04166668
+      objectReference: {fileID: 0}
     - target: {fileID: 8289036321593342052, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -29518,6 +29526,14 @@ PrefabInstance:
     - target: {fileID: 8289036321593342052, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574418470219668870, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
+      propertyPath: m_Size.x
+      value: 1.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574418470219668870, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.8125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29711,7 +29727,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: cedc2974015cf8e43bf1f413d28e329f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.203
+  m_Volume: 0.17
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -30064,7 +30080,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574046635}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}

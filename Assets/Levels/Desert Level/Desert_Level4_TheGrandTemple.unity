@@ -103353,6 +103353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e4d78001b9dca4fadb4b4d8fd2e177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  respawnPoint: {x: 0, y: 0, z: 0}
   useCheckpoints: 0
 --- !u!114 &4586539185620109373
 MonoBehaviour:
@@ -103860,9 +103861,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: cedc2974015cf8e43bf1f413d28e329f, type: 3}
+  m_Resource: {fileID: 8300000, guid: bca33348720acdd48838e887e77e6170, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.187
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
