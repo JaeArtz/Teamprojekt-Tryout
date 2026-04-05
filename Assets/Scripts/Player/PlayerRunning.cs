@@ -34,7 +34,7 @@ public class PlayerRunning : MonoBehaviour
 
     public void ApplyNormalMovement(float horizontalInput)
     {
-        AdjustVelocityToSlope();
+        AdjustVelocityToSlope(horizontalInput);
         Move(horizontalInput);
     }
 
@@ -64,27 +64,26 @@ public class PlayerRunning : MonoBehaviour
             Mathf.Clamp(body.linearVelocity.x + movement, -(float)maxVelocityX * targetSpeedManipulator, (float)maxVelocityX * targetSpeedManipulator),
             body.linearVelocity.y
         );
-
-        if (Hit && horizontalInput == 0f)
-        {
-            //if (body.linearVelocityX < 0.01f) body.linearVelocityX = 0f;
-            //if (body.linearVelocityY < 0.01f) body.linearVelocityY = 0f;
-            //body.gravityScale = 0;
-        }
-        //else body.gravityScale = 3;
     }
 
-    private void AdjustVelocityToSlope()
+    private void AdjustVelocityToSlope(float horizontalInput)
     {
         if (!Hit)
         {
+            body.gravityScale = 3;
             return;
         }
 
         var slopeRotation = Quaternion.FromToRotation(Vector3.up, Hit.normal);
 
         if (Mathf.Abs(slopeRotation.y) < 0.1f)
+        {
+            //if (body.linearVelocityX < 0.01f) body.linearVelocityX = 0f;
+            //if (body.linearVelocityY < 0.01f) body.linearVelocityY = 0f;
+            body.gravityScale = 3;
             return;
+        }
+        else if (horizontalInput == 0f) body.gravityScale = 0;
 
         var adjustedVelocity = slopeRotation * body.linearVelocity;
         if (adjustedVelocity.y < 0)
