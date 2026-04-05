@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
 
     public void SaveCurrentLevel()
     {
-        finishedLevels.Add(SceneManager.GetActiveScene().buildIndex);
+        finishedLevels.Add(SceneManager.GetActiveScene().buildIndex - 4);
         SaveLevelData();
     }
 
