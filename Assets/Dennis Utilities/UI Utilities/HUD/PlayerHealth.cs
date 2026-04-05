@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     private GameObject Player;
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
+    public static event Action OnPlayerLiveUpdate;
 
     private GameObject myLevelLoader;
     private LevelManager myLevelManager;
@@ -30,12 +31,12 @@ public class PlayerHealth : MonoBehaviour
         myLevelManager = GameObject.Find("GameManager").GetComponent<LevelManager>();
         Player = GameObject.Find("Player");
 
-        Assert.AreEqual(currentHealth, maxHealth);
-        currentHealth = maxHealth;
         PlayerData data = SaveSystem.LoadData();
         if(data != null && data.wasLoaded == true)
         {
             currentHealth = data.currentLives;
+            maxHealth = 6 + SaveSystem.LoadLeafData().Count;
+            
             Vector3 position;
             position.x = data.currentPosition[0];
             position.y = data.currentPosition[1];
@@ -43,6 +44,14 @@ public class PlayerHealth : MonoBehaviour
 
             transform.localPosition = position;
             SaveSystem.AlterDataCheck(false);
+        }
+        else
+        {
+            if (!(SaveSystem.LoadData() == null))
+                maxHealth = 6 + SaveSystem.LoadLeafData().Count;
+            else
+                maxHealth = 6;
+            currentHealth = maxHealth;
         }
         currentScene = SceneManager.GetActiveScene().name;
     }
@@ -140,5 +149,15 @@ public class PlayerHealth : MonoBehaviour
             OnPlayerDamaged?.Invoke();
         }
     }
-     
+
+    public void UpdateLives()
+    {
+        maxHealth = 6 + SaveSystem.LoadLeafData().Count;
+        if (!(currentHealth >= maxHealth))
+            currentHealth++;
+        //healthBar.SetHealth(currentHealth);
+        OnPlayerLiveUpdate?.Invoke();
+        
+    }
+
 }

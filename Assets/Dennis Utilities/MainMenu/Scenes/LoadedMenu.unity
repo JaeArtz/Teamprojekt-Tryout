@@ -6203,7 +6203,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1208407178}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8266655483572805874, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
@@ -8560,6 +8561,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f51e46a4c2708c469f5060053a632d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelection
+  myButtons:
+  - {fileID: 1778612164}
+  - {fileID: 61711883}
+  - {fileID: 341637568}
+  - {fileID: 1190026817}
+  - {fileID: 1261041125}
+  - {fileID: 1709846455}
+  - {fileID: 1350918150}
+  - {fileID: 694002640}
+  - {fileID: 1623411392}
+  - {fileID: 197686951}
+  - {fileID: 571712866}
+  - {fileID: 1215426855}
+  - {fileID: 321860084}
+  myTriggers:
+  - {fileID: 1778612167}
+  - {fileID: 61711886}
+  - {fileID: 341637571}
+  - {fileID: 1190026820}
+  - {fileID: 1261041128}
+  - {fileID: 1709846458}
+  - {fileID: 1350918153}
+  - {fileID: 694002643}
+  - {fileID: 1623411395}
+  - {fileID: 197686954}
+  - {fileID: 571712869}
+  - {fileID: 1215426858}
+  - {fileID: 321860087}
 --- !u!1 &1606737027
 GameObject:
   m_ObjectHideFlags: 0

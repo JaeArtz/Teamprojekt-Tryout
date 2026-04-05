@@ -31,4 +31,14 @@ public class PlayerData
         wasLoaded = loaded;
     }
 
+    public PlayerData(PlayerHealth player, PlayerRespawn respawn)
+    {
+        currentLives = player.currentHealth;
+        currentPosition = new float[3];
+        currentPosition[0] = respawn.RespawnPoint.x;
+        currentPosition[1] = respawn.RespawnPoint.y;
+        currentPosition[2] = respawn.RespawnPoint.z;
+        currentScene = player.currentScene;
+    }
+
 }

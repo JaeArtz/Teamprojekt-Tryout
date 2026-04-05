@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     private GameObject myLevelLoader;
+    private GameObject mySaveGame;
     public static bool GameIsPaused = false;
     [SerializeField]
     public GameObject pauseMenuUI;
@@ -14,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     {
         player = GameObject.Find("Player");
         myLevelLoader = GameObject.Find("LevelLoader");
+        mySaveGame = GameObject.Find("Saver");
     }
     // Update is called once per frame
     void Update()
@@ -60,7 +62,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         Debug.Log("Loading Menu...");
-        SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
+        mySaveGame.GetComponent<SaveGame>().SaveCurrentGame();
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("LoadedMenu");
     }
 
@@ -82,7 +84,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Quit()
     {
-        SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
+        mySaveGame.GetComponent<SaveGame>().SaveCurrentGame();
         Debug.Log("Quitting Game...");
         Application.Quit();
     }

@@ -50,6 +50,18 @@ public static class SaveSystem
         stream.Close();
     }
 
+    public static void SaveData(PlayerHealth player, PlayerRespawn respawn)
+    {
+        int currentSaveFile = LoadSelectedFileData();
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + $"/player{currentSaveFile}.bin";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        PlayerData data = new PlayerData(player, respawn);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static void SaveSoulData(HashSet<string> collectedSouls)
     {
         int currentSaveFile = LoadSelectedFileData();
