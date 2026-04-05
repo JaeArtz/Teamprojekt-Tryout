@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    private Vector3 respawnPoint;
+    public Vector3 respawnPoint;
     private GameObject mySaveGame;
     public bool useCheckpoints = true;
 
-    public Vector3 RespawnPoint => respawnPoint;
+    //public Vector3 RespawnPoint => respawnPoint;
 
     private void Awake()
     {

@@ -42,8 +42,10 @@ public class PlayerHealth : MonoBehaviour
             position.y = data.currentPosition[1];
             position.z = data.currentPosition[2];
 
-            transform.localPosition = position;
+            transform.position = position;
             SaveSystem.AlterDataCheck(false);
+
+            //Player.GetComponent<PlayerRespawn>().RespawnNow();
         }
         else
         {

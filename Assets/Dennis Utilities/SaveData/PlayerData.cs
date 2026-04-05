@@ -35,9 +35,9 @@ public class PlayerData
     {
         currentLives = player.currentHealth;
         currentPosition = new float[3];
-        currentPosition[0] = respawn.RespawnPoint.x;
-        currentPosition[1] = respawn.RespawnPoint.y;
-        currentPosition[2] = respawn.RespawnPoint.z;
+        currentPosition[0] = respawn.respawnPoint.x;
+        currentPosition[1] = respawn.respawnPoint.y;
+        currentPosition[2] = respawn.respawnPoint.z;
         currentScene = player.currentScene;
     }
 
