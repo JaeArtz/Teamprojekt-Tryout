@@ -88,6 +88,6 @@ public class PlayerRunning : MonoBehaviour
         var adjustedVelocity = slopeRotation * body.linearVelocity;
         if (adjustedVelocity.y < 0)
             body.linearVelocity = adjustedVelocity;
-        Debug.Log($"{slopeRotation.x}");
+        Debug.Log($"{body.gravityScale}");
     }
 }
