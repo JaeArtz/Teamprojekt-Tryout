@@ -50,6 +50,18 @@ public static class SaveSystem
         stream.Close();
     }
 
+    public static void SaveData(PlayerHealth player, PlayerRespawn respawn)
+    {
+        int currentSaveFile = LoadSelectedFileData();
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + $"/player{currentSaveFile}.bin";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        PlayerData data = new PlayerData(player, respawn);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static void SaveSoulData(HashSet<string> collectedSouls)
     {
         int currentSaveFile = LoadSelectedFileData();
@@ -61,6 +73,7 @@ public static class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
+
     public static void SaveLeafData(HashSet<int> collectedLeaves)
     {
         int currentSaveFile = LoadSelectedFileData();
@@ -72,6 +85,19 @@ public static class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
+
+    public static void SaveLevelData(HashSet<int> unlockedLevels)
+    {
+        int currentSaveFile = LoadSelectedFileData();
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + $"/unlockedLevels{currentSaveFile}.bin";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        LevelData data = new LevelData(unlockedLevels);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static PlayerData LoadData()
     {
         int currentSaveFile = LoadSelectedFileData();
@@ -217,6 +243,56 @@ public static class SaveSystem
         }
 
     }
+
+    public static HashSet<int> LoadLevelData()
+    {
+        int currentSaveFile = LoadSelectedFileData();
+        string path = Application.persistentDataPath + $"/unlockedLevels{currentSaveFile}.bin";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            if (stream.Length == 0)
+            {
+                stream.Close();
+                return null;
+            }
+            LevelData levelData = formatter.Deserialize(stream) as LevelData;
+            stream.Close();
+            return levelData.levels;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+
+    }
+
+    public static HashSet<int> LoadLevelData(int currentSaveFile)
+    {
+        string path = Application.persistentDataPath + $"/unlockedLevels{currentSaveFile}.bin";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            if (stream.Length == 0)
+            {
+                stream.Close();
+                return null;
+            }
+            LevelData levelData = formatter.Deserialize(stream) as LevelData;
+            stream.Close();
+            return levelData.levels;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
+
+    }
+
     public static void DeleteData()
     {
         int currentSaveFile = LoadSelectedFileData();
@@ -224,6 +300,7 @@ public static class SaveSystem
         string path = Application.persistentDataPath + $"/player{currentSaveFile}.bin";
         string soulsPath = Application.persistentDataPath + $"/collectedSouls{currentSaveFile}.bin";
         string leafPath = Application.persistentDataPath + $"/collectedLeaves{currentSaveFile}.bin";
+        string levelPath = Application.persistentDataPath + $"/unlockedLevels{currentSaveFile}.bin";
         bool isAlreadyDeleted = false;
         if (File.Exists(path))
         {
@@ -252,7 +329,16 @@ public static class SaveSystem
             Debug.LogError("Leaf file is already deleted " + leafPath);
             isAlreadyDeleted = true;
         }
-        if(isAlreadyDeleted)
+        if (File.Exists(levelPath))
+        {
+            File.Delete(levelPath);
+        }
+        else
+        {
+            Debug.LogError("Level file is already deleted " + levelPath);
+            isAlreadyDeleted = true;
+        }
+        if (isAlreadyDeleted)
         {
             throw new System.Exception();
         }

@@ -66,9 +66,16 @@ public class LoadMenu : MonoBehaviour
 
     public void DeleteData()
     {
-        PlayClickSound();
-        DeleteSaveFile();
-        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
+        try
+        {
+            PlayClickSound();
+            DeleteSaveFile();
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
+        }
+        catch (System.Exception e)
+        {
+
+        }
     }
 
     //return to MainMenu and set currently indexed gamedata to 0
@@ -88,8 +95,15 @@ public class LoadMenu : MonoBehaviour
 
     public void CreateNewGame()
     {
-        newGameUI.SetActive(true);
-        mainUI.SetActive(false);
+        try
+        {
+            newGameUI.SetActive(true);
+            mainUI.SetActive(false);
+        }
+        catch (System.Exception e)
+        {
+
+        }
     }
     public void Yes()
     {
