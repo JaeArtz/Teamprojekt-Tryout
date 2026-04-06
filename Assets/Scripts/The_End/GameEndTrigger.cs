@@ -1,117 +1,57 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class GameEndTrigger : TriggerAction
+public class GameEndTrigger : MonoBehaviour
 {
-    [Header("UI & Interaction")]
-    [SerializeField] private GameObject interactionHint;
+    [Header("Referenzen")]
+    public AudioSource backgroundMusic;    // Die Musik, die ausfaden soll
+    public AudioSource endEffectSound;     // Der Sound, der im Schwarzbild spielt
+    public LevelLoaderScript levelLoader;  // Dein Objekt für die Schwarzblende
 
-    [Header("References")]
-    [SerializeField] private PlayerController playerController;
-    [SerializeField] private Animator endObjectAnimator;
-    [SerializeField] private AudioSource backgroundMusic;
-    [SerializeField] private AudioSource endEffectSound;
-    [SerializeField] private LevelLoaderScript levelLoader;
+    [Header("Einstellungen")]
+    public float delayBeforeFade = 2.0f;   // Wie lange soll man den liegenden Player sehen?
+    public string nextSceneName = "Credits";
 
-    [Header("Settings")]
-    [SerializeField] private string nextSceneName = "Credits";
-    [SerializeField] private float musicFadeDuration = 2.0f;
-    [SerializeField] private string animationTriggerName = "StartEnd";
-
-    private bool isPlayerInside = false;
-    private bool sequenceStarted = false;
-
-    private void Update()
+    // Diese Funktion wird im zweiten Slot deines "On Interact ()" aufgerufen!
+    public void StartFinalSequence()
     {
-        // Startet die Sequenz bei E-Taste im Radius
-        if (isPlayerInside && !sequenceStarted && Input.GetKeyDown(KeyCode.E))
-        {
-            StartCoroutine(StartEndSequence());
-        }
+        StartCoroutine(EndSequenceRoutine());
     }
 
-    private IEnumerator StartEndSequence()
+    private IEnumerator EndSequenceRoutine()
     {
-        sequenceStarted = true;
-
-        // Vorbereitung: UI aus & Player einfrieren
-        if (interactionHint != null) interactionHint.SetActive(false);
-        if (playerController != null)
-        {
-            playerController.SetInputLocked(true);
-            playerController.ResetHorizontalInputAndVelocity();
-        }
-
-        // --- 1) Eine Animation wird gespielt ---
-        if (endObjectAnimator != null)
-        {
-            endObjectAnimator.SetTrigger(animationTriggerName);
-            // Kleiner Wait, damit die Animation sichtbar startet
-            yield return new WaitForSeconds(0.5f);
-        }
-
-        // --- 2) Der HintergrundSound stoppt/ausfadet ---
+        // 1. Musik ausfaden
         if (backgroundMusic != null)
         {
             float startVol = backgroundMusic.volume;
-            float elapsed = 0;
-            while (elapsed < musicFadeDuration)
+            for (float t = 0; t < 2f; t += Time.deltaTime)
             {
-                elapsed += Time.deltaTime;
-                backgroundMusic.volume = Mathf.Lerp(startVol, 0, elapsed / musicFadeDuration);
+                backgroundMusic.volume = Mathf.Lerp(startVol, 0, t / 2f);
                 yield return null;
             }
             backgroundMusic.Stop();
         }
 
-        // --- 3) Es soll dunkel werden (Bildschirm schwarz, Szene aktiv) ---
+        // 2. Warten (Zeit für die Liege-Animation)
+        yield return new WaitForSeconds(delayBeforeFade);
+
+        // 3. Schwarzblende (Fade-Out)
         if (levelLoader != null)
         {
-            // Triggert den Fade-In deines LevelLoaders
             levelLoader.transition.SetTrigger("Start");
-
-            // Warten, bis der Bildschirm durch den Crossfade komplett schwarz ist
             yield return new WaitForSeconds(levelLoader.transitionTime);
 
-            // --- 4) Ein Sound wird abgespielt (Szene ist schwarz, aber noch aktiv) ---
+            // 4. Sound im Dunkeln abspielen
             if (endEffectSound != null)
             {
                 endEffectSound.Play();
-                // Warten, bis der Sound fertig ist, bevor der Szenenwechsel den Ton killt
+                // Warten, bis der Sound fertig ist
                 yield return new WaitForSeconds(endEffectSound.clip.length);
             }
 
-            // --- 5) Überleitung zur nächsten Szene (Abspann) ---
+            // 5. Szenenwechsel
             SceneManager.LoadScene(nextSceneName);
         }
-    }
-
-    // --- Trigger Bereichs-Logik ---
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (sequenceStarted) return;
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInside = true;
-            if (interactionHint != null) interactionHint.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInside = false;
-            if (interactionHint != null) interactionHint.SetActive(false);
-        }
-    }
-
-    public override IEnumerator Execute(TriggerInfoBundle ctx)
-    {
-        // Bleibt leer, da wir Update() für die E-Taste nutzen
-        yield break;
     }
 }

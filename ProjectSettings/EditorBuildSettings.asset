@@ -48,10 +48,13 @@ EditorBuildSettings:
     path: Assets/Levels/Desert Level/Desert_Level3.unity
     guid: 44710781c18ec0f43acf44f46d5eb08d
   - enabled: 1
-    path: Assets/Levels/Desert Level/Desert_Level4_TheGrandTemple.unity
+    path: Assets/Levels/EndgameLevel/Desert_Level4_TheGrandTemple.unity
     guid: d1a90c233986a4a41829bf4aafad628c
   - enabled: 1
-    path: Assets/Levels/Forest Level/Forest_LastLevel_GameEnd.unity
+    path: Assets/Levels/EndgameLevel/FlightOfThePhoenix.unity
+    guid: 1035f519f68cb754b80ade2016e3f226
+  - enabled: 1
+    path: Assets/Levels/EndgameLevel/Forest_LastLevel_GameEnd.unity
     guid: 3789dcd2a826813448b2ad1c044a445f
   - enabled: 1
     path: Assets/Levels/Forest_Level1.unity
