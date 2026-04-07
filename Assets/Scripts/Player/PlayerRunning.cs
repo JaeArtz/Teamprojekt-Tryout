@@ -71,8 +71,6 @@ public class PlayerRunning : MonoBehaviour
             movementVelocity, //Mathf.Clamp(movementVelocity, -(float)maxVelocityX * targetSpeedManipulator, (float)maxVelocityX * targetSpeedManipulator),
             body.linearVelocity.y
         );
-
-        Debug.Log($"{body.linearVelocity.magnitude}");
     }
 
     private void AdjustVelocityToSlope(float horizontalInput)
@@ -85,8 +83,7 @@ public class PlayerRunning : MonoBehaviour
         }
 
         float slopeAngle = Vector2.Angle(Hit.normal, Vector2.up);
-
-        if (Mathf.Abs(slopeAngle) < 0.1f)
+        if (slopeAngle < 0.1f || slopeAngle > 80.0f)
         {
             body.gravityScale = 3;
             isOnSlope = false;
