@@ -15,6 +15,7 @@ TagManager:
   - Background
   - Lightball
   - BreakableWall
+  - Slope
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Ceiling
   - 'Climbable '
   - Player
-  - 
+  - Slope
   - SinkingGround_CoverTiles
   - BreakableWall
   - SolidBossParts
