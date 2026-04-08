@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 91440b6290d404849a1dad40853e7eb6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3332901545600689908
+    second: WallRolling_CrashCrumble_3_0
+  - first:
+      213: -3254347630713023620
+    second: WallRolling_CrashCrumble_3_1
+  - first:
+      213: -1195316724380861612
+    second: WallRolling_CrashCrumble_3_2
+  - first:
+      213: 8831343098234077100
+    second: WallRolling_CrashCrumble_3_3
+  - first:
+      213: -3913733256848962146
+    second: WallRolling_CrashCrumble_3_4
+  - first:
+      213: -1583242738268344363
+    second: WallRolling_CrashCrumble_3_5
+  - first:
+      213: -2629236080231626812
+    second: WallRolling_CrashCrumble_3_6
+  - first:
+      213: 8722903793451829729
+    second: WallRolling_CrashCrumble_3_7
+  - first:
+      213: -7444104377824635800
+    second: WallRolling_CrashCrumble_3_8
+  - first:
+      213: 4083494314522263925
+    second: WallRolling_CrashCrumble_3_9
+  - first:
+      213: 6747714497082103426
+    second: WallRolling_CrashCrumble_3_10
+  - first:
+      213: 3506748911779968792
+    second: WallRolling_CrashCrumble_3_11
+  - first:
+      213: 1882239416083715636
+    second: WallRolling_CrashCrumble_3_12
+  - first:
+      213: -1361469431390612204
+    second: WallRolling_CrashCrumble_3_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 98
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f621e81c48d04e20800000000000000
+      internalID: 3332901545600689908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 82
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7357b7721c36d2d0800000000000000
+      internalID: -3254347630713023620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 82
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45bf131b5c1696fe0800000000000000
+      internalID: -1195316724380861612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_3
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 66
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caff6d3e1cb3f8a70800000000000000
+      internalID: 8831343098234077100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_4
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 68
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d82e7b650afa9c0800000000000000
+      internalID: -3913733256848962146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 72
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df6c403e11370ae0800000000000000
+      internalID: -1583242738268344363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_6
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 54
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7472f17b3138bd0800000000000000
+      internalID: -2629236080231626812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 54
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e98a92c8cafd0970800000000000000
+      internalID: 8722903793451829729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_8
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 59
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86415d8428a31b890800000000000000
+      internalID: -7444104377824635800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_9
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 46
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5714d6b917c7ba830800000000000000
+      internalID: 4083494314522263925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_10
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 45
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286155c8592b4ad50800000000000000
+      internalID: 6747714497082103426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_11
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 48
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817f1234e897aa030800000000000000
+      internalID: 3506748911779968792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_12
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 38
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43698e1c6ce0f1a10800000000000000
+      internalID: 1882239416083715636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallRolling_CrashCrumble_3_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 37
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415d869f3c61b1de0800000000000000
+      internalID: -1361469431390612204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WallRolling_CrashCrumble_3_0: 3332901545600689908
+      WallRolling_CrashCrumble_3_1: -3254347630713023620
+      WallRolling_CrashCrumble_3_10: 6747714497082103426
+      WallRolling_CrashCrumble_3_11: 3506748911779968792
+      WallRolling_CrashCrumble_3_12: 1882239416083715636
+      WallRolling_CrashCrumble_3_13: -1361469431390612204
+      WallRolling_CrashCrumble_3_2: -1195316724380861612
+      WallRolling_CrashCrumble_3_3: 8831343098234077100
+      WallRolling_CrashCrumble_3_4: -3913733256848962146
+      WallRolling_CrashCrumble_3_5: -1583242738268344363
+      WallRolling_CrashCrumble_3_6: -2629236080231626812
+      WallRolling_CrashCrumble_3_7: 8722903793451829729
+      WallRolling_CrashCrumble_3_8: -7444104377824635800
+      WallRolling_CrashCrumble_3_9: 4083494314522263925
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

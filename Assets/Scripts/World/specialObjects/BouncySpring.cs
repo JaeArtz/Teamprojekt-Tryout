@@ -36,6 +36,9 @@ public class BouncySpring : MonoBehaviour
             // uses property float in PlayerMovement-Skript to set y-velocity
             player.Jump(yVel: bounceForce);
 
+            // make doubleJump available, always, after touching BouncyShroom
+            player.ResetDoubleJumps();
+
             // triggers animation for bounce
             if (anim != null)
             {
