@@ -2,10 +2,18 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    private Vector3 respawnPoint;
+    public Vector3 respawnPoint;
+    private GameObject mySaveGame;
     public bool useCheckpoints = true;
 
-    
+    //public Vector3 RespawnPoint => respawnPoint;
+
+    private void Awake()
+    {
+        mySaveGame = GameObject.Find("Saver");
+    }
+
+
     /// <summary>
     /// Is called once before the first execution of Update after the MonoBehaviour is created.
     /// </summary>
@@ -30,6 +38,7 @@ public class PlayerRespawn : MonoBehaviour
     public void SetCheckpoint(Vector3 newCheckpoint)
     {
         respawnPoint = newCheckpoint;
+        mySaveGame.GetComponent<SaveGame>().SaveCurrentGame();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

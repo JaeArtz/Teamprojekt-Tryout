@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Dennis Utilities/MainMenu/Scenes/DecideLoadableMenu.unity
+    guid: 7f9e1b94fc7bbf744baa7b196e8e8da0
+  - enabled: 1
     path: Assets/Dennis Utilities/MainMenu/Scenes/MainMenu.unity
     guid: f0b99b8348297684e921923362dc5937
   - enabled: 1
-    path: Assets/Levels/Forest_Level1.unity
-    guid: 48aaa190628ed224bacba1f4674448de
+    path: Assets/Dennis Utilities/MainMenu/Scenes/SavefileSelect.unity
+    guid: 27943bca893561d4e9780d05d6674ca9
+  - enabled: 1
+    path: Assets/Dennis Utilities/MainMenu/Scenes/LoadedMenu.unity
+    guid: 71114559de28520438b64beca4144a0a
   - enabled: 1
     path: Assets/Levels/Forest Level/Forest_Tutorial_Level1.unity
     guid: 49eb15cd6240d544d97dd819a2daf322
@@ -27,11 +33,11 @@ EditorBuildSettings:
     path: Assets/Levels/Forest Level/Forest_Swamp_Level2.unity
     guid: 8ffbdddd528c38645a84bfc43de1d553
   - enabled: 1
-    path: Assets/Levels/Forest Level/Forest_Swamp_Level3.unity
-    guid: 894c61aeaf866354eb784298a87363c1
-  - enabled: 1
-    path: Assets/Levels/Forest Level/Forest_Swamp_Level4_EndOfForest.unity
+    path: Assets/Levels/Forest Level/Forest_Swamp_Level3_EndOfForest.unity
     guid: 6afc77b3aaea34b429c82b882c3819b6
+  - enabled: 1
+    path: Assets/Levels/Dungeon Level/Dungeon_Level1.unity
+    guid: 02a732137e4b97642940732165ee899b
   - enabled: 1
     path: Assets/Levels/Desert Level/Desert_Level1.unity
     guid: 94c3fb6373580ca40aed449ab543f573
@@ -42,11 +48,17 @@ EditorBuildSettings:
     path: Assets/Levels/Desert Level/Desert_Level3.unity
     guid: 44710781c18ec0f43acf44f46d5eb08d
   - enabled: 1
-    path: Assets/Levels/Desert Level/Desert_Level4_TheGrandTemple.unity
+    path: Assets/Levels/EndgameLevel/Desert_Level4_TheGrandTemple.unity
     guid: d1a90c233986a4a41829bf4aafad628c
   - enabled: 1
-    path: Assets/Levels/Forest Level/Forest_LastLevel_GameEnd.unity
+    path: Assets/Levels/EndgameLevel/FlightOfThePhoenix.unity
+    guid: 1035f519f68cb754b80ade2016e3f226
+  - enabled: 1
+    path: Assets/Levels/EndgameLevel/Forest_LastLevel_GameEnd.unity
     guid: 3789dcd2a826813448b2ad1c044a445f
+  - enabled: 1
+    path: Assets/Levels/Forest_Level1.unity
+    guid: 48aaa190628ed224bacba1f4674448de
   - enabled: 1
     path: Assets/Dennis Utilities/ThankYou/ThankYou.unity
     guid: 71c7871daccdd524083ae32b811cff29

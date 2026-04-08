@@ -5,16 +5,16 @@ public class SinkingGround : MonoBehaviour
 
     [Header("Sink Settings")]
     [Tooltip("slows player movement")]
-    [SerializeField] private float slowFactor = 0.3f; // 0.3f = 30% of normal velocity
+    [SerializeField] private float slowFactor = 0.7f; // 0.3f = 30% of normal velocity
 
     [Tooltip("restricts jumping height/force")]
-    [SerializeField] private float jumpFactor = 0.2f; // 0.2f = almost no jumping possibly
+    [SerializeField] private float jumpFactor = 0.9f; // 0.2f = almost no jumping possibly
 
     [Tooltip("slowly pulls player into SinkingGround")]
-    [SerializeField] private float sinkForce = -0.5f; // slowly pulls palyer down, and causes damage, until avatar reaches checkpoint and teleports
+    [SerializeField] private float sinkForce = -0.2f; // slowly pulls palyer down, and causes damage, until avatar reaches checkpoint and teleports
 
     [Tooltip("time window for jumping while in SinkingGround (Coyote Time override)")]
-    [SerializeField] private float sinkingGroundCoyouteTime = 0.2f;
+    [SerializeField] private float sinkingGroundCoyouteTime = 0.7f;
 
     private float? _originalMaxX;
     private float? _originalMaxY;
