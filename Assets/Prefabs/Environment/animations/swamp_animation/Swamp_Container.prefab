@@ -566,10 +566,8 @@ GameObject:
   - component: {fileID: 1560234880108612916}
   - component: {fileID: 2976255640944132091}
   - component: {fileID: 2502535254793668096}
-  - component: {fileID: 6896119904632016935}
-  - component: {fileID: 1959522685347637528}
   m_Layer: 0
-  m_Name: Swamp_MovingMud_withSound
+  m_Name: Swamp_MovingMud_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -670,115 +668,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!82 &6896119904632016935
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2908299426291211229}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 5b4b20d751725c5488711ff3e9f3bfa7, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 3
-  MaxDistance: 15
-  Pan2D: 0
-  rolloffMode: 1
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1959522685347637528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2908299426291211229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
 --- !u!1 &2972963436697093600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +894,6 @@ GameObject:
   - component: {fileID: 7995367630852248280}
   - component: {fileID: 790784264776995740}
   - component: {fileID: 1779509934561757959}
-  - component: {fileID: 3203430120652671201}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (1)
   m_TagString: Untagged
@@ -1120,18 +1008,6 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!114 &3203430120652671201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3208606008823964618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
 --- !u!1 &3743721147481126631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,7 +1021,6 @@ GameObject:
   - component: {fileID: 1557542073590892329}
   - component: {fileID: 957902856030887788}
   - component: {fileID: 9109524574758743485}
-  - component: {fileID: 8207023273988783330}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (2)
   m_TagString: Untagged
@@ -1261,18 +1136,6 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &9109524574758743485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3743721147481126631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
---- !u!114 &8207023273988783330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1436,7 +1299,6 @@ GameObject:
   - component: {fileID: 1453839880806019007}
   - component: {fileID: 429800233243641756}
   - component: {fileID: 1050150323761247389}
-  - component: {fileID: 8127401334826186226}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (1)
   m_TagString: Untagged
@@ -1548,22 +1410,10 @@ SortingGroup:
   m_GameObject: {fileID: 5112461469218775040}
   m_Enabled: 1
   m_SortingLayerID: 535374819
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &1050150323761247389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5112461469218775040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
---- !u!114 &8127401334826186226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1727,7 +1577,6 @@ GameObject:
   - component: {fileID: 8725446430569917393}
   - component: {fileID: 1689853345480223201}
   - component: {fileID: 6527620992881009493}
-  - component: {fileID: 5233156383902336109}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (3)
   m_TagString: Untagged
@@ -1854,18 +1703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
---- !u!114 &5233156383902336109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5315436813621623995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
 --- !u!1 &5443847533280460447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,7 +1716,6 @@ GameObject:
   - component: {fileID: 3618459042950462326}
   - component: {fileID: 2440004047363533752}
   - component: {fileID: 6155141572867973750}
-  - component: {fileID: 3403868830412949368}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (6)
   m_TagString: Untagged
@@ -1995,18 +1831,6 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &6155141572867973750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5443847533280460447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
---- !u!114 &3403868830412949368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2221,7 +2045,6 @@ GameObject:
   - component: {fileID: 7480544835831732988}
   - component: {fileID: 6605753754120191315}
   - component: {fileID: 207285586661700222}
-  - component: {fileID: 3652853298047701743}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (1)
   m_TagString: Untagged
@@ -2333,22 +2156,10 @@ SortingGroup:
   m_GameObject: {fileID: 7088671523111701510}
   m_Enabled: 1
   m_SortingLayerID: 535374819
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &207285586661700222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7088671523111701510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
---- !u!114 &3652853298047701743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2373,7 +2184,6 @@ GameObject:
   - component: {fileID: 6260503339807029628}
   - component: {fileID: 8203241604469880379}
   - component: {fileID: 660920528202777655}
-  - component: {fileID: 7152348779205589751}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (5)
   m_TagString: Untagged
@@ -2489,18 +2299,6 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &660920528202777655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7210653260163210353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
---- !u!114 &7152348779205589751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2664,7 +2462,6 @@ GameObject:
   - component: {fileID: 7504784858023341428}
   - component: {fileID: 2255259101227270066}
   - component: {fileID: 9201443218919835860}
-  - component: {fileID: 7662269220682377478}
   m_Layer: 0
   m_Name: Swamp_MovingMud_1 (4)
   m_TagString: Untagged
@@ -2776,22 +2573,10 @@ SortingGroup:
   m_GameObject: {fileID: 8468610310111750806}
   m_Enabled: 1
   m_SortingLayerID: 535374819
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &9201443218919835860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8468610310111750806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
---- !u!114 &7662269220682377478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

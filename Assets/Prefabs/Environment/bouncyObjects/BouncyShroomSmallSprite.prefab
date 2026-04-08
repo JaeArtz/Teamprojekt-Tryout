@@ -109,13 +109,8 @@ MonoBehaviour:
   bounceForce: 22
   bounceTriggerName: Bounce1
   bounceSounds:
-  - {fileID: 8300000, guid: bb5927686e1ca9045b16be1e6edfb28f, type: 3}
-  - {fileID: 8300000, guid: 84db208745b8d72488bbac30a69b31c2, type: 3}
-  - {fileID: 8300000, guid: af3b8870b47b8f44ebd9b0c77ff8fb77, type: 3}
-  - {fileID: 8300000, guid: ed17e6bcef067e645b8e3db503e8dea6, type: 3}
-  - {fileID: 8300000, guid: aa90c786997783e4990b93207a696e47, type: 3}
-  - {fileID: 8300000, guid: af2d146296f572545a6e1a2ae0da490d, type: 3}
-  - {fileID: 8300000, guid: 4db6879d86f55564db0929f1e8b02dce, type: 3}
+  - {fileID: 8300000, guid: bdf47a883f8aaa4448b3a6669fd52f26, type: 3}
+  - {fileID: 8300000, guid: 6421cca0b4a8f0e459fcb36a7060ff3e, type: 3}
   volume: 0.7
 --- !u!61 &4408940897072096463
 BoxCollider2D:

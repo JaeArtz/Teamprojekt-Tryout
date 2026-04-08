@@ -8,7 +8,7 @@ public class EnemyDamage : MonoBehaviour
     private float nextDamageTime;
 
     private bool isInside = false;
-    protected PlayerHealth playerHealth;
+    private PlayerHealth playerHealth;
 
     private void Update()
     {

@@ -8,10 +8,8 @@ public class PlayerHealth : MonoBehaviour
     private GameObject Player;
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
-    public static event Action OnPlayerLiveUpdate;
 
     private GameObject myLevelLoader;
-    private LevelManager myLevelManager;
 
     public int maxHealth;
     public int currentHealth;
@@ -28,39 +26,23 @@ public class PlayerHealth : MonoBehaviour
     {
         playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();
         myLevelLoader = GameObject.Find("LevelLoader");
-        myLevelManager = GameObject.Find("GameManager").GetComponent<LevelManager>();
         Player = GameObject.Find("Player");
 
+        Assert.AreEqual(currentHealth, maxHealth);
+        currentHealth = maxHealth;
         PlayerData data = SaveSystem.LoadData();
         if(data != null && data.wasLoaded == true)
         {
             currentHealth = data.currentLives;
-            maxHealth = 6 + SaveSystem.LoadLeafData().Count;
-            
             Vector3 position;
             position.x = data.currentPosition[0];
             position.y = data.currentPosition[1];
             position.z = data.currentPosition[2];
 
-            transform.position = position;
+            transform.localPosition = position;
             SaveSystem.AlterDataCheck(false);
-
-            //Player.GetComponent<PlayerRespawn>().RespawnNow();
-        }
-        else
-        {
-            if (!(SaveSystem.LoadData() == null))
-                maxHealth = 6 + SaveSystem.LoadLeafData().Count;
-            else
-                maxHealth = 6;
-            currentHealth = maxHealth;
         }
         currentScene = SceneManager.GetActiveScene().name;
-    }
-
-    void Start()
-    {
-        myLevelManager.SaveCurrentLevel();
     }
 
     // Update is called once per frame
@@ -151,15 +133,5 @@ public class PlayerHealth : MonoBehaviour
             OnPlayerDamaged?.Invoke();
         }
     }
-
-    public void UpdateLives()
-    {
-        maxHealth = 6 + SaveSystem.LoadLeafData().Count;
-        if (!(currentHealth >= maxHealth))
-            currentHealth++;
-        //healthBar.SetHealth(currentHealth);
-        OnPlayerLiveUpdate?.Invoke();
-        
-    }
-
+     
 }

@@ -27,8 +27,8 @@ public class CollectableManager : MonoBehaviour
 
     private void SaveCollectedLeaves()
     {
+        SaveSystem.SaveData(player.GetComponent<PlayerHealth>());
         SaveSystem.SaveLeafData(collectedLeaves);
-        player.GetComponent<PlayerHealth>().UpdateLives();
     }
 
     private void LoadCollectedLeaves()

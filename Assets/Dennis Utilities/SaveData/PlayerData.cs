@@ -31,14 +31,4 @@ public class PlayerData
         wasLoaded = loaded;
     }
 
-    public PlayerData(PlayerHealth player, PlayerRespawn respawn)
-    {
-        currentLives = player.currentHealth;
-        currentPosition = new float[3];
-        currentPosition[0] = respawn.respawnPoint.x;
-        currentPosition[1] = respawn.respawnPoint.y;
-        currentPosition[2] = respawn.respawnPoint.z;
-        currentScene = player.currentScene;
-    }
-
 }

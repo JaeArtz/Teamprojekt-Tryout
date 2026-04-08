@@ -179,5 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile
   damage: 1
-  damageInterval: 0
-  initialDelay: 0
+  damageInterval: 2
+  speed: 10
+  resetTime: 5

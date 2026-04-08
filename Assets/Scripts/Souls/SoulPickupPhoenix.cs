@@ -1,15 +1,13 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
+
 public class SoulPickupPhoenix : MonoBehaviour
 {
     [Header("Objects")]
     public GameObject phoenixObject;
     public Transform phoenixTargetPoint;
     public GameObject camTrackerPoint;
-    private GameObject myLevelLoader;
-    public PlayerController playerController;
-    
+    public LevelLoaderScript levelLoader;
 
     [Header("Teleportation")]
     public Transform playerTeleportPoint;      // Punkt 1 (Sand)
@@ -27,10 +25,6 @@ public class SoulPickupPhoenix : MonoBehaviour
 
     private bool collectedPhoenix = false;
 
-    private void Awake()
-    {
-        myLevelLoader = GameObject.Find("LevelLoader");
-    }
     private void Start()
     {
         if (phoenixObject != null) phoenixObject.SetActive(false);
@@ -40,8 +34,6 @@ public class SoulPickupPhoenix : MonoBehaviour
     {
         if (collectedPhoenix || !other.CompareTag("Player")) return;
         collectedPhoenix = true;
-
-        // playerController.SetInputLocked(true);
 
         // --- DER ABSOLUTE FIX ---
         // Wir suchen das Objekt mit dem Namen "Player". 
@@ -135,9 +127,10 @@ public class SoulPickupPhoenix : MonoBehaviour
         player.SetActive(true);
 
         // Level Loader triggern
-        
-        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        
+        if (levelLoader != null)
+        {
+            levelLoader.LoadNextLevel();
+        }
 
         gameObject.SetActive(false);
     }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerRunning : MonoBehaviour
@@ -11,6 +12,10 @@ public class PlayerRunning : MonoBehaviour
 
     [SerializeField, Tooltip("Decelerates player to movement speed 0. Deceleration speed is applied when player movement direction is different to keyboard input direction")]
     private float playerDecelerationX = 15f;
+
+    private float movementVelocity;
+
+    private bool isOnSlope;
 
     private Rigidbody2D body;
     public Rigidbody2D Body { set { body = value; } }
@@ -34,12 +39,13 @@ public class PlayerRunning : MonoBehaviour
 
     public void ApplyNormalMovement(float horizontalInput)
     {
-        AdjustVelocityToSlope(horizontalInput);
         Move(horizontalInput);
+        AdjustVelocityToSlope(horizontalInput);
     }
 
     public void ApplyWalljumpMovement(float horizontalInput, float t)
     {
+        movementVelocity = body.linearVelocityX;
         float manipulator = Mathf.Lerp(1f, 0f, t);
         float wallJumpVelocity = Mathf.Lerp(playerMaxVelocityX, walljumpVelocityX, t);
         Move(horizontalInput, maxVelocityX: wallJumpVelocity, accelerationRateManipulator: manipulator, decelerationRateManipulator: manipulator);
@@ -56,12 +62,13 @@ public class PlayerRunning : MonoBehaviour
             maxVelocityX = playerMaxVelocityX;
 
         float targetSpeed = horizontalInput * (float)maxVelocityX * targetSpeedManipulator;
-        float accelRate = Mathf.Sign(body.linearVelocityX) == Mathf.Sign(targetSpeed) && horizontalInput != 0 ? playerAccelerationX * accelerationRateManipulator : playerDecelerationX * decelerationRateManipulator;
-        float speedDiff = targetSpeed - body.linearVelocity.x;
+        float accelRate = Mathf.Sign(movementVelocity) == Mathf.Sign(targetSpeed) && horizontalInput != 0 ? playerAccelerationX * accelerationRateManipulator : playerDecelerationX * decelerationRateManipulator;
+        float speedDiff = targetSpeed - movementVelocity;
         float movement = speedDiff * accelRate * Time.fixedDeltaTime;
+        movementVelocity += movement;
 
         body.linearVelocity = new Vector2(
-            Mathf.Clamp(body.linearVelocity.x + movement, -(float)maxVelocityX * targetSpeedManipulator, (float)maxVelocityX * targetSpeedManipulator),
+            movementVelocity, //Mathf.Clamp(movementVelocity, -(float)maxVelocityX * targetSpeedManipulator, (float)maxVelocityX * targetSpeedManipulator),
             body.linearVelocity.y
         );
     }
@@ -71,23 +78,25 @@ public class PlayerRunning : MonoBehaviour
         if (!Hit)
         {
             body.gravityScale = 3;
+            isOnSlope = false;
             return;
         }
 
-        var slopeRotation = Quaternion.FromToRotation(Vector3.up, Hit.normal);
-
-        if (Mathf.Abs(slopeRotation.y) < 0.1f)
+        float slopeAngle = Vector2.Angle(Hit.normal, Vector2.up);
+        if (slopeAngle < 0.1f || slopeAngle > 80.0f)
         {
-            //if (body.linearVelocityX < 0.01f) body.linearVelocityX = 0f;
-            //if (body.linearVelocityY < 0.01f) body.linearVelocityY = 0f;
             body.gravityScale = 3;
+            isOnSlope = false;
             return;
         }
-        else if (horizontalInput == 0f) body.gravityScale = 0;
 
-        var adjustedVelocity = slopeRotation * body.linearVelocity;
-        if (adjustedVelocity.y < 0)
-            body.linearVelocity = adjustedVelocity;
-        Debug.Log($"{body.gravityScale}");
+        if (horizontalInput == 0f) body.gravityScale = 0;
+
+        isOnSlope = true;
+        Vector2 direction = Hit.normal.Perpendicular1();
+        Vector2 adjustedVelocity = direction * body.linearVelocity.x;
+        if (body.linearVelocityY > 0.1f)
+            adjustedVelocity.y = body.linearVelocityY;
+        body.linearVelocity = adjustedVelocity;
     }
 }
