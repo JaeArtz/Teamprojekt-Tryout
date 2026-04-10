@@ -3,14 +3,29 @@ using UnityEngine;
 public class FallingSpike : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator animator;
+    SpriteRenderer parentSpriteRenderer;
+
+    [Header("Audio Settings")]
+    [Tooltip("Sound played as Warning before Spime falls down")]
+    [SerializeField] private AudioSource audioSourceWarning;
+    [Tooltip("Sound played on impact of FallDown and Splatter")]
+    [SerializeField] private AudioSource audioSourceFallingCrush;
+
     [SerializeField] private LayerMask playerLayer;
     public float distance;
     public float speed;
+    [Tooltip("Time until FallingSpike destroys itself after falling down")]
+    public float delaySelfdestruct= 1f;
     bool isFalling = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
+        parentSpriteRenderer = GetComponent<SpriteRenderer>();
+        // audioSourceWarning = GetComponent<AudioSource>();
+        // audioSourceFallingCrush = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -22,6 +37,12 @@ public class FallingSpike : MonoBehaviour
 
             if(hit.collider != null) // hit.collider reicht hier völlig aus
             {
+                // 0. WARNING
+                if (audioSourceWarning != null && audioSourceWarning.clip != null)
+                {
+                    audioSourceWarning.PlayOneShot(audioSourceWarning.clip);
+                }
+
                 rb.gravityScale = speed;
                 isFalling = true;
             }
@@ -32,11 +53,32 @@ public class FallingSpike : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground")) // Wenn der Spike den Boden berührt, wird er zerstört
         {
+           
+            // 1. FALL
             rb.linearVelocity = Vector2.zero; 
             rb.gravityScale = 0;
             rb.bodyType = RigidbodyType2D.Kinematic;
 
-            Destroy(gameObject, 1f);
+            // 1.5 PARENTSPIKE TURNS INVISIBLE
+            if (parentSpriteRenderer != null)
+            { 
+                parentSpriteRenderer.enabled = false;
+            }
+
+            // 2. SOUND
+            if (audioSourceFallingCrush != null && audioSourceFallingCrush.clip != null)
+            {
+                audioSourceFallingCrush.PlayOneShot(audioSourceFallingCrush.clip);
+            }
+
+            // 3. ANIMATION
+            if (animator != null) 
+            {
+                animator.SetTrigger("HitGround");
+            }
+
+            // 4. SELFDESTRUCT
+            Destroy(gameObject, delaySelfdestruct);
         }
     }
 

@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 88964fe196b800e4ab962aa4038c2568
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3406963391953239651
+    second: Baumstumpf und alte Holzplanken_0
+  - first:
+      213: -2087343307659147644
+    second: Baumstumpf und alte Holzplanken_1
+  - first:
+      213: -3442775172051076713
+    second: Baumstumpf und alte Holzplanken_2
+  - first:
+      213: 1650423507959291645
+    second: Baumstumpf und alte Holzplanken_3
+  - first:
+      213: 6546003420014611223
+    second: Baumstumpf und alte Holzplanken_4
+  - first:
+      213: -7142154119305146557
+    second: Baumstumpf und alte Holzplanken_5
+  - first:
+      213: 8360628868450972965
+    second: Baumstumpf und alte Holzplanken_6
+  - first:
+      213: 6839090735892147027
+    second: Baumstumpf und alte Holzplanken_7
+  - first:
+      213: 6745501177663054241
+    second: Baumstumpf und alte Holzplanken_8
+  - first:
+      213: -5331828872770244583
+    second: Baumstumpf und alte Holzplanken_9
+  - first:
+      213: -4467445038054289508
+    second: Baumstumpf und alte Holzplanken_10
+  - first:
+      213: 462532796097847531
+    second: Baumstumpf und alte Holzplanken_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 194
+        width: 445
+        height: 652
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ef1247727f74f20800000000000000
+      internalID: 3406963391953239651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_1
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 792
+        width: 386
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48600b622544803e0800000000000000
+      internalID: -2087343307659147644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 551
+        width: 418
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7997c5cb83ec830d0800000000000000
+      internalID: -3442775172051076713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_3
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 552
+        width: 385
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe1ed8af6b77e610800000000000000
+      internalID: 1650423507959291645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_4
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 583
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b8674ad6318da50800000000000000
+      internalID: 6546003420014611223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_5
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 793
+        width: 383
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f49b35ba8f1ec90800000000000000
+      internalID: -7142154119305146557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_6
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 347
+        width: 335
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52575eac8abe60470800000000000000
+      internalID: 8360628868450972965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_7
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 435
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b248b0ac459ee50800000000000000
+      internalID: 6839090735892147027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_8
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 349
+        width: 331
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1e596f495dc9d50800000000000000
+      internalID: 6745501177663054241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_9
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 127
+        width: 213
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 910bb53b3e98106b0800000000000000
+      internalID: -5331828872770244583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_10
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 124
+        width: 250
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9f413d48627002c0800000000000000
+      internalID: -4467445038054289508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baumstumpf und alte Holzplanken_11
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 119
+        width: 199
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be06160a02f3b6600800000000000000
+      internalID: 462532796097847531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 36562b050f1bbcb4392f169d4bcfe197
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Baumstumpf und alte Holzplanken_0: 3406963391953239651
+      Baumstumpf und alte Holzplanken_1: -2087343307659147644
+      Baumstumpf und alte Holzplanken_10: -4467445038054289508
+      Baumstumpf und alte Holzplanken_11: 462532796097847531
+      Baumstumpf und alte Holzplanken_2: -3442775172051076713
+      Baumstumpf und alte Holzplanken_3: 1650423507959291645
+      Baumstumpf und alte Holzplanken_4: 6546003420014611223
+      Baumstumpf und alte Holzplanken_5: -7142154119305146557
+      Baumstumpf und alte Holzplanken_6: 8360628868450972965
+      Baumstumpf und alte Holzplanken_7: 6839090735892147027
+      Baumstumpf und alte Holzplanken_8: 6745501177663054241
+      Baumstumpf und alte Holzplanken_9: -5331828872770244583
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -227,10 +227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   breakSounds:
-  - {fileID: 8300000, guid: 690ff14c0024a1040af2e2cf33664735, type: 3}
-  - {fileID: 8300000, guid: 2232bf49c4a0cac42bc982b5c3c758d9, type: 3}
-  - {fileID: 8300000, guid: afe76982f94bc5f4cbf30cfde122c671, type: 3}
-  - {fileID: 8300000, guid: bc95d29ecf28cc54f99ed1e7075f4b85, type: 3}
+  - {fileID: 8300000, guid: 309828bf1c665b94b97cc25212701dfc, type: 3}
+  - {fileID: 8300000, guid: e83f35ea8d618774282d268a9584192a, type: 3}
+  - {fileID: 8300000, guid: 93e599d2a452d5643a0bdef5d2cd7255, type: 3}
+  - {fileID: 8300000, guid: 4d33204f75a84124998a5961d91c6e32, type: 3}
 --- !u!61 &6733316994843306078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -327,10 +327,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   breakSounds:
-  - {fileID: 8300000, guid: 690ff14c0024a1040af2e2cf33664735, type: 3}
-  - {fileID: 8300000, guid: 2232bf49c4a0cac42bc982b5c3c758d9, type: 3}
-  - {fileID: 8300000, guid: afe76982f94bc5f4cbf30cfde122c671, type: 3}
-  - {fileID: 8300000, guid: bc95d29ecf28cc54f99ed1e7075f4b85, type: 3}
+  - {fileID: 8300000, guid: 309828bf1c665b94b97cc25212701dfc, type: 3}
+  - {fileID: 8300000, guid: e83f35ea8d618774282d268a9584192a, type: 3}
+  - {fileID: 8300000, guid: 93e599d2a452d5643a0bdef5d2cd7255, type: 3}
+  - {fileID: 8300000, guid: 4d33204f75a84124998a5961d91c6e32, type: 3}
 --- !u!61 &8680620968611033749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -729,10 +729,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   breakSounds:
-  - {fileID: 8300000, guid: 690ff14c0024a1040af2e2cf33664735, type: 3}
-  - {fileID: 8300000, guid: 2232bf49c4a0cac42bc982b5c3c758d9, type: 3}
-  - {fileID: 8300000, guid: afe76982f94bc5f4cbf30cfde122c671, type: 3}
-  - {fileID: 8300000, guid: bc95d29ecf28cc54f99ed1e7075f4b85, type: 3}
+  - {fileID: 8300000, guid: 309828bf1c665b94b97cc25212701dfc, type: 3}
+  - {fileID: 8300000, guid: e83f35ea8d618774282d268a9584192a, type: 3}
+  - {fileID: 8300000, guid: 93e599d2a452d5643a0bdef5d2cd7255, type: 3}
+  - {fileID: 8300000, guid: 4d33204f75a84124998a5961d91c6e32, type: 3}
 --- !u!61 &3127365512357527053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1096,10 +1096,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   breakSounds:
-  - {fileID: 8300000, guid: 690ff14c0024a1040af2e2cf33664735, type: 3}
-  - {fileID: 8300000, guid: 2232bf49c4a0cac42bc982b5c3c758d9, type: 3}
-  - {fileID: 8300000, guid: afe76982f94bc5f4cbf30cfde122c671, type: 3}
-  - {fileID: 8300000, guid: bc95d29ecf28cc54f99ed1e7075f4b85, type: 3}
+  - {fileID: 8300000, guid: 309828bf1c665b94b97cc25212701dfc, type: 3}
+  - {fileID: 8300000, guid: e83f35ea8d618774282d268a9584192a, type: 3}
+  - {fileID: 8300000, guid: 93e599d2a452d5643a0bdef5d2cd7255, type: 3}
+  - {fileID: 8300000, guid: 4d33204f75a84124998a5961d91c6e32, type: 3}
 --- !u!61 &3128278968618886075
 BoxCollider2D:
   m_ObjectHideFlags: 0
