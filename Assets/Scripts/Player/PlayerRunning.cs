@@ -93,7 +93,7 @@ public class PlayerRunning : MonoBehaviour
         if (horizontalInput == 0f) body.gravityScale = 0;
 
         isOnSlope = true;
-        Vector2 direction = Hit.normal.Perpendicular1();
+        Vector2 direction = -Vector2.Perpendicular(Hit.normal);
         Vector2 adjustedVelocity = direction * body.linearVelocity.x;
         if (body.linearVelocityY > 0.1f)
             adjustedVelocity.y = body.linearVelocityY;

@@ -1,5 +1,7 @@
 using System.Collections;
+#if UNITY_EDITOR
 using UnityEditor.EditorTools;
+#endif
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour

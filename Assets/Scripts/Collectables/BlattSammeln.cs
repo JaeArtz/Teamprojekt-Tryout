@@ -1,5 +1,7 @@
 using System;
+#if UNITY_EDITOR
 using UnityEditor.EditorTools;
+#endif
 using UnityEngine;
 
 public class BlattSammeln : MonoBehaviour

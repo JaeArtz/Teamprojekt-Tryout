@@ -207,7 +207,6 @@ GameObject:
   - component: {fileID: 7721169521006941240}
   - component: {fileID: 4717336160096043352}
   - component: {fileID: 3423735428183612455}
-  - component: {fileID: 720800826961815313}
   - component: {fileID: 5729801266187962071}
   - component: {fileID: 6692195962089760032}
   - component: {fileID: 2485881745305635808}
@@ -369,55 +368,6 @@ MonoBehaviour:
   wallCheckSize: {x: 0.2, y: 0.8}
   surfaceCollider: {fileID: 7485720916246040221}
   wallTrigger: {fileID: 5825729416126321004}
---- !u!114 &720800826961815313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5336085332118672733}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30eeb6b77121e5440b38ff917a11015a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  t_movementX: 10
-  t_movementY: 10
-  t_movementDirection: 0
-  t_groundCoyoteCounter: 0
-  t_wallCoyoteCounter: 0
-  t_isGrounded: 0
-  t_isOnWall: 0
-  t_playerWallDirection: 0
-  t_isWallJumping: 0
-  t_isDetached: 0
-  t_isHoldingMoveBtn: 0
-  playerMaxVelocityX: 10
-  playerMaxVelocityY: 12
-  playerAccelerationX: 7
-  playerDecelerationX: 20
-  playerEarlyJumpAbortForceY: 0.5
-  playerMaxWallJumpVelocityX: 18
-  playerMaxWallJumpVelocityY: 12
-  wallSlideSpeed: -3
-  wallJumpDuration: 0.15
-  wallJumpCooldown: 0.2
-  wallJumpAirControlDuration: 1
-  groundCoyoteTime: 0.1
-  wallCoyoteTime: 0.15
-  extraJumps: 1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  wallCheckDistance: 0.1
-  groundCheckDistance: 0.1
-  wallCheckSize: {x: 0.2, y: 0.8}
-  boxCollider: {fileID: 6960786142298283055}
-  surfaceCollider: {fileID: 0}
-  wallTrigger: {fileID: 0}
 --- !u!114 &5729801266187962071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,6 +394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e4d78001b9dca4fadb4b4d8fd2e177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  respawnPoint: {x: 0, y: 0, z: 0}
+  useCheckpoints: 1
 --- !u!114 &2485881745305635808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,12 +408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da4b920f6380754d8aa818332c853cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  Player: {fileID: 5336085332118672733}
-  myLevelLoader: {fileID: 0}
   maxHealth: 6
   currentHealth: 6
   currentScene: 
-  playerIcon: {fileID: 0}
   FullLifeIcon: {fileID: 21300000, guid: 7ac2d9863acd8b24daf5470e36fe144c, type: 3}
   HalfLifeIcon: {fileID: 21300000, guid: 8365d9f07804b054dadb7fca768a2a37, type: 3}
   LowLifeIcon: {fileID: 21300000, guid: e34f2ed0c38d08d44836e3630b2bd8b4, type: 3}
@@ -512,8 +461,9 @@ MonoBehaviour:
   playerMaxWallJumpVelocityX: 18
   playerMaxWallJumpVelocityY: 12
   wallSlideSpeed: -3
-  wallJumpCooldown: 0.1
+  wallJumpCooldownDuration: 0.2
   wallJumpAirControlDuration: 1
+  prohibitRollDuration: 1
   wallCoyoteTime: 0.15
   wallCheckDistance: 0.1
   wallTrigger: {fileID: 0}
