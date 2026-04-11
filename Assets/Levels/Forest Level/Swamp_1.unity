@@ -35435,7 +35435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289036321593342052, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: -0.008333337
       objectReference: {fileID: 0}
     - target: {fileID: 8574418470219668870, guid: ebaad8830292c3342bc2eeeb8a852058, type: 3}
       propertyPath: m_Size.x
@@ -37129,13 +37129,22 @@ PrefabInstance:
       insertIndex: 26
       addedObject: {fileID: 1031280931}
     - targetCorrespondingSourceObject: {fileID: 7943511904617916903, guid: e22bf7ce3dd24cb45b2e49b60a0a141a, type: 3}
-      insertIndex: 28
+      insertIndex: 27
+      addedObject: {fileID: 2028320477}
+    - targetCorrespondingSourceObject: {fileID: 7943511904617916903, guid: e22bf7ce3dd24cb45b2e49b60a0a141a, type: 3}
+      insertIndex: 29
       addedObject: {fileID: 801383415}
     - targetCorrespondingSourceObject: {fileID: 7943511904617916903, guid: e22bf7ce3dd24cb45b2e49b60a0a141a, type: 3}
-      insertIndex: 31
+      insertIndex: 32
       addedObject: {fileID: 1894555711}
     - targetCorrespondingSourceObject: {fileID: 7943511904617916903, guid: e22bf7ce3dd24cb45b2e49b60a0a141a, type: 3}
-      insertIndex: 32
+      insertIndex: 33
+      addedObject: {fileID: 1416128416}
+    - targetCorrespondingSourceObject: {fileID: 7943511904617916903, guid: e22bf7ce3dd24cb45b2e49b60a0a141a, type: 3}
+      insertIndex: 34
+      addedObject: {fileID: 1721549397}
+    - targetCorrespondingSourceObject: {fileID: 7943511904617916903, guid: e22bf7ce3dd24cb45b2e49b60a0a141a, type: 3}
+      insertIndex: 35
       addedObject: {fileID: 189344107}
     - targetCorrespondingSourceObject: {fileID: 7943511904617916903, guid: e22bf7ce3dd24cb45b2e49b60a0a141a, type: 3}
       insertIndex: -1
@@ -40959,6 +40968,158 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6603b0aa8fd250949b3d8ff20186dcd4, type: 3}
+--- !u!1 &1416128415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416128416}
+  - component: {fileID: 1416128421}
+  - component: {fileID: 1416128420}
+  - component: {fileID: 1416128419}
+  - component: {fileID: 1416128418}
+  - component: {fileID: 1416128417}
+  m_Layer: 0
+  m_Name: Swamp_MovingMud_1 (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416128416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416128415}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 191, y: -7, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 720787068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1416128417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416128415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
+--- !u!114 &1416128418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416128415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
+--- !u!210 &1416128419
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416128415}
+  m_Enabled: 1
+  m_SortingLayerID: 1857400313
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+--- !u!95 &1416128420
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416128415}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 257690c659ca60544a65b45e9acb1b53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &1416128421
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416128415}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -6599886367684078699, guid: a02bfd659716aa142bef9c77d5410175, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.07, y: 2.67}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1449585574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40981,7 +41142,7 @@ PrefabInstance:
       objectReference: {fileID: 1876935962}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: messageArray.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
@@ -40998,28 +41159,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[3]'
-      value: 'But sometimes you will have to find other ways to evade them, '
+      value: But sometimes you will have to find other ways to evade them.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[4]'
-      value: or quickly jump over without getting bitten too hard by prickles
+      value: Jump past them as quickly as you can, without getting bitten too hard
+        by prickles
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[5]'
-      value: or drawn too deep underground by the mud.
+      value: or getting drawn too deep underground by the mud.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[6]'
-      value: '<color=red>RELEASE SPACE</color> <color=yellow> to </color> <color=red>STOP
-        GLIDE</color> <color=yellow> and fall to the ground.</color> '
+      value: 'You will always  be able to drag yourself out of the <color=#00E2FB>Swamp
+        Patches</color> '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[7]'
+      value: by jumping as much as you can.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[8]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.000015
+      value: 79.000015
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -128.7
+      value: -127.99999
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41237,15 +41407,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
-      value: The Swamp can be particularly challenging for someone without wings.
+      value: The <color=#00E2FB>Swamp</color> can be particularly challenging for
+        someone without wings.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[1]'
-      value: Luckily, the Bird offers you its Soul.
+      value: Luckily, the <color=#00E2FB>Bird</color> offers you its <color=#00E2FB>Soul</color>.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[2]'
-      value: Now you will be able to glide over some spaces
+      value: Now you will be able to <color=#00E2FB>glide</color> over some spaces
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[3]'
@@ -41253,18 +41424,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[4]'
-      value: '<color=yellow>Press </color> <color=red>SPACE</color> <color=yellow>
-        and </color> <color=red>HOLD SPACE</color> <color=yellow> while in Air </color> '
+      value: '<color=yellow>While in </color><br></color><color=red>MID JUMP</color><color=yellow>,
+        Press </color><color=red>SPACE</color> <color=yellow> and </color><color=red>HOLD
+        SPACE</color><color=yellow> while in Air </color> '
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[5]'
-      value: '<color=yellow>in order to </color> <color=red>GLIDE</color> <color=yellow>
-        while in <br></color> <color=red>MID JUMP</color> <color=yellow>.</color> '
+      value: '<color=yellow> in order to slowly </color><color=red>GLIDE</color><color=yellow>
+        <color=yellow> down.</color> '
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[6]'
-      value: '<color=red>RELEASE SPACE</color> <color=yellow> to </color> <color=red>STOP
-        GLIDE</color> <color=yellow> and fall to the ground.</color> '
+      value: '<color=red>RELEASE SPACE</color><color=yellow> to </color><color=red>STOP
+        GLIDE</color><color=yellow> and fall to the ground.</color> '
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42180,7 +42352,7 @@ PrefabInstance:
       objectReference: {fileID: 1876935962}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: messageArray.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
@@ -42188,30 +42360,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[1]'
-      value: I can tell the Bird is very happy to assist you.
+      value: I can tell the <color=#00E2FB>Bird</color> is very happy to assist you.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[2]'
-      value: Have you tried to <color=red>GLIDE</color> while
+      value: 'Have you tried to <color=red>GLIDE</color> '
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[3]'
-      value: using the Power of the Rabbit?
+      value: while using the Power of the <color=#00E2FB>Rabbit</color>?
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[4]'
-      value: <color=yellow>Press </color> <color=red>SPACE</color> <color=yellow>
-        twice for a </color> <br><color=red>DOUBLE JUMP</color>
+      value: <color=yellow>Press </color><color=red>SPACE</color><color=yellow> a
+        </color> <br><color=red>SECOND TIME</color><color=yellow> while </color><br><color=red>GLIDING</color>
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[5]'
-      value: '<color=yellow> during the </color> <color=red>GLIDE</color> <color=yellow>
-        and go even further. '
+      value: <color=yellow> to combine </color><color=red>GLIDE</color><color=yellow>
+        and</color><br><color=red>DOUBLE JUMP</color>
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[6]'
-      value: '<color=red>RELEASE SPACE</color> <color=yellow> to </color> <color=red>STOP
-        GLIDE</color> <color=yellow> and fall to the ground.</color> '
+      value: '<color=yellow> and go even further.</color> '
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42297,6 +42468,158 @@ Transform:
   - {fileID: 247098982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1721549396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721549397}
+  - component: {fileID: 1721549402}
+  - component: {fileID: 1721549401}
+  - component: {fileID: 1721549400}
+  - component: {fileID: 1721549399}
+  - component: {fileID: 1721549398}
+  m_Layer: 0
+  m_Name: Swamp_MovingMud_1 (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1721549397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721549396}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 199, y: -7, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 720787068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1721549398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721549396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
+--- !u!114 &1721549399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721549396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
+--- !u!210 &1721549400
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721549396}
+  m_Enabled: 1
+  m_SortingLayerID: 1857400313
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+--- !u!95 &1721549401
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721549396}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 257690c659ca60544a65b45e9acb1b53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &1721549402
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721549396}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -6599886367684078699, guid: a02bfd659716aa142bef9c77d5410175, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.07, y: 2.67}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1739014393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44004,6 +44327,158 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.08, y: 0.11}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &2028320476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028320477}
+  - component: {fileID: 2028320482}
+  - component: {fileID: 2028320481}
+  - component: {fileID: 2028320480}
+  - component: {fileID: 2028320479}
+  - component: {fileID: 2028320478}
+  m_Layer: 0
+  m_Name: Swamp_MovingMud_1 (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028320477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028320476}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 95, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 720787068}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2028320478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028320476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
+--- !u!114 &2028320479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028320476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e3fa18e469a1e479071fa3793d6e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnimationOffset
+--- !u!210 &2028320480
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028320476}
+  m_Enabled: 1
+  m_SortingLayerID: 1857400313
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+--- !u!95 &2028320481
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028320476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 257690c659ca60544a65b45e9acb1b53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &2028320482
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028320476}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -6599886367684078699, guid: a02bfd659716aa142bef9c77d5410175, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.07, y: 2.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -335036,8 +335511,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139725405499999746}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1372048117
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!1 &3047238703307055595

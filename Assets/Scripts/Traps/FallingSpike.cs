@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic; // added for lists of Audio, instead one single clip
 
 public class FallingSpike : MonoBehaviour
 {
@@ -8,15 +9,17 @@ public class FallingSpike : MonoBehaviour
 
     [Header("Audio Settings")]
     [Tooltip("Sound played as Warning before Spime falls down")]
-    [SerializeField] private AudioSource audioSourceWarning;
+    [SerializeField] private List<AudioClip> warningSounds;
     [Tooltip("Sound played on impact of FallDown and Splatter")]
-    [SerializeField] private AudioSource audioSourceFallingCrush;
+    [SerializeField] private List<AudioClip> crushSounds;
+    [SerializeField] private AudioSource audioSource; 
+    [Range(0, 1)] public float volume = 1f; 
 
     [SerializeField] private LayerMask playerLayer;
     public float distance;
     public float speed;
     [Tooltip("Time until FallingSpike destroys itself after falling down")]
-    public float delaySelfdestruct= 1f;
+    public float delaySelfdestruct = 1f;
     bool isFalling = false;
 
     void Start()
@@ -26,22 +29,22 @@ public class FallingSpike : MonoBehaviour
         parentSpriteRenderer = GetComponent<SpriteRenderer>();
         // audioSourceWarning = GetComponent<AudioSource>();
         // audioSourceFallingCrush = GetComponent<AudioSource>();
+
+        // We need an AudioSource, must check for it
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if(isFalling == false)
+        if (isFalling == false)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distance, playerLayer);
             Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
 
-            if(hit.collider != null) // hit.collider reicht hier völlig aus
+            if (hit.collider != null) // hit.collider reicht hier völlig aus
             {
                 // 0. WARNING
-                if (audioSourceWarning != null && audioSourceWarning.clip != null)
-                {
-                    audioSourceWarning.PlayOneShot(audioSourceWarning.clip);
-                }
+                PlayRandomSFX(warningSounds); // Geändert auf Zufallsfunktion
 
                 rb.gravityScale = speed;
                 isFalling = true;
@@ -51,34 +54,41 @@ public class FallingSpike : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground")) // Wenn der Spike den Boden berührt, wird er zerstört
+        if (collision.gameObject.CompareTag("Ground")) // Wenn der Spike den Boden berührt, wird er zerstört
         {
-           
+
             // 1. FALL
-            rb.linearVelocity = Vector2.zero; 
+            rb.linearVelocity = Vector2.zero;
             rb.gravityScale = 0;
             rb.bodyType = RigidbodyType2D.Kinematic;
 
             // 1.5 PARENTSPIKE TURNS INVISIBLE
             if (parentSpriteRenderer != null)
-            { 
+            {
                 parentSpriteRenderer.enabled = false;
             }
 
             // 2. SOUND
-            if (audioSourceFallingCrush != null && audioSourceFallingCrush.clip != null)
-            {
-                audioSourceFallingCrush.PlayOneShot(audioSourceFallingCrush.clip);
-            }
+            PlayRandomSFX(crushSounds); // Geändert auf Zufallsfunktion
 
             // 3. ANIMATION
-            if (animator != null) 
+            if (animator != null)
             {
                 animator.SetTrigger("HitGround");
             }
 
             // 4. SELFDESTRUCT
             Destroy(gameObject, delaySelfdestruct);
+        }
+    }
+
+    // Neu hinzugefügte Hilfsfunktion zur Zufallsauswahl
+    private void PlayRandomSFX(List<AudioClip> sounds)
+    {
+        if (sounds != null && sounds.Count > 0 && audioSource != null)
+        {
+            AudioClip clip = sounds[Random.Range(0, sounds.Count)];
+            audioSource.PlayOneShot(clip, volume);
         }
     }
 

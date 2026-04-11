@@ -13929,7 +13929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
-      value: Soon you will have reached the end of this part of the Forest.
+      value: Soon you will have reached the end of this part of the <color=#00E2FB>Forest</color>.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[1]'
@@ -13945,11 +13945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[4]'
-      value: Let me grant you our power.
+      value: Let me grant you our Power.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[5]'
-      value: The power of <color=#00E2FB>Light</color>.
+      value: The Power of <color=#00E2FB>Light</color>.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[6]'
@@ -13961,7 +13961,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[8]'
-      value: Like the <color=#00E2FB>Souls</color> of the Animals helping you.
+      value: Like the <color=#00E2FB>Souls</color> of the <color=#00E2FB>Animals</color>
+        helping you.
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[9]'
