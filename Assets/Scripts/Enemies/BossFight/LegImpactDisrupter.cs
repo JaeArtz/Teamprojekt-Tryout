@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class LegImpactDisrupter : MonoBehaviour
 {
-    [Header("Schaden")]
+    [Header("Damage")]
     [SerializeField] private float damageToApply = 6f;
     [SerializeField] private float velocityThreshold = 2f;
 
-    [Header("Sound Effekte")]
+    [Header("Sound Effects")]
     [SerializeField] private AudioSource bumpSource;   // For FistBump
     [SerializeField] private AudioSource rumbleSource; // For FootStomp
 

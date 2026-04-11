@@ -17,18 +17,16 @@ public class EnemyDamageNoRollingDmg : MonoBehaviour
     private void Update()
     {
         if (isInside && playerHealth != null)
-        {
-            // Wir versuchen das Roll-Skript zu finden, falls wir es noch nicht haben
+        {            
             if (playerRoll == null)
             {
                 playerRoll = playerHealth.GetComponentInChildren<PlayerRoll>();
             }
 
-            // Prüfung: Ist das Intervall abgelaufen?
+            // checks if Intervall is over
             if (Time.time >= nextDamageTime)
-            {
-                // ZUSATZ: Nur Schaden machen, wenn der Spieler NICHT rollt
-                // Wenn playerRoll nicht gefunden wird, machen wir sicherheitshalber Schaden
+            {                
+                // only take damage when NOT rolling
                 bool isRolling = (playerRoll != null) && playerRoll.IsRolling;
 
                 if (!isRolling)
@@ -38,8 +36,8 @@ public class EnemyDamageNoRollingDmg : MonoBehaviour
                 }
                 else
                 {
-                    // Optional: Falls der Spieler im Gegner aufhört zu rollen, 
-                    // soll er sofort Schaden bekommen. Deshalb setzen wir den Timer nicht hoch.
+                    // Maybe cause damage instantly and ignore Delay, if Roll stops in Enemy
+                    // optional, doesnt have to be like that
                 }
             }
         }
@@ -48,11 +46,9 @@ public class EnemyDamageNoRollingDmg : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-        {
-            // Sucht PlayerHealth in der Parent-Hierarchie
+        {            
             playerHealth = collision.GetComponentInParent<PlayerHealth>();
-
-            // Sucht PlayerRoll (oft auf einem Child-Objekt wie "Roller" oder beim Health)
+            
             playerRoll = collision.GetComponentInParent<PlayerRoll>();
             if (playerRoll == null)
                 playerRoll = collision.GetComponentInChildren<PlayerRoll>();

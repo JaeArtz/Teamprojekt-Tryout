@@ -46,7 +46,7 @@ public class RuneAction : TriggerAction
 
 
 
-    // --- Trying UPDATE instead COROUTINE ---
+    // --- Trying UPDATE instead of COROUTINE, see if that works better ---
 
     void Update()
 
@@ -104,9 +104,7 @@ public class RuneAction : TriggerAction
 
     public override IEnumerator Execute(TriggerInfoBundle ctx)
 
-    {
-
-        // 
+    {     
 
         yield break;
 

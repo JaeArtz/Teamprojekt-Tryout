@@ -12,7 +12,7 @@ public class ActionPlayRandomSFX : TriggerAction
         if (sounds != null && sounds.Count > 0)
         {
             AudioClip clip = sounds[Random.Range(0, sounds.Count)];
-            // Wir nehmen die Position der Wand (transform.position)
+            // Takes exact position- PlayClipAtPoint plays once (?) and in relation to distance
             AudioSource.PlayClipAtPoint(clip, transform.position, volume);
         }
         yield break;

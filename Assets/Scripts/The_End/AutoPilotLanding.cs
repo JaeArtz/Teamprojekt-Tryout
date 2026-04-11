@@ -4,15 +4,19 @@ using System.Collections;
 public class AutoPilotLanding : MonoBehaviour
 {
     [Header("Referenzen")]
-    public Transform flightTargetPoint; // Hier ziehst du das (deaktivierte) Player-Objekt rein
-    public GameObject playerObject;     // Das Player-Objekt, das aktiviert werden soll
+    [Tooltip("Drag (deactivated) PlayerObject in here")]
+    public Transform flightTargetPoint;
+    [Tooltip("Drag PlayerObject here that needs to be deactivated")]
+    public GameObject playerObject;
 
-    [Header("Einstellungen")]
-    public float flightDuration = 3.0f; // Wie lange braucht der Phönix zum Spieler?
+    [Header("Settings")]
+    [Tooltip("TravelTime in Seconds of Phoenix (SpawnPoint) towards Player (deactivated).")]
+    public float flightDuration = 3.0f;
 
     private void Start()
     {
-        // Der Landeanflug startet sofort
+        // Scene starts with LandingSequence
+        // "Phoenix places Player on Ground"
         StartCoroutine(StartLandingSequence());
     }
 
@@ -20,11 +24,11 @@ public class AutoPilotLanding : MonoBehaviour
     {
         Vector3 startPos = transform.position;
 
-        // Wir nehmen die Position des Players/Targets als Ziel
+        // position of Player is GoalPoint
         Vector3 endPos = flightTargetPoint.position;
         float elapsedTime = 0;
 
-        // 1. Der Flug zum Spieler
+        // 1. Flight towards Player
         while (elapsedTime < flightDuration)
         {
             transform.position = Vector3.Lerp(startPos, endPos, elapsedTime / flightDuration);
@@ -32,21 +36,20 @@ public class AutoPilotLanding : MonoBehaviour
             yield return null;
         }
 
-        // Exakt auf den Zielpunkt setzen
+        // Lands exactly on Point
         transform.position = endPos;
 
-        // 2. Der "Kniff": Phönix weg, Player da
+        // 2. Switch: Phoenix disappears, Player re-activates
         if (playerObject != null)
         {
             playerObject.SetActive(true);
-
-            // Falls der Player ein Rigidbody hat, kurz sicherstellen, 
-            // dass er nicht durch den Boden fällt oder komisch wegspringt
+             
+            // checks for Player-RigidBody, security measure
             var rb = playerObject.GetComponent<Rigidbody2D>();
             if (rb != null) rb.WakeUp();
         }
 
-        // Phönix (dieses Objekt) deaktivieren
+        // deactivates Phoenix
         this.gameObject.SetActive(false);
     }
 }

@@ -17,31 +17,29 @@ public class BreakableWall : MonoBehaviour
 
     public void Break()
     {
-        // 3. SOUND SOFORT ABFEUERN
+        // 3. Sound
         PlayRandomSound();
 
-        // 1. RADIKAL: Alle Kinder (deine Mauer-Grafik) sofort deaktivieren
+        // 1. deactivate children (= only Wall-Sprite, turns Wall invisuble)
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(false);
         }
 
-        // 2. COLLIDER SOFORT AUS
-        // Damit der Player nicht an einer unsichtbaren Wand hängen bleibt
+        // 2. Collider off
+        // (Turns off "invisible Wall"-Box)
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
        
 
-        // 4. SPRENG-ANIMATION STARTEN
-        // Diese Animation muss im Animator auf dem Parent liegen!
+        // 4. Animation (CrushCrumble) on Parent       
         if (animator != null)
         {
             animator.SetTrigger("Break");
         }
 
-        // 5. OBJEKT LÖSCHEN
-        // Wir warten 3 Sekunden, damit Sound und Animation fertig spielen können
+        // 5. Delet Object completely after x seconds        
         Destroy(gameObject, 3.0f);
     }
 

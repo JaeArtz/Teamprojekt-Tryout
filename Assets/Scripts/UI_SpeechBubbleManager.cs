@@ -14,33 +14,36 @@ using TMPro;
 public class UI_SpeechBubbleManager : MonoBehaviour
 {
 
-    [Header("UI Referenzen")]
-    [Tooltip("Drag SPeechBubble_TExt (TMP) in here")]
+    [Header("UI References")]
+    [Tooltip("Drag SpeechBubble_TExt (TMP) in here")]
     [SerializeField] private TextMeshProUGUI messageText;
     [Tooltip("Optional- drag AudioSource in. If no Audio, just leave empty")]
     [SerializeField] private AudioSource talkingAudioSource;
-    [Tooltip("Drag Sprite with Interaction-Button E in here")]
+    [Tooltip("Drag Sprite-Object with Interaction-Button E in here")]
     [SerializeField] private GameObject interactionVisual;
     [Tooltip("Drag SpeechBubble_Canvas in here")]
     [SerializeField] private GameObject speechBubbleContainer;
 
-    [Header("Radius & Spieler")]
+    [Header("Radius & Player")]
     [Tooltip("Drag Player in here, as measure for actionRadius")]
     [SerializeField] private Transform playerTransform;
     [Tooltip("Distance of InteractionButton-Spawn, triggert by Closeness of Player")]
     [SerializeField] private float activationRadius = 5f;
-    [Header("Abbruch Einstellungen")]
-    [SerializeField] private float exitRadiusCooldown = 2f; // Zeit in Sek., bis Gespräch abbricht
+    [Header("Abort Setting")]
+    [Tooltip("Time in seconds until Bubble disappears, when Player leaves")]
+    [SerializeField] private float exitRadiusCooldown = 2f; // 2f = 2 seconds until Bubble disappears
+
     private float exitTimer;
 
-    [Header("Einstellungen")]
+    [Header("General Settings")]
+    [Tooltip("Cooldown, until E-Button appears again, for Reset of this SpeechBubble")]
     [SerializeField] private float cooldownTime = 3f;
     [SerializeField] private float typingSpeed = .02f;
 
     private TextWriter.TextWriterSingle textWriterSingle;
     private int messageIndex = 0;
-    private bool isConversationActive = false;
-    private bool isCooldown = false;
+    private bool conversationIsActive = false;
+    private bool cooldownIsRunning = false;
     private float cooldownTimer;
 
     [SerializeField] private string[] messageArray;
@@ -48,25 +51,24 @@ public class UI_SpeechBubbleManager : MonoBehaviour
     private void Awake()
     {
         speechBubbleContainer.SetActive(false);
-        interactionVisual.SetActive(false); // Startet unsichtbar, bis Spieler nah dran ist
+        interactionVisual.SetActive(false); // Starts invisible, until closeness of Player triggers Visibility
     }
 
     private void Update()
     {
-        // Distanz berechnen
+        // distance to Player
         float distance = Vector3.Distance(transform.position, playerTransform.position);
         bool isWithinRadius = distance <= activationRadius;
 
-        if (isCooldown)
+        if (cooldownIsRunning)
         {
             HandleCooldown();
             return;
         }
-
-        // FALL A: Konversation NICHT aktiv
-        if (!isConversationActive)
+        
+        if (!conversationIsActive)
         {
-            // Zeige das "E" nur, wenn der Spieler im Radius ist
+            // shows E-Button only when Player is close
             interactionVisual.SetActive(isWithinRadius);
 
             if (isWithinRadius && Input.GetKeyDown(KeyCode.E))
@@ -74,7 +76,7 @@ public class UI_SpeechBubbleManager : MonoBehaviour
                 StartConversation();
             }
         }
-        // FALL B: Konversation IST aktiv
+        // else => if Conversation IS active
         else
         {
             if (!isWithinRadius)
@@ -88,11 +90,11 @@ public class UI_SpeechBubbleManager : MonoBehaviour
             }
             else
             {
-                // Wenn der Spieler wieder zurück in den Radius kommt, Timer resetten
+                // If Player comes back during Cooldown => reset 
                 exitTimer = exitRadiusCooldown;
             }
 
-            // InteractionVisual (E) während des Schreibens steuern
+            // Manages InteractionVisual (E) during Typing
             bool isDoneTyping = textWriterSingle == null || !textWriterSingle.IsActive();
             interactionVisual.SetActive(isDoneTyping && isWithinRadius);
 
@@ -105,7 +107,7 @@ public class UI_SpeechBubbleManager : MonoBehaviour
 
     private void StartConversation()
     {
-        isConversationActive = true;
+        conversationIsActive = true;
         messageIndex = 0;
         // interactionVisual.SetActive(false);
         speechBubbleContainer.SetActive(true);
@@ -141,12 +143,12 @@ public class UI_SpeechBubbleManager : MonoBehaviour
 
     private void EndConversation()
     {
-        isConversationActive = false;
+        conversationIsActive = false;
         speechBubbleContainer.SetActive(false);
 
         interactionVisual.SetActive(false);
 
-        isCooldown = true;
+        cooldownIsRunning = true;
         cooldownTimer = cooldownTime;
         
     }
@@ -156,8 +158,8 @@ public class UI_SpeechBubbleManager : MonoBehaviour
         cooldownTimer -= Time.deltaTime;
         if (cooldownTimer <= 0)
         {
-            isCooldown = false;
-            // InteractionVisual wird im nächsten Update-Frame durch Radius-Check wieder aktiviert
+            cooldownIsRunning = false;
+            // InteractionVisual will be reactivated during next Update-Frame by Radius-Check wieder
         }
     }
 
@@ -171,7 +173,7 @@ public class UI_SpeechBubbleManager : MonoBehaviour
         if (talkingAudioSource != null) talkingAudioSource.Stop();
     }
 
-    // Visualisierung des Radius im Unity-Editor (hilfreich zum Einstellen)
+    // Visualises Radius in Unity-Editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

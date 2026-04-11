@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class Thorns : MonoBehaviour
 {
+    // Thorns don't have to damage every single time- can only make a sound
+    // simulates "real" bushes, with Thorns: can damage you- or not if you are lucky
+
+
     private Animator anim;
     private AudioSource audioSource;
 
     [Header("Visual Settings")]
-    [Tooltip("Hit is Trigger for COntroler to start Animation of ThornWiggling")]
-    [SerializeField] private string triggerName = "Hit";
+    [Tooltip("Hit is Trigger for Controler to start Animation of ThornWiggling")]
+    [SerializeField] private string triggerName = "Hit"; // ANIMATION Trigger
 
     [Header("Audio Settings")]
     [Tooltip("Drag Audio Files for Thorns in here, will be played randomly at contact")]

@@ -4,16 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class GameEndTrigger : MonoBehaviour
 {
-    [Header("Referenzen")]
+    [Header("References")]
     public AudioSource backgroundMusic;    // Die Musik, die ausfaden soll
     public AudioSource endEffectSound;     // Der Sound, der im Schwarzbild spielt
     public LevelLoaderScript levelLoader;  // Dein Objekt für die Schwarzblende
 
-    [Header("Einstellungen")]
-    public float delayBeforeFade = 2.0f;   // Wie lange soll man den liegenden Player sehen?
-    public string nextSceneName = "Credits";
+    [Header("Settings")]
+    [Tooltip("Duration in seconds, how long we can see the Player before Fade starts")]
+    public float delayBeforeFade = 7.0f;
+    public string nextSceneName = "Credits"; // Check if name is correct in the end, or switch to general LevelLoader somehow!
 
-    // Diese Funktion wird im zweiten Slot deines "On Interact ()" aufgerufen!
+    //Used in "On Interact ()"
     public void StartFinalSequence()
     {
         StartCoroutine(EndSequenceRoutine());
@@ -21,7 +22,7 @@ public class GameEndTrigger : MonoBehaviour
 
     private IEnumerator EndSequenceRoutine()
     {
-        // 1. Musik ausfaden
+        // 1. Music- fade
         if (backgroundMusic != null)
         {
             float startVol = backgroundMusic.volume;
@@ -33,24 +34,24 @@ public class GameEndTrigger : MonoBehaviour
             backgroundMusic.Stop();
         }
 
-        // 2. Warten (Zeit für die Liege-Animation)
+        // 2. Waiting (for sleep-Animation), just before end
         yield return new WaitForSeconds(delayBeforeFade);
 
-        // 3. Schwarzblende (Fade-Out)
+        // 3. Fade-Out, BlackScreen
         if (levelLoader != null)
         {
             levelLoader.transition.SetTrigger("Start");
             yield return new WaitForSeconds(levelLoader.transitionTime);
 
-            // 4. Sound im Dunkeln abspielen
+            // 4. Sound in the Dark (2 slow low HeartBeats)
             if (endEffectSound != null)
             {
                 endEffectSound.Play();
-                // Warten, bis der Sound fertig ist
+                // Wait for Sound to be done
                 yield return new WaitForSeconds(endEffectSound.clip.length);
             }
 
-            // 5. Szenenwechsel
+            // 5. SwitchScene
             SceneManager.LoadScene(nextSceneName);
         }
     }

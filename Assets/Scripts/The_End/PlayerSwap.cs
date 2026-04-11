@@ -2,31 +2,31 @@ using UnityEngine;
 
 public class PlayerSwap : MonoBehaviour
 {
-    [Header("Referenzen")]
+    [Header("References")]
     public GameObject realPlayer;
 
-    [Header("Einstellungen")]
+    [Header("Settings")]
     public string animTriggerName = "LayDown";
 
     public void DoSwap()
     {
         if (realPlayer == null) return;
 
-        // 1. Das Objekt aktivieren
+        // 1. ACTIVATE OBJECT
         gameObject.SetActive(true);
 
-        // 2. Position und Blickrichtung vom Player übernehmen
+        // 2. ADAPT POSITION AND "FACING-POSITION" OF PLAYER (left or right)
         transform.position = realPlayer.transform.position;
         transform.localScale = realPlayer.transform.localScale;
 
-        // 3. Echten Player ausschalten
+        // 3. DISABLE REAL PLAYER
         realPlayer.SetActive(false);
 
-        // 4. DIE ANIMATION TRIGGERN
+        // 4. TRIGGER ANIMATION
         Animator anim = GetComponent<Animator>();
         if (anim != null)
         {
-            // Hier wird der Name aus dem Inspector ("LayDown") benutzt!
+            // triggers with "LayDown"
             anim.SetTrigger(animTriggerName);
         }
         else

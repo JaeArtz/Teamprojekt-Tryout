@@ -12,8 +12,8 @@ public class SoulPickupPhoenix : MonoBehaviour
     
 
     [Header("Teleportation")]
-    public Transform playerTeleportPoint;      // Punkt 1 (Sand)
-    public Transform playerTeleportPointGate; // Punkt 2 (Gate)
+    public Transform playerTeleportPoint;      // Point 1 (Sand)
+    public Transform playerTeleportPointGate; // Point 2 (Gate)
 
     [Header("Phoenix Settings")]
     public float phoenixSize = 3.0f;
@@ -43,9 +43,7 @@ public class SoulPickupPhoenix : MonoBehaviour
 
         // playerController.SetInputLocked(true);
 
-        // --- DER ABSOLUTE FIX ---
-        // Wir suchen das Objekt mit dem Namen "Player". 
-        // Falls der Trigger am 'Scaler' sitzt, wandern wir zum Parent.
+        // Looks for Player, if necessary at Parent        
         GameObject thePlayer = null;
         if (other.gameObject.name == "Player")
         {
@@ -56,10 +54,9 @@ public class SoulPickupPhoenix : MonoBehaviour
             thePlayer = other.transform.parent.gameObject;
         }
 
-        // Falls er immer noch den Scaler hat (Sicherheitscheck)
         if (thePlayer.name == "Scaler") thePlayer = thePlayer.transform.parent.gameObject;
 
-        // Physik stoppen
+        // stop physics at Player
         var rb = thePlayer.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -68,7 +65,7 @@ public class SoulPickupPhoenix : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
-        // 1. TELEPORT: Sofort zu Punkt 1 (Sand)
+        // 1. TELEPORT: to Point 1 (Sand)
         if (playerTeleportPoint != null)
         {
             thePlayer.transform.position = playerTeleportPoint.position;
@@ -80,7 +77,7 @@ public class SoulPickupPhoenix : MonoBehaviour
 
     private IEnumerator PhoenixFinalSequence(GameObject player)
     {
-        // Phönix Spawn Logik
+        // Phoenix Spawn Logic
         if (phoenixObject != null)
         {
             Vector3 spawnPos = transform.position;
@@ -96,20 +93,19 @@ public class SoulPickupPhoenix : MonoBehaviour
             }
         }
 
-        // Seele am Boden ausmachen
+        // Turns Off Souls
         if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().enabled = false;
 
         yield return new WaitForSeconds(fadeDurationPhoenix);
 
-        // --- JETZT: DEN PLAYER DEAKTIVIEREN ---
-        // Wir geben hier explizit das 'player' Objekt aus der OnTriggerEnter mit.
+        //Deactivates Player
         Debug.Log("Deaktiviere Objekt: " + player.name);
         player.SetActive(false);
 
         yield return new WaitForSeconds(hoverTime);
         StartCoroutine(DetachCameraAfterDelay());
 
-        // Flug des Phönix
+        // Flight Of The Phoenix
         if (phoenixObject != null && phoenixTargetPoint != null)
         {
             Vector3 startPos = phoenixObject.transform.position;
@@ -123,7 +119,7 @@ public class SoulPickupPhoenix : MonoBehaviour
             }
             phoenixObject.transform.position = endPos;
 
-            // --- 2. TELEPORT ZUM GATE ---
+            // --- 2. TELEPORT to GATE ---
             if (playerTeleportPointGate != null)
             {
                 player.transform.position = playerTeleportPointGate.position;
@@ -131,10 +127,10 @@ public class SoulPickupPhoenix : MonoBehaviour
             }
         }
 
-        // --- PLAYER WIEDER AKTIVIEREN ---
+        // --- PLAYER REactivation ---
         player.SetActive(true);
 
-        // Level Loader triggern
+        // triggers LevelLoader
         
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         

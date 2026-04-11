@@ -87,11 +87,11 @@ public class TextWriter : MonoBehaviour
             this.timePerCharacter = timePerCharacter;
             this.onComplete = onComplete;
 
-            // 1. SCHRITT: Den Text komplett an TMP übergeben (Hintergrund-Verarbeitung)
+            // 1. Give complete Text to TMP  (don't start writing live right away!)
             uiText.text = textToWrite;
-            uiText.ForceMeshUpdate(); // Erzwingt die sofortige Berechnung von Layout & Tags
+            uiText.ForceMeshUpdate(); // forces formating the Text, otherwise you see that happening ingame...
 
-            // 2. SCHRITT: Alles unsichtbar machen
+            // 2. Make everything invisible
             this.totalVisibleCharacters = uiText.textInfo.characterCount;
             uiText.maxVisibleCharacters = 0;
             characterIndex = 0;
@@ -107,7 +107,7 @@ public class TextWriter : MonoBehaviour
                 timer += timePerCharacter;
                 characterIndex++;
 
-                // 3. SCHRITT: Zeichen für Zeichen sichtbar machen
+                // 3. Make Text visible bit by bit
                 uiText.maxVisibleCharacters = characterIndex;
 
                 if (characterIndex >= totalVisibleCharacters)

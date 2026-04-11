@@ -5,32 +5,30 @@ using UnityEngine.Events;
 public class InteractionButton_E : MonoBehaviour
 {
     [Header("Visuals")]
-    public GameObject interactionHint; // Dein "E"-Button Popup
+    public GameObject interactionHint; // "E"-Button Popup
 
     [Header("Event")]
-    [Tooltip("Was soll passieren, wenn E gedrückt wird?")]
+    [Tooltip("What happens when we press E?")]
     public UnityEvent onInteract;
 
-    private bool isPlayerInside = false;
-    private bool hasInteracted = false;
+    private bool playerIsInside = false;
+    private bool playerHasInteracted = false;
 
     [Header("Settings")]
     public bool canInteractMultipleTimes = false;
 
     private void Awake()
-    {
-        // Sicherstellen, dass der Collider auf Trigger steht
+    {       
         var col = GetComponent<Collider2D>();
         if (col != null) col.isTrigger = true;
 
-        // Popup am Anfang verstecken
+        // Hides Popup in the Beginning
         if (interactionHint != null) interactionHint.SetActive(false);
     }
 
     void Update()
-    {
-        // Wenn Spieler drin, noch nicht interagiert (oder mehrfach erlaubt) und E drückt
-        if (isPlayerInside && (!hasInteracted || canInteractMultipleTimes))
+    {        
+        if (playerIsInside && (!playerHasInteracted || canInteractMultipleTimes))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -41,12 +39,12 @@ public class InteractionButton_E : MonoBehaviour
 
     private void Interact()
     {
-        hasInteracted = true;
+        playerHasInteracted = true;
 
-        // Popup sofort ausblenden
+        // Hide Popup immediately
         if (interactionHint != null) interactionHint.SetActive(false);
 
-        // Das ausführen, was du im Inspector zugewiesen hast
+        // Do whatever the Inspector says
         onInteract?.Invoke();
 
         Debug.Log("Interaktion ausgeführt!");
@@ -56,9 +54,9 @@ public class InteractionButton_E : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!hasInteracted || canInteractMultipleTimes)
+            if (!playerHasInteracted || canInteractMultipleTimes)
             {
-                isPlayerInside = true;
+                playerIsInside = true;
                 if (interactionHint != null) interactionHint.SetActive(true);
             }
         }
@@ -68,7 +66,7 @@ public class InteractionButton_E : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isPlayerInside = false;
+            playerIsInside = false;
             if (interactionHint != null) interactionHint.SetActive(false);
         }
     }
