@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SinkingGround
   slowFactor: 0.7
-  jumpFactor: 0.9
-  sinkForce: -0.2
-  sinkingGroundCoyouteTime: 0.7
+  jumpFactor: 0.95
+  sinkForce: -0.15
+  sinkingGroundCoyouteTime: 0.5
 --- !u!61 &9121621145104771084
 BoxCollider2D:
   m_ObjectHideFlags: 0

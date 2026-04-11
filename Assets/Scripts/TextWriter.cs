@@ -151,7 +151,7 @@ Standard-Farben: <color=red>Roter Text</color>
 
 Funktioniert mit: red, green, blue, yellow, orange, black, white.
 
-Hex-Codes (Präzise): <color=#FF00FF>Pinker Text</color>
+Hex-Codes (Präzise): <color=#FF00FF>Pinker Text</color>   ACHTUNG MIT HASHTAG!
 
 Transparenz (Alpha): <alpha=#88>Halbdurchsichtiger Text
 

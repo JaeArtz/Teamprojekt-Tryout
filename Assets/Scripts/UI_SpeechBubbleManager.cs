@@ -29,6 +29,9 @@ public class UI_SpeechBubbleManager : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [Tooltip("Distance of InteractionButton-Spawn, triggert by Closeness of Player")]
     [SerializeField] private float activationRadius = 5f;
+    [Header("Abbruch Einstellungen")]
+    [SerializeField] private float exitRadiusCooldown = 2f; // Zeit in Sek., bis Gespräch abbricht
+    private float exitTimer;
 
     [Header("Einstellungen")]
     [SerializeField] private float cooldownTime = 3f;
@@ -74,12 +77,24 @@ public class UI_SpeechBubbleManager : MonoBehaviour
         // FALL B: Konversation IST aktiv
         else
         {
-            // Optional: Gespräch abbrechen, wenn der Spieler wegläuft
             if (!isWithinRadius)
             {
-                EndConversation();
-                return;
+                exitTimer -= Time.deltaTime;
+                if (exitTimer <= 0)
+                {
+                    EndConversation();
+                    return;
+                }
             }
+            else
+            {
+                // Wenn der Spieler wieder zurück in den Radius kommt, Timer resetten
+                exitTimer = exitRadiusCooldown;
+            }
+
+            // InteractionVisual (E) während des Schreibens steuern
+            bool isDoneTyping = textWriterSingle == null || !textWriterSingle.IsActive();
+            interactionVisual.SetActive(isDoneTyping && isWithinRadius);
 
             if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
             {
@@ -92,7 +107,7 @@ public class UI_SpeechBubbleManager : MonoBehaviour
     {
         isConversationActive = true;
         messageIndex = 0;
-        interactionVisual.SetActive(false);
+        // interactionVisual.SetActive(false);
         speechBubbleContainer.SetActive(true);
         ShowNextMessage();
     }
@@ -129,9 +144,11 @@ public class UI_SpeechBubbleManager : MonoBehaviour
         isConversationActive = false;
         speechBubbleContainer.SetActive(false);
 
+        interactionVisual.SetActive(false);
+
         isCooldown = true;
         cooldownTimer = cooldownTime;
-        interactionVisual.SetActive(false);
+        
     }
 
     private void HandleCooldown()
