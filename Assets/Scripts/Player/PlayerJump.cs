@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
@@ -16,6 +17,8 @@ public class PlayerJump : MonoBehaviour
     [Header("Multi Jump")]
     [SerializeField, Tooltip("How many times the player can jump in mid-air")] private int extraJumps = 1;
     private int jumpCounter;
+
+    private RandomAudioPlayer audioPlayer;
 
     private Rigidbody2D body;
     private bool canDoubleJump = false;
@@ -55,6 +58,9 @@ public class PlayerJump : MonoBehaviour
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals("Jump"));
+
+        if (!audioPlayer) Debug.LogError(@"Random Audio Player with name ""Jump"" could not be found!");
     }
 
     // Update is called once per frame
@@ -82,11 +88,13 @@ public class PlayerJump : MonoBehaviour
             if (isGrounded || groundCoyoteTimer > 0)
             {
                 GroundJump();
+                audioPlayer.PlayRandomSound();
                 return true;
             }
             else if (canDoubleJump && jumpCounter > 0)
             {
                 DoubleJump();
+                audioPlayer.PlayRandomSound();
                 return true;
             }
 

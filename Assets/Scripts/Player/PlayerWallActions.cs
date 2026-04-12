@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class PlayerWallActions : MonoBehaviour
@@ -28,6 +29,7 @@ public class PlayerWallActions : MonoBehaviour
     [SerializeField, Tooltip("Circle collider without collision for wall check")]
     private CircleCollider2D wallTrigger;
 
+    private RandomAudioPlayer audioPlayer;
 
     private Rigidbody2D body;
     public Rigidbody2D Body { set { body = value; } }
@@ -39,6 +41,7 @@ public class PlayerWallActions : MonoBehaviour
     private bool _isWallJumping;
     private bool _isDetached;
     private bool _isWallSliding;
+    private bool _isPressingMoveBtn;
     private int _playerWallDirection;
     private int _lastWallDirection;
 
@@ -60,6 +63,10 @@ public class PlayerWallActions : MonoBehaviour
                 }
             }
         }
+
+        audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals("Jump"));
+
+        if (!audioPlayer) Debug.LogError(@"Random Audio Player with name ""Jump"" could not be found!");
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -71,7 +78,7 @@ public class PlayerWallActions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        _isPressingMoveBtn = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
     }
 
     public void ResetWallJumpAirControlDuration()
@@ -81,7 +88,7 @@ public class PlayerWallActions : MonoBehaviour
 
     private bool CanWallJump()
     {
-        return !_isWallJumping && (_isOnWall || wallCoyoteTimer > 0) && wallJumpCooldownTimer <= 0;
+        return !_isGrounded && _isPressingMoveBtn && !_isWallJumping && (_isOnWall || wallCoyoteTimer > 0) && wallJumpCooldownTimer <= 0;
     }
 
     public bool HandleWallActions(ref LayerMask layer, bool isGrounded)
@@ -99,17 +106,33 @@ public class PlayerWallActions : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.Space))
             return false;
 
-
         if (!CanWallJump())
             return false;
 
         WallJump();
+        audioPlayer.PlayRandomSound();
         _isWallJumping = true;
 
         return true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other == null) return;
+        if (wallJumpCooldownTimer > 0) return;
+
+        if (other.CompareTag("Wall"))
+        {
+            _isOnWall = true;
+            _isWallJumping = false;
+            Vector2 contactPoint = other.ClosestPoint(transform.position);
+            Vector2 direction = (Vector2)transform.position - contactPoint;
+            direction.Normalize();
+            _playerWallDirection = direction.x > 0 ? -1 : 1;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other == null) return;
         if (wallJumpCooldownTimer > 0) return;
