@@ -1,8 +1,9 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     private GameObject Player;
@@ -22,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
     public Sprite HalfLifeIcon;
     public Sprite LowLifeIcon;
     public Sprite AlmostDeadIcon;
+
+    private RandomAudioPlayer audioPlayer;
 
     private void Awake()
     {
@@ -55,6 +58,10 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
         currentScene = SceneManager.GetActiveScene().name;
+
+        audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals("Hurt"));
+
+        if (!audioPlayer) Debug.LogError(@"Random Audio Player with name ""Hurt"" could not be found!");
     }
 
     void Start()
@@ -135,10 +142,10 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             currentHealth = 0;
-
         }
         //Debug.Log("TakeDamage aufgerufen, HP vorher: " + currentHealth); //zum testen
-        
+
+        audioPlayer.PlayRandomSound();
     }
 
     void GainHealth(int health)

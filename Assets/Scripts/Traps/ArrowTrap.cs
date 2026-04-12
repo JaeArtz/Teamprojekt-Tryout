@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 public class ArrowTrap : MonoBehaviour
 {
@@ -9,6 +10,15 @@ public class ArrowTrap : MonoBehaviour
     
     private float cooldownTimer;
     private bool isActive = false;
+
+    private RandomAudioPlayer audioPlayer;
+
+    private void Awake()
+    {
+        audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals("ArrowShoot"));
+
+        if (!audioPlayer) Debug.LogError(@"Random Audio Player with name ""ArrowShoot"" could not be found!");
+    }
 
     private void Start()
     {
@@ -43,7 +53,10 @@ public class ArrowTrap : MonoBehaviour
         if(!isActive) return;
         cooldownTimer += Time.deltaTime;
         if (cooldownTimer >= attackCooldown) // Wenn die Abklingzeit erreicht ist, angreifen
+        {
             Attack();
+            audioPlayer.PlayRandomSound();
+        }
     }
 
     // Visualisierung der Schussbahn im Editor

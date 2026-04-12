@@ -53,6 +53,9 @@ GameObject:
   - component: {fileID: 5322117019487849484}
   - component: {fileID: 4558364824663307351}
   - component: {fileID: 5846427342632742176}
+  - component: {fileID: 8426809274216101344}
+  - component: {fileID: 7275976265188008782}
+  - component: {fileID: 1183772606106223335}
   m_Layer: 0
   m_Name: Player_Original
   m_TagString: Player
@@ -233,6 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e4d78001b9dca4fadb4b4d8fd2e177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  respawnPoint: {x: 0, y: 0, z: 0}
   useCheckpoints: 1
 --- !u!114 &8406900078179165746
 MonoBehaviour:
@@ -351,6 +355,143 @@ MonoBehaviour:
   endingGlidingVelocityY: -20
   glideSpeedTransitionDuration: 5
   glideAbortionPenalty: 0.25
+--- !u!114 &8426809274216101344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288793a7e553b0d4a948b90aac5c8431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  audioSource: {fileID: 7275976265188008782}
+  audioClips:
+  - {fileID: 8300000, guid: 7a90916574d4f7048830dc047ac59b6f, type: 3}
+  - {fileID: 8300000, guid: 0c02f949d73526443ae464b4a7401eaa, type: 3}
+  - {fileID: 8300000, guid: 48ff3ef3f78c01c45a19821a68f52daa, type: 3}
+  - {fileID: 8300000, guid: b2adc328934e01545b4598b5dca191ca, type: 3}
+  audioName: Jump
+  volume: 5
+--- !u!82 &7275976265188008782
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1183772606106223335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288793a7e553b0d4a948b90aac5c8431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAudioPlayer
+  audioSource: {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: 2cdb4ce1067ea1b43aa982436393312c, type: 3}
+  - {fileID: 8300000, guid: 6e9e1edf0da0eae40b3ee7dafc2dc225, type: 3}
+  - {fileID: 8300000, guid: 6531291530e5951489b3604c5ced5e0e, type: 3}
+  - {fileID: 8300000, guid: 700d93fd52aa5c44bae9c2494d173b86, type: 3}
+  audioName: Hurt
+  volume: 1
 --- !u!1 &4606677167576761522
 GameObject:
   m_ObjectHideFlags: 0
