@@ -2,7 +2,9 @@
 using UnityEditor.PackageManager;
 #endif
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadMenu : MonoBehaviour
 {
@@ -13,6 +15,11 @@ public class LoadMenu : MonoBehaviour
 
     [SerializeField]
     private GameObject backgroundAnimator;
+
+    [SerializeField]
+    private GameObject loadButton;
+    [SerializeField]
+    private GameObject deleteButton;
 
     public GameObject quitUI;
     public GameObject mainUI;
@@ -28,11 +35,19 @@ public class LoadMenu : MonoBehaviour
     private AudioClip m_blank;
     private void Awake()
     {
+        if(SaveSystem.LoadData() == null)
+        {
+            loadButton.GetComponent<Button>().interactable = false;
+            deleteButton.GetComponent<Button>().interactable = false;
+            loadButton.GetComponent<EventTrigger>().enabled = false;
+            deleteButton.GetComponent<EventTrigger>().enabled = false;
+
+        }
         m_audioComponent = GetComponent<AudioSource>();
         try
         {
-            PlayerData data = SaveSystem.LoadData();
-            if(!data.hasFinished)
+            bool data = SaveSystem.LoadGameState();
+            if(!data)
             {
                 StartCoroutine(backgroundAnimator.GetComponent<Main_Menu_Dark>().animateBGDark());
             }
@@ -150,11 +165,19 @@ public class LoadMenu : MonoBehaviour
 
     public void YesGame()
     {
-        int currentSave = SaveSystem.LoadSelectedFileData();
-        SaveSystem.DeleteData();
-        m_soundEffectHover = m_blank;
-        SaveSystem.SaveSelectedFileData(currentSave);
-        myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        try
+        {
+            int currentSave = SaveSystem.LoadSelectedFileData();
+            SaveSystem.DeleteData();
+            m_soundEffectHover = m_blank;
+            SaveSystem.SaveSelectedFileData(currentSave);
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        catch (System.Exception e)
+        {
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
     }
 
     public void NoGame()

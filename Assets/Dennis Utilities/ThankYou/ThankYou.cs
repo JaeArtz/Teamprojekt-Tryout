@@ -21,7 +21,7 @@ public class ThankYou : MonoBehaviour
         //Allow Space Key Press to be done.
         if (Input.GetKey(KeyCode.Space) && !keyPressed)
         {
-            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("MainMenu");
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
 
