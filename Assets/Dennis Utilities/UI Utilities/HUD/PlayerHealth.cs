@@ -23,7 +23,6 @@ public class PlayerHealth : MonoBehaviour
     public Sprite LowLifeIcon;
     public Sprite AlmostDeadIcon;
 
-
     private void Awake()
     {
         playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();

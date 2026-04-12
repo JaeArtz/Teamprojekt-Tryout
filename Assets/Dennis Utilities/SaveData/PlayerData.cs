@@ -10,6 +10,8 @@ public class PlayerData
     public string currentScene;
 
     public bool wasLoaded = false;
+
+    public bool hasFinished = false;
     public PlayerData(PlayerHealth player)
     {
         currentLives = player.currentHealth;
@@ -41,4 +43,14 @@ public class PlayerData
         currentScene = player.currentScene;
     }
 
+    public PlayerData(bool finished, PlayerData player)
+    {
+        currentLives = player.currentLives;
+        currentPosition = new float[3];
+        currentPosition[0] = player.currentPosition[0];
+        currentPosition[1] = player.currentPosition[1];
+        currentPosition[2] = player.currentPosition[2];
+        currentScene = player.currentScene;
+        hasFinished = finished;
+    }
 }

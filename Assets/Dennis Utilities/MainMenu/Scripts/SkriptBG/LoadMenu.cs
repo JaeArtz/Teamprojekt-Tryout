@@ -11,6 +11,9 @@ public class LoadMenu : MonoBehaviour
     [SerializeField] private Notify deletingFailed;
     [SerializeField] private Notify deletingSucceded;
 
+    [SerializeField]
+    private GameObject backgroundAnimator;
+
     public GameObject quitUI;
     public GameObject mainUI;
     public GameObject newGameUI;
@@ -26,6 +29,22 @@ public class LoadMenu : MonoBehaviour
     private void Awake()
     {
         m_audioComponent = GetComponent<AudioSource>();
+        try
+        {
+            PlayerData data = SaveSystem.LoadData();
+            if(!data.hasFinished)
+            {
+                StartCoroutine(backgroundAnimator.GetComponent<Main_Menu_Dark>().animateBGDark());
+            }
+            else
+            {
+                StartCoroutine(backgroundAnimator.GetComponent<Main_Menu_Light>().animateBGLight());
+            }
+        }
+        catch (System.Exception e)
+        {
+            StartCoroutine(backgroundAnimator.GetComponent<Main_Menu_Dark>().animateBGDark());
+        }
     }
 
     public void StartGame()

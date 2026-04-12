@@ -11,8 +11,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject hudUI;
     public GameObject quitUI;
 
+
+    private AudioSource m_audioComponent;
+    [SerializeField]
+    private AudioClip m_soundEffectHover;
+    [SerializeField]
+    private AudioClip m_soundEffectClick;
+    [SerializeField]
+    private AudioClip m_blank;
+    [SerializeField]
+    private AudioClip m_backUp;
     private void Awake()
     {
+        m_audioComponent = GetComponent<AudioSource>();
         player = GameObject.Find("Player");
         myLevelLoader = GameObject.Find("LevelLoader");
         mySaveGame = GameObject.Find("Saver");
@@ -46,6 +57,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        m_soundEffectHover = m_backUp;
         pauseMenuUI.SetActive(true);
         player.GetComponent<PlayerAttack>().enabled = (false);
         hudUI.SetActive(false);
@@ -55,11 +67,13 @@ public class PauseMenu : MonoBehaviour
 
     public void ResetLevel()
     {
+        m_soundEffectHover = m_blank;
         Time.timeScale = 1.0f;
         myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void LoadMenu()
     {
+        m_soundEffectHover = m_blank;
         Time.timeScale = 1.0f;
         Debug.Log("Loading Menu...");
         mySaveGame.GetComponent<SaveGame>().SaveCurrentGame();
@@ -74,6 +88,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Yes()
     {
+        m_soundEffectHover = m_blank;
         Quit();
     }
 
@@ -84,8 +99,27 @@ public class PauseMenu : MonoBehaviour
     }
     public void Quit()
     {
+        m_soundEffectHover = m_blank;
         mySaveGame.GetComponent<SaveGame>().SaveCurrentGame();
         Debug.Log("Quitting Game...");
         Application.Quit();
+    }
+
+
+    public void PlayHoverSound()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectHover);
+    }
+    public void PlayClickSound()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectClick);
+
+        //TODO: waitForMillis instead of null value.
+        m_soundEffectClick = m_blank;
+    }
+
+    public void ClickSoundPlayNoDeactivation()
+    {
+        m_audioComponent.PlayOneShot(m_soundEffectClick);
     }
 }

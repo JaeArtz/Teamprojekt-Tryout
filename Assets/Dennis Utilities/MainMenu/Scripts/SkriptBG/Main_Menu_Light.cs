@@ -2,24 +2,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class Main_Menu_Dark : MonoBehaviour
+public class Main_Menu_Light : MonoBehaviour
 {
-    
+
     public Sprite[] sprites;
-    
-    
+
+
     private int currentIndex = 0;
     private int lastIndex;
     private bool reverse = false;
-    public IEnumerator animateBGDark()
+
+    
+    public IEnumerator animateBGLight()
     {
         Image image = gameObject.GetComponent<Image>();
+        RectTransform rt = image.GetComponent(typeof(RectTransform)) as RectTransform;
+        float y = rt.localScale.y;
+        rt.localScale = new Vector3(rt.localScale.x, 1.75f, rt.localScale.z);
+
         lastIndex = sprites.Length - 1;
         while (true)
         {
-            if(!reverse)
+            if (!reverse)
             {
-                
+
                 if (currentIndex == lastIndex)
                 {
                     image.sprite = sprites[currentIndex];
@@ -46,7 +52,7 @@ public class Main_Menu_Dark : MonoBehaviour
                     currentIndex--;
                 }
             }
-                
+
             yield return new WaitForSeconds(0.075f);
         }
     }
