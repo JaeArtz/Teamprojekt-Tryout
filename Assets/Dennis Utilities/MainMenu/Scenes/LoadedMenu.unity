@@ -3497,6 +3497,8 @@ MonoBehaviour:
   deletingFailed: {fileID: 11400000, guid: e7940abdfeb86564ea3318daca3a8138, type: 2}
   deletingSucceded: {fileID: 11400000, guid: 6f8446b4f09bc4c4ebdbc6a62eb3aefe, type: 2}
   backgroundAnimator: {fileID: 2047706190}
+  loadButton: {fileID: 1215747958}
+  deleteButton: {fileID: 1152179280}
   quitUI: {fileID: 1754457240}
   mainUI: {fileID: 1655044665}
   newGameUI: {fileID: 1420993994}

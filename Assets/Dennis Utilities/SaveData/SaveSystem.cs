@@ -74,6 +74,19 @@ public static class SaveSystem
         stream.Close();
     }
 
+    public static void SaveGameState(bool gameState)
+    {
+        int currentSaveFile = LoadSelectedFileData();
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + $"/gameState{currentSaveFile}.bin";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        GameState data = new GameState(gameState);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+
     public static void SaveLeafData(HashSet<int> collectedLeaves)
     {
         int currentSaveFile = LoadSelectedFileData();
@@ -172,6 +185,30 @@ public static class SaveSystem
 
     }
 
+    public static bool LoadGameState()
+    {
+        int currentSaveFile = LoadSelectedFileData();
+        string path = Application.persistentDataPath + $"/gameState{currentSaveFile}.bin";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            if (stream.Length == 0)
+            {
+                stream.Close();
+                return false;
+            }
+            GameState gameState = formatter.Deserialize(stream) as GameState;
+            stream.Close();
+            return gameState.gameState;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return false;
+        }
+
+    }
     public static HashSet<string> LoadSoulData(int currentSaveFile)
     { 
         string path = Application.persistentDataPath + $"/collectedSouls{currentSaveFile}.bin";
@@ -301,6 +338,7 @@ public static class SaveSystem
         string soulsPath = Application.persistentDataPath + $"/collectedSouls{currentSaveFile}.bin";
         string leafPath = Application.persistentDataPath + $"/collectedLeaves{currentSaveFile}.bin";
         string levelPath = Application.persistentDataPath + $"/unlockedLevels{currentSaveFile}.bin";
+        string gameStatePath = Application.persistentDataPath + $"/gameState{currentSaveFile}.bin";
         bool isAlreadyDeleted = false;
         if (File.Exists(path))
         {
@@ -336,6 +374,15 @@ public static class SaveSystem
         else
         {
             Debug.LogError("Level file is already deleted " + levelPath);
+            isAlreadyDeleted = true;
+        }
+        if (File.Exists(gameStatePath))
+        {
+            File.Delete(gameStatePath);
+        }
+        else
+        {
+            Debug.LogError("GameState file is already deleted " + gameStatePath);
             isAlreadyDeleted = true;
         }
         if (isAlreadyDeleted)
