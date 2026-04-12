@@ -308,7 +308,7 @@ MonoBehaviour:
   prohibitRollDuration: 0.08
   wallCoyoteTime: 0.15
   wallCheckDistance: 0.1
-  wallTrigger: {fileID: 0}
+  wallTrigger: {fileID: 606657185490777511}
 --- !u!114 &5322117019487849484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 48ff3ef3f78c01c45a19821a68f52daa, type: 3}
   - {fileID: 8300000, guid: b2adc328934e01545b4598b5dca191ca, type: 3}
   audioName: Jump
-  volume: 5
+  volume: 2
 --- !u!82 &7275976265188008782
 AudioSource:
   m_ObjectHideFlags: 0
@@ -484,14 +484,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288793a7e553b0d4a948b90aac5c8431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomAudioPlayer
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7275976265188008782}
   audioClips:
   - {fileID: 8300000, guid: 2cdb4ce1067ea1b43aa982436393312c, type: 3}
   - {fileID: 8300000, guid: 6e9e1edf0da0eae40b3ee7dafc2dc225, type: 3}
   - {fileID: 8300000, guid: 6531291530e5951489b3604c5ced5e0e, type: 3}
   - {fileID: 8300000, guid: 700d93fd52aa5c44bae9c2494d173b86, type: 3}
   audioName: Hurt
-  volume: 1
+  volume: 1.5
 --- !u!1 &4606677167576761522
 GameObject:
   m_ObjectHideFlags: 0
