@@ -16,7 +16,7 @@ public class PlayerClimb : MonoBehaviour
     public PlayerRoll Roll { set { roll = value; } }
 
     private bool canClimb = false;
-    public bool CanJump { get { return !IsClimbing; } private set {} }
+    public bool CanJump { get { return canClimb && !IsClimbing; } private set {} }
 
     private bool climbUp = false;
     private bool climbDown = false;
