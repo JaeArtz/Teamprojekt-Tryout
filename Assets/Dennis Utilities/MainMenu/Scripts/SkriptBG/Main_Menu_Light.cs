@@ -18,7 +18,7 @@ public class Main_Menu_Light : MonoBehaviour
         Image image = gameObject.GetComponent<Image>();
         RectTransform rt = image.GetComponent(typeof(RectTransform)) as RectTransform;
         float y = rt.localScale.y;
-        rt.localScale = new Vector3(rt.localScale.x, 1.75f, rt.localScale.z);
+        rt.localScale = new Vector3(rt.localScale.x, 1.9f, rt.localScale.z);
 
         lastIndex = sprites.Length - 1;
         while (true)

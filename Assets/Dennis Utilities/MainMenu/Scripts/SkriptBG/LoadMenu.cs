@@ -25,6 +25,8 @@ public class LoadMenu : MonoBehaviour
     public GameObject mainUI;
     public GameObject newGameUI;
     public GameObject levelsUI;
+    public GameObject collectionUI;
+    public GameObject storyUI;
 
     private AudioSource m_audioComponent;
     [SerializeField]
@@ -200,7 +202,35 @@ public class LoadMenu : MonoBehaviour
         levelsUI.SetActive(false);
         mainUI.SetActive(true);
     }
+    public void OpenCollectionPanel()
+    {
+        ClickSoundPlayNoDeactivation();
 
+        mainUI.SetActive(false);
+        collectionUI.SetActive(true);
+    }
+
+    public void CloseCollectionPanel()
+    {
+        ClickSoundPlayNoDeactivation();
+        collectionUI.SetActive(false);
+        mainUI.SetActive(true);
+    }
+
+    public void OpenStoryPanel()
+    {
+        ClickSoundPlayNoDeactivation();
+
+        collectionUI.SetActive(false);
+        storyUI.SetActive(true);
+    }
+
+    public void CloseStoryPanel()
+    {
+        ClickSoundPlayNoDeactivation();
+        storyUI.SetActive(false);
+        collectionUI.SetActive(true);
+    }
     public void PlayHoverSound()
     {
         m_audioComponent.PlayOneShot(m_soundEffectHover);
