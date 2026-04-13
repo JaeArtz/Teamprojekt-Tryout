@@ -61,6 +61,7 @@ public class BlattSammeln : MonoBehaviour
     {
         if (collectedSprite != null)
             spriteRenderer.sprite = collectedSprite;
+        isCollected = true;
     }
 }
 
