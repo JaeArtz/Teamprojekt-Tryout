@@ -77,12 +77,12 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
-        proj.transform.position = firePoint.position;
-        
-        // Richtung basierend auf Spieler-Rotation
-        float direction = Mathf.Sign(transform.localScale.x);
-        proj.SetDirection(direction);
-    
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dir = (mouseWorld - transform.position).normalized;
+
+        proj.transform.position = transform.position + (Vector3)dir;
+
+        proj.SetDirection(dir);
     }
 
 
