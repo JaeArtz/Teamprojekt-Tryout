@@ -13,8 +13,16 @@ public class AutoPilotLanding : MonoBehaviour
     [Tooltip("TravelTime in Seconds of Phoenix (SpawnPoint) towards Player (deactivated).")]
     public float flightDuration = 3.0f;
 
+    public void Awake()
+    {
+        if(SaveSystem.LoadData().wasLoaded == true)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
     private void Start()
     {
+        playerObject.SetActive(false);
         // Scene starts with LandingSequence
         // "Phoenix places Player on Ground"
         StartCoroutine(StartLandingSequence());
