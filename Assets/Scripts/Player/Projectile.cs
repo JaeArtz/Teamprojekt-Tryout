@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Light2D ballLight;
     private bool hit; // Projektil was getroffen?
     private CircleCollider2D cCollider;
-    private float direction;
+    private Vector2 dir;
 
     private float lifeTime;
 
@@ -20,8 +20,8 @@ public class Projectile : MonoBehaviour
     {
         if (hit) return;
 
-        float movementSpeed = speed * Time.deltaTime * direction;
-        transform.Translate(movementSpeed, 0, 0);
+        Vector2 movementDir = dir * Time.deltaTime * speed;
+        transform.Translate(movementDir, 0);
         lifeTime += Time.deltaTime;
 
         if (lifeTime > 5f) //Projektil nach 5 Sekuden entfernen wenn nichts getroffen wird
@@ -43,6 +43,9 @@ public class Projectile : MonoBehaviour
             Deactivate();
             return;
         }*/
+        if (!other) return;
+        if (other.CompareTag("Player")) return;
+        if (other.isTrigger && !other.CompareTag("Enemy")) return;
 
         ILightReactable lightReactable = other.GetComponent<ILightReactable>();
         if (lightReactable != null)
@@ -58,23 +61,17 @@ public class Projectile : MonoBehaviour
     }
 
     // Um Schuss zu initialisieren, Richtung setzen und aktivieren
-    public void SetDirection(float _direction)
+    public void SetDirection(Vector2 _dir)
     {
         lifeTime = 0;
-        direction = _direction;
+        dir = _dir;
         gameObject.SetActive(true);
         hit = false;
         cCollider.enabled = true;
 
         // Sprite an Flugrichtung anpassen
-        float localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != _direction)
-        {
-            localScaleX = -localScaleX;
-        }
-
-
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+        float angle = Vector2.SignedAngle(Vector2.right, _dir);
+        transform.eulerAngles = new Vector3(0, 0, angle);
     }
 
     private void Deactivate()

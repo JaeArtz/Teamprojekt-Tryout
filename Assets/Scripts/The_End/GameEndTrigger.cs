@@ -9,10 +9,15 @@ public class GameEndTrigger : MonoBehaviour
     public AudioSource endEffectSound;     // Der Sound, der im Schwarzbild spielt
     public LevelLoaderScript levelLoader;  // Dein Objekt für die Schwarzblende
 
+    private GameObject myLevelLoader;
     [Header("Settings")]
     [Tooltip("Duration in seconds, how long we can see the Player before Fade starts")]
     public float delayBeforeFade = 7.0f;
-    public string nextSceneName = "Credits"; // Check if name is correct in the end, or switch to general LevelLoader somehow!
+
+    public void Awake()
+    {
+        myLevelLoader = GameObject.Find("LevelLoader");
+    }
 
     //Used in "On Interact ()"
     public void StartFinalSequence()
@@ -52,7 +57,7 @@ public class GameEndTrigger : MonoBehaviour
             }
 
             // 5. SwitchScene
-            SceneManager.LoadScene(nextSceneName);
+            myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
