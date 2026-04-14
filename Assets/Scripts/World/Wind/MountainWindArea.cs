@@ -3,7 +3,7 @@ using UnityEngine;
 public class MountainWindArea : MonoBehaviour
 {
     [Header("Wind & Timer")]
-    public float windForce = 5f; // Dein fester Wert zum Verändern (Variable 2)
+    public float windForce = 5f;
     public float gustDuration = 4f;
     public float pauseDuration = 6f;
 
@@ -17,16 +17,27 @@ public class MountainWindArea : MonoBehaviour
     public AudioClip[] gustClips;
 
     private PlayerRunning _playerRun;
-    private float _originalMaxX; // Variable 1: Merkt sich den Ursprungswert
+    private float _originalMaxX;
+    private bool _hasStoredOriginalValue = false;
+
     private float _timer;
     private bool _isWindActive;
-    private float _currentDir; // -1 = Links, 1 = Rechts
+    private float _currentDir; // -1 or 1
     private int _step;
 
     private void Start()
     {
-        _isWindActive = false;
-        _currentDir = 0f;
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+        {
+            var run = playerObj.GetComponentInParent<PlayerRunning>();
+            if (run != null)
+            {
+                _originalMaxX = run.MaxVelocityX;
+                _hasStoredOriginalValue = true;
+                Debug.Log($"WindArea: Start-Speed {_originalMaxX} gespeichert.");
+            }
+        }
         ApplyShaderSpeed();
     }
 
@@ -36,17 +47,16 @@ public class MountainWindArea : MonoBehaviour
 
         if (!_isWindActive)
         {
-            if (_timer >= pauseDuration)
-            {
-                StartWind();
-            }
+            if (_timer >= pauseDuration) StartWind();
         }
         else
         {
-            if (_timer >= gustDuration)
-            {
-                StopWind();
-            }
+            // New: updates Player each Frame,applies current Windeffect into right direction
+            // make sure Player ist pushed by Wind (X+5) or slowed by Wind (X-5)
+            // depending on into which direction he and the Wind are moving
+            ApplyWindToPlayer();
+
+            if (_timer >= gustDuration) StopWind();
         }
     }
 
@@ -54,13 +64,12 @@ public class MountainWindArea : MonoBehaviour
     {
         _timer = 0;
         _isWindActive = true;
-
-        // Zyklus: 1x Rechts (Schub), 2x Links (Widerstand)
+        // switches between 1 and -1
         _currentDir = (_step == 0) ? 1f : -1f;
         _step = (_step + 1) % 3;
 
         ApplyShaderSpeed();
-        ApplyWindToPlayer(); // Hier setzen wir den Wert auf Variable 2
+        ApplyWindToPlayer();
 
         if (gustAudioSource && gustClips != null && gustClips.Length > 0)
             gustAudioSource.PlayOneShot(gustClips[Random.Range(0, gustClips.Length)]);
@@ -70,27 +79,37 @@ public class MountainWindArea : MonoBehaviour
     {
         _timer = 0;
         _isWindActive = false;
-
-        ResetPlayerValue(); // Hier setzen wir den Wert zurück auf Variable 1
+        ResetPlayerValue();
         _currentDir = 0f;
-
         ApplyShaderSpeed();
     }
 
     private void ApplyWindToPlayer()
     {
-        if (_playerRun != null && _isWindActive)
+        if (_playerRun == null || !_isWindActive || !_hasStoredOriginalValue) return;
+
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        // When WindGust stops blowing => Reset to originalX (should be 10)
+        if (horizontalInput == 0)
         {
-            // Setzt den Wert auf (Original + Wind-Einfluss)
-            _playerRun.MaxVelocityX = _originalMaxX + (_currentDir * windForce);
+            _playerRun.MaxVelocityX = _originalMaxX;
+            return;
         }
+
+        // checks to make sure Player is "Blowin in The Wind" (in the Wind-direction)
+        bool withWind = Mathf.Sign(horizontalInput) == Mathf.Sign(_currentDir);
+
+        if (withWind)
+            _playerRun.MaxVelocityX = _originalMaxX + windForce; // speed up, currently +5
+        else
+            _playerRun.MaxVelocityX = _originalMaxX - windForce; // slow down, currently -5
     }
 
     private void ResetPlayerValue()
     {
-        if (_playerRun != null)
+        if (_playerRun != null && _hasStoredOriginalValue)
         {
-            // Setzt den Wert zurück auf den gespeicherten Originalwert
             _playerRun.MaxVelocityX = _originalMaxX;
         }
     }
@@ -102,20 +121,13 @@ public class MountainWindArea : MonoBehaviour
         desertWindRenderer.material.SetVector("_FogSpeed", new Vector2(targetSpeed, 0));
     }
 
-    // --- TRIGGER LOGIK ---
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         var run = other.GetComponentInParent<PlayerRunning>();
         if (run != null)
         {
             _playerRun = run;
-            _originalMaxX = run.MaxVelocityX; // Schritt 1 & 2: Originalwert in Variable 1 kopieren
-
-            if (_isWindActive)
-            {
-                ApplyWindToPlayer(); // Falls der Wind schon weht, wenn man reinläuft
-            }
+            if (_isWindActive) ApplyWindToPlayer();
         }
     }
 
@@ -124,7 +136,7 @@ public class MountainWindArea : MonoBehaviour
         var run = other.GetComponentInParent<PlayerRunning>();
         if (run != null && run == _playerRun)
         {
-            ResetPlayerValue(); // Schritt 5: Wert zurücksetzen
+            ResetPlayerValue();
             _playerRun = null;
         }
     }
