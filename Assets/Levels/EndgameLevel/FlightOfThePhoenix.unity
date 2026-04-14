@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AutoPilot
   flightTargetPoint: {fileID: 1690957975}
   camTrackerPoint: {fileID: 6318177696700804245}
+  playerObject: {fileID: 3600857870172864614}
   flightDuration: 30
   pickupTimePercent: 0.25
   holdDurationSeconds: 14
@@ -346,6 +347,10 @@ PrefabInstance:
     - target: {fileID: 2511538156179606041, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425020505741102488, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7863211045363660148, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
       propertyPath: m_Name
@@ -550,7 +555,7 @@ SpriteRenderer:
   m_SortingLayerID: 535374819
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 061b454829a91844fb4a7435b2f35b67, type: 3}
+  m_Sprite: {fileID: 4934017686571055659, guid: 47c0091dcb27cec478424e938ce34a0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

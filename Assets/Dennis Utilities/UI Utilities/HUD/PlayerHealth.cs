@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public string currentScene;
     private Image playerIcon;
+    private bool wasAlreadyLoaded = false;
 
     public Sprite FullLifeIcon;
     public Sprite HalfLifeIcon;
@@ -45,8 +46,7 @@ public class PlayerHealth : MonoBehaviour
             position.z = data.currentPosition[2];
 
             transform.position = position;
-            SaveSystem.AlterDataCheck(false);
-
+            wasAlreadyLoaded = true;
             //Player.GetComponent<PlayerRespawn>().RespawnNow();
         }
         else
@@ -66,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        SaveSystem.AlterDataCheck(false);
         myLevelManager.SaveCurrentLevel();
     }
 

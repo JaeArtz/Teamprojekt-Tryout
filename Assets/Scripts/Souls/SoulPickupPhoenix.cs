@@ -26,9 +26,10 @@ public class SoulPickupPhoenix : MonoBehaviour
     public float flightDuration = 3.0f;
 
     private bool collectedPhoenix = false;
-
+    private GameObject HUD;
     private void Awake()
     {
+        HUD = GameObject.Find("HUDCanvas");
         myLevelLoader = GameObject.Find("LevelLoader");
     }
     private void Start()
@@ -71,13 +72,14 @@ public class SoulPickupPhoenix : MonoBehaviour
             thePlayer.transform.position = playerTeleportPoint.position;
             Physics2D.SyncTransforms();
         }
-
+        HUD.SetActive(false);
         StartCoroutine(PhoenixFinalSequence(thePlayer));
     }
 
     private IEnumerator PhoenixFinalSequence(GameObject player)
     {
         // Phoenix Spawn Logic
+        
         if (phoenixObject != null)
         {
             Vector3 spawnPos = transform.position;
@@ -101,7 +103,6 @@ public class SoulPickupPhoenix : MonoBehaviour
         //Deactivates Player
         Debug.Log("Deaktiviere Objekt: " + player.name);
         player.SetActive(false);
-
         yield return new WaitForSeconds(hoverTime);
         StartCoroutine(DetachCameraAfterDelay());
 

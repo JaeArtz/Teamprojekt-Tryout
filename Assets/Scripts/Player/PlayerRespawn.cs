@@ -5,12 +5,20 @@ public class PlayerRespawn : MonoBehaviour
     public Vector3 respawnPoint;
     private GameObject mySaveGame;
     public bool useCheckpoints = true;
-
+    private bool wasAlreadyLoaded = false;
     //public Vector3 RespawnPoint => respawnPoint;
 
     private void Awake()
     {
         mySaveGame = GameObject.Find("Saver");
+        PlayerData data = SaveSystem.LoadData();
+        if(data != null)
+        {
+            if (data.wasLoaded == false)
+            {
+                wasAlreadyLoaded = true;
+            }
+        }
     }
 
 
@@ -19,13 +27,22 @@ public class PlayerRespawn : MonoBehaviour
     /// </summary>
     void Start()
     {
-        //respawnPoint = transform.position;
-        if (useCheckpoints && PlayerPrefs.HasKey("CheckpointX"))
-        {
-            float x = PlayerPrefs.GetFloat("CheckpointX");
-            float y = PlayerPrefs.GetFloat("CheckpointY");
-            respawnPoint = new Vector3(x, y, transform.position.z);
-            transform.position = respawnPoint; // Spieler direkt hinsetzen!
+            //respawnPoint = transform.position;
+        if (!wasAlreadyLoaded)
+        { 
+            if (useCheckpoints && PlayerPrefs.HasKey("CheckpointX"))
+            {
+                float x = PlayerPrefs.GetFloat("CheckpointX");
+                float y = PlayerPrefs.GetFloat("CheckpointY");
+                respawnPoint = new Vector3(x, y, transform.position.z);
+                transform.position = respawnPoint; // Spieler direkt hinsetzen!
+            }
+            else
+            {
+                PlayerPrefs.DeleteKey("CheckpointX");
+                PlayerPrefs.DeleteKey("CheckpointY");
+                respawnPoint = transform.position; // Fallback: Levelstart
+            }
         }
         else
         {
@@ -33,6 +50,7 @@ public class PlayerRespawn : MonoBehaviour
             PlayerPrefs.DeleteKey("CheckpointY");
             respawnPoint = transform.position; // Fallback: Levelstart
         }
+
     }
 
     public void SetCheckpoint(Vector3 newCheckpoint)

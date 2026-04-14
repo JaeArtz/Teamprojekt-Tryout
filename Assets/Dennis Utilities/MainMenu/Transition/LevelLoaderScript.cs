@@ -17,11 +17,15 @@ public class LevelLoaderScript : MonoBehaviour
 
     public void LoadScene(int levelIndex)
     {
+        PlayerPrefs.DeleteKey("CheckpointX");
+        PlayerPrefs.DeleteKey("CheckpointY");
         StartCoroutine(LoadLevel(levelIndex));
     }
 
     public void LoadScene(string levelName)
     {
+        PlayerPrefs.DeleteKey("CheckpointX");
+        PlayerPrefs.DeleteKey("CheckpointY");
         StartCoroutine(LoadLevel(levelName));
     }
     IEnumerator LoadLevel(string sceneName)

@@ -9,7 +9,8 @@ public class AutoPilot : MonoBehaviour
     public Transform flightTargetPoint;
     [Tooltip("Point in Scene for Camera, will be picked up along the way")]
     public Transform camTrackerPoint;
-
+    [Tooltip("Drag PlayerObject here that needs to be deactivated")]
+    public GameObject playerObject;
     [Header("Timing")]
     [Tooltip("Total of Flight Duration of the Phoenix in seconds")]
     public float flightDuration = 5.0f;
@@ -18,17 +19,21 @@ public class AutoPilot : MonoBehaviour
     [Tooltip("How many seconds will Cam be carried by Phnoenix?")]
     public float holdDurationSeconds = 2.0f;
 
+    private GameObject UI;
     private GameObject myLevelLoader;
     private bool cameraAttached = false;
 
     private void Awake()
     {
+        UI = GameObject.Find("HUDCanvas");
         myLevelLoader = GameObject.Find("LevelLoader");
     }
 
     private void Start()
     {
         StartCoroutine(CompleteFlightSequence());
+        playerObject.SetActive(false);
+        UI.SetActive(false);
     }
 
     IEnumerator CompleteFlightSequence()

@@ -9,12 +9,14 @@ public class AutoPilotLanding : MonoBehaviour
     [Tooltip("Drag PlayerObject here that needs to be deactivated")]
     public GameObject playerObject;
 
+    private GameObject HUD;
     [Header("Settings")]
     [Tooltip("TravelTime in Seconds of Phoenix (SpawnPoint) towards Player (deactivated).")]
     public float flightDuration = 3.0f;
 
     public void Awake()
     {
+        HUD = GameObject.Find("HUDCanvas");
         if(SaveSystem.LoadData().wasLoaded == true)
         {
             this.gameObject.SetActive(false);
@@ -23,6 +25,7 @@ public class AutoPilotLanding : MonoBehaviour
     private void Start()
     {
         playerObject.SetActive(false);
+        HUD.SetActive(false);
         // Scene starts with LandingSequence
         // "Phoenix places Player on Ground"
         StartCoroutine(StartLandingSequence());
@@ -51,7 +54,7 @@ public class AutoPilotLanding : MonoBehaviour
         if (playerObject != null)
         {
             playerObject.SetActive(true);
-             
+            HUD.SetActive(true);
             // checks for Player-RigidBody, security measure
             var rb = playerObject.GetComponent<Rigidbody2D>();
             if (rb != null) rb.WakeUp();
