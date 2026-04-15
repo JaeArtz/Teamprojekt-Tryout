@@ -33,6 +33,8 @@ public class Ghost2 : MonoBehaviour, ILightReactable
     [Tooltip("Does the original Sprite Image used in the spriteRenderer face right?")]
     public bool spriteFacesRightByDefault = false;
     public float hoverTimeOffset;
+    [Header("Damage Settings")]
+    public int enemyDamage = 1;
     
 
     private GhostState state = GhostState.Active;
@@ -122,7 +124,7 @@ public class Ghost2 : MonoBehaviour, ILightReactable
                 cooldownActive = true;
                 lastCooldownTime = Time.time;
                 //Debug.Log("Player nimmt Schaden! (Ghost2 -> TakeDamage)");
-                playerHealth.TakeDamage(1);
+                playerHealth.TakeDamage(enemyDamage);
             }
             else
             {

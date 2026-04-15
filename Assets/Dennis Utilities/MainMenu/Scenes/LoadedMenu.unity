@@ -499,7 +499,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 8680618518514536221, guid: 650f20ac16ce53c428669165b62ef25e, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1048,7 +1048,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -4061011728483841392, guid: a4fc9ff4eab5e854ebecd52f3c9e2277, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5935,6 +5935,7 @@ GameObject:
   - component: {fileID: 641446391}
   - component: {fileID: 641446393}
   - component: {fileID: 641446392}
+  - component: {fileID: 641446394}
   m_Layer: 5
   m_Name: StoryImage
   m_TagString: Untagged
@@ -5999,6 +6000,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641446390}
   m_CullTransparentMesh: 1
+--- !u!114 &641446394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641446390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
+  m_AspectMode: 2
+  m_AspectRatio: 1
 --- !u!1 &649192570
 GameObject:
   m_ObjectHideFlags: 0
@@ -7578,7 +7593,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 20
   m_Viewport: {fileID: 799457648}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -10189,7 +10204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.90588236, g: 0.6784314, b: 0.39607844, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15863,7 +15878,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -435691164617867576, guid: c3f8ebb3c432778468f29bc23abea5c6, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -16545,7 +16560,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -8385271591693565608, guid: d59bb84f817989b44a116784dc376dfc, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

@@ -520,11 +520,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372719999433069996, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -293.99988
+      value: -111
       objectReference: {fileID: 0}
     - target: {fileID: 372719999433069996, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.99997
+      value: -123.99997
       objectReference: {fileID: 0}
     - target: {fileID: 2306987915510789644, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -552,11 +552,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3021634608807895294, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 396.99976
+      value: 338
       objectReference: {fileID: 0}
     - target: {fileID: 3021634608807895294, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -82.99997
+      value: -80.99997
       objectReference: {fileID: 0}
     - target: {fileID: 3854110567256296899, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_Size.y
@@ -568,11 +568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4782166448055267027, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -148.99988
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4782166448055267027, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -108.00003
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 4933755314290219037, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_Size.y
@@ -584,11 +584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5901860877517721784, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 472.99988
+      value: 356
       objectReference: {fileID: 0}
     - target: {fileID: 5901860877517721784, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -110.00003
+      value: -69.00003
       objectReference: {fileID: 0}
     - target: {fileID: 5979013448964292344, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       propertyPath: m_Size.x
@@ -617,6 +617,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7520852454953961586, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
+    - {fileID: 2317391570066291428, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
+    - {fileID: 8192401460314239501, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
@@ -409073,8 +409075,8 @@ MonoBehaviour:
   - 'They will tell you more about our World. '
   - 'The World it once was... '
   - ... and maybe can become again.
-  - They will also make you stronger. And aid you
-  - in withstand the Dangers of this World.
+  - They will also make you stronger. And aid you,
+  - in withstanding the Dangers of this World.
   - The now dead World. <br>Only inhabited
   - by Ghosts.
   - <color=yellow>When you collect </color><color=#00E2FB>Wind Leafs</color><color=yellow>,

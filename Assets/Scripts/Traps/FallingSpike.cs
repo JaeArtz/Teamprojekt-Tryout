@@ -54,7 +54,8 @@ public class FallingSpike : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground")) // Wenn der Spike den Boden berührt, wird er zerstört
+        // Wenn der Spike den Boden berührt, oder den Player, zerplatzt er und wird zerstört
+        if ((collision.gameObject.CompareTag("Ground")) || (collision.gameObject.CompareTag("Player"))) 
         {
 
             // 1. FALL
