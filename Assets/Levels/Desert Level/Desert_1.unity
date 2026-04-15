@@ -73501,15 +73501,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1180655847}
     m_Modifications:
     - target: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 209.7
+      value: 50.837357
       objectReference: {fileID: 0}
     - target: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50
+      value: 52.268852
       objectReference: {fileID: 0}
     - target: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
       propertyPath: m_LocalPosition.z
@@ -73551,11 +73551,20 @@ PrefabInstance:
       propertyPath: leafID
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 8476219260071031334, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 77a46772e913cdb47850d57f0f7406c4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
+--- !u!4 &1110928680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
+  m_PrefabInstance: {fileID: 1110928679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1122364464
 GameObject:
   m_ObjectHideFlags: 0
@@ -73962,7 +73971,9 @@ Transform:
   m_LocalPosition: {x: 143.56444, y: 10.55655, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1976641904}
+  - {fileID: 1110928680}
   m_Father: {fileID: 1241393008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1181964861
@@ -100728,15 +100739,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1180655847}
     m_Modifications:
     - target: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107
+      value: -51.86264
       objectReference: {fileID: 0}
     - target: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29
+      value: 31.268852
       objectReference: {fileID: 0}
     - target: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100778,11 +100789,20 @@ PrefabInstance:
       propertyPath: leafID
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 8476219260071031334, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 77a46772e913cdb47850d57f0f7406c4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
+--- !u!4 &1976641904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 543497130962186743, guid: c2b54ad879bd52c438c0bc45197de571, type: 3}
+  m_PrefabInstance: {fileID: 1976641903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1978929947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186062,8 +186082,6 @@ SceneRoots:
   - {fileID: 1200990548}
   - {fileID: 107838691}
   - {fileID: 1323515822}
-  - {fileID: 1110928679}
-  - {fileID: 1976641903}
   - {fileID: 428735567}
   - {fileID: 717394823}
   - {fileID: 275634217}
