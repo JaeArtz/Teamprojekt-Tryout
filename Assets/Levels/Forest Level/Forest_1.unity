@@ -408041,6 +408041,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1876935968}
+    - target: {fileID: 7425020505741102485, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7863211045363660148, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
       propertyPath: m_Name
       value: Hud and UI

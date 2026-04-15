@@ -339,10 +339,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AutoPilot
   flightTargetPoint: {fileID: 1690957975}
   camTrackerPoint: {fileID: 6318177696700804245}
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 930399530}
   flightDuration: 30
   pickupTimePercent: 0.25
   holdDurationSeconds: 14
+--- !u!1 &930399530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2148937037148257664, guid: fdab9ffebf2769d41a9fe50ef5827a88, type: 3}
+  m_PrefabInstance: {fileID: 773704156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1066978597
 GameObject:
   m_ObjectHideFlags: 0

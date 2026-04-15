@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     public string currentScene;
     private Image playerIcon;
     private bool wasAlreadyLoaded = false;
+    private bool isFinalAnimation = false;
 
     public Sprite FullLifeIcon;
     public Sprite HalfLifeIcon;
@@ -84,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
 
         EvaluatePlayerIconAppearance();
 
-        if(currentHealth == 0)
+        if(currentHealth == 0 && !isFinalAnimation)
         {
             //Player.SetActive(false);
             //myLevelLoader.GetComponent<LevelLoaderScript>().LoadScene("GameOverScreen");
@@ -149,11 +150,12 @@ public class PlayerHealth : MonoBehaviour
         audioPlayer.PlayRandomSound();
     }
 
-    void GainHealth(int health)
+    void PlayFinalAnimation(int damage)
     {
-        if (!(currentHealth >= maxHealth))
+        if (currentHealth - damage == 0) currentHealth = 0;
         {
-            currentHealth += health;
+            currentHealth -= damage;
+            isFinalAnimation = true;
             //healthBar.SetHealth(currentHealth);
             OnPlayerDamaged?.Invoke();
         }
