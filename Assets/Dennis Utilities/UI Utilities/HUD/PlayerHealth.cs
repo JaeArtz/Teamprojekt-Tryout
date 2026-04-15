@@ -27,9 +27,10 @@ public class PlayerHealth : MonoBehaviour
     public Sprite AlmostDeadIcon;
 
     private RandomAudioPlayer audioPlayer;
-
+    private GameObject leafAnimation;
     private void Awake()
     {
+        leafAnimation = GameObject.Find("LeafCanvas");
         playerIcon = GameObject.Find("PlayerHeadIcon").GetComponent<Image>();
         myLevelLoader = GameObject.Find("LevelLoader");
         myLevelManager = GameObject.Find("GameManager").GetComponent<LevelManager>();
@@ -39,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
         if(data != null && data.wasLoaded == true)
         {
             currentHealth = data.currentLives;
-            maxHealth = 6 + SaveSystem.LoadLeafData().Count;
+            maxHealth = 6 + (SaveSystem.LoadLeafData().Count / 4);
             
             Vector3 position;
             position.x = data.currentPosition[0];
@@ -53,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             if (!(SaveSystem.LoadData() == null))
-                maxHealth = 6 + SaveSystem.LoadLeafData().Count;
+                maxHealth = 6 + (SaveSystem.LoadLeafData().Count / 4);
             else
                 maxHealth = 6;
             currentHealth = maxHealth;
@@ -114,15 +115,15 @@ public class PlayerHealth : MonoBehaviour
     //Testfunction, might be optimized and changed later on!
     private void EvaluatePlayerIconAppearance()
     {
-        if (currentHealth < 2)
+        if (currentHealth/(float)maxHealth < 0.2)
         {
             playerIcon.sprite = AlmostDeadIcon;
         }
-        else if (currentHealth < 3)//TODO: make range last from 6% to 33%
+        else if (currentHealth / (float)maxHealth < 0.34)//TODO: make range last from 6% to 33%
         {
             playerIcon.sprite = LowLifeIcon;
         }
-        else if (currentHealth < 5) //TODO: make range last from 33% to 66%
+        else if (currentHealth / (float)maxHealth < 0.67) //TODO: make range last from 33% to 66%
         {
             playerIcon.sprite = HalfLifeIcon;
         }
@@ -169,7 +170,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void UpdateLives()
     {
-        maxHealth = 6 + SaveSystem.LoadLeafData().Count;
+        maxHealth = 6 + (SaveSystem.LoadLeafData().Count / 4);
+        StartCoroutine(leafAnimation.GetComponent<LeafAnimation>().displayLeaves());
         if (!(currentHealth >= maxHealth))
             currentHealth++;
         //healthBar.SetHealth(currentHealth);

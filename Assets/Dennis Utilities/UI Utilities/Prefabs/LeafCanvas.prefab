@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2458956663095189792}
   - component: {fileID: 1085270533133365548}
   m_Layer: 5
-  m_Name: Leaf_1 (2)
+  m_Name: Leaf_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,10 +32,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8854295183256013101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2458956663095189792
 CanvasRenderer:
@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4922237606127327220
 RectTransform:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 8020678224319718591}
   - component: {fileID: 458189162770229157}
   m_Layer: 5
-  m_Name: Leaf_1 (3)
+  m_Name: Leaf_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,10 +287,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8854295183256013101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8020678224319718591
 CanvasRenderer:
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 523349484209526411}
   - component: {fileID: 2909704000706225120}
   m_Layer: 5
-  m_Name: Leaf_1
+  m_Name: Leaf_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,10 +362,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8854295183256013101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &523349484209526411
 CanvasRenderer:
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 4094866655080402007}
   - component: {fileID: 3384528363986516047}
   m_Layer: 5
-  m_Name: Leaf_1 (1)
+  m_Name: 'Leaf_1 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,10 +437,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8854295183256013101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4094866655080402007
 CanvasRenderer:
@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 3004094515896895293}
   - component: {fileID: 3935344738962796746}
   - component: {fileID: 5249270939900297052}
+  - component: {fileID: 8958449047172634448}
   m_Layer: 5
   m_Name: LeafCanvas
   m_TagString: Untagged
@@ -582,3 +583,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8958449047172634448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541487056139625530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ccb3d737a67e8439d61b49402e1a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LeafAnimation
+  leaves:
+  - {fileID: 5941737509400370668}
+  - {fileID: 6427819655515145127}
+  - {fileID: 722207421610334942}
+  - {fileID: 5056432479413334010}
