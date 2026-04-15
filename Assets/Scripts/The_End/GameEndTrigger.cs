@@ -10,6 +10,8 @@ public class GameEndTrigger : MonoBehaviour
     public LevelLoaderScript levelLoader;  // Dein Objekt für die Schwarzblende
 
     private GameObject myLevelLoader;
+    private GameObject pauseCanvas;
+    private LastBreath lastBreath;
     [Header("Settings")]
     [Tooltip("Duration in seconds, how long we can see the Player before Fade starts")]
     public float delayBeforeFade = 7.0f;
@@ -17,6 +19,9 @@ public class GameEndTrigger : MonoBehaviour
     public void Awake()
     {
         myLevelLoader = GameObject.Find("LevelLoader");
+        pauseCanvas = GameObject.Find("PauseCanvas");
+        lastBreath = GameObject.Find("LastSeconds").GetComponent<LastBreath>();
+
     }
 
     //Used in "On Interact ()"
@@ -27,6 +32,8 @@ public class GameEndTrigger : MonoBehaviour
 
     private IEnumerator EndSequenceRoutine()
     {
+        pauseCanvas.SetActive(false);
+        StartCoroutine(lastBreath.LastDyingBreath());
         // 1. Music- fade
         if (backgroundMusic != null)
         {

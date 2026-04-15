@@ -150,11 +150,17 @@ public class PlayerHealth : MonoBehaviour
         audioPlayer.PlayRandomSound();
     }
 
-    void PlayFinalAnimation(int damage)
+    public void PlayFinalAnimation(int damage)
     {
-        if (currentHealth - damage == 0) currentHealth = 0;
+        if (currentHealth - damage <= 0)
+        {   
+            currentHealth = 0;
+            OnPlayerDamaged?.Invoke(); 
+        }
+        else
         {
             currentHealth -= damage;
+            maxHealth = currentHealth;
             isFinalAnimation = true;
             //healthBar.SetHealth(currentHealth);
             OnPlayerDamaged?.Invoke();
