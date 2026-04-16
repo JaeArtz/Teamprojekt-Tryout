@@ -27,9 +27,11 @@ public class SoulPickupPhoenix : MonoBehaviour
 
     private bool collectedPhoenix = false;
     private GameObject HUD;
+    private GameObject pauseCanvas;
     private void Awake()
     {
         HUD = GameObject.Find("HUDCanvas");
+        pauseCanvas = GameObject.Find("PauseCanvas");
         myLevelLoader = GameObject.Find("LevelLoader");
     }
     private void Start()
@@ -73,6 +75,7 @@ public class SoulPickupPhoenix : MonoBehaviour
             Physics2D.SyncTransforms();
         }
         HUD.SetActive(false);
+        pauseCanvas.SetActive(false);
         StartCoroutine(PhoenixFinalSequence(thePlayer));
     }
 

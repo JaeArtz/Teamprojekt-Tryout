@@ -112,8 +112,19 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        if (SoulManager.Instance != null && SoulManager.Instance.HasSoul("rabbitSoul"))
-            jump.CanDoubleJump = true;
+        if (SoulManager.Instance != null)
+        {
+            // BRabbit Soul
+            if (SoulManager.Instance.HasSoul("rabbitSoul"))
+                jump.CanDoubleJump = true;
+
+            // Armadillo Soul beim Start prüfen
+            if (SoulManager.Instance.HasSoul("armadilloSoul"))
+                roll.CanRoll = true;
+
+            if(SoulManager.Instance.HasSoul("birdSoul"))
+                glide.IsGlideUnlocked = true;
+        }
 
         Debug.Log("Player Controller Start Done.");
     }
@@ -167,7 +178,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(dir * 0.7f, 0.7f, transform.localScale.z);
         }
 
-        roll.CanRoll = wallActions.CanRoll;
+        //roll.CanRoll = wallActions.CanRoll;
 
         if (!roll.IsRolling && roll.ApplyBoostedSpeed && !_isGrounded && Mathf.Sign(body.linearVelocityX) != Input.GetAxisRaw("Horizontal"))
             roll.StopBoostSpeed();
@@ -235,6 +246,16 @@ public class PlayerController : MonoBehaviour
         {
             jump.CanDoubleJump = true;
             showcaseDoubleJump = true;
+        }
+
+        if (soul.soulID == "armadilloSoul")
+        {
+            roll.CanRoll = true;
+        }
+
+        if (soul.soulID == "birdSoul")
+        {
+            glide.IsGlideUnlocked = true;
         }
     }
 

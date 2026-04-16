@@ -26,8 +26,17 @@ public class PlayerGlide : MonoBehaviour
 
 
     private bool isHoldingSpace;
-    private bool canGlide;
+    public bool canGlide;
 
+    private bool isGlideUnlocked; // Permanente Freischaltung durch Seele
+    public bool IsGlideUnlocked { set { isGlideUnlocked = value; } }
+
+    private bool canGlideInAir; // Darf man in diesem spezifischen Sprung gleiten?
+
+    void Awake()
+    {
+        isGlideUnlocked = false; // Standardmäßig gesperrt
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,13 +46,16 @@ public class PlayerGlide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isGlideUnlocked) return; // Wenn nicht freigeschaltet, mache gar nichts
+
         isHoldingSpace = Input.GetKey(KeyCode.Space);
 
         if (Input.GetKeyUp(KeyCode.Space) && IsGliding && glideSpeedTransitionTimer > 0 && body.linearVelocityY < currentGlidingVelocityY)
             glideSpeedTransitionTimer = Mathf.Max(0, glideSpeedTransitionTimer - glideAbortionPenalty);
 
+        // Nur wenn freigeschaltet, darf man beim Drücken von Space das Gleiten für diesen Sprung aktivieren
         if(Input.GetKeyDown(KeyCode.Space))
-            canGlide = true;
+            canGlideInAir = true; 
     }
 
     private void FixedUpdate()
@@ -67,16 +79,18 @@ public class PlayerGlide : MonoBehaviour
     {
         if (IsGrounded)
         {
-            if (body.linearVelocityY <= 0)
-                canGlide = false;
+            canGlideInAir = false; // Reset, wenn man landet
             IsGliding = false;
             return;
         }
-        if (!isHoldingSpace)
+
+        // Wenn die Seele nicht da ist ODER man die Taste für diesen Sprung nicht gedrückt hat
+        if (!isGlideUnlocked || !canGlideInAir || !isHoldingSpace)
         {
             IsGliding = false;
             return;
         }
+
         if (roll && roll.IsRolling)
         {
             IsGliding = false;
@@ -86,14 +100,11 @@ public class PlayerGlide : MonoBehaviour
         if (body.linearVelocityY > currentGlidingVelocityY)
         {
             IsGliding = false;
-            return;
         }
         else
         {
-            IsGliding = canGlide;
-            return;
+            IsGliding = true; 
         }
-
     }
 
     public void ResetGlideSpeedTransitionTimer()

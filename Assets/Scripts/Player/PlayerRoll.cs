@@ -43,10 +43,15 @@ public class PlayerRoll : MonoBehaviour
     private int enemyLayerIndex;
     private int breakableWallMask; // Layer-Maske für BreakableWall-Layer
 
+    void Awake()
+    {
+        canRoll = false; // Rollen zu Beginn sperren — wird durch Armadillo-Seele freigeschaltet
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        canRoll = false; // Rollen zu Beginn sperren — wird durch Armadillo-Seele freigeschaltet
+        //canRoll = false; // Rollen zu Beginn sperren — wird durch Armadillo-Seele freigeschaltet
         
         // Layer vom tatsächlichen Collider-Child holen (sitzt auf "Scaler", nicht Root)
         var col = GetComponentInChildren<BoxCollider2D>();
@@ -71,12 +76,12 @@ public class PlayerRoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canRoll && releasedR && Input.GetKeyDown(KeyCode.R) && rollCooldownTimer <= 0 && rollDurationTimer <= 0)
+        if (canRoll && releasedR && (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.R)) && rollCooldownTimer <= 0 && rollDurationTimer <= 0)
         {
             isHoldingR = true;
             releasedR = false;
         }
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.Mouse1) || Input.GetKeyUp(KeyCode.R))
         {
             isHoldingR = false;
             releasedR = true;

@@ -56,12 +56,12 @@ public class SavefileLoader : MonoBehaviour
             buttonText1.GetComponent<TextMeshProUGUI>().text = player1.currentScene;
             int collectedSouls = SaveSystem.LoadSoulData(1).Count;
             int collectedLeaves = SaveSystem.LoadLeafData(1).Count; 
-            savefileText1.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/4 \nCollected Leaves {collectedLeaves }/24";
+            savefileText1.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/5 \nCollected Leaves {collectedLeaves }/24";
         }
         else
         {
             buttonText1.GetComponent<TextMeshProUGUI>().text = "Empty";
-            savefileText1.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/24";
+            savefileText1.GetComponent<TMP_Text>().text = "Collected Souls: 0/5 \nCollected Leaves 0/24";
         }
 
         if (player2 != null)
@@ -69,12 +69,12 @@ public class SavefileLoader : MonoBehaviour
             buttonText2.GetComponent<TextMeshProUGUI>().text = player2.currentScene;
             int collectedSouls = SaveSystem.LoadSoulData(2).Count;
             int collectedLeaves = SaveSystem.LoadLeafData(2).Count;
-            savefileText2.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/4 \nCollected Leaves {collectedLeaves}/24";
+            savefileText2.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/5 \nCollected Leaves {collectedLeaves}/24";
         }
         else
         {
             buttonText2.GetComponent<TextMeshProUGUI>().text = "Empty";
-            savefileText2.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/24";
+            savefileText2.GetComponent<TMP_Text>().text = "Collected Souls: 0/5 \nCollected Leaves 0/24";
         }
 
         if (player3 != null)
@@ -82,12 +82,12 @@ public class SavefileLoader : MonoBehaviour
             buttonText3.GetComponent<TextMeshProUGUI>().text = player3.currentScene;
             int collectedSouls = SaveSystem.LoadSoulData(3).Count;
             int collectedLeaves = SaveSystem.LoadLeafData(3).Count;
-            savefileText3.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/4 \nCollected Leaves {collectedLeaves}/24";
+            savefileText3.GetComponent<TMP_Text>().text = $"Collected Souls: {collectedSouls}/5 \nCollected Leaves {collectedLeaves}/24";
         }
         else
         {
             buttonText3.GetComponent<TextMeshProUGUI>().text = "Empty";
-            savefileText3.GetComponent<TMP_Text>().text = "Collected Souls: 0/4 \nCollected Leaves 0/24";
+            savefileText3.GetComponent<TMP_Text>().text = "Collected Souls: 0/5 \nCollected Leaves 0/24";
         }
     }
 

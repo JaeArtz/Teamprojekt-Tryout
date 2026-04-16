@@ -20,12 +20,14 @@ public class AutoPilot : MonoBehaviour
     public float holdDurationSeconds = 2.0f;
 
     private GameObject UI;
+    private GameObject pauseCanvas;
     private GameObject myLevelLoader;
     private bool cameraAttached = false;
 
     private void Awake()
     {
         UI = GameObject.Find("HUDCanvas");
+        pauseCanvas = GameObject.Find("PauseCanvas");
         myLevelLoader = GameObject.Find("LevelLoader");
     }
 
@@ -34,6 +36,7 @@ public class AutoPilot : MonoBehaviour
         StartCoroutine(CompleteFlightSequence());
         playerObject.SetActive(false);
         UI.SetActive(false);
+        pauseCanvas.SetActive(false);
     }
 
     IEnumerator CompleteFlightSequence()
