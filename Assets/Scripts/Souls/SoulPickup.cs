@@ -126,7 +126,12 @@ public class SoulPickup : MonoBehaviour
 
         }
 
-
+        // Suche das PlayerGlide Script auf dem Spieler
+        var pgl = other.GetComponentInParent<PlayerGlide>();
+        if (pgl != null && soulData.soulID == "birdSoul")
+        {
+            pgl.IsGlideUnlocked = true;
+        }
 
         // Dialog anzeigen (optional)
 
