@@ -4026,7 +4026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6597161062742531398, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.0300293
+      value: -2.030014
       objectReference: {fileID: 0}
     - target: {fileID: 6597161064305967826, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -96433,8 +96433,9 @@ PrefabInstance:
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[5]'
       value: <color=yellow>Press </color><color=red>RIGHT CLICK</color><color=yellow>
-        to  <color=red>ROLL</color> like an </color><color=#00E2FB>Armadillo</color><color=yellow>,
-        into the <color=red>DIRECTION</color> you are facing.</color>
+        or  <color=red>R</color><color=yellow> to  <color=red>ROLL</color> like an
+        </color><color=#00E2FB>Armadillo</color><color=yellow>, into the <color=red>DIRECTION</color>
+        you are facing.</color>
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[6]'
