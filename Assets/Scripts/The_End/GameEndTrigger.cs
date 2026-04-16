@@ -58,6 +58,7 @@ public class GameEndTrigger : MonoBehaviour
             // 4. Sound in the Dark (2 slow low HeartBeats)
             if (endEffectSound != null)
             {
+                yield return new WaitForSeconds(3);
                 endEffectSound.Play();
                 // Wait for Sound to be done
                 yield return new WaitForSeconds(endEffectSound.clip.length);
