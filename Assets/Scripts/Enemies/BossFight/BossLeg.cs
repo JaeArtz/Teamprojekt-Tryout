@@ -53,6 +53,7 @@ public class BossLeg : MonoBehaviour
         // 3. STOMP
         // Damage ON, Wall OFF
         if (damageTrigger) damageTrigger.enabled = true;
+        Debug.Log($"STOMP - damageTrigger enabled: {damageTrigger.enabled}, Object: {damageTrigger.gameObject.name}");
         if (solidWallCollider) solidWallCollider.enabled = false;
 
 
