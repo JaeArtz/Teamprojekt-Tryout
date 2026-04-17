@@ -1,33 +1,30 @@
 using UnityEngine;
 using System.Collections;
-using System;
 
-public class BossCombatManager : MonoBehaviour
+public class BossCombatManagerTest : MonoBehaviour
 {
-    public static BossCombatManager Instance;
+    public static BossCombatManagerTest Instance;
 
     [Header("Limb References")]
     public BossFist leftFist;
     public BossFist rightFist;
-    public BossLeg leftLeg;
-    public BossLeg rightLeg;
+    public BossLegMovement leftLeg;
+    public BossLegMovement rightLeg;
 
     [Header("Player & Arena Tracking")]
     public Transform playerTransform;
-    [Tooltip("ArenaMiddlePoint is the centerpoint")]
     public Transform centerPoint;
-    public float groundY = 94f; // y-coordinate of Ground, for reference of BossFist-Attack
+    public float groundY = 94f;
 
     [Header("Rhythm Settings")]
-    public float pauseBetweenAttacks = 0.8f; // single attack
-    public float pauseBetweenCycles = 2.0f;  // whole cycle of attacks (fixed rythm of boss-attacks)
+    public float pauseBetweenAttacks = 0.8f;
+    public float pauseBetweenCycles = 2.0f;
 
     private bool playerIsInRange = false;
     private bool bossIsRunning = false;
 
-    [Header("Sound and Visual Fight Effects")]
-    [SerializeField] private AudioSource bumpPunchSource;
-    [SerializeField] private AudioSource rumbleStompSource;
+    [Header("Effects")]
+    [SerializeField] private AudioSource rumbleSource;
     [SerializeField] private GameObject shockwavePrefab;
 
     void Awake()
@@ -35,41 +32,23 @@ public class BossCombatManager : MonoBehaviour
         if (Instance == null) Instance = this;
     }
 
-    // --- LEG (Sound + Shockwave) ---
+    // Diese Methode wird vom Bein aufgerufen, um die Wellen zu erzeugen
     public void TriggerStompEffects(Vector3 spawnPos)
     {
-        // brings everything to "Ground-Level" (y coordinate, "height of Ground" for wave animations)
         Vector3 groundSpawnPos = new Vector3(spawnPos.x, groundY, spawnPos.z);
+        if (rumbleSource != null && rumbleSource.clip != null)
+            rumbleSource.PlayOneShot(rumbleSource.clip);
 
-        // 1. Sound
-        if (rumbleStompSource != null && rumbleStompSource.clip != null)
-            rumbleStompSource.PlayOneShot(rumbleStompSource.clip);
-
-        // 2. Shockwave
         if (shockwavePrefab != null)
         {
-            // Right
             GameObject waveR = Instantiate(shockwavePrefab, groundSpawnPos, Quaternion.identity);
-            var sR = waveR.GetComponent<Shockwave>();
-            if (sR != null) sR.Setup(1);
+            if (waveR.GetComponent<Shockwave>() != null) waveR.GetComponent<Shockwave>().Setup(1);
 
-            // Left
             GameObject waveL = Instantiate(shockwavePrefab, groundSpawnPos, Quaternion.identity);
-            var sL = waveL.GetComponent<Shockwave>();
-            if (sL != null) sL.Setup(-1);
+            if (waveL.GetComponent<Shockwave>() != null) waveL.GetComponent<Shockwave>().Setup(-1);
         }
     }
 
-    // --- FIST (Sound) ---
-    public void TriggerFistSound()
-    {
-        if (rumbleStompSource != null && rumbleStompSource.clip != null)
-        {
-            rumbleStompSource.PlayOneShot(rumbleStompSource.clip);
-        }
-    }
-
-    #region Trigger & Loop (Unchanged)
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -87,17 +66,17 @@ public class BossCombatManager : MonoBehaviour
     private IEnumerator BossRhythmLoop()
     {
         bossIsRunning = true;
-
         while (playerIsInRange)
         {
+            // --- ORIGINAL RHYTHMUS ---
             yield return StartCoroutine(GetActiveFist().Attack());
             yield return new WaitForSeconds(pauseBetweenAttacks);
             yield return StartCoroutine(GetActiveFist().Attack());
             yield return new WaitForSeconds(pauseBetweenAttacks);
 
-            yield return StartCoroutine(rightLeg.Attack());
+            if (rightLeg != null) yield return StartCoroutine(rightLeg.Attack());
             yield return new WaitForSeconds(pauseBetweenAttacks);
-            yield return StartCoroutine(leftLeg.Attack());
+            if (leftLeg != null) yield return StartCoroutine(leftLeg.Attack());
             yield return new WaitForSeconds(pauseBetweenAttacks);
 
             yield return StartCoroutine(GetActiveFist().Attack());
@@ -105,13 +84,12 @@ public class BossCombatManager : MonoBehaviour
             yield return StartCoroutine(GetActiveFist().Attack());
             yield return new WaitForSeconds(pauseBetweenAttacks);
 
-            yield return StartCoroutine(leftLeg.Attack());
+            if (leftLeg != null) yield return StartCoroutine(leftLeg.Attack());
             yield return new WaitForSeconds(pauseBetweenAttacks);
-            yield return StartCoroutine(rightLeg.Attack());
+            if (rightLeg != null) yield return StartCoroutine(rightLeg.Attack());
 
             yield return new WaitForSeconds(pauseBetweenCycles);
         }
-
         bossIsRunning = false;
     }
 
@@ -119,10 +97,6 @@ public class BossCombatManager : MonoBehaviour
     {
         if (playerTransform == null) return leftFist;
         float centerX = (centerPoint != null) ? centerPoint.position.x : transform.position.x;
-        if (playerTransform.position.x < centerX)
-            return leftFist;
-        else
-            return rightFist;
+        return (playerTransform.position.x < centerX) ? leftFist : rightFist;
     }
-    #endregion
 }
