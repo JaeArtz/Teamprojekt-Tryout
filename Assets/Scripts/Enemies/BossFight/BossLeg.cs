@@ -52,8 +52,8 @@ public class BossLeg : MonoBehaviour
 
         // 3. STOMP
         // Damage ON, Wall OFF
-        if (damageTrigger) damageTrigger.enabled = false;
-        if (solidWallCollider) solidWallCollider.enabled = true;
+        if (damageTrigger) damageTrigger.enabled = true;
+        if (solidWallCollider) solidWallCollider.enabled = false;
 
 
         yield return StartCoroutine(LerpPosition(raisedPos, groundPos, strikeDuration));
