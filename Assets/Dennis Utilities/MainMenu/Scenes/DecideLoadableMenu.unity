@@ -353,6 +353,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31740864}
   m_CullTransparentMesh: 1
+--- !u!95 &138009458 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6597161062965021672, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
+  m_PrefabInstance: {fileID: 1096277340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &389788609
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 7884225985186256668, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 138009458}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
