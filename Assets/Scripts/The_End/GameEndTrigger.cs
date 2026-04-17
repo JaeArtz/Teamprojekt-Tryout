@@ -16,12 +16,19 @@ public class GameEndTrigger : MonoBehaviour
     [Tooltip("Duration in seconds, how long we can see the Player before Fade starts")]
     public float delayBeforeFade = 7.0f;
 
+    public Animator animator;
+    public GameObject AnimatorCanvas;
     public void Awake()
     {
         myLevelLoader = GameObject.Find("LevelLoader");
         pauseCanvas = GameObject.Find("PauseCanvas");
         lastBreath = GameObject.Find("LastSeconds").GetComponent<LastBreath>();
 
+    }
+
+    public void Start()
+    {
+        AnimatorCanvas.SetActive(false);
     }
 
     //Used in "On Interact ()"
@@ -58,10 +65,12 @@ public class GameEndTrigger : MonoBehaviour
             // 4. Sound in the Dark (2 slow low HeartBeats)
             if (endEffectSound != null)
             {
+                AnimatorCanvas.SetActive(true);
+                animator.Play("TreeAnim");
                 yield return new WaitForSeconds(3);
                 endEffectSound.Play();
                 // Wait for Sound to be done
-                yield return new WaitForSeconds(endEffectSound.clip.length);
+                yield return new WaitForSeconds((endEffectSound.clip.length - 7.0f));
             }
 
             // 5. SwitchScene
