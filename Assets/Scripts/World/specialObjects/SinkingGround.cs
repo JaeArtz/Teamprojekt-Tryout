@@ -41,21 +41,20 @@ public class SinkingGround : MonoBehaviour
     {
         var jump = other.GetComponentInParent<PlayerJump>();
         var run = other.GetComponentInParent<PlayerRunning>();
-        if (jump && run)
+        var body = other.GetComponentInParent<Rigidbody2D>();
+        if (jump && run && body)
         {
             // if player doesn't actively jump and try to get out
             // he gets dragged down
-            if (jump.VerticalVelocity <= 0.1f)
+            if (body.linearVelocityY <= sinkForce)
             {
-                jump.VerticalVelocity = sinkForce;
+                body.linearVelocityY = sinkForce;
             }
 
             jump.remoteAccessToGroundCoyoteCounter = sinkingGroundCoyouteTime;
 
             run.MaxVelocityX = (float)_originalMaxX * slowFactor;
             jump.MaxVelocityY = (float)_originalMaxY * jumpFactor;
-
-            jump.VerticalVelocity = sinkForce;
         }
     }
 
