@@ -98,4 +98,4 @@ public class BouncerFist : MonoBehaviour
         }
     }
 }
-// I currently use an invisible Wall that spawns at the appropriate spot, so the fist flies, does nothing, but at least the player collides and falls down....
+// I currently use an invisible Wall that spawns at the appropriate spot, so the fist flies, does some damage, the player collides and falls down
