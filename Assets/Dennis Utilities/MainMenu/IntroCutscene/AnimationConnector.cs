@@ -13,6 +13,7 @@ public class AnimationConnector : MonoBehaviour
     private GameObject StoryHeartBeatSection;
     private GameObject FinalScreen;
 
+
     [SerializeField]
     private AudioClip audio_storyTreeFirstPart;
     [SerializeField]
@@ -21,6 +22,8 @@ public class AnimationConnector : MonoBehaviour
     private AudioClip audio_storyHeartBeatSection;
     [SerializeField]
     private AudioClip audio_goldenDroplett;
+    [SerializeField]
+    private AudioClip heartBeat;
 
     private AudioSource m_audioComponent;
     private GameObject LevelLoader;
@@ -73,6 +76,10 @@ public class AnimationConnector : MonoBehaviour
         yield return new WaitForSeconds(4.0f);
         StoryHeartBeatSection.SetActive(false);
         FinalScreen.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        m_audioComponent.PlayOneShot(heartBeat);
+        yield return new WaitForSeconds(4.5f);
+
         try
         {
             if (SaveSystem.LoadSelectedFileData() == 0)
@@ -93,7 +100,7 @@ public class AnimationConnector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && !keyPressed)
+        if (Input.anyKey && !keyPressed)
         {
             try
             {
