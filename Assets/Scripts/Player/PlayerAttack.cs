@@ -66,7 +66,7 @@ public class PlayerAttack : MonoBehaviour
         return true;
     }
 
-    private void Attack()
+    private void Attack(Vector2? forcedDirection = null)
     {
         lastAttackTime = Time.time;
 
@@ -77,8 +77,17 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 dir = (mouseWorld - transform.position).normalized;
+        Vector2 dir;
+
+        if (forcedDirection.HasValue)
+        {
+            dir = forcedDirection.Value;
+        }
+        else
+        {
+            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            dir = ((Vector2)mouseWorld - (Vector2)transform.position).normalized;
+        }
 
         proj.transform.position = transform.position + (Vector3)dir;
 
@@ -124,7 +133,10 @@ public class PlayerAttack : MonoBehaviour
         playerController.SetInputLocked(true);
 
         yield return new WaitForSeconds(0.3f);
-        Attack();
+
+        float facingDir = transform.localScale.x > 0 ? 1f : -1f;
+        Vector2 forcedDir = new Vector2(facingDir, 0f);
+        Attack(forcedDir);
         yield return new WaitForSeconds(2f);
 
         playerController.SetInputLocked(false);
