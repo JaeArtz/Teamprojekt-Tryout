@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 8426809274216101344}
   - component: {fileID: 7275976265188008782}
   - component: {fileID: 1183772606106223335}
+  - component: {fileID: 5288405965988499352}
   m_Layer: 0
   m_Name: Player_Original
   m_TagString: Player
@@ -355,6 +356,7 @@ MonoBehaviour:
   endingGlidingVelocityY: -20
   glideSpeedTransitionDuration: 5
   glideAbortionPenalty: 0.25
+  canGlide: 0
 --- !u!114 &8426809274216101344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +494,30 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 700d93fd52aa5c44bae9c2494d173b86, type: 3}
   audioName: Hurt
   volume: 1.5
+--- !u!114 &5288405965988499352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562932011958070637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288793a7e553b0d4a948b90aac5c8431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAudioPlayer
+  audioSource: {fileID: 7275976265188008782}
+  audioClips:
+  - {fileID: 8300000, guid: 4759c711ab1318c49a1d1e3c3e5ec7fc, type: 3}
+  - {fileID: 8300000, guid: 5ebff68f8c9ec9e4a8d4e4bdd48c58b1, type: 3}
+  - {fileID: 8300000, guid: ddcea70659d14644db46bc63ca14ba0c, type: 3}
+  - {fileID: 8300000, guid: eb81db792215c4b4d99dcef299c331f1, type: 3}
+  - {fileID: 8300000, guid: 76d5cd8c99d2dd644b793305c9517fe2, type: 3}
+  - {fileID: 8300000, guid: cd1bbb7721d24da4b9178073bc372abf, type: 3}
+  - {fileID: 8300000, guid: 1099a94ca81777041a01609ef9948a12, type: 3}
+  - {fileID: 8300000, guid: f6c28e4e7b544fb46b0231b0d1c09568, type: 3}
+  audioName: Shot
+  volume: 1
 --- !u!1 &4606677167576761522
 GameObject:
   m_ObjectHideFlags: 0

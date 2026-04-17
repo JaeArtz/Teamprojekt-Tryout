@@ -1,4 +1,11 @@
+using System.Linq;
 using UnityEngine;
+
+public enum EnemyType
+{
+    Ghost,
+    Hyena
+}
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Ghost2 : MonoBehaviour, ILightReactable
@@ -35,18 +42,23 @@ public class Ghost2 : MonoBehaviour, ILightReactable
     public float hoverTimeOffset;
     [Header("Damage Settings")]
     public int enemyDamage = 1;
+
+    [Header("Enemy Settings")]
+    [SerializeField, Tooltip("Type of enemy.")]
+    private EnemyType enemyType;
     
 
     private GhostState state = GhostState.Active;
     private float stunTimer;
     private SpriteRenderer sr;
 
+    [Header("Collider Settings")]
     [SerializeField] private CircleCollider2D hitCollider;
     [SerializeField] private BoxCollider2D bodyCollider;
     private Animator animator;
     private GhostLight_PathPoints_SmoothMovement pathScript;
 
-
+    private RandomAudioPlayer audioPlayer;
 
     void Awake()
     {
@@ -55,6 +67,10 @@ public class Ghost2 : MonoBehaviour, ILightReactable
         pathScript = GetComponentInParent<GhostLight_PathPoints_SmoothMovement>();
         startingPosition = transform.position;
         lastPosition = transform.position;
+
+        audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals($"{enemyType.ToString()} Stun"));
+
+        if (!audioPlayer) Debug.LogError($@"Random Audio Player with name ""{enemyType.ToString()} Stun"" could not be found!");
     }
 
     void Update()
@@ -137,6 +153,9 @@ public class Ghost2 : MonoBehaviour, ILightReactable
 
     private void SetStunned()
     {
+        if (state != GhostState.Stunned)
+            audioPlayer.PlayRandomSound();
+
         state = GhostState.Stunned;
         stunTimer = stunDuration;
         sr.sprite = stunnedSprite;

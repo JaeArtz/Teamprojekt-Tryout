@@ -8,8 +8,9 @@
 
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
 using TMPro;
+using UnityEngine;
 
 public class UI_SpeechBubbleManager : MonoBehaviour
 {
@@ -48,10 +49,16 @@ public class UI_SpeechBubbleManager : MonoBehaviour
 
     [SerializeField] private string[] messageArray;
 
+    private RandomAudioPlayer audioPlayer;
+
     private void Awake()
     {
         speechBubbleContainer.SetActive(false);
         interactionVisual.SetActive(false); // Starts invisible, until closeness of Player triggers Visibility
+
+        audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals("Shimmer"));
+
+        if (!audioPlayer) Debug.LogError(@"Random Audio Player with name ""Shimmer"" could not be found!");
     }
 
     private void Update()
@@ -166,6 +173,7 @@ public class UI_SpeechBubbleManager : MonoBehaviour
     private void StartTalkingSound()
     {
         if (talkingAudioSource != null) talkingAudioSource.Play();
+        audioPlayer.PlayRandomSound();
     }
 
     private void StopTalkingSound()

@@ -43,6 +43,7 @@ public class Projectile : MonoBehaviour
             Deactivate();
             return;
         }*/
+        Debug.Log("Hit");
         if (!other) return;
         if (other.CompareTag("Player")) return;
         if (other.isTrigger && !other.CompareTag("Enemy")) return;

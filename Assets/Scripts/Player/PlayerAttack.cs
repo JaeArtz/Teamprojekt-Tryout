@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Linq;
+
 #if UNITY_EDITOR
 using UnityEditor.EditorTools;
 #endif
@@ -20,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
     // Showcase vom LightShot
     private bool showcaseLightShot = false;
 
+    private RandomAudioPlayer audioPlayer;
+
     private void Start()
     {
         if (soulManager.HasSoul("lightShotSoul"))
@@ -33,6 +37,10 @@ public class PlayerAttack : MonoBehaviour
         soulManager = GameObject.Find("GameManager").GetComponent<SoulManager>();
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
+
+        audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals("Shot"));
+
+        if (!audioPlayer) Debug.LogError(@"Random Audio Player with name ""Shot"" could not be found!");
     }
 
     private void Update()
@@ -53,6 +61,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (lightShotUnlocked && Input.GetMouseButtonDown(0) && CanAttack())
         {
+            audioPlayer.PlayRandomSound();
             Attack();
         }
     }

@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 302914218035805106}
   - component: {fileID: 1198937652742355571}
   - component: {fileID: -3016009641559298757}
+  - component: {fileID: 151569192918799100}
+  - component: {fileID: 5582632798042412673}
+  - component: {fileID: 7549151445163054055}
   m_Layer: 0
   m_Name: GhostTraveling
   m_TagString: Enemy
@@ -224,5 +227,152 @@ MonoBehaviour:
   autoFlipp: 1
   spriteFacesRightByDefault: 0
   hoverTimeOffset: 0
+  enemyDamage: 1
+  enemyType: 0
   hitCollider: {fileID: 1198937652742355571}
   bodyCollider: {fileID: 302914218035805106}
+--- !u!82 &151569192918799100
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229111381611243761}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.75
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &5582632798042412673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229111381611243761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288793a7e553b0d4a948b90aac5c8431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAudioPlayer
+  audioSource: {fileID: 151569192918799100}
+  audioClips:
+  - {fileID: 8300000, guid: ea7062398f6624f4eb36799827eef454, type: 3}
+  - {fileID: 8300000, guid: a4884519dab188b488a984084d373e58, type: 3}
+  - {fileID: 8300000, guid: e27490c879eabc54d98d82dc03420493, type: 3}
+  - {fileID: 8300000, guid: b9c2f06f10750614ba835d0400ee338f, type: 3}
+  - {fileID: 8300000, guid: 76c05aeb4ec0edf49904ed7574a857e6, type: 3}
+  - {fileID: 8300000, guid: 3ece82185c94bb24abc70f19d1a915e2, type: 3}
+  - {fileID: 8300000, guid: 1bc62259b1495874187200acc7965328, type: 3}
+  - {fileID: 8300000, guid: a39424f8b7eb477488cba74ba0635281, type: 3}
+  audioName: Ghost Stun
+  volume: 3
+--- !u!114 &7549151445163054055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229111381611243761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288793a7e553b0d4a948b90aac5c8431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAudioPlayer
+  audioSource: {fileID: 151569192918799100}
+  audioClips:
+  - {fileID: 8300000, guid: 3ae31118e3dfd594e8a5db4a25d27d4d, type: 3}
+  - {fileID: 8300000, guid: a5537c3599005aa438187c3f813c1c7b, type: 3}
+  - {fileID: 8300000, guid: c3fba5d989f21174a98559ea86fb2f13, type: 3}
+  - {fileID: 8300000, guid: cca4c57be592b064cb1f8afb4f454d1d, type: 3}
+  - {fileID: 8300000, guid: 60ecdc3ebe2e83b47bc4dd489f2b8014, type: 3}
+  - {fileID: 8300000, guid: 5fcf431535b523f40a53f6b2676b1d59, type: 3}
+  - {fileID: 8300000, guid: 705213af11d776b4dad45ccb52a2d990, type: 3}
+  - {fileID: 8300000, guid: c1981c48e8aa3344ab06611b399af782, type: 3}
+  audioName: Hyena Stun
+  volume: 5
