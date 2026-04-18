@@ -187,7 +187,7 @@ MonoBehaviour:
   talkingAudioSource: {fileID: 0}
   interactionVisual: {fileID: 4168077993027313288}
   speechBubbleContainer: {fileID: 1569701766655711217}
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 704136176570501442, guid: fdab9ffebf2769d41a9fe50ef5827a88, type: 3}
   activationRadius: 5
   exitRadiusCooldown: 2
   cooldownTime: 3

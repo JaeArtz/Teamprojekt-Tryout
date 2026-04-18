@@ -143,3 +143,5 @@ MonoBehaviour:
   soulData: {fileID: 11400000, guid: e76d199325acb42479541d0be892cf3c, type: 2}
   dialogBox: {fileID: 0}
   dialogDuration: 3
+  interactionHint_E: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 77a46772e913cdb47850d57f0f7406c4, type: 3}
