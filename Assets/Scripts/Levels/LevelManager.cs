@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     private HashSet<int> finishedLevels = new HashSet<int>();
     private GameObject player;
+    public bool wasAlreadyVisited = false;
 
     private void Awake()
     {
@@ -22,6 +23,8 @@ public class LevelManager : MonoBehaviour
         else
         {
             finishedLevels = SaveSystem.LoadLevelData();
+            if (finishedLevels.Contains(SceneManager.GetActiveScene().buildIndex - 4)) 
+                wasAlreadyVisited = true;
         }
     }
 

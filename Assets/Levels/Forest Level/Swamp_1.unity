@@ -34765,12 +34765,20 @@ PrefabInstance:
       objectReference: {fileID: 2017168218}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6597161064305967826, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1007697214}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6597161064305967827, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1237155979}
   m_SourcePrefab: {fileID: 100100000, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
+--- !u!4 &373545034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6597161064305967826, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
+  m_PrefabInstance: {fileID: 373545033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &373786697
 GameObject:
   m_ObjectHideFlags: 0
@@ -35054,6 +35062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddde829d86570ad44a391a4efc8b0a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  wasAlreadyVisited: 0
 --- !u!1001 &423920178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38255,6 +38264,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8083087107593941237, guid: e860a15b5baf34f49808a76e750aadf5, type: 3}
   m_PrefabInstance: {fileID: 4828072720901596102}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1007697213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007697214}
+  - component: {fileID: 1007697215}
+  m_Layer: 0
+  m_Name: WorldCompleted
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1007697214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007697213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.129272, y: -397.35522, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 373545034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1007697215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007697213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0595e639520ff448b7fd24b6ee3539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldCompleted
+  message: Unlocked Story 13 for clearing World 1!
 --- !u!1001 &1015556653
 PrefabInstance:
   m_ObjectHideFlags: 0
