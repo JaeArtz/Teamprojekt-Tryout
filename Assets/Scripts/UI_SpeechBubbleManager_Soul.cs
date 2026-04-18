@@ -185,7 +185,7 @@ public class UI_SpeechBubbleManager_Soul : MonoBehaviour
         if (talkingAudioSource != null) talkingAudioSource.Stop();
     }
 
-    // Visualises Radius in Unity-Editor
+    // Visualiert Radius in Unity-Editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

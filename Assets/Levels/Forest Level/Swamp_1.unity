@@ -35857,9 +35857,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e6f494b493ec25747aa4721894ea8347, type: 2}
     - target: {fileID: 8917038320030930409, guid: 038145d1257d6554abbabbe181eb131b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1340371364}
+    - target: {fileID: 8917038320030930409, guid: 038145d1257d6554abbabbe181eb131b, type: 3}
       propertyPath: stayActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8917038320030930409, guid: 038145d1257d6554abbabbe181eb131b, type: 3}
+      propertyPath: interactionHint_E
+      value: 
+      objectReference: {fileID: 1340371363}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40937,6 +40945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoulPickup_Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1253004888571998732, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 7006503929252287495, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -116.5
@@ -40978,6 +40990,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8181640831082546346, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1876935962}
+    - target: {fileID: 8181640831082546346, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
       value: <color=red>GLIDE SKILL UNLOCKED</color>
       objectReference: {fileID: 0}
@@ -40993,6 +41009,16 @@ PrefabInstance:
 --- !u!4 &1340371362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7006503929252287495, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+  m_PrefabInstance: {fileID: 1340371361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1340371363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4168077993027313288, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+  m_PrefabInstance: {fileID: 1340371361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1340371364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1569701766655711217, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
   m_PrefabInstance: {fileID: 1340371361}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1353737494
@@ -41698,7 +41724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.32133
+      value: -109.99999
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.y

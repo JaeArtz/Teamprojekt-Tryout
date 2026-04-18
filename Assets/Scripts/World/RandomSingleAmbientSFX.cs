@@ -7,7 +7,7 @@ public class RandomSingleAmbientSFX : MonoBehaviour
 {
     public List<AudioClip> sounds;
     [Header("Settings")]
-    public string soulIDForLoudness = "catSoul"; // Die ID deiner Katzen-Seele
+    public string soulIDForLoudness = "catSoul"; 
     public float minWaitTime = 2f;
     public float maxWaitTime = 6f;
 

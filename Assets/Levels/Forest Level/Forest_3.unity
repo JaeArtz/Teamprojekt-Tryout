@@ -14192,11 +14192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1163.1782
+      value: -1165.1761
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -45.412872
+      value: -45.420677
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15538,6 +15538,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
+--- !u!1 &1503151043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4168077993027313288, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+  m_PrefabInstance: {fileID: 2116995272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513338103
 GameObject:
   m_ObjectHideFlags: 0
@@ -23063,6 +23068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoulPickup_Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1253004888571998732, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 641378626}
     - target: {fileID: 7006503929252287495, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1159.1761
@@ -23103,6 +23112,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7161081099385857373, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181640831082546346, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1930173856}
     - target: {fileID: 8181640831082546346, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
       value: <color=#00E2FB>LIGHT BALL UNLOCKED</color>
@@ -23119,6 +23136,11 @@ PrefabInstance:
 --- !u!4 &2116995273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7006503929252287495, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+  m_PrefabInstance: {fileID: 2116995272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2116995274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1569701766655711217, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
   m_PrefabInstance: {fileID: 2116995272}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129259941
@@ -268499,10 +268521,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoulPickup
   soulData: {fileID: 11400000, guid: 084aeb3d2e79186418a7dd1964da176b, type: 2}
-  dialogBox: {fileID: 0}
+  dialogBox: {fileID: 2116995274}
   dialogDuration: 3
-  interactionHint_E: {fileID: 0}
-  pickupSound: {fileID: 0}
+  interactionHint_E: {fileID: 1503151043}
+  pickupSound: {fileID: 8300000, guid: 77a46772e913cdb47850d57f0f7406c4, type: 3}
 --- !u!95 &8917038321731477658
 Animator:
   serializedVersion: 7
