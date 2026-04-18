@@ -107,13 +107,7 @@ public class Ghost2 : MonoBehaviour, ILightReactable
     {
         if (autoFlipp && sr != null)
         {
-            float xFactorDifference = transform.position.x - lastPosition.x;
-
-            /*// Das hier hilft uns zu sehen, was die zweite Hyäne berechnet
-            if (gameObject.name == "GhostTraveling1") // Ersetze durch den exakten Namen im Inspector
-            {
-                Debug.Log($"{gameObject.name} bewegt sich um: {xFactorDifference}");
-            }*/
+            float xFactorDifference = transform.position.x - lastPosition.x;           
 
             if (Mathf.Abs(xFactorDifference) > 0.0001f) // Sensiblerer Schwellenwert
             {
@@ -139,7 +133,7 @@ public class Ghost2 : MonoBehaviour, ILightReactable
             {
                 cooldownActive = true;
                 lastCooldownTime = Time.time;
-                //Debug.Log("Player nimmt Schaden! (Ghost2 -> TakeDamage)");
+                
                 playerHealth.TakeDamage(enemyDamage);
             }
             else

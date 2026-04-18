@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 public class GameEndTrigger : MonoBehaviour
 {
     [Header("References")]
-    public AudioSource backgroundMusic;    // Die Musik, die ausfaden soll
-    public AudioSource endEffectSound;     // Der Sound, der im Schwarzbild spielt
-    public LevelLoaderScript levelLoader;  // Dein Objekt für die Schwarzblende
+    [Tooltip("This Sound will fade out at End of Level")]
+    public AudioSource backgroundMusic;
+    [Tooltip("Sound that will play in the Dark after Fadeout into Black (The Two Heartbeats)")]
+    public AudioSource endEffectSound;
+    [Tooltip("Insert LevelLoader here")]
+    public LevelLoaderScript levelLoader;
 
     private GameObject myLevelLoader;
     private GameObject pauseCanvas;

@@ -35,7 +35,7 @@ public class PlayerRespawn : MonoBehaviour
                 float x = PlayerPrefs.GetFloat("CheckpointX");
                 float y = PlayerPrefs.GetFloat("CheckpointY");
                 respawnPoint = new Vector3(x, y, transform.position.z);
-                transform.position = respawnPoint; // Spieler direkt hinsetzen!
+                transform.position = respawnPoint; // gibt Anweisung: Spieler hier hinsetzen
             }
             else
             {
@@ -79,14 +79,5 @@ public class PlayerRespawn : MonoBehaviour
         if (rb != null)
             rb.linearVelocity = Vector2.zero;
     }
-
-    /*
-    /// <summary>
-    /// Is called once per frame.
-    /// </summary>
-    void Update()
-    {
-        
-    }
-    */
+    
 }

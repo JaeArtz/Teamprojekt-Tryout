@@ -16,6 +16,8 @@ public class SinkingGround : MonoBehaviour
     [Tooltip("time window for jumping while in SinkingGround (Coyote Time override)")]
     [SerializeField] private float sinkingGroundCoyouteTime = 0.7f;
 
+    // value can be null if not set yet, so: make it nullable
+    // thats why readonly doesn't work here
     private float? _originalMaxX;
     private float? _originalMaxY;
 
@@ -31,7 +33,8 @@ public class SinkingGround : MonoBehaviour
             if(!_originalMaxY.HasValue)
                 _originalMaxY = jump.MaxVelocityY;
 
-            // change values (while stuck in SinkingGround)
+            // change temporary values (while stuck in SinkingGround)
+            // NO changing of original values
             run.MaxVelocityX = (float)_originalMaxX * slowFactor;
             jump.MaxVelocityY = (float)_originalMaxY * jumpFactor;
         }

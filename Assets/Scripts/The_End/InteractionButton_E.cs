@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class InteractionButton_E : MonoBehaviour
 {
     [Header("Visuals")]
+    [Tooltip("Always drag the object with E-Button Sprite in here")]
     public GameObject interactionHint; // "E"-Button Popup
 
     [Header("Event")]
@@ -47,7 +48,7 @@ public class InteractionButton_E : MonoBehaviour
         // Do whatever the Inspector says
         onInteract?.Invoke();
 
-        Debug.Log("Interaktion ausgeführt!");
+        Debug.Log("Interaktion mit E-Button ausgeführt!");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
