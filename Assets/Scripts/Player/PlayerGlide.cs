@@ -79,7 +79,7 @@ public class PlayerGlide : MonoBehaviour
     {
         if (IsGrounded)
         {
-            canGlideInAir = false; // Reset, wenn man landet
+            canGlideInAir = body.linearVelocityY > 1f; // Reset, wenn man landet
             IsGliding = false;
             return;
         }
