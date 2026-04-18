@@ -16,6 +16,10 @@ public class BossLeg : MonoBehaviour
     public float strikeDuration = 0.15f;
     public float stayDuration = 0.6f;
 
+    [Header("DamageDealer Object")]
+    [Tooltip("Drag object in that is the damageDealer: Foot_Bottom")]
+    public GameObject footBottom_damageDealer;
+
     [Header("Visuals")]
     public GameObject shadowSprite;
     public float warningTime = 1.0f;
@@ -29,7 +33,7 @@ public class BossLeg : MonoBehaviour
         impulseSource = GetComponent<CinemachineImpulseSource>();
 
         // Initial State:
-        if (damageTrigger) damageTrigger.enabled = false; // no damage dealt when Leg ist standing still
+        // if (damageTrigger) damageTrigger.enabled = false; // no damage dealt when Leg ist standing still
         if (solidWallCollider) solidWallCollider.enabled = true; // "solid wall" while standing
         if (shadowSprite) shadowSprite.SetActive(false);
     }
@@ -39,7 +43,7 @@ public class BossLeg : MonoBehaviour
         Vector3 raisedPos = new Vector3(groundPos.x, groundPos.y + raiseHeight, groundPos.z);
 
         // 1. LIFT Foot
-        if (damageTrigger) damageTrigger.enabled = false;
+        // if (damageTrigger) damageTrigger.enabled = false;
         yield return StartCoroutine(LerpPosition(groundPos, raisedPos, raiseDuration));
 
         // 2. "WARNING"
@@ -52,8 +56,8 @@ public class BossLeg : MonoBehaviour
 
         // 3. STOMP
         // Damage ON, Wall OFF
-        if (damageTrigger) damageTrigger.enabled = true;
-        Debug.Log($"STOMP - damageTrigger enabled: {damageTrigger.enabled}, Object: {damageTrigger.gameObject.name}");
+        // if (damageTrigger) damageTrigger.enabled = true;
+        // Debug.Log($"STOMP - damageTrigger enabled: {damageTrigger.enabled}, Object: {damageTrigger.gameObject.name}");
         if (solidWallCollider) solidWallCollider.enabled = false;
 
 
@@ -65,14 +69,14 @@ public class BossLeg : MonoBehaviour
         // --- SOUND AND SHOCKWAVES ---
         if (BossCombatManager.Instance != null)
         {
-            BossCombatManager.Instance.TriggerStompEffects(transform.position);
+            BossCombatManager.Instance.TriggerStompEffects(transform.position, footBottom_damageDealer);
         }
         // ------------------------------------------------
 
         // WALL ON, shortly after DAMAGE OFF
         if (solidWallCollider) solidWallCollider.enabled = true;
         yield return new WaitForSeconds(0.1f);
-        if (damageTrigger) damageTrigger.enabled = false;
+        // if (damageTrigger) damageTrigger.enabled = false;
 
         yield return new WaitForSeconds(stayDuration - 0.1f);
 

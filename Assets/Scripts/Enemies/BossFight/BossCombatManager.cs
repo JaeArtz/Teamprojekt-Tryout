@@ -12,6 +12,13 @@ public class BossCombatManager : MonoBehaviour
     public BossLeg leftLeg;
     public BossLeg rightLeg;
 
+    [Header("Damage Dealer Settings")]
+    [Tooltip("Foot_Bottom object with EnemyDamage Script")]
+    public GameObject leftLegDamageDealer;
+    public GameObject rightLegDamageDealer;
+    [Tooltip("How long does the Damage Dealer stay active before being deactivated again?")]
+    public float durationDamageDealer = 0.5f;
+
     [Header("Player & Arena Tracking")]
     public Transform playerTransform;
     [Tooltip("ArenaMiddlePoint is the centerpoint")]
@@ -32,11 +39,14 @@ public class BossCombatManager : MonoBehaviour
 
     void Awake()
     {
+        // standard procedure, makes sure only one instance of the script exists
         if (Instance == null) Instance = this;
+        if (leftLegDamageDealer != null) leftLegDamageDealer.SetActive(false);
+        if (rightLegDamageDealer != null) rightLegDamageDealer.SetActive(false);
     }
 
     // --- LEG (Sound + Shockwave) ---
-    public void TriggerStompEffects(Vector3 spawnPos)
+    public void TriggerStompEffects(Vector3 spawnPos, GameObject legDamageDealer)
     {
         // brings everything to "Ground-Level" (y coordinate, "height of Ground" for wave animations)
         Vector3 groundSpawnPos = new Vector3(spawnPos.x, groundY, spawnPos.z);
@@ -58,6 +68,31 @@ public class BossCombatManager : MonoBehaviour
             var sL = waveL.GetComponent<Shockwave>();
             if (sL != null) sL.Setup(-1);
         }
+
+        // 3. Temporary Activation of DamegeDealer (Foot_Bottom)
+        if (legDamageDealer != null)
+        {
+            StartCoroutine(ActiveDamageDealer(legDamageDealer));
+        }
+       
+    }
+
+    private IEnumerator ActivateDamageDealer(bool isLeftLeg)
+    {
+        GameObject dealer = isLeftLeg ? leftLegDamageDealer : rightLegDamageDealer;
+
+        if (dealer != null)
+        {
+            dealer.SetActive(true);
+            yield return new WaitForSeconds(durationDamageDealer);
+            dealer.SetActive(false);
+        }
+    }
+    private IEnumerator ActiveDamageDealer(GameObject dealer)
+    {
+        dealer.SetActive(true);
+        yield return new WaitForSeconds(durationDamageDealer);
+        dealer.SetActive(false);
     }
 
     // --- FIST (Sound) ---
