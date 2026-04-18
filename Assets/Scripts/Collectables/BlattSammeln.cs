@@ -1,4 +1,6 @@
 using System;
+using TMPro;
+
 #if UNITY_EDITOR
 using UnityEditor.EditorTools;
 #endif
@@ -11,13 +13,14 @@ public class BlattSammeln : MonoBehaviour
     private CollectableManager collectableManager;
     [SerializeField]
     private AudioClip audioClip;
-
+    private GameObject notifyPanel;
 
     private SpriteRenderer spriteRenderer;
     private bool isCollected = false;
     private void Awake()
     {
         collectableManager = GameObject.Find("GameManager").GetComponent<CollectableManager>();
+        notifyPanel = GameObject.Find("NotifyPanel");
     }
     private void Start()
     {
@@ -36,6 +39,14 @@ public class BlattSammeln : MonoBehaviour
             CollectLeaf();
             isCollected = true;
             PlaySound();
+
+            string currentStory = processDisplay();
+            Debug.Log(currentStory);
+            if(currentStory.Length > 1)
+            {
+                notifyPanel.SetActive(true);
+                StartCoroutine(notifyPanel.GetComponent<ShowStoryAnimation>().ShowCollectedAnimation(currentStory));
+            }
         }
     }
 
@@ -62,6 +73,60 @@ public class BlattSammeln : MonoBehaviour
         if (collectedSprite != null)
             spriteRenderer.sprite = collectedSprite;
         isCollected = true;
+    }
+
+
+    private string processDisplay()
+    {
+        if (leafID == 1)
+        {
+            return "Unlocked Story Nr.1";
+        }
+        if (leafID == 2)
+        {
+            return "Unlocked Story Nr.6";
+        }
+        if (leafID == 4)
+        {
+            return "Unlocked Story Nr.7";
+        }
+        if (leafID == 5)
+        {
+            return "Unlocked Story Nr.8";
+        }
+        if (leafID == 6)
+        {
+            return "Unlocked Story Nr.2";
+        }
+        if (leafID == 7)
+        {
+            return "Unlocked Story Nr.10";
+        }
+        if (leafID == 9)
+        {
+            return "Unlocked Story Nr.5";
+        }
+        if (leafID == 11)
+        {
+            return "Unlocked Story Nr.4";
+        }
+        if (leafID == 15)
+        {
+            return "Unlocked Story Nr.9";
+        }
+        if (leafID == 20)
+        {
+            return "Unlocked Story Nr.3";
+        }
+        if (leafID == 22)
+        {
+            return "Unlocked Story Nr.12";
+        }
+        if (leafID == 24)
+        {
+            return "Unlocked Story Nr.11";
+        }
+        return "";
     }
 }
 
