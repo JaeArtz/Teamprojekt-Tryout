@@ -2260,16 +2260,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 1116148810}
     m_Modifications:
     - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: hoverSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
       propertyPath: hoverAmplitude
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: useInternalHover
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2493316488136366846, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
       propertyPath: m_Enabled
@@ -268425,6 +268417,8 @@ MonoBehaviour:
   soulData: {fileID: 11400000, guid: 084aeb3d2e79186418a7dd1964da176b, type: 2}
   dialogBox: {fileID: 0}
   dialogDuration: 3
+  interactionHint_E: {fileID: 0}
+  pickupSound: {fileID: 0}
 --- !u!95 &8917038321731477658
 Animator:
   serializedVersion: 7

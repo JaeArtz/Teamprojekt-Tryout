@@ -73716,21 +73716,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 280444574}
     m_Modifications:
     - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: hoverSpeed
-      value: 2
+      propertyPath: enemyType
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: enemyDamage
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: hitCollider
-      value: 
-      objectReference: {fileID: 1221024247}
-    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: bodyCollider
-      value: 
-      objectReference: {fileID: 1221024248}
     - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
       propertyPath: normalSprite
       value: 
@@ -73739,14 +73727,6 @@ PrefabInstance:
       propertyPath: stunnedSprite
       value: 
       objectReference: {fileID: -7265772220100608013, guid: ea069a011ccf71c4bb9f9f0f4ae32b3d, type: 3}
-    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: hoverAmplitude
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      propertyPath: useInternalHover
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 302914218035805106, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
       propertyPath: m_Size.x
       value: 7.448715
@@ -73877,7 +73857,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8229111381611243761, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-      insertIndex: -1
+      insertIndex: 6
       addedObject: {fileID: 1221024251}
   m_SourcePrefab: {fileID: 100100000, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
 --- !u!1001 &1165242721
@@ -74396,16 +74376,6 @@ GameObject:
 --- !u!4 &1221024245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5620933480652726399, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-  m_PrefabInstance: {fileID: 1133149143}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1221024247 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 1198937652742355571, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
-  m_PrefabInstance: {fileID: 1133149143}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1221024248 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 302914218035805106, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
   m_PrefabInstance: {fileID: 1133149143}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1221024251
@@ -92167,6 +92137,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1571594968}
     m_Modifications:
+    - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
+      propertyPath: enemyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3016009641559298757, guid: 5028abd6335b0984682f97a40c81c398, type: 3}
       propertyPath: hoverSpeed
       value: 2
