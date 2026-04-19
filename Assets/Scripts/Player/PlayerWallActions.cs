@@ -24,8 +24,6 @@ public class PlayerWallActions : MonoBehaviour
     private float wallCoyoteTimer;
 
     [Header("Collider Settings")]
-    [SerializeField, Tooltip("How far the cast start is away from the player collider to check for a nearby wall")]
-    private float wallCheckDistance = 0.1f;
     [SerializeField, Tooltip("Circle collider without collision for wall check")]
     private CircleCollider2D wallTrigger;
 

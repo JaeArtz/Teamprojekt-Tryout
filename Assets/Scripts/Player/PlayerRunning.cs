@@ -15,8 +15,6 @@ public class PlayerRunning : MonoBehaviour
 
     private float movementVelocity;
 
-    private bool isOnSlope;
-
     private Rigidbody2D body;
     public Rigidbody2D Body { set { body = value; } }
 
@@ -78,7 +76,6 @@ public class PlayerRunning : MonoBehaviour
         if (!Hit || !Hit.collider.CompareTag("Slope"))
         {
             body.gravityScale = 3;
-            isOnSlope = false;
             return;
         }
 
@@ -86,13 +83,11 @@ public class PlayerRunning : MonoBehaviour
         if (slopeAngle < 0.1f || slopeAngle > 80.0f)
         {
             body.gravityScale = 3;
-            isOnSlope = false;
             return;
         }
 
         if (horizontalInput == 0f) body.gravityScale = 0;
 
-        isOnSlope = true;
         Vector2 direction = -Vector2.Perpendicular(Hit.normal);
         Vector2 adjustedVelocity = direction * body.linearVelocity.x;
         if (body.linearVelocityY > 0.1f)

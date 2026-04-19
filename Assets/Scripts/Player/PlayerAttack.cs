@@ -14,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("Attack Settings")]
     [SerializeField] private float attackCooldown = 0.7f;
-    [SerializeField] private Transform firePoint;
     
     private float lastAttackTime = -Mathf.Infinity;
     private bool lightShotUnlocked = false;
