@@ -20,7 +20,6 @@ public class PlayerClimb : MonoBehaviour
 
     private bool climbUp = false;
     private bool climbDown = false;
-    private bool isOnTop = false;
 
     public bool IsClimbing => canClimb && (climbUp ^ climbDown);
 

@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Tooltip("The wall layer")] private LayerMask wallLayer;
 
     [Header("Collider Settings")]
-    [SerializeField, Tooltip("How far the cast start is away from the player collider to check for a nearby wall")] private float wallCheckDistance = 0.2f;
-    [SerializeField, Tooltip("How far the cast start is away from the player collider to check for a nearby ground")] private float groundCheckDistance = 0.2f;
-    [SerializeField, Tooltip("How far the box cast is being elongated to check for a nearby wall")] private Vector2 wallCheckSize = new Vector2(0.2f, 0.8f);
     [SerializeField, Tooltip("Box collider for collision with objects")] private BoxCollider2D surfaceCollider;
     [SerializeField, Tooltip("Circle collider without collision for wall check")] private CircleCollider2D wallTrigger;
 
