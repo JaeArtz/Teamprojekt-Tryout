@@ -45,6 +45,7 @@ public class UI_SpeechBubbleManager_Soul : MonoBehaviour
     private bool conversationIsActive = false;
     private bool cooldownIsRunning = false;
     private float cooldownTimer;
+    private bool buttonWasPushed = false;
 
     [SerializeField] private string[] messageArray;
 
@@ -71,8 +72,10 @@ public class UI_SpeechBubbleManager_Soul : MonoBehaviour
             // shows E-Button only when Player is close
             interactionVisual.SetActive(isWithinRadius);
 
-            if (isWithinRadius && Input.GetKeyDown(KeyCode.E))
+            if ((isWithinRadius) && (Input.GetKeyDown(KeyCode.E)) && (buttonWasPushed == false))
             {
+                buttonWasPushed = true;
+                interactionVisual.SetActive(false);
                 StartConversation();
             }
         }
@@ -98,7 +101,7 @@ public class UI_SpeechBubbleManager_Soul : MonoBehaviour
             // => Textpopup wird einmalig kurz gezeigt
             interactionVisual.SetActive(false);
 
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+            if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && (buttonWasPushed == false))
             {
                 HandleInput();
             }

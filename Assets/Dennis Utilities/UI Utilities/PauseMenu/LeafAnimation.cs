@@ -31,7 +31,7 @@ public class LeafAnimation : MonoBehaviour
             for(int i = 0; i < 4; i++)
             {
                 colors[i] = leaves[i].GetComponent<Image>().color;
-                colors[i].a =  Mathf.Clamp01(elapsedTime / fadeTime);
+                colors[i].a = Mathf.Clamp01(elapsedTime / fadeTime);
                 leaves[i].GetComponent<Image>().color = colors[i];
             }
         }

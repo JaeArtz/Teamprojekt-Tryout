@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class CheckpointTriggerAutoStart : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class CheckpointTriggerAutoStart : MonoBehaviour
 
     private bool _hasTriggered;
 
+    private GameObject HUD;
+    private GameObject pauseCanvas;
     private void Reset()
     {
         var col = GetComponent<Collider2D>();
@@ -28,6 +31,9 @@ public class CheckpointTriggerAutoStart : MonoBehaviour
 
     private void Awake()
     {
+
+        HUD = GameObject.Find("HUDCanvas");
+        pauseCanvas = GameObject.Find("PauseCanvas");
         var col = GetComponent<Collider2D>();
         if (!col.isTrigger) col.isTrigger = true;
 
@@ -38,6 +44,8 @@ public class CheckpointTriggerAutoStart : MonoBehaviour
     // difference to other CheckpointTrigger: starts automatically at start of Level, no "Triggerbox"
     private void Start()
     {
+        HUD.SetActive(false);
+        pauseCanvas.SetActive(false);
         _hasTriggered = true;
 
         GameObject targetPlayer = manualPlayerReference;

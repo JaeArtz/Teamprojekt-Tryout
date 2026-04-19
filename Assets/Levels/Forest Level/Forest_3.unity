@@ -1741,6 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddde829d86570ad44a391a4efc8b0a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  wasAlreadyVisited: 0
 --- !u!1 &393701664
 GameObject:
   m_ObjectHideFlags: 0
@@ -14128,67 +14129,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[6]'
-      value: It will help you with the <color=#00E2FB>Ghosts</color> you encounter.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[7]'
-      value: Some of the Spirits stayed true to themselves.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[8]'
-      value: Like the <color=#00E2FB>Souls</color> of the <color=#00E2FB>Animals</color>
-        helping you.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[9]'
-      value: Some stayed neutral. Like many plants.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[10]'
-      value: But some spirits...
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[11]'
-      value: It makes me sad to see them turn into these evil corrupted beings.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[12]'
-      value: Please don't hurt them. They are merely lost.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[13]'
-      value: 'When the <color=#00E2FB>Light</color> touches them, '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[14]'
-      value: they will remember moments of their past lives.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[15]'
-      value: 'When they experience peace, even if just for a moment, '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[16]'
-      value: you can slip past them without being harmed.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[17]'
-      value: And you help them to not forget themselves forever.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[18]'
       value: <color=yellow>Press</color></i> <color=red>LEFT CLICK</color> <color=yellow>
         to shoot a  </color><color=#00E2FB>Light Ball</color>
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[19]'
+      propertyPath: 'messageArray.Array.data[7]'
       value: <color=yellow>to </color><color=#00E2FB>calm Enemies</color> <color=yellow>
         and  </color><color=#00E2FB>light up</color> <color=yellow> dark places.</color>
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
-      propertyPath: 'messageArray.Array.data[20]'
+      propertyPath: 'messageArray.Array.data[8]'
       value: <color=yellow>The </color><color=#00E2FB>Light</color> <color=yellow>
         will shoot towards your </color><color=#00E2FB>Mouse Pointer</color> <color=yellow>.</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[9]'
+      value: It will help you with the <color=#00E2FB>Ghosts</color> you encounter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[10]'
+      value: Some of the Spirits stayed true to themselves.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[11]'
+      value: Like the <color=#00E2FB>Souls</color> of the <color=#00E2FB>Animals</color>
+        helping you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[12]'
+      value: Some stayed neutral. Like many plants.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[13]'
+      value: But some spirits...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[14]'
+      value: It makes me sad to see them turn into these evil corrupted beings.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[15]'
+      value: Please don't hurt them. They are merely lost.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[16]'
+      value: 'When the <color=#00E2FB>Light</color> touches them, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[17]'
+      value: they will remember moments of their past lives.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[18]'
+      value: 'When they experience peace, even if just for a moment, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[19]'
+      value: you can slip past them without being harmed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[20]'
+      value: And you help them to not forget themselves forever.
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x

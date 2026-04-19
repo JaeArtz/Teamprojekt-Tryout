@@ -3,7 +3,7 @@ using UnityEngine;
 public class TriggerDispatcher : MonoBehaviour
 {
     [Tooltip("Drag child object in here that has follow Target Simple and the animation")]
-    public FollowTargetExperimental2 targetScript;
+    public FollowTargetTrackPoint targetScript;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
