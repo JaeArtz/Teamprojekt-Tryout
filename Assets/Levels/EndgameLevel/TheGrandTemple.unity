@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 5752507}
   - component: {fileID: 5752506}
   - component: {fileID: 5752505}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: TopZone (2)
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -43491,7 +43491,7 @@ GameObject:
   - component: {fileID: 310205443}
   - component: {fileID: 310205442}
   - component: {fileID: 310205441}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: TopZone (1)
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -43689,7 +43689,7 @@ GameObject:
   - component: {fileID: 353002116}
   - component: {fileID: 353002115}
   - component: {fileID: 353002114}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: TopZone (1)
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -44569,7 +44569,7 @@ GameObject:
   - component: {fileID: 421391880}
   - component: {fileID: 421391879}
   - component: {fileID: 421391878}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: TopZone
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -49949,7 +49949,7 @@ GameObject:
   - component: {fileID: 459062030}
   - component: {fileID: 459062029}
   - component: {fileID: 459062028}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: TopZone
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -84269,7 +84269,7 @@ GameObject:
   - component: {fileID: 872348249}
   - component: {fileID: 872348248}
   - component: {fileID: 872348247}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: TopZone
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -241545,7 +241545,7 @@ GameObject:
   - component: {fileID: 1824909212650032332}
   - component: {fileID: 6429864582520667951}
   - component: {fileID: 705488333196013102}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: TopZone
   m_TagString: PassableGround
   m_Icon: {fileID: 0}
@@ -242524,6 +242524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddde829d86570ad44a391a4efc8b0a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  wasAlreadyVisited: 0
 --- !u!4 &8251221888944913125
 Transform:
   m_ObjectHideFlags: 0

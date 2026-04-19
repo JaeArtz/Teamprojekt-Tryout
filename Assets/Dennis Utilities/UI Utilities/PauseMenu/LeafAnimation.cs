@@ -10,7 +10,7 @@ public class LeafAnimation : MonoBehaviour
     public List<GameObject> leaves;
     private GameObject leafPanel;
 
-
+    private YieldInstruction fadeInstruction = new YieldInstruction();
     private void Awake()
     {
         leafPanel = GameObject.Find("LeafPanel");
@@ -20,7 +20,34 @@ public class LeafAnimation : MonoBehaviour
     {
         AlterShownLeaves();
         leafPanel.SetActive(true);
-        yield return new WaitForSeconds(1f);
+
+        float elapsedTime = 0.0f;
+        float fadeTime = 1.0f;
+        Color[] colors = new Color[4];
+        while (elapsedTime < fadeTime)
+        {
+            yield return fadeInstruction;
+            elapsedTime += Time.deltaTime;
+            for(int i = 0; i < 4; i++)
+            {
+                colors[i] = leaves[i].GetComponent<Image>().color;
+                colors[i].a = Mathf.Clamp01(elapsedTime / fadeTime);
+                leaves[i].GetComponent<Image>().color = colors[i];
+            }
+        }
+
+        elapsedTime = 0.0f;
+        while (elapsedTime < fadeTime)
+        {
+            yield return fadeInstruction;
+            elapsedTime += Time.deltaTime;
+            for (int i = 0; i < 4; i++)
+            {
+                colors[i] = leaves[i].GetComponent<Image>().color;
+                colors[i].a = 1.0f - Mathf.Clamp01(elapsedTime / fadeTime);
+                leaves[i].GetComponent<Image>().color = colors[i];
+            }
+        }
         leafPanel.SetActive(false);
     }
     

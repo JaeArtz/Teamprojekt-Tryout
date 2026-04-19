@@ -3,6 +3,15 @@ using UnityEngine;
 
 public class ActionReactivateEntirePlayer : TriggerAction
 {
+    private GameObject HUD;
+    private GameObject pauseCanvas;
+
+    private void Awake()
+    {
+
+        HUD = GameObject.Find("HUDCanvas");
+        pauseCanvas = GameObject.Find("PauseCanvas");
+    }
     public override IEnumerator Execute(TriggerInfoBundle ctx)
     {
         if (ctx.PlayerObject == null) yield break;
@@ -29,7 +38,8 @@ public class ActionReactivateEntirePlayer : TriggerAction
             rb.simulated = true;
             rb.WakeUp();
         }
-
+        HUD.SetActive(true);
+        pauseCanvas.SetActive(true);
         yield break;
     }
 }
