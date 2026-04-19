@@ -30,7 +30,7 @@ public class ShowStoryAnimation : MonoBehaviour
         StoryText.GetComponent<TMP_Text>().color = storyColor;*/
 
         float elapsedTime = 0.0f;
-        float fadeTime = 1.0f;
+        float fadeTime = 1.5f;
         while (elapsedTime < fadeTime)
         {
             yield return fadeInstruction;
