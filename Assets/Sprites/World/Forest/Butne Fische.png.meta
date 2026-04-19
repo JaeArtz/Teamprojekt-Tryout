@@ -1,0 +1,1209 @@
+fileFormatVersion: 2
+guid: bc61bb020a0c4c346a45a3a596b75b7f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8239163860003128235
+    second: Butne Fische_0
+  - first:
+      213: -97794235072602356
+    second: Butne Fische_1
+  - first:
+      213: -9068641012001297248
+    second: Butne Fische_2
+  - first:
+      213: 8303524575531199356
+    second: Butne Fische_3
+  - first:
+      213: -571968394754847152
+    second: Butne Fische_4
+  - first:
+      213: -8528163906182300970
+    second: Butne Fische_5
+  - first:
+      213: -8158657769492454501
+    second: Butne Fische_6
+  - first:
+      213: -3382658058180986101
+    second: Butne Fische_7
+  - first:
+      213: 3706893848871228269
+    second: Butne Fische_8
+  - first:
+      213: 3431858523815779714
+    second: Butne Fische_9
+  - first:
+      213: 3450715904876654254
+    second: Butne Fische_10
+  - first:
+      213: 2272204108308782700
+    second: Butne Fische_11
+  - first:
+      213: -583209263568701118
+    second: Butne Fische_12
+  - first:
+      213: 5381162940803820511
+    second: Butne Fische_13
+  - first:
+      213: 7477716604594921554
+    second: Butne Fische_14
+  - first:
+      213: 6361538034777649718
+    second: Butne Fische_15
+  - first:
+      213: 5519585265224915031
+    second: Butne Fische_16
+  - first:
+      213: -6711257518189457536
+    second: Butne Fische_17
+  - first:
+      213: -3235040565356529511
+    second: Butne Fische_18
+  - first:
+      213: -5709745447670354857
+    second: Butne Fische_19
+  - first:
+      213: 2591330247052711435
+    second: Butne Fische_20
+  - first:
+      213: 3857639399531184195
+    second: Butne Fische_21
+  - first:
+      213: -2488731611007073020
+    second: Butne Fische_22
+  - first:
+      213: 8770262821134676008
+    second: Butne Fische_23
+  - first:
+      213: -540402557047831193
+    second: Butne Fische_24
+  - first:
+      213: 1782867586096313475
+    second: Butne Fische_25
+  - first:
+      213: 4666933146573574999
+    second: Butne Fische_26
+  - first:
+      213: -5983545032430580506
+    second: Butne Fische_27
+  - first:
+      213: -6977917819473562188
+    second: Butne Fische_28
+  - first:
+      213: -2597779474718126900
+    second: Butne Fische_29
+  - first:
+      213: 2287327777897896808
+    second: Butne Fische_30
+  - first:
+      213: 5180784103455886391
+    second: Butne Fische_31
+  - first:
+      213: 4710991604240219827
+    second: Butne Fische_32
+  - first:
+      213: 284761002223884056
+    second: Butne Fische_33
+  - first:
+      213: -258790025848779553
+    second: Butne Fische_34
+  - first:
+      213: -678969762430028196
+    second: Butne Fische_35
+  - first:
+      213: -2640380500524103896
+    second: Butne Fische_36
+  - first:
+      213: -1035119034329753921
+    second: Butne Fische_37
+  - first:
+      213: 6652439002863819298
+    second: Butne Fische_38
+  - first:
+      213: -2766343355465506841
+    second: Butne Fische_39
+  - first:
+      213: 7117852817181331533
+    second: Butne Fische_40
+  - first:
+      213: -7937511377158054126
+    second: Butne Fische_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Butne Fische_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 862
+        width: 163
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55cf64e4f1c98ad80800000000000000
+      internalID: -8239163860003128235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 593
+        width: 141
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f9a6d49a094aef0800000000000000
+      internalID: -97794235072602356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 510
+        width: 150
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0acaf1c1c07b52280800000000000000
+      internalID: -9068641012001297248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 742
+        width: 148
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b63448b9b0c3370800000000000000
+      internalID: 8303524575531199356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_4
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 623
+        width: 131
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e03ef76c5ff08f0800000000000000
+      internalID: -571968394754847152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 844
+        width: 168
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da32b98c10e5a980800000000000000
+      internalID: -8528163906182300970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_6
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 499
+        width: 168
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93eb6d2cff96ce80800000000000000
+      internalID: -8158657769492454501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 732
+        width: 157
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b728d0b626e01d0800000000000000
+      internalID: -3382658058180986101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_8
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 618
+        width: 181
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63dc0ac058817330800000000000000
+      internalID: 3706893848871228269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_9
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 861
+        width: 214
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d9f67052960af20800000000000000
+      internalID: 3431858523815779714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_10
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 503
+        width: 155
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaea6f235d763ef20800000000000000
+      internalID: 3450715904876654254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_11
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 741
+        width: 186
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e9dec099d788f10800000000000000
+      internalID: 2272204108308782700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_12
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 621
+        width: 154
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2493547c34608e7f0800000000000000
+      internalID: -583209263568701118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_13
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 501
+        width: 162
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdbab1d1f2bbdaa40800000000000000
+      internalID: 5381162940803820511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_14
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 867
+        width: 179
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250abeb12af26c760800000000000000
+      internalID: 7477716604594921554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_15
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 743
+        width: 159
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632fe044329b84850800000000000000
+      internalID: 6361538034777649718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_16
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 610
+        width: 173
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75816310e81899c40800000000000000
+      internalID: 5519585265224915031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_17
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 851
+        width: 144
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fc52058d2dcd2a0800000000000000
+      internalID: -6711257518189457536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_18
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 501
+        width: 170
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998f1fbeeb3da13d0800000000000000
+      internalID: -3235040565356529511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_19
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 743
+        width: 160
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c64b154c8e2c0b0800000000000000
+      internalID: -5709745447670354857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_20
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 856
+        width: 174
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b065d47512146f320800000000000000
+      internalID: 2591330247052711435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_21
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 628
+        width: 150
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3408b906896198530800000000000000
+      internalID: 3857639399531184195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_22
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 496
+        width: 162
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40543a029cf367dd0800000000000000
+      internalID: -2488731611007073020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_23
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 380
+        width: 136
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8203c88a19b36b970800000000000000
+      internalID: 8770262821134676008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_24
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 393
+        width: 138
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765837fccba1088f0800000000000000
+      internalID: -540402557047831193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_25
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 371
+        width: 182
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38434de9f940eb810800000000000000
+      internalID: 1782867586096313475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_26
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 381
+        width: 176
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753930868f644c040800000000000000
+      internalID: 4666933146573574999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_27
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 385
+        width: 162
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec0c64ce7d26fca0800000000000000
+      internalID: -5983545032430580506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_28
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 384
+        width: 154
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b5f86ab6b4792f90800000000000000
+      internalID: -6977917819473562188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_29
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 271
+        width: 153
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc00a4d455d2fbd0800000000000000
+      internalID: -2597779474718126900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_30
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 262
+        width: 122
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bdc76ce783ebf10800000000000000
+      internalID: 2287327777897896808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_31
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 258
+        width: 138
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c8a7071b7d5e740800000000000000
+      internalID: 5180784103455886391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_32
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 258
+        width: 179
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bef59677edc06140800000000000000
+      internalID: 4710991604240219827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_33
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 266
+        width: 193
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817507f6f9ca3f300800000000000000
+      internalID: 284761002223884056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_34
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 275
+        width: 146
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc8ed5b7d7986cf0800000000000000
+      internalID: -258790025848779553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_35
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 113
+        width: 195
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5670213990d396f0800000000000000
+      internalID: -678969762430028196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_36
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 136
+        width: 154
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82784629ceb7b5bd0800000000000000
+      internalID: -2640380500524103896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_37
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 121
+        width: 164
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6978af8b482a1f0800000000000000
+      internalID: -1035119034329753921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_38
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 130
+        width: 167
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ad6a7e606325c50800000000000000
+      internalID: 6652439002863819298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_39
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 132
+        width: 164
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef57baff59fb99d0800000000000000
+      internalID: -2766343355465506841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_40
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 141
+        width: 190
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d405b9bdc61b7c260800000000000000
+      internalID: 7117852817181331533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Butne Fische_41
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 124
+        width: 154
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f5fdb057b48d190800000000000000
+      internalID: -7937511377158054126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 500b099e351033248824e9b2b29877c3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Butne Fische_0: -8239163860003128235
+      Butne Fische_1: -97794235072602356
+      Butne Fische_10: 3450715904876654254
+      Butne Fische_11: 2272204108308782700
+      Butne Fische_12: -583209263568701118
+      Butne Fische_13: 5381162940803820511
+      Butne Fische_14: 7477716604594921554
+      Butne Fische_15: 6361538034777649718
+      Butne Fische_16: 5519585265224915031
+      Butne Fische_17: -6711257518189457536
+      Butne Fische_18: -3235040565356529511
+      Butne Fische_19: -5709745447670354857
+      Butne Fische_2: -9068641012001297248
+      Butne Fische_20: 2591330247052711435
+      Butne Fische_21: 3857639399531184195
+      Butne Fische_22: -2488731611007073020
+      Butne Fische_23: 8770262821134676008
+      Butne Fische_24: -540402557047831193
+      Butne Fische_25: 1782867586096313475
+      Butne Fische_26: 4666933146573574999
+      Butne Fische_27: -5983545032430580506
+      Butne Fische_28: -6977917819473562188
+      Butne Fische_29: -2597779474718126900
+      Butne Fische_3: 8303524575531199356
+      Butne Fische_30: 2287327777897896808
+      Butne Fische_31: 5180784103455886391
+      Butne Fische_32: 4710991604240219827
+      Butne Fische_33: 284761002223884056
+      Butne Fische_34: -258790025848779553
+      Butne Fische_35: -678969762430028196
+      Butne Fische_36: -2640380500524103896
+      Butne Fische_37: -1035119034329753921
+      Butne Fische_38: 6652439002863819298
+      Butne Fische_39: -2766343355465506841
+      Butne Fische_4: -571968394754847152
+      Butne Fische_40: 7117852817181331533
+      Butne Fische_41: -7937511377158054126
+      Butne Fische_5: -8528163906182300970
+      Butne Fische_6: -8158657769492454501
+      Butne Fische_7: -3382658058180986101
+      Butne Fische_8: 3706893848871228269
+      Butne Fische_9: 3431858523815779714
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

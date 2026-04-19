@@ -1,0 +1,937 @@
+fileFormatVersion: 2
+guid: 8526dc2b0e1213240a1d1f9cd533728b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5266612047000741415
+    second: "Harztr\xE4ne_SpriteSheet_0"
+  - first:
+      213: -4040653813674393489
+    second: "Harztr\xE4ne_SpriteSheet_1"
+  - first:
+      213: 414562609175321668
+    second: "Harztr\xE4ne_SpriteSheet_2"
+  - first:
+      213: -2719722964284246338
+    second: "Harztr\xE4ne_SpriteSheet_3"
+  - first:
+      213: 4384530818843521239
+    second: "Harztr\xE4ne_SpriteSheet_4"
+  - first:
+      213: -5994661701941648866
+    second: "Harztr\xE4ne_SpriteSheet_5"
+  - first:
+      213: 6546552991792012719
+    second: "Harztr\xE4ne_SpriteSheet_6"
+  - first:
+      213: -3620274861739718970
+    second: "Harztr\xE4ne_SpriteSheet_7"
+  - first:
+      213: 1309230918562536040
+    second: "Harztr\xE4ne_SpriteSheet_8"
+  - first:
+      213: 1757575760249763736
+    second: "Harztr\xE4ne_SpriteSheet_9"
+  - first:
+      213: -2564088269222499966
+    second: "Harztr\xE4ne_SpriteSheet_10"
+  - first:
+      213: -4711387999822948911
+    second: "Harztr\xE4ne_SpriteSheet_11"
+  - first:
+      213: 4381549232060248348
+    second: "Harztr\xE4ne_SpriteSheet_12"
+  - first:
+      213: 7763688072696875510
+    second: "Harztr\xE4ne_SpriteSheet_13"
+  - first:
+      213: 382553091478065983
+    second: "Harztr\xE4ne_SpriteSheet_14"
+  - first:
+      213: -4969262128789017118
+    second: "Harztr\xE4ne_SpriteSheet_15"
+  - first:
+      213: -2965554704747168574
+    second: "Harztr\xE4ne_SpriteSheet_16"
+  - first:
+      213: 7424589197222687382
+    second: "Harztr\xE4ne_SpriteSheet_17"
+  - first:
+      213: 4316041103670122368
+    second: "Harztr\xE4ne_SpriteSheet_18"
+  - first:
+      213: -2446896136379863608
+    second: "Harztr\xE4ne_SpriteSheet_19"
+  - first:
+      213: -6633769955636469751
+    second: "Harztr\xE4ne_SpriteSheet_20"
+  - first:
+      213: -8861674178183017006
+    second: "Harztr\xE4ne_SpriteSheet_21"
+  - first:
+      213: 4949068224409237581
+    second: "Harztr\xE4ne_SpriteSheet_22"
+  - first:
+      213: 80359378048336436
+    second: "Harztr\xE4ne_SpriteSheet_23"
+  - first:
+      213: 6282150131894540212
+    second: "Harztr\xE4ne_SpriteSheet_24"
+  - first:
+      213: -357787959478649691
+    second: "Harztr\xE4ne_SpriteSheet_25"
+  - first:
+      213: -8314829886481499056
+    second: "Harztr\xE4ne_SpriteSheet_26"
+  - first:
+      213: 1509142741350885673
+    second: "Harztr\xE4ne_SpriteSheet_27"
+  - first:
+      213: 6375258199834956194
+    second: "Harztr\xE4ne_SpriteSheet_28"
+  - first:
+      213: -8620398746204849679
+    second: "Harztr\xE4ne_SpriteSheet_29"
+  - first:
+      213: 2290414579918734752
+    second: "Harztr\xE4ne_SpriteSheet_30"
+  - first:
+      213: -7466761214489931072
+    second: "Harztr\xE4ne_SpriteSheet_31"
+  - first:
+      213: 8496134431902990425
+    second: "Harztr\xE4ne_SpriteSheet_32"
+  - first:
+      213: -5217385769777393482
+    second: "Harztr\xE4ne_SpriteSheet_33"
+  - first:
+      213: -6412626122693241721
+    second: "Harztr\xE4ne_SpriteSheet_34"
+  - first:
+      213: 8097857092426922337
+    second: "Harztr\xE4ne_SpriteSheet_35"
+  - first:
+      213: -3733446455572670104
+    second: "Harztr\xE4ne_SpriteSheet_36"
+  - first:
+      213: 581805234070947899
+    second: "Harztr\xE4ne_SpriteSheet_37"
+  - first:
+      213: 740426761761679357
+    second: "Harztr\xE4ne_SpriteSheet_38"
+  - first:
+      213: -2244604276026247974
+    second: "Harztr\xE4ne_SpriteSheet_39"
+  - first:
+      213: -4213355986421864856
+    second: "Harztr\xE4ne_SpriteSheet_40"
+  - first:
+      213: -2100570713695312963
+    second: "Harztr\xE4ne_SpriteSheet_41"
+  - first:
+      213: 382399323544094278
+    second: "Harztr\xE4ne_SpriteSheet_42"
+  - first:
+      213: -7272611692289983077
+    second: "Harztr\xE4ne_SpriteSheet_43"
+  - first:
+      213: -4576934200798325295
+    second: "Harztr\xE4ne_SpriteSheet_44"
+  - first:
+      213: -1686583336049300624
+    second: "Harztr\xE4ne_SpriteSheet_45"
+  - first:
+      213: -2105255906595900293
+    second: "Harztr\xE4ne_SpriteSheet_46"
+  - first:
+      213: -5310892105032575933
+    second: "Harztr\xE4ne_SpriteSheet_47"
+  - first:
+      213: -850997782593333282
+    second: "Harztr\xE4ne_SpriteSheet_48"
+  - first:
+      213: 2722780073108110775
+    second: "Harztr\xE4ne_SpriteSheet_49"
+  - first:
+      213: 3759587423255018272
+    second: "Harztr\xE4ne_SpriteSheet_50"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_0"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d95ab83f3c39e6b0800000000000000
+      internalID: -5266612047000741415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_1"
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f604c97c3c6bce7c0800000000000000
+      internalID: -4040653813674393489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_2"
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44cdd012f72d0c500800000000000000
+      internalID: 414562609175321668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_3"
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb67d5aaf5a914ad0800000000000000
+      internalID: -2719722964284246338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_4"
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0bbebac8bf8dc30800000000000000
+      internalID: 4384530818843521239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_5"
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12212371feaecca0800000000000000
+      internalID: -5994661701941648866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_6"
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad980bc2470ada50800000000000000
+      internalID: 6546552991792012719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_7"
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 871
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c64abcb13332cdc0800000000000000
+      internalID: -3620274861739718970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_8"
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 771
+        width: 133
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ad0e575925b2210800000000000000
+      internalID: 1309230918562536040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_9"
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 610
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897368787d9246810800000000000000
+      internalID: 1757575760249763736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_12"
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 610
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1136d6efc36ecc30800000000000000
+      internalID: 4381549232060248348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_13"
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 610
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9c8081b292ebb60800000000000000
+      internalID: 7763688072696875510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_15"
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 610
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edaab11c62a90bb0800000000000000
+      internalID: -4969262128789017118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_17"
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 415
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69239a7a980790760800000000000000
+      internalID: 7424589197222687382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_18"
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 509
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0871e343488a5eb30800000000000000
+      internalID: 4316041103670122368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_19"
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 415
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd6dcc9de0ea0ed0800000000000000
+      internalID: -2446896136379863608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_21"
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 415
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd462e3942050580800000000000000
+      internalID: -8861674178183017006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_25"
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 415
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5acfc5a1fb1e80bf0800000000000000
+      internalID: -357787959478649691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_32"
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 610
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9500b89504558e570800000000000000
+      internalID: 8496134431902990425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_33"
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 415
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b09d38094f1897b0800000000000000
+      internalID: -5217385769777393482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_38"
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 610
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df76ff48736864a00800000000000000
+      internalID: 740426761761679357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_39"
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 415
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad4f12aad4099d0e0800000000000000
+      internalID: -2244604276026247974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_40"
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 197
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8662f0dbd072785c0800000000000000
+      internalID: -4213355986421864856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_42"
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 197
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6460232a82e8e4500800000000000000
+      internalID: 382399323544094278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_45"
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 197
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b20ba446d0898e0800000000000000
+      internalID: -1686583336049300624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_48"
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 197
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed711e78606a034f0800000000000000
+      internalID: -850997782593333282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_49"
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 197
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bdfe13fc0249c520800000000000000
+      internalID: 2722780073108110775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Harztr\xE4ne_SpriteSheet_50"
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 197
+        width: 216
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b3421a7dcbc2430800000000000000
+      internalID: 3759587423255018272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2a1be928a839c9c419f9558acb6ca7d4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Harztr\xE4ne_SpriteSheet_0": -5266612047000741415
+      "Harztr\xE4ne_SpriteSheet_1": -4040653813674393489
+      "Harztr\xE4ne_SpriteSheet_10": -2564088269222499966
+      "Harztr\xE4ne_SpriteSheet_11": -4711387999822948911
+      "Harztr\xE4ne_SpriteSheet_12": 4381549232060248348
+      "Harztr\xE4ne_SpriteSheet_13": 7763688072696875510
+      "Harztr\xE4ne_SpriteSheet_14": 382553091478065983
+      "Harztr\xE4ne_SpriteSheet_15": -4969262128789017118
+      "Harztr\xE4ne_SpriteSheet_16": -2965554704747168574
+      "Harztr\xE4ne_SpriteSheet_17": 7424589197222687382
+      "Harztr\xE4ne_SpriteSheet_18": 4316041103670122368
+      "Harztr\xE4ne_SpriteSheet_19": -2446896136379863608
+      "Harztr\xE4ne_SpriteSheet_2": 414562609175321668
+      "Harztr\xE4ne_SpriteSheet_20": -6633769955636469751
+      "Harztr\xE4ne_SpriteSheet_21": -8861674178183017006
+      "Harztr\xE4ne_SpriteSheet_22": 4949068224409237581
+      "Harztr\xE4ne_SpriteSheet_23": 80359378048336436
+      "Harztr\xE4ne_SpriteSheet_24": 6282150131894540212
+      "Harztr\xE4ne_SpriteSheet_25": -357787959478649691
+      "Harztr\xE4ne_SpriteSheet_26": -8314829886481499056
+      "Harztr\xE4ne_SpriteSheet_27": 1509142741350885673
+      "Harztr\xE4ne_SpriteSheet_28": 6375258199834956194
+      "Harztr\xE4ne_SpriteSheet_29": -8620398746204849679
+      "Harztr\xE4ne_SpriteSheet_3": -2719722964284246338
+      "Harztr\xE4ne_SpriteSheet_30": 2290414579918734752
+      "Harztr\xE4ne_SpriteSheet_31": -7466761214489931072
+      "Harztr\xE4ne_SpriteSheet_32": 8496134431902990425
+      "Harztr\xE4ne_SpriteSheet_33": -5217385769777393482
+      "Harztr\xE4ne_SpriteSheet_34": -6412626122693241721
+      "Harztr\xE4ne_SpriteSheet_35": 8097857092426922337
+      "Harztr\xE4ne_SpriteSheet_36": -3733446455572670104
+      "Harztr\xE4ne_SpriteSheet_37": 581805234070947899
+      "Harztr\xE4ne_SpriteSheet_38": 740426761761679357
+      "Harztr\xE4ne_SpriteSheet_39": -2244604276026247974
+      "Harztr\xE4ne_SpriteSheet_4": 4384530818843521239
+      "Harztr\xE4ne_SpriteSheet_40": -4213355986421864856
+      "Harztr\xE4ne_SpriteSheet_41": -2100570713695312963
+      "Harztr\xE4ne_SpriteSheet_42": 382399323544094278
+      "Harztr\xE4ne_SpriteSheet_43": -7272611692289983077
+      "Harztr\xE4ne_SpriteSheet_44": -4576934200798325295
+      "Harztr\xE4ne_SpriteSheet_45": -1686583336049300624
+      "Harztr\xE4ne_SpriteSheet_46": -2105255906595900293
+      "Harztr\xE4ne_SpriteSheet_47": -5310892105032575933
+      "Harztr\xE4ne_SpriteSheet_48": -850997782593333282
+      "Harztr\xE4ne_SpriteSheet_49": 2722780073108110775
+      "Harztr\xE4ne_SpriteSheet_5": -5994661701941648866
+      "Harztr\xE4ne_SpriteSheet_50": 3759587423255018272
+      "Harztr\xE4ne_SpriteSheet_6": 6546552991792012719
+      "Harztr\xE4ne_SpriteSheet_7": -3620274861739718970
+      "Harztr\xE4ne_SpriteSheet_8": 1309230918562536040
+      "Harztr\xE4ne_SpriteSheet_9": 1757575760249763736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
