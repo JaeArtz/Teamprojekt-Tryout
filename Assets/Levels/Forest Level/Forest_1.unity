@@ -405821,7 +405821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionPlaySoundWithDuration
   blockUntilFinished: 0
   audioSource: {fileID: 1251123981}
-  playDuration: 2
+  playDuration: 0
   waitForDuration: 1
 --- !u!114 &695553767
 MonoBehaviour:
@@ -405899,7 +405899,7 @@ MonoBehaviour:
   blockUntilFinished: 1
   objectToMove: {fileID: 2100031934}
   targetPoint: {fileID: 837202133}
-  speed: 2.5
+  speed: 3.75
   xOffset: 0
   selfDestructOnArrival: 1
   isFinished: 0
@@ -406010,7 +406010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionWait
   blockUntilFinished: 1
-  waitTime: 18
+  waitTime: 13
 --- !u!1001 &703777202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -406255,7 +406255,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: bc242cf7f57545d46adbcf51fb83bc24, type: 3}
+  m_Resource: {fileID: 8300000, guid: f2a3e2857d7f69c4689a265e7bda0f00, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
