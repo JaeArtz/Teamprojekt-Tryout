@@ -35134,7 +35134,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 445641685}
-  - component: {fileID: 445641686}
+  - component: {fileID: 445641687}
+  - component: {fileID: 445641688}
   m_Layer: 0
   m_Name: FishSwarmContainer 1
   m_TagString: Untagged
@@ -35158,7 +35159,53 @@ Transform:
   - {fileID: 3274365638352709913}
   m_Father: {fileID: 720787068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &445641686
+--- !u!61 &445641687
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445641684}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.5, y: -4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &445641688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35167,14 +35214,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 445641684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f8f61e073474643b96bb17442a9c55, type: 3}
+  m_Script: {fileID: 11500000, guid: ce4353677f354db4ca6a7a5497c84905, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FollowTargetSimple
-  target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
-  isFollowing: 0
-  followX: 1
-  followY: 1
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerDispatcher
+  targetScript: {fileID: 8574109962704322922}
 --- !u!1001 &446884417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38867,24 +38910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367ce97247eb2db419d136ce5b00e928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WindController
---- !u!1 &1187988486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1397102676109678940, guid: cc4bda87c2aec2147a18e5f9da606bd7, type: 3}
-  m_PrefabInstance: {fileID: 8138692323954453384}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1187988487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187988486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03597957109821e439b1a303be85f3c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterZoneTrigger
-  fishSwarm: {fileID: 445641686}
 --- !u!1 &1220346242
 GameObject:
   m_ObjectHideFlags: 0
@@ -338411,6 +338436,7 @@ GameObject:
   - component: {fileID: 8574109962704322921}
   - component: {fileID: 2739343837597658085}
   - component: {fileID: 1827537168}
+  - component: {fileID: 8574109962704322922}
   m_Layer: 0
   m_Name: Phoenix_Animation_Pics._0 (1)
   m_TagString: Untagged
@@ -370691,10 +370717,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1397102676109678940, guid: cc4bda87c2aec2147a18e5f9da606bd7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1187988487}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc4bda87c2aec2147a18e5f9da606bd7, type: 3}
 --- !u!212 &8149478579320051283
 SpriteRenderer:
@@ -372328,6 +372351,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8574109962704322922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680674596495791278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db0b11c76667eb479faafb518781184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowTargetSimple
+  target: {fileID: 1876935962}
+  offset: {x: 0, y: 0, z: 0}
+  isFollowing: 0
+  followX: 1
+  followY: 1
 --- !u!212 &8586392290095536169
 SpriteRenderer:
   m_ObjectHideFlags: 0
