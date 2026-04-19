@@ -33551,20 +33551,55 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1876935962}
+    - target: {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6437036690761177799, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
       propertyPath: m_Name
       value: FishSwarmContainer 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6566169187467751723, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: targetScript
+      value: 
+      objectReference: {fileID: 126448324}
+    m_RemovedComponents:
+    - {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 126448324}
   m_SourcePrefab: {fileID: 100100000, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
 --- !u!4 &126448322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431534467854511403, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
   m_PrefabInstance: {fileID: 126448321}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &126448323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+  m_PrefabInstance: {fileID: 126448321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &126448324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126448323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53608a117fb72dd458dced2353ea6bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowTargetTrackPoint
+  target: {fileID: 1876935962}
+  offset: {x: 0, y: 0, z: 0}
+  isFollowing: 0
+  followX: 1
+  followY: 1
+  smoothSpeed: 1
 --- !u!1 &128811051
 GameObject:
   m_ObjectHideFlags: 0
@@ -37021,20 +37056,55 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1876935962}
+    - target: {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6437036690761177799, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
       propertyPath: m_Name
       value: FishSwarmContainer 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6566169187467751723, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: targetScript
+      value: 
+      objectReference: {fileID: 690992328}
+    m_RemovedComponents:
+    - {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 690992328}
   m_SourcePrefab: {fileID: 100100000, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
 --- !u!4 &690992326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431534467854511403, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
   m_PrefabInstance: {fileID: 690992325}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &690992327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+  m_PrefabInstance: {fileID: 690992325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &690992328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690992327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53608a117fb72dd458dced2353ea6bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowTargetTrackPoint
+  target: {fileID: 1876935962}
+  offset: {x: 0, y: 0, z: 0}
+  isFollowing: 0
+  followX: 1
+  followY: 1
+  smoothSpeed: 1
 --- !u!1 &704303206
 GameObject:
   m_ObjectHideFlags: 0
@@ -43369,20 +43439,55 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1876935962}
+    - target: {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6437036690761177799, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
       propertyPath: m_Name
       value: FishSwarmContainer 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6566169187467751723, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: targetScript
+      value: 
+      objectReference: {fileID: 1706753264}
+    m_RemovedComponents:
+    - {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1706753264}
   m_SourcePrefab: {fileID: 100100000, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
 --- !u!4 &1706753262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431534467854511403, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
   m_PrefabInstance: {fileID: 1706753261}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1706753263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+  m_PrefabInstance: {fileID: 1706753261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1706753264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706753263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53608a117fb72dd458dced2353ea6bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowTargetTrackPoint
+  target: {fileID: 1876935962}
+  offset: {x: 0, y: 0, z: 0}
+  isFollowing: 0
+  followX: 1
+  followY: 1
+  smoothSpeed: 1
 --- !u!1 &1721549396
 GameObject:
   m_ObjectHideFlags: 0
@@ -342118,15 +342223,50 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1876935962}
+    - target: {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6437036690761177799, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
       propertyPath: m_Name
       value: FishSwarmContainer 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6566169187467751723, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      propertyPath: targetScript
+      value: 
+      objectReference: {fileID: 3357643399928958376}
+    m_RemovedComponents:
+    - {fileID: 2284232382970863574, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3357643399928958376}
   m_SourcePrefab: {fileID: 100100000, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+--- !u!1 &3357643399928958375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4941869034310141585, guid: 7b89280f13934744d97ae6a3c2f17100, type: 3}
+  m_PrefabInstance: {fileID: 3357643399928958374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3357643399928958376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3357643399928958375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53608a117fb72dd458dced2353ea6bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowTargetTrackPoint
+  target: {fileID: 1876935962}
+  offset: {x: 0, y: 0, z: 0}
+  isFollowing: 0
+  followX: 1
+  followY: 1
+  smoothSpeed: 1
 --- !u!212 &3373477422164857892
 SpriteRenderer:
   m_ObjectHideFlags: 0
