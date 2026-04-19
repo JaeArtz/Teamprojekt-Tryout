@@ -22,7 +22,7 @@ public class FollowTargetExperimental : MonoBehaviour
 
     private void LateUpdate()
     {
-        // GEMINI: Wenn kein Target da ist, bricht das Skript ab.
+        
         if (target == null) return;
 
         Vector3 targetDestination;
@@ -33,20 +33,19 @@ public class FollowTargetExperimental : MonoBehaviour
         }
         else
         {
-            // GEMINI: Wir berechnen die Zielposition
+            
             targetDestination = transform.position;
             if (followX) targetDestination.x = target.position.x + offset.x;
             if (followY) targetDestination.y = target.position.y + offset.y;
         }
 
-        // GEMINI: Wir nutzen TESTWEISE wieder die harte Zuweisung, damit wir sehen ob es ÜBERHAUPT geht.
-        // Wenn das hier nicht funktioniert, blockiert Unity die Transformation dieses Objekts.
+        
         transform.position = targetDestination;
 
         // GEMINI: Kontroll-Log (Nur wenn isFollowing aktiv ist)
         if (isFollowing)
         {
-            Debug.Log("GEMINI: Ich sollte mich bewegen zu: " + targetDestination);
+            Debug.Log("Ich sollte mich bewegen zu: " + targetDestination);
         }
     }
 
