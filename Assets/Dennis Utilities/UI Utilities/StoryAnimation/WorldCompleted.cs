@@ -32,6 +32,7 @@ public class WorldCompleted : MonoBehaviour
         Debug.Log(message);
         StartCoroutine(notifyPanel.GetComponent<ShowStoryAnimation>().ShowCollectedAnimation(message));
         yield return new WaitForSeconds(2.0f);
+        this.enabled = false;
     }
 
 }
