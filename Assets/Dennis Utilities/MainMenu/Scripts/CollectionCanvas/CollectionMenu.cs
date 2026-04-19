@@ -144,7 +144,7 @@ public class CollectionMenu : MonoBehaviour
     }
     private void Start()
     {
-        myCaptions.Add("Story 1: The Story of the Doe and the She-Wolf");
+        myCaptions.Add("Story 1: Tales from the Forest - The Story of the Doe and the She-Wolf");
         myCaptions.Add("Story 2: A Tale of Love Beyond Borders");
         myCaptions.Add("Story 3: The Miner’s Tale");
         myCaptions.Add("Story 4: The Tale of the Dark Queen");
@@ -154,7 +154,7 @@ public class CollectionMenu : MonoBehaviour
         myCaptions.Add("Story 8: The Tale of the Man Who Watched Over the Light");
         myCaptions.Add("Story 9: The Tale of the Last Oath of Kareth");
         myCaptions.Add("Story 10: A Tale of Two Sisters");
-        myCaptions.Add("Story 11: Tales from the Forest");
+        myCaptions.Add("Story 11: Tales from the Forest - The Saga of the Old Green");
         myCaptions.Add("Story 12: A Tale of Friendship Beyond Time");
         myCaptions.Add("Story 13: Dashuri - Tales from the Magic Forest Part 1");
         myCaptions.Add("Story 14: Dashuri - Tales from the Magic Forest Part 2");
