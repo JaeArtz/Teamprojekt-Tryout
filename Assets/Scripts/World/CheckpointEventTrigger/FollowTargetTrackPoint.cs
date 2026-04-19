@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FollowTargetExperimental : MonoBehaviour
+public class FollowTargetTrackPoint : MonoBehaviour
 {
     [Header("Settings")]
     public Transform target; // Drag in Player here
@@ -9,20 +9,20 @@ public class FollowTargetExperimental : MonoBehaviour
 
     [SerializeField] bool followX = true;
     [SerializeField] bool followY = true;
+        
+    [SerializeField] float smoothSpeed = 2f;
 
     // Position for "Default Movement"
     private Vector3 homePosition2;
 
     private void Start()
     {
-        homePosition2 = transform.position;
-        // GEMINI: Test-Log
-        Debug.Log("GEMINI: Start auf " + gameObject.name + ". Home Position ist: " + homePosition2);
+        homePosition2 = transform.position;       
+        
     }
 
     private void LateUpdate()
     {
-        
         if (target == null) return;
 
         Vector3 targetDestination;
@@ -33,19 +33,17 @@ public class FollowTargetExperimental : MonoBehaviour
         }
         else
         {
-            
             targetDestination = transform.position;
             if (followX) targetDestination.x = target.position.x + offset.x;
             if (followY) targetDestination.y = target.position.y + offset.y;
         }
-
         
-        transform.position = targetDestination;
+        transform.position = Vector3.Lerp(transform.position, targetDestination, Time.deltaTime * smoothSpeed);
 
-        // GEMINI: Kontroll-Log (Nur wenn isFollowing aktiv ist)
+        // Kontroll-Log (Nur wenn isFollowing aktiv ist)
         if (isFollowing)
         {
-            Debug.Log("Ich sollte mich bewegen zu: " + targetDestination);
+            // Debug.Log("Ich gleite gemütlich zu: " + targetDestination);
         }
     }
 
@@ -53,8 +51,7 @@ public class FollowTargetExperimental : MonoBehaviour
     public void ActivateFollow(Transform newTarget)
     {
         isFollowing = true;
-        target = newTarget;
-        Debug.Log("GEMINI: ActivateFollow wurde aufgerufen!");
+        target = newTarget;        
     }
 
     [ContextMenu("Set Current Offset")]
