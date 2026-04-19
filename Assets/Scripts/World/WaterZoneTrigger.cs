@@ -4,7 +4,7 @@ public class WaterZoneTrigger : MonoBehaviour
 {
     [Header("Assignment")]
     [Tooltip("Drag Parentcontainer with fish (or other) animation- childObject in here.")]
-    public FollowTargetSimple fishSwarm;
+    public FollowTargetExperimental2 fishSwarm;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
