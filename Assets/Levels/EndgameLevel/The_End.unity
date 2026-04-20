@@ -13481,6 +13481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddde829d86570ad44a391a4efc8b0a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  wasAlreadyVisited: 0
 --- !u!1001 &404823216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -465358,9 +465359,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1382099150293737103, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382099150293737103, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1079.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382099150293737103, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000022888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382099150293737103, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0010262
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362248917151999660, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4758312185286581097, guid: d25a02127e329694994646ff52bf3913, type: 3}
       propertyPath: m_Name
       value: AnimCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096203481103665003, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096203481103665003, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096203481103665003, guid: d25a02127e329694994646ff52bf3913, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1020
       objectReference: {fileID: 0}
     - target: {fileID: 5108511249027148799, guid: d25a02127e329694994646ff52bf3913, type: 3}
       propertyPath: m_Pivot.x
