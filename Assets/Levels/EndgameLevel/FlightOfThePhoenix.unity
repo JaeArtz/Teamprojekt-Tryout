@@ -185,17 +185,9 @@ PrefabInstance:
       objectReference: {fileID: 417986589}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6597161064305967826, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1127431760}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
---- !u!4 &417986588 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6597161064305967826, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
-  m_PrefabInstance: {fileID: 417986587}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &417986589 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6597161062965021672, guid: 66ae718ebf6fac040ac7720a2df4db3a, type: 3}
@@ -435,51 +427,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!1 &1127431759
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1127431760}
-  - component: {fileID: 1127431761}
-  m_Layer: 0
-  m_Name: WorldCompleted
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1127431760
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127431759}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1899.263, y: 450.7578, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 417986588}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1127431761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1127431759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0595e639520ff448b7fd24b6ee3539, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WorldCompleted
-  message: Unlocked Story 16 for clearing World 4!
 --- !u!1001 &1589952294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -528,6 +475,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4190398359633850921, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190398359633850921, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190398359633850921, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190398359633850921, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190398359633850921, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190398359633850921, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982110913006039046, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982110913006039046, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982110913006039046, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982110913006039046, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982110913006039046, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982110913006039046, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155913324488242872, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155913324488242872, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155913324488242872, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155913324488242872, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155913324488242872, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155913324488242872, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7425020505741102488, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -535,6 +554,30 @@ PrefabInstance:
     - target: {fileID: 7863211045363660148, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
       propertyPath: m_Name
       value: Hud and UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961653479383047669, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961653479383047669, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961653479383047669, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961653479383047669, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961653479383047669, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961653479383047669, guid: 933ba5538bc2036408d5d87e337e9407, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

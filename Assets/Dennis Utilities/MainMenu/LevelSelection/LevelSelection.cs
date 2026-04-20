@@ -24,8 +24,16 @@ public class LevelSelection : MonoBehaviour
             HashSet<int> unlockedLevels = SaveSystem.LoadLevelData();
             foreach (int level in unlockedLevels)
             {
-                myButtons[level].interactable = true;
-                myTriggers[level].enabled = true;
+                if (level == 12)
+                {
+                    myButtons[11].interactable = true;
+                    myTriggers[11].enabled = true;
+                }
+                else
+                {
+                    myButtons[level].interactable = true;
+                    myTriggers[level].enabled = true;
+                }
             }
         }
         else
