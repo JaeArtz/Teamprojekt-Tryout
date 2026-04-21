@@ -1913,7 +1913,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2549,7 +2549,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -67348,7 +67348,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -186317,6 +186317,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 266
       objectReference: {fileID: 0}
+    - target: {fileID: 3127365512357527053, guid: 471da3923b007a843b873c3897b6a1fe, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
     - target: {fileID: 3344098358178830552, guid: 471da3923b007a843b873c3897b6a1fe, type: 3}
       propertyPath: m_Name
       value: Breakable Walls
@@ -186333,6 +186337,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 6733316994843306078, guid: 471da3923b007a843b873c3897b6a1fe, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8000864598036381937, guid: 471da3923b007a843b873c3897b6a1fe, type: 3}

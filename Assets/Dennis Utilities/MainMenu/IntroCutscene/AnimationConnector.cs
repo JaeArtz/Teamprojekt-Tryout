@@ -1,8 +1,6 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 public class AnimationConnector : MonoBehaviour
 {
     private bool keyPressed = false;

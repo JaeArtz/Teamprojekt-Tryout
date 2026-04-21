@@ -60,10 +60,10 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
         currentScene = SceneManager.GetActiveScene().name;
-
         audioPlayer = GetComponents<RandomAudioPlayer>().FirstOrDefault(component => component.Name.Equals("Hurt"));
 
         if (!audioPlayer) Debug.LogError(@"Random Audio Player with name ""Hurt"" could not be found!");
+
     }
 
     void Start()

@@ -55,7 +55,7 @@ public class CollectionMenu : MonoBehaviour
                 myTriggers[14].enabled = true;
                 myButtons[14].GetComponentInChildren<TextMeshProUGUI>().text = "";
             }
-            if (unlockedLevels.Contains(11))
+            if (unlockedLevels.Contains(12))
             {
                 myButtons[15].interactable = true;
                 myTriggers[15].enabled = true;
