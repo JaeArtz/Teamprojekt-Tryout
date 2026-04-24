@@ -41555,7 +41555,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 7006503929252287495, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -116.5
+      value: -117.42
       objectReference: {fileID: 0}
     - target: {fileID: 7006503929252287495, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41597,6 +41597,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1876935962}
+    - target: {fileID: 8181640831082546346, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
+      propertyPath: activationRadius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8181640831082546346, guid: 63007bd39aa4e1c4bbbd24f4aaa7fde8, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
       value: <color=red>GLIDE SKILL UNLOCKED</color>
@@ -42304,6 +42308,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1876935962}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: activationRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: messageArray.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -42342,11 +42350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -109.99999
+      value: -110.32
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -140.1628
+      value: -140.65
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.z
