@@ -42035,7 +42035,7 @@ PrefabInstance:
       objectReference: {fileID: 1876935962}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: messageArray.Array.size
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[0]'
@@ -42074,7 +42074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[8]'
-      value: 
+      value: 'And don''t be afraid of the little fish ghists in the Swamp. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[9]'
+      value: They won't hurt you. They are just curious.
       objectReference: {fileID: 0}
     - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: m_LocalPosition.x
