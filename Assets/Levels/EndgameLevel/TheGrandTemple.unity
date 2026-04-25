@@ -45609,7 +45609,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -61437,11 +61437,11 @@ Transform:
   m_GameObject: {fileID: 668477301}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -69.20359, y: 11.417755, z: 0}
   m_LocalScale: {x: 5.1053267, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 680841488}
+  m_Father: {fileID: 1290033499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &668477303
 BoxCollider2D:
@@ -61838,12 +61838,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 152170200982485209, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
       insertIndex: 1
       addedObject: {fileID: 225607512}
-    - targetCorrespondingSourceObject: {fileID: 152170200982485209, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4963838684852488904}
-    - targetCorrespondingSourceObject: {fileID: 152170200982485209, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 668477302}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7370bf8529d3d4a90a1e58fbfc45b9, type: 3}
 --- !u!4 &680841488 stripped
@@ -93965,7 +93959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1290033499
 Transform:
   m_ObjectHideFlags: 0
@@ -93992,6 +93986,8 @@ Transform:
   - {fileID: 1384421798}
   - {fileID: 718977570}
   - {fileID: 1616871331}
+  - {fileID: 4963838684852488904}
+  - {fileID: 668477302}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1290033500
@@ -94596,7 +94592,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -108828,7 +108824,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5fd52b4ce1050d5498fd9cee69eac667, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -227387,11 +227383,11 @@ Transform:
   m_GameObject: {fileID: 5479314507643015275}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -69.20359, y: 11.417755, z: 0}
   m_LocalScale: {x: 5.1053267, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 680841488}
+  m_Father: {fileID: 1290033499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5097784781644942892
 Transform:

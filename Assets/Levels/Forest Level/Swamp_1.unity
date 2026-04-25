@@ -42078,7 +42078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[8]'
-      value: 'And don''t be afraid of the little fish ghists in the Swamp. '
+      value: 'And don''t be afraid of the little fish ghosts in the Swamp. '
       objectReference: {fileID: 0}
     - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
       propertyPath: 'messageArray.Array.data[9]'
