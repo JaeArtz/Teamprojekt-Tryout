@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &607586822100924804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 119367318171624279, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_Name
+      value: "Gl\xFChw\xFCrmchen Box 2 Variant"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982186481132320557, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982186481132320557, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982186481132320557, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1857400313
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621998646688656210, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274808012617675667, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: amplitude
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: exitRadiusCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: messageArray.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[0]'
+      value: By the way, with some practise
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[1]'
+      value: you should be able to <color=#00E2FB>hold</color> on to the <color=#00E2FB>Ladder</color>.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[2]'
+      value: 'You don''t have to let yourself <color=#00E2FB>fall down</color> all
+        the time '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[3]'
+      value: while <color=#00E2FB>climbing</color>.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[4]'
+      value: <color=yellow>Press </color></i><color=red>SHIFT</color><color=yellow>
+        while  </color><color=red>CLIMBING</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[5]'
+      value: <color=yellow>to </color><color=red>STAY PUT</color><color=yellow>.</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[6]'
+      value: <color=yellow>You can still move </color><color=red>UP AND DOWN</color><color=yellow>
+        the </color><color=#00E2FB>Ladder</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[7]'
+      value: <color=yellow>while </color></i><color=red>HOLDING SHIFT</color><color=yellow>.</color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[8]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[9]'
+      value: It will help you with the <color=#00E2FB>Ghosts</color> you encounter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[10]'
+      value: Some of the Spirits stayed true to themselves.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[11]'
+      value: Like the <color=#00E2FB>Souls</color> of the <color=#00E2FB>Animals</color>
+        helping you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[12]'
+      value: Some stayed neutral. Like many plants.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[13]'
+      value: But some spirits...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[14]'
+      value: It makes me sad to see them turn into these evil corrupted beings.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[15]'
+      value: Please don't hurt them. They are merely lost.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[16]'
+      value: 'When the <color=#00E2FB>Light</color> touches them, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[17]'
+      value: with some practise
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[18]'
+      value: 'When they experience peace, even if just for a moment, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[19]'
+      value: you can slip past them without being harmed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786807045612242666, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: 'messageArray.Array.data[20]'
+      value: And you help them to not forget themselves forever.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1061.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -46.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099826559163067317, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25562f04acd008843b8ce7a876cbafb7, type: 3}
